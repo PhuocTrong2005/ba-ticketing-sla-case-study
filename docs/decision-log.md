@@ -32,5 +32,8 @@
 | D-28 | Quyền Manager từ chỉ đọc sang ghi phương án cho review đang mở (BR-05, BR-54). | Chưa ghi nhận. | Chủ dự án đề xuất. | Đã chốt |
 | D-29 | SLA không đổi khi chờ Manager; báo cáo M-07 tách bối cảnh theo `as_of`. | Chưa ghi nhận. | Chủ dự án đề xuất; chi tiết M-07 do rà soát bổ sung. | Đã chốt |
 | D-30 | Hỗ trợ chuyên môn chỉ là cờ và ghi chú nội bộ; phối hợp ngoài hệ thống. | Chưa ghi nhận. | Chủ dự án đề xuất. | Đã chốt |
+| D-31 | Agent được chuyển Waiting khi review mở (BR-57). | Chặn mọi chuyển trạng thái khi review mở. | Chưa ghi nhận lý do của chủ dự án; chủ dự án chấp nhận đề xuất của cố vấn. | Đã chốt |
+| D-32 | Mã lỗi Manager ghi phương án khi không có review mở theo BR-58. | Chưa ghi nhận. | Chủ dự án chấp nhận đề xuất của cố vấn. | Đã chốt |
+| D-33 | Tách điều kiện chặn: nhóm 1 đến 11 chặn logic tính SLA chính; nhóm 12 chặn logic tính bối cảnh M-07; workflow review không bị chặn. Điều kiện hoàn thành v1.0 vẫn cần đủ 12 nhóm có ca verified. | Để 12 nhóm cùng chặn toàn bộ logic SLA. | Chủ dự án ủy quyền, cố vấn đề xuất: escalation không đổi cách tính SLA (BR-56); phần tính bối cảnh M-07 là phép tính mới cần đáp án riêng. | Đã chốt |
 
 Đề xuất mới không thuộc lịch sử quyết định này phải được ghi vào [open-questions.md](open-questions.md) đến khi chủ dự án chốt.

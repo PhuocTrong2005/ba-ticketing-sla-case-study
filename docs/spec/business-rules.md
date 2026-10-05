@@ -14,7 +14,7 @@ Nguồn sự thật nghiệp vụ của case study hệ thống quản lý ticke
 8. [Hiển thị](#hiển-thị)
 9. [API, quyền và lỗi](#api-quyền-và-lỗi)
 10. [Báo cáo](#báo-cáo)
-11. [Escalation sau nhiều lần Customer từ chối](#escalation-sau-nhiều-lần-customer-từ-chối)
+11. [Escalation sau nhiều lần Customer từ chối (BR-52…BR-58)](#escalation-sau-nhiều-lần-customer-từ-chối)
 
 ## Phạm vi và công nghệ
 
@@ -170,10 +170,14 @@ Nguồn sự thật nghiệp vụ của case study hệ thống quản lý ticke
 
 **BR-52 — Vòng đời escalation.** `rejection_count` là số lần Customer từ chối ở Resolved, cộng dồn suốt vòng đời ticket; tin nhắn thông thường không tính và giá trị này dẫn xuất từ `ticket_events` (BR-28). Từ lần từ chối thứ 3 trở đi, mỗi lần từ chối tạo một lượt review mới; ngưỡng 3 là cấu hình demo. Ticket vẫn về In Progress theo BR-08, Agent hiện tại tiếp tục phụ trách và ticket gắn cờ “Cần Manager can thiệp”; hai lần từ chối đầu xử lý bình thường. Ghi nhận từ chối, chuyển về In Progress và tạo lượt review phải nằm trong cùng một giao dịch. Mỗi lượt xử lý có tối đa một review; mỗi ticket có tối đa một review đang mở.
 
-**BR-53 — Chặn Resolved khi review mở.** Khi còn review chưa hoàn thành (`review_completed_at` rỗng), Agent không được chuyển Resolved và nhận 409 `REVIEW_REQUIRED`. Chỉ được báo Resolved lại sau khi Manager ghi phương án hợp lệ. Nếu Customer lại từ chối, cần review mới. Ticket không tự đóng; chỉ Customer xác nhận mới Closed.
+**BR-53 — Chặn Resolved khi review mở.** Khi còn review chưa hoàn thành (`review_completed_at` rỗng), Agent không được chuyển Resolved và nhận 409 `REVIEW_REQUIRED`. Chỉ được báo Resolved lại sau khi Manager ghi phương án hợp lệ. Nếu Customer lại từ chối, cần review mới. Ticket không tự đóng; chỉ Customer xác nhận mới Closed. Xem BR-57.
 
-**BR-54 — Quyền review của Manager.** Manager được ghi `handling_plan` cho review đang mở. Manager không nhắn công khai, không nhận ticket, không bấm Resolved. Agent ghi phương án nhận 403. Với tài nguyên review nội bộ, Customer luôn nhận 404, kể cả ticket thuộc mình; không trả dữ liệu cho phép suy ra review tồn tại.
+**BR-54 — Quyền review của Manager.** Manager được ghi `handling_plan` cho review đang mở. Manager không nhắn công khai, không nhận ticket, không bấm Resolved. Agent ghi phương án nhận 403. Với tài nguyên review nội bộ, Customer luôn nhận 404, kể cả ticket thuộc mình; không trả dữ liệu cho phép suy ra review tồn tại. Xem BR-58.
 
 **BR-55 — Dữ liệu review.** Mỗi lượt review là một bản ghi riêng trong `ticket_reviews`: `review_requested_at` (bắt đầu yêu cầu, đồng thời chặn Resolved), `review_completed_at` (Manager ghi phương án hợp lệ và gỡ chặn), `reviewed_by`, `handling_plan`, `resolution_cycle_id`. `handling_plan` gồm nguyên nhân chưa giải quyết được và hướng xử lý tiếp theo (đều bắt buộc), `needs_expert_input` (boolean) và ghi chú ý kiến chuyên môn (tùy chọn); thiếu trường bắt buộc trả 422. Đây là thông tin nội bộ. `needs_expert_input` chỉ là cờ và ghi chú nội bộ, không tạo yêu cầu, thông báo, phân công nhóm kỹ thuật hoặc chuyển Agent; phối hợp thực tế diễn ra ngoài hệ thống, không mô phỏng trong v1.0. Sự kiện review được ghi bổ sung vào `ticket_events`.
 
 **BR-56 — SLA và review.** Chờ Manager review không tạm dừng, không reset, không cấp thêm thời gian SLA. Lưu thời điểm yêu cầu và hoàn thành review để báo cáo M-07, tách bối cảnh chờ Manager khỏi kết quả SLA.
+
+**BR-57 — Waiting khi review mở.** Khi review đang mở, Agent phụ trách được chủ động chuyển ticket In Progress sang Waiting for Customer nếu thỏa điều kiện BR-08; chỉ Resolved bị chặn theo BR-53. Khi Customer trả lời, ticket về In Progress và review vẫn mở. Manager được ghi phương án cho review đang mở ở cả In Progress và Waiting for Customer. Đồng hồ giải quyết tạm dừng ở Waiting for Customer theo BR-20 như thường lệ; thời gian chờ Manager trong M-07 vẫn tính theo giờ lịch.
+
+**BR-58 — Lỗi ghi phương án khi không có review mở.** Manager ghi phương án khi ticket không có review mở trả 409 `INVALID_TICKET_STATE`; ticket Closed trả 409 `TICKET_CLOSED`. Review đã hoàn thành không còn là review mở. Thứ tự kiểm tra: danh tính, vai trò, truy cập (Customer luôn 404 với tài nguyên review, Agent 403), rồi trạng thái, rồi nội dung (422), theo BR-33 và BR-54.

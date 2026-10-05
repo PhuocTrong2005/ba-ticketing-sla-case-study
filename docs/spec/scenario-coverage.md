@@ -21,7 +21,7 @@ Mỗi ca phải có ID, mô tả, `policy_id`, `created_at`, `as_of`, và `event
 | 9 | Vi phạm và hết ngân sách: đã vi phạm trước Waiting, Resolved hoặc lúc nhận; vi phạm không bị xóa. Từ chối với 0 giây còn lại: TRONG giờ → deadline bằng thời điểm ticket quay lại In Progress (BR-46); NGOÀI giờ → deadline bằng bắt đầu phiên làm việc kế tiếp: 08:00:00 cùng ngày nếu thời điểm đó trước 08:00 của một ngày làm việc; ngược lại 08:00:00 của ngày làm việc kế tiếp (BR-38). | |
 | 10 | Thời điểm đánh giá và dữ liệu: đánh giá tại `as_of` khi đang chạy, Waiting, Resolved; snapshot lúc nhận; hai đồng hồ có kết quả khác nhau; lưu khoảng chạy 0 giây; sự kiện cùng giây theo `event_id`. | |
 | 11 | Ngưỡng cảnh báo áp dụng cho cả hai đồng hồ SLA đang chạy: còn đúng 3.600 giây chưa cảnh báo; 3.599 cảnh báo nhẹ; đúng 900 vẫn nhẹ; 899 nhấn mạnh; đúng deadline “đến hạn”; sau 1 giây vi phạm; tạm dừng/hoàn tất không cảnh báo. Có ca High phản hồi đầu tại thời điểm tạo (còn đúng 3.600 giây → chưa cảnh báo) và sau 1 giây (3.599 → cảnh báo nhẹ). | |
-| 12 | Escalation: từ chối lần 1, 2 không tạo review; lần 3 tạo review; lần 4, 5 tạo review mới; Agent báo Resolved khi review mở (`REVIEW_REQUIRED`); báo Resolved sau khi Manager ghi phương án; chờ Manager theo giờ lịch và phần trùng SLA đang chạy trong giờ làm việc; SLA vi phạm trước yêu cầu review và vi phạm trong lúc chờ; review chưa hoàn thành tính đến `as_of`; review hoàn thành sau `as_of` vẫn mở tại `as_of`; SLA không đổi do chờ Manager. | |
+| 12 | Escalation: từ chối lần 1, 2 không tạo review; lần 3 tạo review; lần 4, 5 tạo review mới; Agent báo Resolved khi review mở (`REVIEW_REQUIRED`); báo Resolved sau khi Manager ghi phương án; Agent chuyển Waiting khi review mở; Manager ghi phương án khi ticket ở Waiting; Customer trả lời làm ticket về In Progress, review vẫn mở và Resolved vẫn bị chặn; Manager ghi phương án khi không có review mở (`INVALID_TICKET_STATE`) và khi ticket Closed (`TICKET_CLOSED`); chờ Manager theo giờ lịch và phần trùng SLA đang chạy trong giờ làm việc; SLA vi phạm trước yêu cầu review và vi phạm trong lúc chờ; review chưa hoàn thành tính đến `as_of`; review hoàn thành sau `as_of` vẫn mở tại `as_of`; SLA không đổi do chờ Manager. | |
 
 ## Điều kiện hoàn tất
 
@@ -29,4 +29,5 @@ Mỗi ca phải có ID, mô tả, `policy_id`, `created_at`, `as_of`, và `event
 - Một ca có thể phủ nhiều nhóm.
 - Mỗi ca ghi đầu vào, chuỗi sự kiện, `as_of`, `expected_*` và phép tính độc lập.
 - Chủ dự án tự kiểm tra và xác nhận `verified`; Codex không tự xác nhận.
-- Không còn nhóm trống; không bắt buộc số ca cố định.
+- Nhóm 1 đến 11 chặn logic tính SLA chính; nhóm 12 chặn logic tính bối cảnh M-07 (giây chờ theo giờ lịch, giây trùng SLA đang chạy, vi phạm trước/trong lúc chờ). Workflow review không bị chặn bởi các ca verified.
+- Điều kiện hoàn thành v1.0 cần đủ 12 nhóm có ca `verified`; không bắt buộc số ca cố định.

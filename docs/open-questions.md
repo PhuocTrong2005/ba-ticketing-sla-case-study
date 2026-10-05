@@ -2,10 +2,7 @@
 
 ## Đang mở
 
-| OQ | Câu hỏi / đề xuất |
-|---|---|
-| OQ-17 | Trong lúc review đang mở, Agent có được CHỦ ĐỘNG chuyển ticket sang Waiting for Customer không? Đề xuất (chưa chốt): được; chỉ Resolved bị chặn. Lưu ý: câu hỏi này không ngăn Manager ghi phương án cho review đang mở khi ticket đã ở Waiting hợp lệ. |
-| OQ-18 | Manager ghi phương án khi ticket không có review mở: mã lỗi nào? Đề xuất (chưa chốt): 409 `INVALID_TICKET_STATE` (Closed: `TICKET_CLOSED`). |
+Không có.
 
 ## Đã đóng
 
@@ -25,3 +22,5 @@
 | OQ-14 | BR-49, D-22 |
 | OQ-15 | BR-50, BR-51, D-23, D-24 |
 | OQ-16 | BR-49, D-22 |
+| OQ-17 | BR-57, D-31 |
+| OQ-18 | BR-58, D-32 |
