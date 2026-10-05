@@ -92,7 +92,7 @@ Các mức là dẫn xuất và không lưu. Áp dụng riêng cho từng đồn
 | `soft` | Còn từ 900 đến 3.599 giây làm việc. |
 | `emphasized` | Còn từ 1 đến 899 giây làm việc. |
 | `due` | Đúng deadline. |
-| `breached` | Sau deadline. |
+| `breached` | Sau deadline, gồm cả đồng hồ đã hoàn tất trễ. |
 
 ## Tiền tố mã tài liệu
 

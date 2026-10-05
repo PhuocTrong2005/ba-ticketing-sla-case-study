@@ -4,7 +4,19 @@ Tài liệu này quy định phạm vi và định dạng kịch bản SLA; khô
 
 ## Quy ước file kịch bản SLA
 
-Mỗi ca phải có ID, mô tả, `policy_id`, `created_at`, `as_of`, và `events` ở JSON cố định. Mỗi sự kiện có `seq`, `type`, `at` ở ISO 8601 `+07:00` đến giây. Quy ước sự kiện gồm `review_requested` và `review_completed`. Mỗi ca có các cột `expected_*`, gồm deadline, giây đã tiêu, giây còn lại, trạng thái của từng đồng hồ, `expected_first_response_warning_level`, `expected_resolution_warning_level`, `expected_first_response_sla_status_at_assignment`, `expected_resolution_sla_status_at_assignment`, `expected_manager_wait_calendar_seconds`, `expected_manager_wait_resolution_overlap_business_seconds`, `expected_resolution_breached_before_review` và `expected_resolution_breached_during_review`. Hai cột `expected_*_warning_level` dùng các giá trị `none`, `soft`, `emphasized`, `due`, `breached`; cùng `calculation_note` và `review_status` (`draft` hoặc `verified`). Mọi tính toán theo giây nguyên.
+Mỗi ca phải có ID, mô tả, `policy_id`, `created_at`, `as_of`, và `events` ở JSON cố định. Mỗi sự kiện có `seq`, `type`, `at` ở ISO 8601 `+07:00` đến giây, và có `at_raw` khi đầu vào có phần dưới giây. Quy ước sự kiện SLA gồm `agent_assigned`, `agent_public_reply`, `resolved`, `status_waiting`, `customer_public_message`; ngữ cảnh escalation còn gồm `review_requested` và `review_completed`. Mỗi ca có các trường `expected_*`: `first_response_due_at`, `resolution_due_at`, giây đã tiêu và còn lại, trạng thái, mức cảnh báo, và snapshot lúc nhận cho từng đồng hồ. `resolution_due_at` là `null` khi đang Waiting; deadline của đồng hồ hoàn tất là deadline áp dụng lúc hoàn tất. Các trường ngữ cảnh Manager chỉ dùng cho ca escalation. Hai trường `expected_*_warning_level` dùng các giá trị `none`, `soft`, `emphasized`, `due`, `breached`; cùng `calculation_note`, `review_status` (`draft` hoặc `verified`) và `blocked_by` nếu phụ thuộc câu hỏi mở. Mọi tính toán theo giây nguyên.
+
+## Ca đã soạn (draft)
+
+Các mã dưới đây chỉ là kịch bản `draft`, không phải verified; bảng “Mã kịch bản verified” bên dưới vẫn để trống.
+
+| Nhóm | Mã ca draft |
+|---:|---|
+| 1 | SLA-01…SLA-05 |
+| 2 | SLA-14…SLA-18 |
+| 3 | SLA-19…SLA-21 |
+| 4 | SLA-06…SLA-13 |
+| 6 | SLA-22…SLA-26 |
 
 ## Mười hai nhóm kịch bản tối thiểu
 

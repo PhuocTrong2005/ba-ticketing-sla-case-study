@@ -6,6 +6,10 @@ Khung truy vết này sẽ được bổ sung khi có yêu cầu, API/màn hình
 |---|---|---|---|---|---|
 | _Chưa lập_ | _Chưa lập_ | _Chưa lập_ | _Chưa lập_ | _Chưa có_ | Draft |
 | _Chưa lập_ | BR-39 | _Chưa lập_ | _Chưa lập_ | _Chưa có_ | Draft |
+| _Chưa lập_ | D-34; BR-39 | _Chưa lập_ | _Chưa lập_ | _Chưa có_ | Draft |
+| _Chưa lập_ | D-35; BR-39 | _Chưa lập_ | _Chưa lập_ | _Chưa có_ | Draft |
+| _Chưa lập_ | D-36; BR-25 | _Chưa lập_ | _Chưa lập_ | _Chưa có_ | Draft |
+| _Chưa lập_ | D-37 | _Chưa lập_ | _Chưa lập_ | _Chưa có_ | Draft |
 | _Chưa lập_ | BR-40 | _Chưa lập_ | _Chưa lập_ | _Chưa có_ | Draft |
 | _Chưa lập_ | BR-41 | _Chưa lập_ | _Chưa lập_ | _Chưa có_ | Draft |
 | _Chưa lập_ | BR-42 | _Chưa lập_ | _Chưa lập_ | _Chưa có_ | Draft |

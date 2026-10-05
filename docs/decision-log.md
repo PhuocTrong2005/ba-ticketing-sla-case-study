@@ -35,5 +35,9 @@
 | D-31 | Agent được chuyển Waiting khi review mở (BR-57). | Chặn mọi chuyển trạng thái khi review mở. | Chưa ghi nhận lý do của chủ dự án; chủ dự án chấp nhận đề xuất của cố vấn. | Đã chốt |
 | D-32 | Mã lỗi Manager ghi phương án khi không có review mở theo BR-58. | Chưa ghi nhận. | Chủ dự án chấp nhận đề xuất của cố vấn. | Đã chốt |
 | D-33 | Tách điều kiện chặn: nhóm 1 đến 11 chặn logic tính SLA chính; nhóm 12 chặn logic tính bối cảnh M-07; workflow review không bị chặn. Điều kiện hoàn thành v1.0 vẫn cần đủ 12 nhóm có ca verified. | Để 12 nhóm cùng chặn toàn bộ logic SLA. | Chủ dự án ủy quyền, cố vấn đề xuất: escalation không đổi cách tính SLA (BR-56); phần tính bối cảnh M-07 là phép tính mới cần đáp án riêng. | Đã chốt |
+| D-34 | BR-39: hoàn tất trễ hiển thị `breached`. | `none` cho đồng hồ hoàn tất. | Chủ dự án chọn khi rà ca SLA-09. | Đã chốt |
+| D-35 | BR-39: cảnh báo theo giây làm việc còn lại, không phụ thuộc `as_of` trong/ngoài giờ. | Chưa ghi nhận. | Chủ dự án chọn khi rà ca SLA-12. | Đã chốt |
+| D-36 | BR-25: cắt phần dưới giây, không làm tròn; đầu vào thô lưu riêng. | Làm tròn. | Chủ dự án chọn khi rà ca SLA-13. | Đã chốt |
+| D-37 | Định dạng file kịch bản là JSON (`tests/sla/sla-scenarios.json`), vì JSON lồng trong CSV dễ hỏng khi sửa bằng Excel. | Chưa ghi nhận. | Chủ dự án ủy quyền, cố vấn đề xuất. | Đã chốt |
 
 Đề xuất mới không thuộc lịch sử quyết định này phải được ghi vào [open-questions.md](open-questions.md) đến khi chủ dự án chốt.
