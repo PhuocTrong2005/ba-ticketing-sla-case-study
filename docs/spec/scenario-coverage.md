@@ -10,6 +10,8 @@ Mỗi ca phải có ID, mô tả, `policy_id`, `created_at`, `as_of`, và `event
 
 Các mã dưới đây chỉ là kịch bản `draft`, không phải verified; bảng “Mã kịch bản verified” bên dưới vẫn để trống.
 
+SLA-17 và SLA-18 minh họa BR-59 và vẫn là ca `draft`.
+
 | Nhóm | Mã ca draft |
 |---:|---|
 | 1 | SLA-01…SLA-05 |

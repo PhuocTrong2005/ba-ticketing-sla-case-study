@@ -39,5 +39,6 @@
 | D-35 | BR-39: cảnh báo theo giây làm việc còn lại, không phụ thuộc `as_of` trong/ngoài giờ. | Chưa ghi nhận. | Chủ dự án chọn khi rà ca SLA-12. | Đã chốt |
 | D-36 | BR-25: cắt phần dưới giây, không làm tròn; đầu vào thô lưu riêng. | Làm tròn. | Chủ dự án chọn khi rà ca SLA-13. | Đã chốt |
 | D-37 | Định dạng file kịch bản là JSON (`tests/sla/sla-scenarios.json`), vì JSON lồng trong CSV dễ hỏng khi sửa bằng Excel. | Chưa ghi nhận. | Chủ dự án ủy quyền, cố vấn đề xuất. | Đã chốt |
+| D-38 | BR-59: thao tác ngoài giờ vẫn được ghi nhận nếu SLA chưa đến hạn; sau deadline vẫn ghi nhận nhưng breached. | Chưa ghi nhận. | Chủ dự án chọn khi rà SLA-17/SLA-18; cách diễn đạt “sau deadline vẫn ghi nhận nhưng breached” suy từ quyết định SLA-09 (D-34), cần chủ dự án xác nhận. | Đã chốt |
 
 Đề xuất mới không thuộc lịch sử quyết định này phải được ghi vào [open-questions.md](open-questions.md) đến khi chủ dự án chốt.

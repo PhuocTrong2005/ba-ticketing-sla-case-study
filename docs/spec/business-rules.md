@@ -9,7 +9,7 @@ Nguồn sự thật nghiệp vụ của case study hệ thống quản lý ticke
 3. [Vòng đời ticket](#vòng-đời-ticket)
 4. [Tin nhắn](#tin-nhắn)
 5. [Nhận ticket và tải](#nhận-ticket-và-tải)
-6. [SLA](#sla)
+6. [SLA (BR-17…BR-59)](#sla)
 7. [Dữ liệu và khả năng dựng lại](#dữ-liệu-và-khả-năng-dựng-lại)
 8. [Hiển thị](#hiển-thị)
 9. [API, quyền và lỗi](#api-quyền-và-lỗi)
@@ -103,6 +103,8 @@ Nguồn sự thật nghiệp vụ của case study hệ thống quản lý ticke
 **BR-38 — Tiếp tục sau từ chối ngoài giờ.** Khi Customer từ chối và ticket quay về In Progress ngoài giờ làm việc, deadline giải quyết mới = (bắt đầu phiên làm việc kế tiếp: 08:00:00 cùng ngày nếu thời điểm đó trước 08:00 của một ngày làm việc; ngược lại 08:00:00 của ngày làm việc kế tiếp) + ngân sách còn lại. Với ngân sách còn lại bằng 0 giây, deadline bằng đúng bắt đầu phiên làm việc kế tiếp: 08:00:00 cùng ngày nếu thời điểm đó trước 08:00 của một ngày làm việc; ngược lại 08:00:00 của ngày làm việc kế tiếp. Ticket là breached khi `as_of` > deadline; hoàn thành đúng deadline vẫn đạt. Nếu đã breached trước đó thì giữ breached. Không cấp thêm thời gian.
 
 **BR-39 — Ngưỡng cảnh báo SLA.** Ngưỡng áp dụng cho cả hai đồng hồ SLA khi đang chạy; mỗi đồng hồ tính theo số giây làm việc còn lại của chính nó. Khi đồng hồ SLA đang chạy, còn dưới 3.600 giây làm việc thì cảnh báo nhẹ; còn dưới 900 giây thì nhấn mạnh. Đúng 3.600 giây chưa cảnh báo; 3.599 giây cảnh báo nhẹ; đúng 900 giây vẫn cảnh báo nhẹ; 899 giây nhấn mạnh; đúng deadline hiển thị “đến hạn”; sau deadline 1 giây hiển thị “vi phạm”. Đồng hồ tạm dừng không phát cảnh báo sắp đến hạn; đồng hồ hoàn tất đạt (met) không phát cảnh báo. Mức `breached` cũng hiển thị cho đồng hồ đã hoàn tất trễ. Mức cảnh báo tính theo số giây làm việc còn lại, không phụ thuộc `as_of` nằm trong hay ngoài giờ làm việc. Khi đồng hồ tạm dừng, thời gian còn lại vẫn được hiển thị theo BR-24; chỉ mức cảnh báo bị tắt.
+
+**BR-59 — Thao tác ngoài giờ.** Thao tác của Agent hoặc Customer ngoài giờ làm việc vẫn được ghi nhận với timestamp thực (BR-27); không giây ngoài giờ nào được cộng vào SLA (BR-17). Kết quả đạt hoặc trễ vẫn xác định theo BR-22: thao tác có thời điểm không sau deadline là met; thao tác sau deadline vẫn được ghi nhận nhưng là breached.
 
 **BR-46 — Từ chối trong giờ với ngân sách 0 giây.** Khi Customer từ chối trong giờ làm việc và ngân sách còn lại bằng 0 giây, deadline bằng đúng thời điểm ticket quay lại In Progress; ticket là breached khi `as_of` > deadline. Ngoài giờ áp dụng BR-38, gồm quy tắc bắt đầu phiên làm việc kế tiếp.
 

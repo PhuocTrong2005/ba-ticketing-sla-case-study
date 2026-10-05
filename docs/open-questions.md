@@ -2,9 +2,7 @@
 
 ## Đang mở
 
-| OQ | Câu hỏi / đề xuất |
-|---|---|
-| OQ-19 | Agent hoặc Customer thao tác ngoài giờ làm việc có được ghi nhận không? Đề xuất (chưa chốt): được, ghi timestamp thực, không cộng giây vào SLA. SLA-17 và SLA-18 phụ thuộc OQ-19, giữ `draft` và đánh dấu `blocked_by: OQ-19`. |
+Không có.
 
 ## Đã đóng
 
@@ -26,3 +24,4 @@
 | OQ-16 | BR-49, D-22 |
 | OQ-17 | BR-57, D-31 |
 | OQ-18 | BR-58, D-32 |
+| OQ-19 | BR-59, D-38 |
