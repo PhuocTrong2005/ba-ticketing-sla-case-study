@@ -104,6 +104,9 @@ Các mức là dẫn xuất và không lưu. Áp dụng riêng cho từng đồn
 | `API` | API requirement/contract |
 | `TC` | Test case |
 | `A` | Acceptance criterion |
+| `G` | Mục tiêu |
+| `AS` | Giả định |
+| `C` | Ràng buộc |
 | `D` | Decision log |
 | `M` | Metric báo cáo |
 | `BR` | Business rule |
