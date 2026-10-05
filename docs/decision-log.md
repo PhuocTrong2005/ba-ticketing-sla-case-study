@@ -26,5 +26,11 @@
 | D-22 | Mức cảnh báo SLA là thông tin nội bộ theo BR-49; Customer không thấy mức cảnh báo. | Customer thấy mức cảnh báo. | Cố vấn, chưa xác nhận: cảnh báo là công cụ nội bộ, tránh gây hiểu lầm cho khách. | Đã chốt |
 | D-23 | Mã lỗi thao tác Customer và xem chi tiết Agent theo BR-50. | Chưa ghi nhận. | Chủ dự án chấp nhận đề xuất của cố vấn. | Đã chốt |
 | D-24 | Nhận ticket Closed trả `TICKET_CLOSED` theo BR-51. | `TICKET_ALREADY_ASSIGNED` cho ticket Closed. | Chủ dự án chấp nhận đề xuất của cố vấn. | Đã chốt |
+| D-25 | Làm rõ BR-23: dùng tổng giây đã tiêu để xác định ngân sách còn lại và deadline, sau đó đánh giá theo deadline áp dụng. | So trực tiếp giây đã tiêu với ngân sách. | Phát hiện khi rà soát: deadline 17:00:00, hoàn thành 17:00:01 vẫn breached; chủ dự án chấp nhận sửa. Wording được chỉnh thêm để xử lý Waiting/Resolved. | Đã chốt |
+| D-26 | Thêm escalation bằng lượt review của Manager và cờ, giữ năm trạng thái. | Thêm trạng thái thứ sáu; chuyển Agent, nhóm kỹ thuật hay phân công mới (ngoài phạm vi v1.0). | Chủ dự án (diễn đạt lại): lặp lại cách xử lý cũ sau nhiều lần bị từ chối không giải quyết được vấn đề của khách. | Đã chốt |
+| D-27 | Kích hoạt từ lần từ chối thứ 3; mỗi lần từ đó tạo một review; ngưỡng 3 là cấu hình demo. | Chỉ kích hoạt từ lần thứ 4. | Cố vấn, chưa xác nhận: khách đã từ chối kết quả ba lần không nên chờ thêm một vòng. Chủ dự án chọn phương án này. | Đã chốt |
+| D-28 | Quyền Manager từ chỉ đọc sang ghi phương án cho review đang mở (BR-05, BR-54). | Chưa ghi nhận. | Chủ dự án đề xuất. | Đã chốt |
+| D-29 | SLA không đổi khi chờ Manager; báo cáo M-07 tách bối cảnh theo `as_of`. | Chưa ghi nhận. | Chủ dự án đề xuất; chi tiết M-07 do rà soát bổ sung. | Đã chốt |
+| D-30 | Hỗ trợ chuyên môn chỉ là cờ và ghi chú nội bộ; phối hợp ngoài hệ thống. | Chưa ghi nhận. | Chủ dự án đề xuất. | Đã chốt |
 
 Đề xuất mới không thuộc lịch sử quyết định này phải được ghi vào [open-questions.md](open-questions.md) đến khi chủ dự án chốt.

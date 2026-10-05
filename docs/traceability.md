@@ -18,3 +18,8 @@ Khung truy vết này sẽ được bổ sung khi có yêu cầu, API/màn hình
 | _Chưa lập_ | BR-49 | _Chưa lập_ | _Chưa lập_ | _Chưa có_ | Draft |
 | _Chưa lập_ | BR-50 | _Chưa lập_ | _Chưa lập_ | _Chưa có_ | Draft |
 | _Chưa lập_ | BR-51 | _Chưa lập_ | _Chưa lập_ | _Chưa có_ | Draft |
+| _Chưa lập_ | BR-52 | _Chưa lập_ | _Chưa lập_ | _Chưa có_ | Draft |
+| _Chưa lập_ | BR-53 | _Chưa lập_ | _Chưa lập_ | _Chưa có_ | Draft |
+| _Chưa lập_ | BR-54 | _Chưa lập_ | _Chưa lập_ | _Chưa có_ | Draft |
+| _Chưa lập_ | BR-55 | _Chưa lập_ | _Chưa lập_ | _Chưa có_ | Draft |
+| _Chưa lập_ | BR-56; M-07 | _Chưa lập_ | _Chưa lập_ | _Chưa có_ | Draft |

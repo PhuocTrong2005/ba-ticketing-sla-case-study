@@ -4,9 +4,9 @@ Tài liệu này quy định phạm vi và định dạng kịch bản SLA; khô
 
 ## Quy ước file kịch bản SLA
 
-Mỗi ca phải có ID, mô tả, `policy_id`, `created_at`, `as_of`, và `events` ở JSON cố định. Mỗi sự kiện có `seq`, `type`, `at` ở ISO 8601 `+07:00` đến giây. Mỗi ca có các cột `expected_*`, gồm deadline, giây đã tiêu, giây còn lại, trạng thái của từng đồng hồ, `expected_first_response_warning_level`, `expected_resolution_warning_level`, `expected_first_response_sla_status_at_assignment` và `expected_resolution_sla_status_at_assignment`. Hai cột `expected_*_warning_level` dùng các giá trị `none`, `soft`, `emphasized`, `due`, `breached`; cùng `calculation_note` và `review_status` (`draft` hoặc `verified`). Mọi tính toán theo giây nguyên.
+Mỗi ca phải có ID, mô tả, `policy_id`, `created_at`, `as_of`, và `events` ở JSON cố định. Mỗi sự kiện có `seq`, `type`, `at` ở ISO 8601 `+07:00` đến giây. Quy ước sự kiện gồm `review_requested` và `review_completed`. Mỗi ca có các cột `expected_*`, gồm deadline, giây đã tiêu, giây còn lại, trạng thái của từng đồng hồ, `expected_first_response_warning_level`, `expected_resolution_warning_level`, `expected_first_response_sla_status_at_assignment`, `expected_resolution_sla_status_at_assignment`, `expected_manager_wait_calendar_seconds`, `expected_manager_wait_resolution_overlap_business_seconds`, `expected_resolution_breached_before_review` và `expected_resolution_breached_during_review`. Hai cột `expected_*_warning_level` dùng các giá trị `none`, `soft`, `emphasized`, `due`, `breached`; cùng `calculation_note` và `review_status` (`draft` hoặc `verified`). Mọi tính toán theo giây nguyên.
 
-## Mười một nhóm kịch bản tối thiểu
+## Mười hai nhóm kịch bản tối thiểu
 
 | Nhóm | Phạm vi | Mã kịch bản verified |
 |---:|---|---|
@@ -17,10 +17,11 @@ Mỗi ca phải có ID, mô tả, `policy_id`, `created_at`, `as_of`, và `event
 | 5 | Phản hồi đầu: tin nhắn khách và ghi chú nội bộ không tính; chỉ phản hồi công khai đầu tiên của Agent; nội dung Resolved có thể là phản hồi đầu; khách từ chối không đổi kết quả này. | |
 | 6 | Waiting for Customer: một hoặc nhiều lần; vào/ra ngoài giờ hoặc qua cuối tuần; không cộng thời gian chờ; tiếp tục đúng ngân sách còn lại; thời điểm trước 08:00 của một ngày làm việc (phiên bắt đầu cùng ngày). | |
 | 7 | Resolved và Closed: Resolved đúng hạn/trễ; khách xác nhận muộn hoặc chưa xác nhận; thời gian ở Resolved không cộng SLA; kết quả chỉ xác nhận cuối khi Closed. | |
-| 8 | Từ chối kết quả: một hoặc nhiều lần; ngoài giờ; xen kẽ Waiting; giữ ngân sách còn lại, không reset hoặc nhân đôi. | |
+| 8 | Từ chối kết quả: một hoặc nhiều lần, gồm từ chối lần thứ 3 trở đi; ngoài giờ; xen kẽ Waiting; giữ ngân sách còn lại, không reset hoặc nhân đôi. | |
 | 9 | Vi phạm và hết ngân sách: đã vi phạm trước Waiting, Resolved hoặc lúc nhận; vi phạm không bị xóa. Từ chối với 0 giây còn lại: TRONG giờ → deadline bằng thời điểm ticket quay lại In Progress (BR-46); NGOÀI giờ → deadline bằng bắt đầu phiên làm việc kế tiếp: 08:00:00 cùng ngày nếu thời điểm đó trước 08:00 của một ngày làm việc; ngược lại 08:00:00 của ngày làm việc kế tiếp (BR-38). | |
 | 10 | Thời điểm đánh giá và dữ liệu: đánh giá tại `as_of` khi đang chạy, Waiting, Resolved; snapshot lúc nhận; hai đồng hồ có kết quả khác nhau; lưu khoảng chạy 0 giây; sự kiện cùng giây theo `event_id`. | |
 | 11 | Ngưỡng cảnh báo áp dụng cho cả hai đồng hồ SLA đang chạy: còn đúng 3.600 giây chưa cảnh báo; 3.599 cảnh báo nhẹ; đúng 900 vẫn nhẹ; 899 nhấn mạnh; đúng deadline “đến hạn”; sau 1 giây vi phạm; tạm dừng/hoàn tất không cảnh báo. Có ca High phản hồi đầu tại thời điểm tạo (còn đúng 3.600 giây → chưa cảnh báo) và sau 1 giây (3.599 → cảnh báo nhẹ). | |
+| 12 | Escalation: từ chối lần 1, 2 không tạo review; lần 3 tạo review; lần 4, 5 tạo review mới; Agent báo Resolved khi review mở (`REVIEW_REQUIRED`); báo Resolved sau khi Manager ghi phương án; chờ Manager theo giờ lịch và phần trùng SLA đang chạy trong giờ làm việc; SLA vi phạm trước yêu cầu review và vi phạm trong lúc chờ; review chưa hoàn thành tính đến `as_of`; review hoàn thành sau `as_of` vẫn mở tại `as_of`; SLA không đổi do chờ Manager. | |
 
 ## Điều kiện hoàn tất
 

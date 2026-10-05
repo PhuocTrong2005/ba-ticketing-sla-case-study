@@ -27,7 +27,7 @@ Sẽ cập nhật sau khi các kịch bản SLA verified tối thiểu được 
 
 Hiện repository có tài liệu nền, decision log, open questions và khung cấu trúc. Chưa có prototype, backend, SQL, test hoặc workflow thực thi. Khi được xây dựng, prototype sẽ mô phỏng dữ liệu trong trình duyệt; backend là mô phỏng dùng dữ liệu demo cố định, không có đăng nhập thật.
 
-Giới hạn đã biết: Ticket High có SLA phản hồi đầu 3.600 giây; ngưỡng cảnh báo cố định 3.600 giây nên cảnh báo nhẹ xuất hiện sau giây làm việc đầu tiên (còn 3.599 giây) và gần như toàn bộ thời hạn phản hồi đầu của High ở trạng thái cảnh báo. SLA phản hồi đầu Normal 7.200 giây: 3.600 giây đầu chưa cảnh báo. Từ chối trong giờ với ngân sách 0 giây khiến ticket thành breached ngay sau thời điểm quay lại; M-02/M-03 chỉ gồm ticket Closed trong kỳ nên ticket chưa Closed chưa được tính và báo cáo có dòng “Còn N ticket chưa Closed, chưa tính vào các tỷ lệ này”.
+Giới hạn đã biết: Ticket High có SLA phản hồi đầu 3.600 giây; ngưỡng cảnh báo cố định 3.600 giây nên cảnh báo nhẹ xuất hiện sau giây làm việc đầu tiên (còn 3.599 giây) và gần như toàn bộ thời hạn phản hồi đầu của High ở trạng thái cảnh báo. SLA phản hồi đầu Normal 7.200 giây: 3.600 giây đầu chưa cảnh báo. Từ chối trong giờ với ngân sách 0 giây khiến ticket thành breached ngay sau thời điểm quay lại; M-02/M-03 chỉ gồm ticket Closed trong kỳ nên ticket chưa Closed chưa được tính và báo cáo có dòng “Còn N ticket chưa Closed, chưa tính vào các tỷ lệ này”. Escalation dùng một Manager demo, không có người thay thế; không bảo đảm giải quyết triệt để vì Customer vẫn là người xác nhận Closed. Hỗ trợ chuyên môn chỉ là cờ và ghi chú nội bộ; ngưỡng từ chối 3 là cấu hình demo.
 
 ## Roadmap (ngoài phạm vi v1.0)
 

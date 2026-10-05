@@ -2,7 +2,10 @@
 
 ## Đang mở
 
-Không có.
+| OQ | Câu hỏi / đề xuất |
+|---|---|
+| OQ-17 | Trong lúc review đang mở, Agent có được CHỦ ĐỘNG chuyển ticket sang Waiting for Customer không? Đề xuất (chưa chốt): được; chỉ Resolved bị chặn. Lưu ý: câu hỏi này không ngăn Manager ghi phương án cho review đang mở khi ticket đã ở Waiting hợp lệ. |
+| OQ-18 | Manager ghi phương án khi ticket không có review mở: mã lỗi nào? Đề xuất (chưa chốt): 409 `INVALID_TICKET_STATE` (Closed: `TICKET_CLOSED`). |
 
 ## Đã đóng
 

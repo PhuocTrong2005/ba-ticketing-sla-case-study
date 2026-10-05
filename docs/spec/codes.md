@@ -48,6 +48,7 @@ Tài liệu này quy định các mã dùng thống nhất trong case study. Ngu
 | 409 | `TICKET_ALREADY_ASSIGNED` | Ticket đã được nhận. |
 | 409 | `AGENT_CAPACITY_REACHED` | Agent đạt giới hạn tải. |
 | 409 | `TICKET_CLOSED` | Ticket đã Closed. |
+| 409 | `REVIEW_REQUIRED` | Agent chuyển Resolved khi còn review chưa hoàn thành. |
 | 422 | — | Dữ liệu sai/thiếu; gồm nội dung hoặc lý do bắt buộc. FastAPI có thể trả 422 do payload sai cấu trúc trước handler. |
 
 Mọi trường hợp mã lỗi hiện đã chốt tại [business-rules.md](business-rules.md); điểm mới phải ghi vào [open-questions.md](../open-questions.md).
@@ -65,6 +66,21 @@ Mọi trường hợp mã lỗi hiện đã chốt tại [business-rules.md](bus
 |---|---|---|
 | `first_response_breached` | boolean, dẫn xuất | Cờ cho biết đồng hồ phản hồi đầu đã breached. |
 | `resolution_breached` | boolean, dẫn xuất | Cờ cho biết đồng hồ giải quyết đã breached. |
+
+## Trường escalation và review
+
+| Trường | Kiểu | Ý nghĩa |
+|---|---|---|
+| `rejection_count` | số nguyên, dẫn xuất | Số lần Customer từ chối ở Resolved, cộng dồn từ `ticket_events`. |
+| `needs_manager_review` | boolean, dẫn xuất | Đúng khi ticket có review đang mở. |
+| `review_requested_at` | timestamp | Thời điểm bắt đầu yêu cầu review và chặn Resolved. |
+| `review_completed_at` | timestamp hoặc `null` | Thời điểm Manager ghi phương án hợp lệ và gỡ chặn. |
+| `reviewed_by` | định danh Manager hoặc `null` | Manager đã ghi phương án. |
+| `handling_plan` | cấu trúc nội bộ | Gồm nguyên nhân chưa giải quyết được, hướng xử lý tiếp theo, `needs_expert_input` và ghi chú ý kiến chuyên môn tùy chọn. |
+| `resolution_cycle_id` | định danh | Lượt xử lý gắn với review. |
+| `needs_expert_input` | boolean | Cờ nội bộ, không tạo hành động hệ thống. |
+
+Các trường escalation và review không có trong phản hồi dành cho Customer.
 
 ## Mức hiển thị cảnh báo SLA
 
