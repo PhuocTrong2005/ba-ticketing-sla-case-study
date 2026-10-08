@@ -2,7 +2,9 @@
 
 Khung truy vết này sẽ được bổ sung khi có yêu cầu, API/màn hình, kịch bản verified và bằng chứng hợp lệ. Không tự tạo bằng chứng hay gán trạng thái verified.
 
-Nhập ngày 08/10/2026: S1–S12 → SLA-70…SLA-81 đều draft; [ánh xạ nhóm/nhánh](spec/scenario-coverage.md#nhập-s1s12-ngày-08102026--draft-chưa-mở-gate) và [báo cáo nhập](../tests/evidence/sla-draft-import.md). 69 object verified không đổi. Kiểm tra cấu trúc mới 12/12 không phải PASS SLA/API; checker gốc chỉ chạy được 69 ca cũ. A1/A2 và HTTP REVIEW_REQUIRED của SLA-81 chờ API test. Gate SLA chính/M-07 chưa được xác nhận mở; không đổi trạng thái stories/FR/NFR.
+Sau xác nhận ngày 08/10/2026, fixture có **SLA-01…SLA-81 verified**. Chủ dự án xác nhận SLA-70…SLA-81 qua hội thoại; Codex chạy checker tham chiếu 81/81 PASS, 1.460 phép so sánh và [audit cấu trúc](../tests/evidence/sla-fixture-current-audit.json) 81/81 PASS. [Báo cáo hiện hành](../tests/evidence/sla-verification-81.md) phân biệt xác nhận, đối chiếu fixture và các kiểm thử implementation chưa có. Gate SLA chính còn chặn bởi hai biến thể Waiting; gate tính bối cảnh M-07 đủ điều kiện viết logic theo D-33. A1/A2 và HTTP `REVIEW_REQUIRED` chờ API test. Chưa gán test backend hoặc trạng thái duyệt cho stories/FR/NFR.
+
+Lịch sử lúc nhập nháp ngày 08/10/2026: S1–S12 → SLA-70…SLA-81 khi đó đều draft; [ánh xạ nhóm/nhánh](spec/scenario-coverage.md#nhập-s1s12-ngày-08102026--draft-chưa-mở-gate) và [báo cáo nhập](../tests/evidence/sla-draft-import.md) giữ nguyên trạng thái tại thời điểm đó. 69 object verified không đổi. Kiểm tra cấu trúc mới 12/12 lúc đó không phải PASS SLA/API; checker gốc chỉ chạy được 69 ca cũ. Kết luận hiện hành ở đoạn trên.
 
 | Yêu cầu (US/FR/NFR) | Quy tắc (BR) | API / màn hình | Test (TC) | Bằng chứng | Trạng thái |
 |---|---|---|---|---|---|

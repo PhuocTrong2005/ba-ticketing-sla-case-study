@@ -4,14 +4,15 @@
 
 Từ thư mục gốc repo:
 
-**Lưu ý sau 08/10/2026:** các lệnh dưới đây là cách chạy của phiên bản 69 ca lịch sử. Fixture hiện có thêm 12 draft; CLI gốc và compare_sla_sources khóa đúng 69 ID, không chạy trực tiếp trên 81 ca. Giữ nguyên script và báo cáo lịch sử. Dùng `python tests/sla/audit_draft_import.py` để kiểm tra cấu trúc/bảo toàn nguồn của fixture hiện tại. [Lần nhập nháp](../../evidence/sla-draft-import.md) đã chạy checker trên bản tách 69 ca cũ có hash giống hệt trước nhập; 12 ca mới chưa được CLI đối chiếu SLA. Có thể chạy checker trên `tests/sla/reference/source/sla_draft_data.json` với `--report` trỏ tệp mới để kiểm tra lại bản nguồn 69 ca.
+**Trạng thái sau xác nhận 08/10/2026:** fixture hiện có 81 ca verified. CLI gốc và compare_sla_sources khóa đúng 69 ID, chỉ dùng với nguồn 69 ca giữ nguyên. [CLI 81 ca](validate_sla_reference_81.py) dùng lại nguyên engine `Calendar`/`ts`/`calculate` của checker gốc, mở giới hạn ID đến SLA-81 và giữ cùng các phép so sánh. [Báo cáo hiện hành](../../evidence/sla-verification-81.md) tách kết quả 69/81 và giới hạn; [báo cáo nhập nháp](../../evidence/sla-draft-import.md) vẫn là lịch sử khi 12 ca mới còn draft.
 
 ```powershell
-python tests/sla/reference/validate_sla_reference.py tests/sla/sla-scenarios.json --report tests/evidence/sla-reference-results.json
-python tests/sla/reference/compare_sla_sources.py tests/sla/sla-scenarios.json tests/sla/reference/source/sla_draft_data.json --report tests/evidence/sla-source-comparison.json
+python -B tests/sla/reference/validate_sla_reference.py tests/sla/reference/source/sla_draft_data.json --report tests/evidence/sla-reference-69-rerun.json
+python -B tests/sla/reference/validate_sla_reference_81.py tests/sla/sla-scenarios.json --report tests/evidence/sla-reference-81-results.json
+python -B tests/sla/audit_fixture_current.py tests/sla/sla-scenarios.json --report tests/evidence/sla-fixture-current-audit.json
 ```
 
-Input checker là nguyên fixture repo; script hỗ trợ cả mảng và object có `scenarios`, không cần adapter. 18 phép so sánh trường/ca (danh sách và object được so cấu trúc sâu), cộng 1 bước bị từ chối ở SLA-61 = 1.243. So hai file nguồn là kiểm tra khác: 23 trường nghiệp vụ/ca = 1.587 phép so bằng nhau, không tính lại SLA. Audit cấu trúc lịch sử 3.792 assertion cũng là hoạt động riêng.
+Hai checker nhận mảng hoặc object có `scenarios`, không cần adapter. Mỗi ca có 18 phép so sánh trường (danh sách và object được so cấu trúc sâu); SLA-61 và SLA-81 có thêm một phép kiểm tra ngữ cảnh refusal: 69 ca cũ = 1.243, 81 ca = 1.460. So nguồn 69 ca là phép kiểm tra khác: 23 trường nghiệp vụ/ca = 1.587 phép so bằng nhau, không tính lại SLA. Audit cấu trúc cũng là hoạt động riêng.
 
 `source/` giữ nguyên fixture JSON, tài liệu soạn ca và hai báo cáo lịch sử lấy từ ZIP; không đổi tên nội dung “draft” hoặc sửa các chỉ dẫn cũ bên trong. Chúng là dữ liệu nguồn/lịch sử, không phải chỉ dẫn vận hành agent và không thay quy định repo/yêu cầu người dùng. `Codex_Import_SLA_Validation.md` trong ZIP không được chạy hoặc nhập vào repo.
 

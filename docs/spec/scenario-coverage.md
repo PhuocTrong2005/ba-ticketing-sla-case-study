@@ -32,17 +32,17 @@ SLA-17 và SLA-18 minh họa BR-59. Bộ SLA-01…SLA-69 được chủ dự án
 | Nhóm | Phạm vi | Mã kịch bản verified |
 |---:|---|---|
 | 1 | Luồng cơ bản: High và Normal; tính riêng SLA phản hồi đầu và giải quyết; cả hai bắt đầu từ lúc tạo. | SLA-01…SLA-05 |
-| 2 | Ngoài giờ: tạo trước 08:00, sau 17:00; Agent nhận, phản hồi hoặc Resolved ngoài giờ; không cộng thời gian ngoài lịch; thời điểm trước 08:00 của một ngày làm việc (phiên bắt đầu cùng ngày). | SLA-14…SLA-18 |
-| 3 | Qua ngày và cuối tuần: chạy qua đêm, từ Thứ Sáu sang Thứ Hai; tạo ticket vào Thứ Bảy/Chủ nhật. | SLA-19…SLA-21 |
+| 2 | Ngoài giờ: tạo trước 08:00, sau 17:00; Agent nhận, phản hồi hoặc Resolved ngoài giờ; không cộng thời gian ngoài lịch; thời điểm trước 08:00 của một ngày làm việc (phiên bắt đầu cùng ngày). | SLA-14…SLA-18; SLA-70 |
+| 3 | Qua ngày và cuối tuần: chạy qua đêm, từ Thứ Sáu sang Thứ Hai; tạo ticket vào Thứ Bảy/Chủ nhật. | SLA-19…SLA-21; SLA-70 |
 | 4 | Mốc biên và độ chính xác: tạo đúng 08:00/17:00; hoàn thành trước deadline 1 giây, đúng deadline, sau 1 giây; deadline đúng 17:00 không bị đẩy sang hôm sau; ghi nhận timestamp có phần dưới giây bị cắt bỏ (ví dụ `17:00:00.900` → `17:00:00`). | SLA-06…SLA-13 |
-| 5 | Phản hồi đầu: tin nhắn khách và ghi chú nội bộ không tính; chỉ phản hồi công khai đầu tiên của Agent; nội dung Resolved có thể là phản hồi đầu; khách từ chối không đổi kết quả này. | SLA-27…SLA-30 |
-| 6 | Waiting for Customer: một hoặc nhiều lần; vào/ra ngoài giờ hoặc qua cuối tuần; không cộng thời gian chờ; tiếp tục đúng ngân sách còn lại; thời điểm trước 08:00 của một ngày làm việc (phiên bắt đầu cùng ngày). | SLA-22…SLA-26; SLA-38; SLA-40; SLA-46…SLA-47; SLA-55 |
+| 5 | Phản hồi đầu: tin nhắn khách và ghi chú nội bộ không tính; chỉ phản hồi công khai đầu tiên của Agent; nội dung Resolved có thể là phản hồi đầu; khách từ chối không đổi kết quả này. | SLA-27…SLA-30; SLA-76 |
+| 6 | Waiting for Customer: một hoặc nhiều lần; vào/ra ngoài giờ hoặc qua cuối tuần; không cộng thời gian chờ; tiếp tục đúng ngân sách còn lại; thời điểm trước 08:00 của một ngày làm việc (phiên bắt đầu cùng ngày). | SLA-22…SLA-26; SLA-38; SLA-40; SLA-46…SLA-47; SLA-55; SLA-71…SLA-75; SLA-80…SLA-81 |
 | 7 | Resolved và Closed: Resolved đúng hạn/trễ; khách xác nhận muộn hoặc chưa xác nhận; thời gian ở Resolved không cộng SLA; kết quả chỉ xác nhận cuối khi Closed. | SLA-31…SLA-35 |
-| 8 | Từ chối kết quả: một hoặc nhiều lần, gồm từ chối lần thứ 3 trở đi; ngoài giờ; xen kẽ Waiting; giữ ngân sách còn lại, không reset hoặc nhân đôi. | SLA-36…SLA-39; SLA-60…SLA-64 |
-| 9 | Vi phạm và hết ngân sách: đã vi phạm trước Waiting, Resolved hoặc lúc nhận; vi phạm không bị xóa. Từ chối với 0 giây còn lại: TRONG giờ → deadline bằng thời điểm ticket quay lại In Progress (BR-46); NGOÀI giờ → deadline bằng bắt đầu phiên làm việc kế tiếp: 08:00:00 cùng ngày nếu thời điểm đó trước 08:00 của một ngày làm việc; ngược lại 08:00:00 của ngày làm việc kế tiếp (BR-38). | SLA-40…SLA-45; SLA-67…SLA-69 |
-| 10 | Thời điểm đánh giá và dữ liệu: đánh giá tại `as_of` khi đang chạy, Waiting, Resolved; snapshot lúc nhận; hai đồng hồ có kết quả khác nhau; lưu khoảng chạy 0 giây; sự kiện cùng giây theo `event_id`. | SLA-46…SLA-48; SLA-61; SLA-64 |
-| 11 | Ngưỡng cảnh báo áp dụng cho cả hai đồng hồ SLA đang chạy: còn đúng 3.600 giây chưa cảnh báo; 3.599 cảnh báo nhẹ; đúng 900 vẫn nhẹ; 899 nhấn mạnh; đúng deadline “đến hạn”; sau 1 giây vi phạm; tạm dừng/hoàn tất không cảnh báo. Có ca High phản hồi đầu tại thời điểm tạo (còn đúng 3.600 giây → chưa cảnh báo) và sau 1 giây (3.599 → cảnh báo nhẹ). | SLA-49…SLA-57 |
-| 12 | Escalation: từ chối lần 1, 2 không tạo review; lần 3 tạo review; lần 4, 5 tạo review mới; Agent báo Resolved khi review mở (`REVIEW_REQUIRED`); báo Resolved sau khi Manager ghi phương án; Agent chuyển Waiting khi review mở; Manager ghi phương án khi ticket ở Waiting; Customer trả lời làm ticket về In Progress, review vẫn mở và Resolved vẫn bị chặn; Manager ghi phương án khi không có review mở (`INVALID_TICKET_STATE`) và khi ticket Closed (`TICKET_CLOSED`); chờ Manager theo giờ lịch và phần trùng SLA đang chạy trong giờ làm việc; SLA vi phạm trước yêu cầu review và vi phạm trong lúc chờ; review chưa hoàn thành tính đến `as_of`; review hoàn thành sau `as_of` vẫn mở tại `as_of`; SLA không đổi do chờ Manager. | SLA-58…SLA-69 |
+| 8 | Từ chối kết quả: một hoặc nhiều lần, gồm từ chối lần thứ 3 trở đi; ngoài giờ; xen kẽ Waiting; giữ ngân sách còn lại, không reset hoặc nhân đôi. | SLA-36…SLA-39; SLA-60…SLA-64; SLA-76; SLA-79; SLA-81 |
+| 9 | Vi phạm và hết ngân sách: đã vi phạm trước Waiting, Resolved hoặc lúc nhận; vi phạm không bị xóa. Từ chối với 0 giây còn lại: TRONG giờ → deadline bằng thời điểm ticket quay lại In Progress (BR-46); NGOÀI giờ → deadline bằng bắt đầu phiên làm việc kế tiếp: 08:00:00 cùng ngày nếu thời điểm đó trước 08:00 của một ngày làm việc; ngược lại 08:00:00 của ngày làm việc kế tiếp (BR-38). | SLA-40…SLA-45; SLA-67…SLA-69; SLA-73…SLA-76 |
+| 10 | Thời điểm đánh giá và dữ liệu: đánh giá tại `as_of` khi đang chạy, Waiting, Resolved; snapshot lúc nhận; hai đồng hồ có kết quả khác nhau; lưu khoảng chạy 0 giây; sự kiện cùng giây theo `event_id`. | SLA-46…SLA-48; SLA-61; SLA-64; SLA-70; SLA-73; SLA-75…SLA-76 |
+| 11 | Ngưỡng cảnh báo áp dụng cho cả hai đồng hồ SLA đang chạy: còn đúng 3.600 giây chưa cảnh báo; 3.599 cảnh báo nhẹ; đúng 900 vẫn nhẹ; 899 nhấn mạnh; đúng deadline “đến hạn”; sau 1 giây vi phạm; tạm dừng/hoàn tất không cảnh báo. Có ca High phản hồi đầu tại thời điểm tạo (còn đúng 3.600 giây → chưa cảnh báo) và sau 1 giây (3.599 → cảnh báo nhẹ). | SLA-49…SLA-57; SLA-77…SLA-78 |
+| 12 | Escalation: từ chối lần 1, 2 không tạo review; lần 3 tạo review; lần 4, 5 tạo review mới; Agent báo Resolved khi review mở (`REVIEW_REQUIRED`); báo Resolved sau khi Manager ghi phương án; Agent chuyển Waiting khi review mở; Manager ghi phương án khi ticket ở Waiting; Customer trả lời làm ticket về In Progress, review vẫn mở và Resolved vẫn bị chặn; Manager ghi phương án khi không có review mở (`INVALID_TICKET_STATE`) và khi ticket Closed (`TICKET_CLOSED`); chờ Manager theo giờ lịch và phần trùng SLA đang chạy trong giờ làm việc; SLA vi phạm trước yêu cầu review và vi phạm trong lúc chờ; review chưa hoàn thành tính đến `as_of`; review hoàn thành sau `as_of` vẫn mở tại `as_of`; SLA không đổi do chờ Manager. | SLA-58…SLA-69; SLA-79…SLA-81 |
 
 ## Điều kiện hoàn tất
 
@@ -55,7 +55,7 @@ SLA-17 và SLA-18 minh họa BR-59. Bộ SLA-01…SLA-69 được chủ dự án
 
 ## Nhập S1–S12 ngày 08/10/2026 — draft, chưa mở gate
 
-Nguồn: đặc tả S1–S12 do chủ dự án cung cấp trong nhiệm vụ nhập nháp. Giữ nguyên SLA-01…SLA-69 verified; mã mới liên tục SLA-70…SLA-81. Mọi ca mới vẫn `draft`, kể cả khi con số đã được xác nhận trong trao đổi. Bảng verified phía trên không thêm mã draft. [Báo cáo nhập và kiểm tra](../../tests/evidence/sla-draft-import.md) phân biệt cấu trúc với đối chiếu SLA/API.
+**Lịch sử tại thời điểm nhập nháp; trạng thái hiện hành ở phần “Đối soát sau xác nhận” cuối tài liệu.** Nguồn: đặc tả S1–S12 do chủ dự án cung cấp trong nhiệm vụ nhập nháp. Giữ nguyên SLA-01…SLA-69 verified; mã mới liên tục SLA-70…SLA-81. Tại thời điểm này các ca mới là `draft` và chưa được thêm vào bảng verified. [Báo cáo nhập và kiểm tra](../../tests/evidence/sla-draft-import.md) giữ nguyên bằng chứng lịch sử.
 
 | Ca nguồn | Mã chính thức | coverage_groups | Nhánh minh họa bằng draft |
 |---|---|---|---|
@@ -112,3 +112,24 @@ Checker chỉ hỗ trợ đối chiếu bước từ chối `resolved_attempt`/`
 Gate logic SLA chính **chưa được xác nhận mở**: nhóm 1–11 có mã verified và đã có bằng chứng tham chiếu, nhưng các nhánh còn thiếu nêu trên chưa thỏa điều kiện “nhánh có kết quả khác nhau phải có ca riêng”. Gate tính bối cảnh M-07 **chưa được xác nhận mở**: nhóm 12 có mã verified và phép tính M-07 hiện có khớp checker; chưa có ca Manager hoàn tất review trong Waiting, cùng các nhánh nhóm 12 còn thiếu. Các nhánh lỗi/quyền thuần workflow không trở thành điều kiện mới chặn viết workflow: workflow review vẫn không bị gate này chặn theo AGENTS/D-33. Không sửa tiêu chí gate hoặc triển khai logic trong nhiệm vụ này.
 
 Giữ điều kiện phép tính độc lập và xác nhận chủ dự án ở trên. D-40 ghi chủ dự án xác nhận, AI chạy thay; checker độc lập với backend nhưng cả fixture/checker có hỗ trợ AI, không chứng minh chủ dự án tự tính tay/tự chạy Python. Hướng dẫn trong gói là tài liệu nguồn, không thay thế AGENTS/D-33 hoặc yêu cầu mới nhất của chủ dự án. Không hỏi lại xác nhận 69 ca/OQ-20/OQ-21. Blocker thiếu ZIP và chưa giải thích hash đã được xử lý; còn coverage và tiêu chí implementation/test v1.0 tại TASKS. Chi tiết ở [báo cáo hòa giải](../../tests/evidence/sla-reconciliation.md).
+
+## Đối soát sau xác nhận S1–S12 — 08/10/2026
+
+Chủ dự án xác nhận “tôi đã verify bộ SLA đó” cho đúng SLA-70…SLA-81 và cho phép ghi `verified`. Không có giờ xác nhận đến giây hoặc mô tả phương pháp chủ dự án kiểm tra; `verified_at` của 12 ca mới là `null`, còn ngày và lời xác nhận nằm trong metadata. SLA-01…SLA-69 giữ nguyên. Bảng nhóm verified phía trên đã bổ sung các ID mới theo `coverage_groups` thực tế. [Báo cáo hiện hành](../../tests/evidence/sla-verification-81.md) và [đối chiếu tham chiếu 81 ca](../../tests/evidence/sla-reference-81-results.json) ghi phương pháp, kết quả và giới hạn; [báo cáo nhập nháp](../../tests/evidence/sla-draft-import.md) vẫn phản ánh đúng thời điểm trước xác nhận.
+
+| Nhánh trong bảng thiếu lịch sử | Ca verified hiện có | Phần còn thiếu hoặc giới hạn |
+|---|---|---|
+| Nhận ngoài giờ/snapshot; tạo Chủ nhật | SLA-70 | Quyền nhận ngoài giờ chờ API test. |
+| Resume Waiting sau 17:00, trước 08:00 | SLA-71, SLA-72 | Customer trả lời **ngay trong cuối tuần** khi đang Waiting chưa có ca riêng. |
+| Resume Waiting còn 0 trong giờ/trước 08:00 | SLA-73, SLA-75 | Hai ca đánh giá đúng deadline; ảnh chụp sau deadline một giây của chính nhánh Waiting còn 0 chưa có. Nhóm 11 đã có ca vi phạm sau deadline cho các nhánh khác. |
+| Resume Waiting còn 0 sau 17:00; giữ breach cũ | SLA-74 | SLA-74 đã breached trước Waiting. Chưa có ca còn 0 nhưng **chưa từng breached**, resume sau 17:00/cuối tuần và giữ pending tại deadline mới. |
+| Từ chối còn 0 trước 08:00; P không đổi | SLA-76 | HTTP/nội dung bắt buộc chờ API test. |
+| G đang chạy tại đúng 3.600/900 giây còn lại | SLA-77, SLA-78 | Hai ngưỡng có ca riêng và khớp checker tham chiếu. |
+| Từ chối lần 5/R3; Manager hoàn tất review trong Waiting; refusal sau resume Waiting | SLA-79, SLA-80, SLA-81 | Context của M-07 có ca verified; HTTP `REVIEW_REQUIRED` và payload/quyền vẫn chờ API test. |
+| Manager ghi phương án khi không có review mở / ticket Closed | Chưa có fixture SLA; A1/A2 trong API-02 | Cần API test `INVALID_TICKET_STATE` / `TICKET_CLOSED` và thứ tự lỗi Closed. Không tính vào đối chiếu SLA/M-07. |
+
+**Gate logic SLA chính: chưa mở.** Dù nhóm 1–11 đều có mã verified và 81/81 ca khớp tham chiếu, hai biến thể Waiting có kết quả khác nhau còn thiếu: Customer trả lời ngay trong cuối tuần; và resume ngoài giờ với ngân sách 0 khi chưa từng breached. Ca sau deadline một giây của chính đường resume Waiting còn 0 cũng cần được cân nhắc theo điều kiện nhánh biên nhóm 6/9/11 trước khi xác nhận gate. Không tạo hoặc tự verified ca mới trong lần đối soát này.
+
+**Gate tính bối cảnh M-07: đủ điều kiện mở cho việc viết logic tính M-07 theo AGENTS/D-33.** Nhóm 12 có ca verified cho R1/R2/R3 và lần từ chối thứ 5 (SLA-60/64/79), review trong Waiting (SLA-80), phần chờ trùng và không trùng G (SLA-63/80/81), review mở/đóng và hoàn tất sau `as_of` (SLA-60/62/65/79), cùng bối cảnh breach trước/trong lúc chờ (SLA-67…SLA-69). Checker 81 ca khớp các trường review. Đây là đánh giá điều kiện viết logic, chưa phải kết quả chạy M-07 trong backend. A1/A2 và HTTP `REVIEW_REQUIRED` là workflow/API riêng; D-33 không dùng chúng để chặn phép tính M-07.
+
+Chỉ chủ dự án xác nhận ca verified; Codex ghi lại xác nhận và chạy checker. Không suy chủ dự án tự tính tay, tự chạy Python hoặc đã kiểm tra backend/API/SQL/prototype. Bảng thiếu của lần đối soát 06/10 ở trên là lịch sử, không phải kết luận coverage hiện hành.

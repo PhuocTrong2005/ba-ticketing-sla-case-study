@@ -6490,12 +6490,12 @@
         "expected_first_response_sla_status_at_assignment": "pending",
         "expected_resolution_sla_status_at_assignment": "pending",
         "calculation_note": "Theo S1: tạo/nhận Chủ nhật không tiêu SLA; snapshot tại 11/10 10:05 pending/pending. P: 12/10 08:00–08:10 = 600 giây, hạn 09:00. G: 08:00–08:30 = 1800 giây, hạn 16:00; còn 27000.",
-        "review_status": "draft",
+        "review_status": "verified",
         "drafted_by": "AI advisor",
         "reviewed_by": null,
-        "verification_method": "Nhập đầu vào và đáp án từ đặc tả S1–S12; chưa có kiểm chứng độc lập được ghi nhận cho ca draft.",
-        "verification_basis": "Đặc tả S1–S12 do chủ dự án cung cấp ngày 08/10/2026; yêu cầu giữ draft; ca nguồn S1",
-        "verification_evidence_status": "draft_not_verified",
+        "verification_method": "Project owner confirmed via conversation on 2026-10-08; owner verification method was not provided. Codex recorded the confirmation; reference execution is reported separately.",
+        "verification_basis": "owner_confirmation; original input S1 in 2026-10-08 draft specification",
+        "verification_evidence_status": "owner_confirmation_in_conversation; no_owner_method_or_execution_evidence",
         "blocked_by": [],
         "coverage_groups": [
             2,
@@ -6517,7 +6517,10 @@
         ],
         "expected_ticket_state": "In Progress",
         "expected_rejection_count": 0,
-        "expected_open_review": null
+        "expected_open_review": null,
+        "verified_by": "project owner",
+        "verified_at": null,
+        "owner_confirmation": "tôi đã verify bộ SLA đó; 08/10/2026; scope SLA-70..SLA-81"
     },
     {
         "scenario_id": "SLA-71",
@@ -6560,12 +6563,12 @@
         "expected_first_response_sla_status_at_assignment": "pending",
         "expected_resolution_sla_status_at_assignment": "pending",
         "calculation_note": "Theo S2: P 09:00–09:10 = 600 giây. G 25200 + 1800 = 27000; còn 3600 tại resume 17:30 ngoài giờ, hạn 06/10 09:00; còn 1800 tại as_of. Waiting và ngoài giờ không cộng G.",
-        "review_status": "draft",
+        "review_status": "verified",
         "drafted_by": "AI advisor",
         "reviewed_by": null,
-        "verification_method": "Nhập đầu vào và đáp án từ đặc tả S1–S12; chưa có kiểm chứng độc lập được ghi nhận cho ca draft.",
-        "verification_basis": "Đặc tả S1–S12 do chủ dự án cung cấp ngày 08/10/2026; yêu cầu giữ draft; ca nguồn S2",
-        "verification_evidence_status": "draft_not_verified",
+        "verification_method": "Project owner confirmed via conversation on 2026-10-08; owner verification method was not provided. Codex recorded the confirmation; reference execution is reported separately.",
+        "verification_basis": "owner_confirmation; original input S2 in 2026-10-08 draft specification",
+        "verification_evidence_status": "owner_confirmation_in_conversation; no_owner_method_or_execution_evidence",
         "blocked_by": [],
         "coverage_groups": [
             6
@@ -6590,7 +6593,10 @@
         ],
         "expected_ticket_state": "In Progress",
         "expected_rejection_count": 0,
-        "expected_open_review": null
+        "expected_open_review": null,
+        "verified_by": "project owner",
+        "verified_at": null,
+        "owner_confirmation": "tôi đã verify bộ SLA đó; 08/10/2026; scope SLA-70..SLA-81"
     },
     {
         "scenario_id": "SLA-72",
@@ -6633,12 +6639,12 @@
         "expected_first_response_sla_status_at_assignment": "pending",
         "expected_resolution_sla_status_at_assignment": "pending",
         "calculation_note": "Theo S3: P = 600 giây. G 3600 + 1800 = 5400; resume 07:30 còn 25200 giây tính từ 08:00 cùng ngày, hạn 15:00; còn 23400 tại as_of.",
-        "review_status": "draft",
+        "review_status": "verified",
         "drafted_by": "AI advisor",
         "reviewed_by": null,
-        "verification_method": "Nhập đầu vào và đáp án từ đặc tả S1–S12; chưa có kiểm chứng độc lập được ghi nhận cho ca draft.",
-        "verification_basis": "Đặc tả S1–S12 do chủ dự án cung cấp ngày 08/10/2026; yêu cầu giữ draft; ca nguồn S3",
-        "verification_evidence_status": "draft_not_verified",
+        "verification_method": "Project owner confirmed via conversation on 2026-10-08; owner verification method was not provided. Codex recorded the confirmation; reference execution is reported separately.",
+        "verification_basis": "owner_confirmation; original input S3 in 2026-10-08 draft specification",
+        "verification_evidence_status": "owner_confirmation_in_conversation; no_owner_method_or_execution_evidence",
         "blocked_by": [],
         "coverage_groups": [
             6
@@ -6663,7 +6669,10 @@
         ],
         "expected_ticket_state": "In Progress",
         "expected_rejection_count": 0,
-        "expected_open_review": null
+        "expected_open_review": null,
+        "verified_by": "project owner",
+        "verified_at": null,
+        "owner_confirmation": "tôi đã verify bộ SLA đó; 08/10/2026; scope SLA-70..SLA-81"
     },
     {
         "scenario_id": "SLA-73",
@@ -6706,12 +6715,12 @@
         "expected_first_response_sla_status_at_assignment": "pending",
         "expected_resolution_sla_status_at_assignment": "pending",
         "calculation_note": "Theo S4: P = 600 giây. G 09:00–17:00 = 28800, Waiting đúng deadline chưa breach. Resume còn 0 trong giờ nên hạn bằng 06/10 09:00, as_of đúng hạn pending/due. Khoảng mới mở có 0 giây tại as_of; không đánh giá thêm 09:00:01.",
-        "review_status": "draft",
+        "review_status": "verified",
         "drafted_by": "AI advisor",
         "reviewed_by": null,
-        "verification_method": "Nhập đầu vào và đáp án từ đặc tả S1–S12; chưa có kiểm chứng độc lập được ghi nhận cho ca draft.",
-        "verification_basis": "Đặc tả S1–S12 do chủ dự án cung cấp ngày 08/10/2026; yêu cầu giữ draft; ca nguồn S4",
-        "verification_evidence_status": "draft_not_verified",
+        "verification_method": "Project owner confirmed via conversation on 2026-10-08; owner verification method was not provided. Codex recorded the confirmation; reference execution is reported separately.",
+        "verification_basis": "owner_confirmation; original input S4 in 2026-10-08 draft specification",
+        "verification_evidence_status": "owner_confirmation_in_conversation; no_owner_method_or_execution_evidence",
         "blocked_by": [],
         "coverage_groups": [
             6,
@@ -6738,7 +6747,10 @@
         ],
         "expected_ticket_state": "In Progress",
         "expected_rejection_count": 0,
-        "expected_open_review": null
+        "expected_open_review": null,
+        "verified_by": "project owner",
+        "verified_at": null,
+        "owner_confirmation": "tôi đã verify bộ SLA đó; 08/10/2026; scope SLA-70..SLA-81"
     },
     {
         "scenario_id": "SLA-74",
@@ -6781,12 +6793,12 @@
         "expected_first_response_sla_status_at_assignment": "pending",
         "expected_resolution_sla_status_at_assignment": "pending",
         "calculation_note": "Theo S5: P = 600 giây. G 08:00–16:00:01 = 28801, đã vượt hạn 16:00 một giây. Resume 18:00 còn 0, hạn mới 06/10 08:00; khoảng mới chưa cộng giây. Giữ breached, không xóa vi phạm dù as_of bằng hạn mới.",
-        "review_status": "draft",
+        "review_status": "verified",
         "drafted_by": "AI advisor",
         "reviewed_by": null,
-        "verification_method": "Nhập đầu vào và đáp án từ đặc tả S1–S12; chưa có kiểm chứng độc lập được ghi nhận cho ca draft.",
-        "verification_basis": "Đặc tả S1–S12 do chủ dự án cung cấp ngày 08/10/2026; yêu cầu giữ draft; ca nguồn S5",
-        "verification_evidence_status": "draft_not_verified",
+        "verification_method": "Project owner confirmed via conversation on 2026-10-08; owner verification method was not provided. Codex recorded the confirmation; reference execution is reported separately.",
+        "verification_basis": "owner_confirmation; original input S5 in 2026-10-08 draft specification",
+        "verification_evidence_status": "owner_confirmation_in_conversation; no_owner_method_or_execution_evidence",
         "blocked_by": [],
         "coverage_groups": [
             6,
@@ -6812,7 +6824,10 @@
         ],
         "expected_ticket_state": "In Progress",
         "expected_rejection_count": 0,
-        "expected_open_review": null
+        "expected_open_review": null,
+        "verified_by": "project owner",
+        "verified_at": null,
+        "owner_confirmation": "tôi đã verify bộ SLA đó; 08/10/2026; scope SLA-70..SLA-81"
     },
     {
         "scenario_id": "SLA-75",
@@ -6855,12 +6870,12 @@
         "expected_first_response_sla_status_at_assignment": "pending",
         "expected_resolution_sla_status_at_assignment": "pending",
         "calculation_note": "Theo S6: P = 600 giây. G = 28800 trước Waiting đúng hạn; resume 07:30 còn 0, hạn 08:00 cùng ngày. as_of 08:00 pending/due, khoảng mở chưa cộng giây.",
-        "review_status": "draft",
+        "review_status": "verified",
         "drafted_by": "AI advisor",
         "reviewed_by": null,
-        "verification_method": "Nhập đầu vào và đáp án từ đặc tả S1–S12; chưa có kiểm chứng độc lập được ghi nhận cho ca draft.",
-        "verification_basis": "Đặc tả S1–S12 do chủ dự án cung cấp ngày 08/10/2026; yêu cầu giữ draft; ca nguồn S6",
-        "verification_evidence_status": "draft_not_verified",
+        "verification_method": "Project owner confirmed via conversation on 2026-10-08; owner verification method was not provided. Codex recorded the confirmation; reference execution is reported separately.",
+        "verification_basis": "owner_confirmation; original input S6 in 2026-10-08 draft specification",
+        "verification_evidence_status": "owner_confirmation_in_conversation; no_owner_method_or_execution_evidence",
         "blocked_by": [],
         "coverage_groups": [
             6,
@@ -6887,7 +6902,10 @@
         ],
         "expected_ticket_state": "In Progress",
         "expected_rejection_count": 0,
-        "expected_open_review": null
+        "expected_open_review": null,
+        "verified_by": "project owner",
+        "verified_at": null,
+        "owner_confirmation": "tôi đã verify bộ SLA đó; 08/10/2026; scope SLA-70..SLA-81"
     },
     {
         "scenario_id": "SLA-76",
@@ -6930,12 +6948,12 @@
         "expected_first_response_sla_status_at_assignment": "pending",
         "expected_resolution_sla_status_at_assignment": "pending",
         "calculation_note": "Theo S7: P = 600 giây và giữ met sau từ chối. G Resolved đúng 17:00 dùng 28800, met tạm; từ chối 07:30 còn 0, hạn 08:00 cùng ngày. as_of đúng hạn pending/due; 1 từ chối không tạo review.",
-        "review_status": "draft",
+        "review_status": "verified",
         "drafted_by": "AI advisor",
         "reviewed_by": null,
-        "verification_method": "Nhập đầu vào và đáp án từ đặc tả S1–S12; chưa có kiểm chứng độc lập được ghi nhận cho ca draft.",
-        "verification_basis": "Đặc tả S1–S12 do chủ dự án cung cấp ngày 08/10/2026; yêu cầu giữ draft; ca nguồn S7",
-        "verification_evidence_status": "draft_not_verified",
+        "verification_method": "Project owner confirmed via conversation on 2026-10-08; owner verification method was not provided. Codex recorded the confirmation; reference execution is reported separately.",
+        "verification_basis": "owner_confirmation; original input S7 in 2026-10-08 draft specification",
+        "verification_evidence_status": "owner_confirmation_in_conversation; no_owner_method_or_execution_evidence",
         "blocked_by": [],
         "coverage_groups": [
             5,
@@ -6963,7 +6981,10 @@
         ],
         "expected_ticket_state": "In Progress",
         "expected_rejection_count": 1,
-        "expected_open_review": null
+        "expected_open_review": null,
+        "verified_by": "project owner",
+        "verified_at": null,
+        "owner_confirmation": "tôi đã verify bộ SLA đó; 08/10/2026; scope SLA-70..SLA-81"
     },
     {
         "scenario_id": "SLA-77",
@@ -6996,12 +7017,12 @@
         "expected_first_response_sla_status_at_assignment": "pending",
         "expected_resolution_sla_status_at_assignment": "pending",
         "calculation_note": "Theo S8: P = 600 giây. G 08:00–15:00 = 25200, còn đúng 3600, chưa soft; hạn 16:00, pending/none.",
-        "review_status": "draft",
+        "review_status": "verified",
         "drafted_by": "AI advisor",
         "reviewed_by": null,
-        "verification_method": "Nhập đầu vào và đáp án từ đặc tả S1–S12; chưa có kiểm chứng độc lập được ghi nhận cho ca draft.",
-        "verification_basis": "Đặc tả S1–S12 do chủ dự án cung cấp ngày 08/10/2026; yêu cầu giữ draft; ca nguồn S8",
-        "verification_evidence_status": "draft_not_verified",
+        "verification_method": "Project owner confirmed via conversation on 2026-10-08; owner verification method was not provided. Codex recorded the confirmation; reference execution is reported separately.",
+        "verification_basis": "owner_confirmation; original input S8 in 2026-10-08 draft specification",
+        "verification_evidence_status": "owner_confirmation_in_conversation; no_owner_method_or_execution_evidence",
         "blocked_by": [],
         "coverage_groups": [
             11
@@ -7021,7 +7042,10 @@
         ],
         "expected_ticket_state": "In Progress",
         "expected_rejection_count": 0,
-        "expected_open_review": null
+        "expected_open_review": null,
+        "verified_by": "project owner",
+        "verified_at": null,
+        "owner_confirmation": "tôi đã verify bộ SLA đó; 08/10/2026; scope SLA-70..SLA-81"
     },
     {
         "scenario_id": "SLA-78",
@@ -7054,12 +7078,12 @@
         "expected_first_response_sla_status_at_assignment": "pending",
         "expected_resolution_sla_status_at_assignment": "pending",
         "calculation_note": "Theo S9: P = 600 giây. G 08:00–15:45 = 27900, còn đúng 900, vẫn soft; hạn 16:00, pending/soft.",
-        "review_status": "draft",
+        "review_status": "verified",
         "drafted_by": "AI advisor",
         "reviewed_by": null,
-        "verification_method": "Nhập đầu vào và đáp án từ đặc tả S1–S12; chưa có kiểm chứng độc lập được ghi nhận cho ca draft.",
-        "verification_basis": "Đặc tả S1–S12 do chủ dự án cung cấp ngày 08/10/2026; yêu cầu giữ draft; ca nguồn S9",
-        "verification_evidence_status": "draft_not_verified",
+        "verification_method": "Project owner confirmed via conversation on 2026-10-08; owner verification method was not provided. Codex recorded the confirmation; reference execution is reported separately.",
+        "verification_basis": "owner_confirmation; original input S9 in 2026-10-08 draft specification",
+        "verification_evidence_status": "owner_confirmation_in_conversation; no_owner_method_or_execution_evidence",
         "blocked_by": [],
         "coverage_groups": [
             11
@@ -7079,7 +7103,10 @@
         ],
         "expected_ticket_state": "In Progress",
         "expected_rejection_count": 0,
-        "expected_open_review": null
+        "expected_open_review": null,
+        "verified_by": "project owner",
+        "verified_at": null,
+        "owner_confirmation": "tôi đã verify bộ SLA đó; 08/10/2026; scope SLA-70..SLA-81"
     },
     {
         "scenario_id": "SLA-79",
@@ -7172,12 +7199,12 @@
         "expected_first_response_sla_status_at_assignment": "pending",
         "expected_resolution_sla_status_at_assignment": "pending",
         "calculation_note": "Theo S10: P = 600 giây. G 3600+3000+3000+3000+3600+1200 = 17400, còn 11400. Tại từ chối 13:40 đã dùng 16200, còn 12600: 12000 đến 17:00 và 600 từ 08:00 hôm sau, hạn 06/10 08:10. R1 lịch/trùng G=1800/1800, R2=2700/2700, R3 mở đến as_of=1200/1200; không trừ thời gian chờ review khỏi G.",
-        "review_status": "draft",
+        "review_status": "verified",
         "drafted_by": "AI advisor",
         "reviewed_by": null,
-        "verification_method": "Nhập đầu vào và đáp án từ đặc tả S1–S12; chưa có kiểm chứng độc lập được ghi nhận cho ca draft.",
-        "verification_basis": "Đặc tả S1–S12 do chủ dự án cung cấp ngày 08/10/2026; yêu cầu giữ draft; ca nguồn S10",
-        "verification_evidence_status": "draft_not_verified",
+        "verification_method": "Project owner confirmed via conversation on 2026-10-08; owner verification method was not provided. Codex recorded the confirmation; reference execution is reported separately.",
+        "verification_basis": "owner_confirmation; original input S10 in 2026-10-08 draft specification",
+        "verification_evidence_status": "owner_confirmation_in_conversation; no_owner_method_or_execution_evidence",
         "blocked_by": [],
         "coverage_groups": [
             8,
@@ -7248,7 +7275,10 @@
         ],
         "expected_ticket_state": "In Progress",
         "expected_rejection_count": 5,
-        "expected_open_review": "R3"
+        "expected_open_review": "R3",
+        "verified_by": "project owner",
+        "verified_at": null,
+        "owner_confirmation": "tôi đã verify bộ SLA đó; 08/10/2026; scope SLA-70..SLA-81"
     },
     {
         "scenario_id": "SLA-80",
@@ -7321,12 +7351,12 @@
         "expected_first_response_sla_status_at_assignment": "pending",
         "expected_resolution_sla_status_at_assignment": "pending",
         "calculation_note": "Theo S11: P = 600 giây. G 9600+1200 = 10800, còn 18000; Waiting từ 11:30, không có khoảng mở, hạn null. BR-08/57: hoàn tất review 12:00 không phải Customer trả lời, ticket vẫn Waiting. R1 chờ lịch 11:10–12:00 = 3000, chỉ trùng G 11:10–11:30 = 1200, breach context none.",
-        "review_status": "draft",
+        "review_status": "verified",
         "drafted_by": "AI advisor",
         "reviewed_by": null,
-        "verification_method": "Nhập đầu vào và đáp án từ đặc tả S1–S12; chưa có kiểm chứng độc lập được ghi nhận cho ca draft.",
-        "verification_basis": "Đặc tả S1–S12 do chủ dự án cung cấp ngày 08/10/2026; yêu cầu giữ draft; ca nguồn S11",
-        "verification_evidence_status": "draft_not_verified",
+        "verification_method": "Project owner confirmed via conversation on 2026-10-08; owner verification method was not provided. Codex recorded the confirmation; reference execution is reported separately.",
+        "verification_basis": "owner_confirmation; original input S11 in 2026-10-08 draft specification",
+        "verification_evidence_status": "owner_confirmation_in_conversation; no_owner_method_or_execution_evidence",
         "blocked_by": [],
         "coverage_groups": [
             6,
@@ -7371,7 +7401,10 @@
         ],
         "expected_ticket_state": "Waiting for Customer",
         "expected_rejection_count": 3,
-        "expected_open_review": null
+        "expected_open_review": null,
+        "verified_by": "project owner",
+        "verified_at": null,
+        "owner_confirmation": "tôi đã verify bộ SLA đó; 08/10/2026; scope SLA-70..SLA-81"
     },
     {
         "scenario_id": "SLA-81",
@@ -7444,12 +7477,12 @@
         "expected_first_response_sla_status_at_assignment": "pending",
         "expected_resolution_sla_status_at_assignment": "pending",
         "calculation_note": "Theo S12 đã sửa hạn G trong yêu cầu: P = 600 giây. G 9600+1200+900 = 11700, còn 17100. Tại resume 12:30 đã dùng 10800, còn 18000: 16200 đến 17:00 và 1800 từ 08:00 hôm sau, hạn 2026-10-06T08:30:00+07:00. R1 lịch 11:10–12:45 = 5700; trùng G 1200+900 = 2100; context none. resolved_attempt 12:40 nằm riêng ở expected_rejected_actions, không đóng khoảng hoặc đổi trạng thái; 409 REVIEW_REQUIRED là đáp án draft, chưa phải kết quả HTTP.",
-        "review_status": "draft",
+        "review_status": "verified",
         "drafted_by": "AI advisor",
         "reviewed_by": null,
-        "verification_method": "Nhập đầu vào và đáp án từ đặc tả S1–S12; chưa có kiểm chứng độc lập được ghi nhận cho ca draft.",
-        "verification_basis": "Đặc tả S1–S12 do chủ dự án cung cấp ngày 08/10/2026; yêu cầu giữ draft; ca nguồn S12",
-        "verification_evidence_status": "draft_not_verified",
+        "verification_method": "Project owner confirmed via conversation on 2026-10-08; owner verification method was not provided. Codex recorded the confirmation; reference execution is reported separately.",
+        "verification_basis": "owner_confirmation; original input S12 in 2026-10-08 draft specification",
+        "verification_evidence_status": "owner_confirmation_in_conversation; no_owner_method_or_execution_evidence",
         "blocked_by": [],
         "coverage_groups": [
             6,
@@ -7510,6 +7543,9 @@
         ],
         "expected_ticket_state": "In Progress",
         "expected_rejection_count": 3,
-        "expected_open_review": "R1"
+        "expected_open_review": "R1",
+        "verified_by": "project owner",
+        "verified_at": null,
+        "owner_confirmation": "tôi đã verify bộ SLA đó; 08/10/2026; scope SLA-70..SLA-81"
     }
 ]

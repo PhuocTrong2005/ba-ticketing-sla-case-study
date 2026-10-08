@@ -1,0 +1,37 @@
+{
+  "kind": "Actual final validation for 81-case confirmation, not backend/API test",
+  "executed_at": "2026-10-08T16:45:45+07:00",
+  "command": "python final validation script via PowerShell stdin; git diff --check subprocess",
+  "checks": {
+    "json_81_unique_ordered_ids": true,
+    "all_81_verified": true,
+    "old_69_objects_unchanged": true,
+    "old_69_object_bytes_unchanged": true,
+    "new_12_business_and_expected_unchanged": true,
+    "SLA_81_due_and_rejected_action": true,
+    "new_checker_source_and_script_hashes_match": true,
+    "new_checker_result_81_pass_1460": true,
+    "old_checker_result_69_pass_1243": true,
+    "audit_current_pass_and_hash_match": true,
+    "historical_artifacts_unchanged": true,
+    "all_document_links_resolve": true,
+    "git_diff_check_exit_zero": true
+  },
+  "links_checked": 68,
+  "broken_links": [],
+  "git_diff_check": {
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'TASKS.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'docs/decision-log.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'docs/open-questions.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'docs/spec/scenario-coverage.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'docs/traceability.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'tests/sla/reference/README.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'tests/sla/sla-scenarios.json', LF will be replaced by CRLF the next time Git touches it\n"
+  },
+  "fixture_sha256": "d4198ce6201ecaffc0444d9af50e5a505e7fcceecd81f96cc8d97da8c2ea005c",
+  "exit_code": 0,
+  "historical_artifact_git_content_matches": {
+    "tests/sla/reference/validate_sla_reference.py": true,
+    "tests/sla/audit_fixture_structure.py": true,
+    "tests/evidence/sla-reference-results.json": true,
+    "tests/evidence/sla-draft-import.md": true,
+    "tests/evidence/sla-draft-import-structure.json": true
+  },
+  "line_ending_note": "Two historical JSON files have different raw working-tree versus Git blob hashes because of Git line-ending normalization; git diff and parsed JSON confirm unchanged content."
+}

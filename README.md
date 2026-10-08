@@ -25,21 +25,22 @@ Bộ 69 fixture SLA đã được chủ dự án xác nhận lúc `2026-10-06T09
 
 Fixture 69 ca trước lần nhập nháp có SHA-256 `4bcad90141b1d6b86a28804b93a961cea2862d84011c6b463439c370c17397b9`. [Đối chiếu nguồn lịch sử](tests/evidence/sla-source-comparison.json) xác nhận cả 69 scenario khớp toàn bộ; khác hash do nguồn có wrapper metadata, repo là mảng và định dạng JSON khác. Lúc `2026-10-06T12:51:30+07:00`, checker gốc chạy trực tiếp trên repo đạt [69 PASS, 0 FAIL, 1.243 phép so sánh](tests/evidence/sla-reference-results.json), exit code 0; [run record](tests/evidence/sla-reference-run.json) lưu stdout/stderr, Python và hash. [Audit cấu trúc lịch sử](tests/evidence/sla-fixture-audit.json) giữ nguyên 69/69, 3.792 assertion. [Báo cáo hòa giải](tests/evidence/sla-reconciliation.md) và [manifest SHA-256](tests/evidence/sla-reconciliation.sha256) là bằng chứng của phiên bản 69 ca, không phải toàn bộ fixture 81 ca hiện tại.
 
-Ngày 08/10/2026 nhập S1–S12 thành SLA-70…SLA-81, toàn bộ `draft`; 69 ca verified giữ nguyên cả byte của object. [Báo cáo nhập](tests/evidence/sla-draft-import.md): cấu trúc cũ 69 PASS / 0 FAIL (3.792 assertion), mới 12 PASS / 0 FAIL (850 assertion). Checker gốc chạy lại riêng 69 ca cũ: 69 PASS / 0 FAIL, 1.243 so sánh. CLI chỉ nhận 69 ID nên từ chối bộ 81 ca trước khi đối chiếu; **12 ca mới có 0 phép so sánh SLA, chưa có kết luận PASS/FAIL SLA**. S12 có G due `2026-10-06T08:30:00+07:00`. Chưa mở gate.
+Ngày 08/10/2026, sau [lần nhập nháp](tests/evidence/sla-draft-import.md), chủ dự án xác nhận S1–S12 = SLA-70…SLA-81 thành `verified`. Fixture hiện có **81 verified, 0 draft**; 69 object đầu giữ nguyên byte. S12 có G due `2026-10-06T08:30:00+07:00`. [Báo cáo đối chiếu hiện hành](tests/evidence/sla-verification-81.md): checker gốc trên nguồn 69 ca đạt 69 PASS / 0 FAIL, 1.243 phép so sánh; checker 81 ca dùng lại engine gốc đạt 81 PASS / 0 FAIL, 1.460 phép so sánh (12 ca mới: 217). Audit cấu trúc 81/81 PASS, không tính SLA. Xác nhận của chủ dự án qua hội thoại khác với lần chạy công cụ do Codex thực hiện; không có bằng chứng backend/API/SQL/prototype.
 
-Chạy lại checker gốc trên bản nguồn 69 ca (kết quả mới ghi vào tệp riêng):
-
-```powershell
-python tests/sla/reference/validate_sla_reference.py tests/sla/reference/source/sla_draft_data.json --report tests/evidence/sla-source-reference-rerun.json
-```
-
-Chạy audit cấu trúc fixture hiện hành từ thư mục repo (không tính SLA). Audit lịch sử chỉ nhận 69 ca verified, giữ nguyên:
+Chạy checker gốc trên bản nguồn 69 ca và checker 81 ca trên fixture hiện hành (ghi báo cáo mới nếu chạy lại):
 
 ```powershell
-python tests/sla/audit_draft_import.py
+python -B tests/sla/reference/validate_sla_reference.py tests/sla/reference/source/sla_draft_data.json --report tests/evidence/sla-reference-69-rerun.json
+python -B tests/sla/reference/validate_sla_reference_81.py tests/sla/sla-scenarios.json --report tests/evidence/sla-reference-81-results.json
 ```
 
-Cả 12 nhóm đã có mã verified; bảng yêu cầu → ca hiện có → phần chưa kiểm chứng nằm tại [scenario coverage](docs/spec/scenario-coverage.md). Gate logic SLA chính và gate tính bối cảnh M-07 **chưa được xác nhận mở** do các nhánh thiếu; blocker thiếu ZIP/hash đã được giải quyết. Không đổi tiêu chí gate. Workflow review không bị gate này chặn theo D-33. Checker chưa kiểm tra được lỗi Manager `INVALID_TICKET_STATE`/`TICKET_CLOSED`, quyền/nội dung/API thật. Fixture/reference check chưa chứng minh backend/API/SQL/prototype/concurrency đã chạy đúng. Trạng thái truy vết tại [docs/traceability.md](docs/traceability.md).
+Chạy audit cấu trúc fixture hiện hành từ thư mục repo (không tính SLA). Audit nhập nháp lịch sử giữ nguyên:
+
+```powershell
+python -B tests/sla/audit_fixture_current.py tests/sla/sla-scenarios.json --report tests/evidence/sla-fixture-current-audit.json
+```
+
+Cả 12 nhóm có mã verified. [Đối soát coverage hiện hành](docs/spec/scenario-coverage.md#đối-soát-sau-xác-nhận-s1s12--08102026): gate logic SLA chính **chưa mở** vì các biến thể Waiting còn thiếu; gate tính bối cảnh M-07 **đủ điều kiện mở cho việc viết logic** nhờ các nhánh tính đã có ca verified/đối chiếu. Đây không phải backend PASS. Workflow review không bị gate này chặn theo D-33. A1/A2, HTTP `REVIEW_REQUIRED`, quyền/nội dung và tính nguyên tử cần API test riêng. Trạng thái truy vết tại [docs/traceability.md](docs/traceability.md).
 
 ## Phần đã làm, mô phỏng và giới hạn
 
