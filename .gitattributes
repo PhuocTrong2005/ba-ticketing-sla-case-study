@@ -1,2 +1,6 @@
 # Preserve the original verification-package document byte for byte.
 tests/sla/reference/source/SLA_69_Draft_Verification.md -whitespace
+
+# Keep fixture, checker and evidence hashes stable across Windows checkouts.
+*.json text eol=lf
+*.py text eol=lf

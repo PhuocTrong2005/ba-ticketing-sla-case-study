@@ -39,7 +39,7 @@ Checker 81 chạy lại lần cuối lúc `2026-10-08T16:43:13+07:00` bởi Code
 
 Audit hiện hành chạy lại lần cuối lúc `2026-10-08T16:43:13+07:00` (SHA-256 script `6136ea7fdc2bf51c6899b0c3ce48368a40d61b7b61be57e28082128d2a247e19`). Nó kiểm tra schema, trạng thái/provenance, ID, liên kết coverage, byte 69 object đầu, tính nguyên vẹn checker gốc, thứ tự sự kiện và shape interval/review/refusal; không tính SLA. [Audit nhập nháp cũ](sla-draft-import-structure.json) và [báo cáo nhập](sla-draft-import.md) được giữ nguyên, đúng trạng thái 12 draft tại thời điểm đó.
 
-[Kiểm tra cuối](sla-verification-81-checks.json) xác nhận JSON/ID, 69 object cũ nguyên byte, 12 ca mới không đổi input/`expected_*`, hash fixture/checker/audit khớp report, 67 liên kết tài liệu hợp lệ và `git diff --check` exit 0. Hai JSON lịch sử có byte worktree khác blob Git do chuẩn hóa dòng; `git diff` và nội dung JSON xác nhận chúng không đổi. Không thay báo cáo kiểm tra lịch sử.
+[Kiểm tra cuối](sla-verification-81-checks.json) xác nhận JSON/ID, 69 object cũ nguyên byte, 12 ca mới không đổi input/`expected_*`, hash fixture/checker/audit khớp report, liên kết tài liệu hợp lệ và `git diff --check` exit 0. Git trên Windows từng checkout JSON/Python thành CRLF khiến hash byte worktree khác báo cáo dù nội dung Git không đổi; `.gitattributes` cố định LF cho hai loại file này. Checker gốc, checker 81 ca và audit đã chạy lại trên checkout LF: kết quả và hash đầu vào/script khớp báo cáo. Không thay báo cáo kiểm tra lịch sử.
 
 ## Gate và phần chưa kiểm tra
 

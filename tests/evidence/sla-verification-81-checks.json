@@ -1,6 +1,6 @@
 {
   "kind": "Actual final validation for 81-case confirmation, not backend/API test",
-  "executed_at": "2026-10-08T16:45:45+07:00",
+  "executed_at": "2026-10-08T16:49:43+07:00",
   "command": "python final validation script via PowerShell stdin; git diff --check subprocess",
   "checks": {
     "json_81_unique_ordered_ids": true,
@@ -15,14 +15,15 @@
     "audit_current_pass_and_hash_match": true,
     "historical_artifacts_unchanged": true,
     "all_document_links_resolve": true,
-    "git_diff_check_exit_zero": true
+    "git_diff_check_exit_zero": true,
+    "reproducible_checkout_hashes": true
   },
   "links_checked": 68,
   "broken_links": [],
   "git_diff_check": {
     "exit_code": 0,
     "stdout": "",
-    "stderr": "warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'TASKS.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'docs/decision-log.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'docs/open-questions.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'docs/spec/scenario-coverage.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'docs/traceability.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'tests/sla/reference/README.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'tests/sla/sla-scenarios.json', LF will be replaced by CRLF the next time Git touches it\n"
+    "stderr": "warning: in the working copy of '.gitattributes', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'tests/evidence/sla-verification-81.md', LF will be replaced by CRLF the next time Git touches it\n"
   },
   "fixture_sha256": "d4198ce6201ecaffc0444d9af50e5a505e7fcceecd81f96cc8d97da8c2ea005c",
   "exit_code": 0,
@@ -33,5 +34,12 @@
     "tests/evidence/sla-draft-import.md": true,
     "tests/evidence/sla-draft-import-structure.json": true
   },
-  "line_ending_note": "Two historical JSON files have different raw working-tree versus Git blob hashes because of Git line-ending normalization; git diff and parsed JSON confirm unchanged content."
+  "line_ending_note": "Git initially produced CRLF working-tree bytes on Windows. LF is now specified for JSON/Python via .gitattributes; current worktree hashes match the actual checker/audit reports. Historical artefact contents remain unchanged.",
+  "reproducible_checkout_hashes": {
+    "fixture_worktree_hash_matches_reference": true,
+    "checker_81_worktree_hash_matches_reference": true,
+    "original_checker_worktree_hash_matches_reference": true,
+    "audit_worktree_hash_matches_audit": true,
+    "old_source_worktree_hash_matches_original_rerun": true
+  }
 }
