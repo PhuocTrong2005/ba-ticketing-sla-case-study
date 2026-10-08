@@ -1,0 +1,872 @@
+{
+  "kind": "fixture_structure_only",
+  "executed_at": "2026-10-06T11:04:39+07:00",
+  "executor": "Codex AI assistant running local Python on behalf of project owner",
+  "python_version": "3.13.3",
+  "python_executable": "C:\\Program Files\\Python313\\python.exe",
+  "command": "python tests/sla/audit_fixture_structure.py tests/sla/sla-scenarios.json --report tests/evidence/sla-fixture-audit.json",
+  "cwd": "C:\\Users\\ASUS\\ba-ticketing-sla-case-study",
+  "sha256": {
+    "tests/sla/sla-scenarios.json": "4bcad90141b1d6b86a28804b93a961cea2862d84011c6b463439c370c17397b9",
+    "tests/sla/audit_fixture_structure.py": "f780b258036de3bd0b9ccee560074efa1d426b6405cc9e34a93e10ce8a670127",
+    "docs/spec/scenario-coverage.md": "95dbc4d03943bd25a296a3f198ba4d831e683eb34d550b12ef3f8c28df4dd718"
+  },
+  "errors": [],
+  "reference_check": {
+    "status": "NOT_RUN_MISSING_SOURCE",
+    "pass": null,
+    "fail": null,
+    "comparisons": null,
+    "exit_code": null,
+    "missing": [
+      "SLA_Verification_Package.zip",
+      "validate_sla_reference.py"
+    ]
+  },
+  "limitations": [
+    "No SLA calculation or expected_* correctness check",
+    "No comparison with package fixture; package unavailable",
+    "No backend/API/SQL/prototype/concurrency execution",
+    "Coverage group presence does not prove all branches covered",
+    "Provenance strings checked for presence; original verification artefacts unavailable"
+  ],
+  "cases": [
+    {
+      "scenario_id": "SLA-01",
+      "structural_status": "PASS",
+      "structural_assertions": 40,
+      "errors": [],
+      "events_after_as_of_allowed": [],
+      "expected_values_recomputed": false
+    },
+    {
+      "scenario_id": "SLA-02",
+      "structural_status": "PASS",
+      "structural_assertions": 40,
+      "errors": [],
+      "events_after_as_of_allowed": [],
+      "expected_values_recomputed": false
+    },
+    {
+      "scenario_id": "SLA-03",
+      "structural_status": "PASS",
+      "structural_assertions": 48,
+      "errors": [],
+      "events_after_as_of_allowed": [],
+      "expected_values_recomputed": false
+    },
+    {
+      "scenario_id": "SLA-04",
+      "structural_status": "PASS",
+      "structural_assertions": 52,
+      "errors": [],
+      "events_after_as_of_allowed": [],
+      "expected_values_recomputed": false
+    },
+    {
+      "scenario_id": "SLA-05",
+      "structural_status": "PASS",
+      "structural_assertions": 48,
+      "errors": [],
+      "events_after_as_of_allowed": [],
+      "expected_values_recomputed": false
+    },
+    {
+      "scenario_id": "SLA-06",
+      "structural_status": "PASS",
+      "structural_assertions": 40,
+      "errors": [],
+      "events_after_as_of_allowed": [],
+      "expected_values_recomputed": false
+    },
+    {
+      "scenario_id": "SLA-07",
+      "structural_status": "PASS",
+      "structural_assertions": 40,
+      "errors": [],
+      "events_after_as_of_allowed": [],
+      "expected_values_recomputed": false
+    },
+    {
+      "scenario_id": "SLA-08",
+      "structural_status": "PASS",
+      "structural_assertions": 48,
+      "errors": [],
+      "events_after_as_of_allowed": [],
+      "expected_values_recomputed": false
+    },
+    {
+      "scenario_id": "SLA-09",
+      "structural_status": "PASS",
+      "structural_assertions": 48,
+      "errors": [],
+      "events_after_as_of_allowed": [],
+      "expected_values_recomputed": false
+    },
+    {
+      "scenario_id": "SLA-10",
+      "structural_status": "PASS",
+      "structural_assertions": 48,
+      "errors": [],
+      "events_after_as_of_allowed": [],
+      "expected_values_recomputed": false
+    },
+    {
+      "scenario_id": "SLA-11",
+      "structural_status": "PASS",
+      "structural_assertions": 40,
+      "errors": [],
+      "events_after_as_of_allowed": [],
+      "expected_values_recomputed": false
+    },
+    {
+      "scenario_id": "SLA-12",
+      "structural_status": "PASS",
+      "structural_assertions": 40,
+      "errors": [],
+      "events_after_as_of_allowed": [],
+      "expected_values_recomputed": false
+    },
+    {
+      "scenario_id": "SLA-13",
+      "structural_status": "PASS",
+      "structural_assertions": 49,
+      "errors": [],
+      "events_after_as_of_allowed": [],
+      "expected_values_recomputed": false
+    },
+    {
+      "scenario_id": "SLA-14",
+      "structural_status": "PASS",
+      "structural_assertions": 40,
+      "errors": [],
+      "events_after_as_of_allowed": [],
+      "expected_values_recomputed": false
+    },
+    {
+      "scenario_id": "SLA-15",
+      "structural_status": "PASS",
+      "structural_assertions": 40,
+      "errors": [],
+      "events_after_as_of_allowed": [],
+      "expected_values_recomputed": false
+    },
+    {
+      "scenario_id": "SLA-16",
+      "structural_status": "PASS",
+      "structural_assertions": 48,
+      "errors": [],
+      "events_after_as_of_allowed": [],
+      "expected_values_recomputed": false
+    },
+    {
+      "scenario_id": "SLA-17",
+      "structural_status": "PASS",
+      "structural_assertions": 48,
+      "errors": [],
+      "events_after_as_of_allowed": [],
+      "expected_values_recomputed": false
+    },
+    {
+      "scenario_id": "SLA-18",
+      "structural_status": "PASS",
+      "structural_assertions": 52,
+      "errors": [],
+      "events_after_as_of_allowed": [],
+      "expected_values_recomputed": false
+    },
+    {
+      "scenario_id": "SLA-19",
+      "structural_status": "PASS",
+      "structural_assertions": 40,
+      "errors": [],
+      "events_after_as_of_allowed": [],
+      "expected_values_recomputed": false
+    },
+    {
+      "scenario_id": "SLA-20",
+      "structural_status": "PASS",
+      "structural_assertions": 40,
+      "errors": [],
+      "events_after_as_of_allowed": [],
+      "expected_values_recomputed": false
+    },
+    {
+      "scenario_id": "SLA-21",
+      "structural_status": "PASS",
+      "structural_assertions": 48,
+      "errors": [],
+      "events_after_as_of_allowed": [],
+      "expected_values_recomputed": false
+    },
+    {
+      "scenario_id": "SLA-22",
+      "structural_status": "PASS",
+      "structural_assertions": 57,
+      "errors": [],
+      "events_after_as_of_allowed": [],
+      "expected_values_recomputed": false
+    },
+    {
+      "scenario_id": "SLA-23",
+      "structural_status": "PASS",
+      "structural_assertions": 56,
+      "errors": [],
+      "events_after_as_of_allowed": [
+        4
+      ],
+      "expected_values_recomputed": false
+    },
+    {
+      "scenario_id": "SLA-24",
+      "structural_status": "PASS",
+      "structural_assertions": 57,
+      "errors": [],
+      "events_after_as_of_allowed": [],
+      "expected_values_recomputed": false
+    },
+    {
+      "scenario_id": "SLA-25",
+      "structural_status": "PASS",
+      "structural_assertions": 57,
+      "errors": [],
+      "events_after_as_of_allowed": [],
+      "expected_values_recomputed": false
+    },
+    {
+      "scenario_id": "SLA-26",
+      "structural_status": "PASS",
+      "structural_assertions": 66,
+      "errors": [],
+      "events_after_as_of_allowed": [],
+      "expected_values_recomputed": false
+    },
+    {
+      "scenario_id": "SLA-27",
+      "structural_status": "PASS",
+      "structural_assertions": 52,
+      "errors": [],
+      "events_after_as_of_allowed": [],
+      "expected_values_recomputed": false
+    },
+    {
+      "scenario_id": "SLA-28",
+      "structural_status": "PASS",
+      "structural_assertions": 56,
+      "errors": [],
+      "events_after_as_of_allowed": [],
+      "expected_values_recomputed": false
+    },
+    {
+      "scenario_id": "SLA-29",
+      "structural_status": "PASS",
+      "structural_assertions": 48,
+      "errors": [],
+      "events_after_as_of_allowed": [],
+      "expected_values_recomputed": false
+    },
+    {
+      "scenario_id": "SLA-30",
+      "structural_status": "PASS",
+      "structural_assertions": 57,
+      "errors": [],
+      "events_after_as_of_allowed": [],
+      "expected_values_recomputed": false
+    },
+    {
+      "scenario_id": "SLA-31",
+      "structural_status": "PASS",
+      "structural_assertions": 52,
+      "errors": [],
+      "events_after_as_of_allowed": [],
+      "expected_values_recomputed": false
+    },
+    {
+      "scenario_id": "SLA-32",
+      "structural_status": "PASS",
+      "structural_assertions": 52,
+      "errors": [],
+      "events_after_as_of_allowed": [],
+      "expected_values_recomputed": false
+    },
+    {
+      "scenario_id": "SLA-33",
+      "structural_status": "PASS",
+      "structural_assertions": 56,
+      "errors": [],
+      "events_after_as_of_allowed": [],
+      "expected_values_recomputed": false
+    },
+    {
+      "scenario_id": "SLA-34",
+      "structural_status": "PASS",
+      "structural_assertions": 56,
+      "errors": [],
+      "events_after_as_of_allowed": [],
+      "expected_values_recomputed": false
+    },
+    {
+      "scenario_id": "SLA-35",
+      "structural_status": "PASS",
+      "structural_assertions": 56,
+      "errors": [],
+      "events_after_as_of_allowed": [],
+      "expected_values_recomputed": false
+    },
+    {
+      "scenario_id": "SLA-36",
+      "structural_status": "PASS",
+      "structural_assertions": 66,
+      "errors": [],
+      "events_after_as_of_allowed": [],
+      "expected_values_recomputed": false
+    },
+    {
+      "scenario_id": "SLA-37",
+      "structural_status": "PASS",
+      "structural_assertions": 57,
+      "errors": [],
+      "events_after_as_of_allowed": [],
+      "expected_values_recomputed": false
+    },
+    {
+      "scenario_id": "SLA-38",
+      "structural_status": "PASS",
+      "structural_assertions": 75,
+      "errors": [],
+      "events_after_as_of_allowed": [],
+      "expected_values_recomputed": false
+    },
+    {
+      "scenario_id": "SLA-39",
+      "structural_status": "PASS",
+      "structural_assertions": 57,
+      "errors": [],
+      "events_after_as_of_allowed": [],
+      "expected_values_recomputed": false
+    },
+    {
+      "scenario_id": "SLA-40",
+      "structural_status": "PASS",
+      "structural_assertions": 52,
+      "errors": [],
+      "events_after_as_of_allowed": [],
+      "expected_values_recomputed": false
+    },
+    {
+      "scenario_id": "SLA-41",
+      "structural_status": "PASS",
+      "structural_assertions": 57,
+      "errors": [],
+      "events_after_as_of_allowed": [],
+      "expected_values_recomputed": false
+    },
+    {
+      "scenario_id": "SLA-42",
+      "structural_status": "PASS",
+      "structural_assertions": 57,
+      "errors": [],
+      "events_after_as_of_allowed": [],
+      "expected_values_recomputed": false
+    },
+    {
+      "scenario_id": "SLA-43",
+      "structural_status": "PASS",
+      "structural_assertions": 57,
+      "errors": [],
+      "events_after_as_of_allowed": [],
+      "expected_values_recomputed": false
+    },
+    {
+      "scenario_id": "SLA-44",
+      "structural_status": "PASS",
+      "structural_assertions": 57,
+      "errors": [],
+      "events_after_as_of_allowed": [],
+      "expected_values_recomputed": false
+    },
+    {
+      "scenario_id": "SLA-45",
+      "structural_status": "PASS",
+      "structural_assertions": 48,
+      "errors": [],
+      "events_after_as_of_allowed": [],
+      "expected_values_recomputed": false
+    },
+    {
+      "scenario_id": "SLA-46",
+      "structural_status": "PASS",
+      "structural_assertions": 66,
+      "errors": [],
+      "events_after_as_of_allowed": [],
+      "expected_values_recomputed": false
+    },
+    {
+      "scenario_id": "SLA-47",
+      "structural_status": "PASS",
+      "structural_assertions": 52,
+      "errors": [],
+      "events_after_as_of_allowed": [],
+      "expected_values_recomputed": false
+    },
+    {
+      "scenario_id": "SLA-48",
+      "structural_status": "PASS",
+      "structural_assertions": 48,
+      "errors": [],
+      "events_after_as_of_allowed": [],
+      "expected_values_recomputed": false
+    },
+    {
+      "scenario_id": "SLA-49",
+      "structural_status": "PASS",
+      "structural_assertions": 40,
+      "errors": [],
+      "events_after_as_of_allowed": [],
+      "expected_values_recomputed": false
+    },
+    {
+      "scenario_id": "SLA-50",
+      "structural_status": "PASS",
+      "structural_assertions": 40,
+      "errors": [],
+      "events_after_as_of_allowed": [],
+      "expected_values_recomputed": false
+    },
+    {
+      "scenario_id": "SLA-51",
+      "structural_status": "PASS",
+      "structural_assertions": 40,
+      "errors": [],
+      "events_after_as_of_allowed": [],
+      "expected_values_recomputed": false
+    },
+    {
+      "scenario_id": "SLA-52",
+      "structural_status": "PASS",
+      "structural_assertions": 40,
+      "errors": [],
+      "events_after_as_of_allowed": [],
+      "expected_values_recomputed": false
+    },
+    {
+      "scenario_id": "SLA-53",
+      "structural_status": "PASS",
+      "structural_assertions": 40,
+      "errors": [],
+      "events_after_as_of_allowed": [],
+      "expected_values_recomputed": false
+    },
+    {
+      "scenario_id": "SLA-54",
+      "structural_status": "PASS",
+      "structural_assertions": 40,
+      "errors": [],
+      "events_after_as_of_allowed": [],
+      "expected_values_recomputed": false
+    },
+    {
+      "scenario_id": "SLA-55",
+      "structural_status": "PASS",
+      "structural_assertions": 52,
+      "errors": [],
+      "events_after_as_of_allowed": [],
+      "expected_values_recomputed": false
+    },
+    {
+      "scenario_id": "SLA-56",
+      "structural_status": "PASS",
+      "structural_assertions": 48,
+      "errors": [],
+      "events_after_as_of_allowed": [],
+      "expected_values_recomputed": false
+    },
+    {
+      "scenario_id": "SLA-57",
+      "structural_status": "PASS",
+      "structural_assertions": 48,
+      "errors": [],
+      "events_after_as_of_allowed": [],
+      "expected_values_recomputed": false
+    },
+    {
+      "scenario_id": "SLA-58",
+      "structural_status": "PASS",
+      "structural_assertions": 57,
+      "errors": [],
+      "events_after_as_of_allowed": [],
+      "expected_values_recomputed": false
+    },
+    {
+      "scenario_id": "SLA-59",
+      "structural_status": "PASS",
+      "structural_assertions": 66,
+      "errors": [],
+      "events_after_as_of_allowed": [],
+      "expected_values_recomputed": false
+    },
+    {
+      "scenario_id": "SLA-60",
+      "structural_status": "PASS",
+      "structural_assertions": 77,
+      "errors": [],
+      "events_after_as_of_allowed": [],
+      "expected_values_recomputed": false
+    },
+    {
+      "scenario_id": "SLA-61",
+      "structural_status": "PASS",
+      "structural_assertions": 79,
+      "errors": [],
+      "events_after_as_of_allowed": [],
+      "expected_values_recomputed": false
+    },
+    {
+      "scenario_id": "SLA-62",
+      "structural_status": "PASS",
+      "structural_assertions": 85,
+      "errors": [],
+      "events_after_as_of_allowed": [],
+      "expected_values_recomputed": false
+    },
+    {
+      "scenario_id": "SLA-63",
+      "structural_status": "PASS",
+      "structural_assertions": 90,
+      "errors": [],
+      "events_after_as_of_allowed": [],
+      "expected_values_recomputed": false
+    },
+    {
+      "scenario_id": "SLA-64",
+      "structural_status": "PASS",
+      "structural_assertions": 92,
+      "errors": [],
+      "events_after_as_of_allowed": [],
+      "expected_values_recomputed": false
+    },
+    {
+      "scenario_id": "SLA-65",
+      "structural_status": "PASS",
+      "structural_assertions": 81,
+      "errors": [],
+      "events_after_as_of_allowed": [
+        9
+      ],
+      "expected_values_recomputed": false
+    },
+    {
+      "scenario_id": "SLA-66",
+      "structural_status": "PASS",
+      "structural_assertions": 74,
+      "errors": [],
+      "events_after_as_of_allowed": [
+        8
+      ],
+      "expected_values_recomputed": false
+    },
+    {
+      "scenario_id": "SLA-67",
+      "structural_status": "PASS",
+      "structural_assertions": 77,
+      "errors": [],
+      "events_after_as_of_allowed": [],
+      "expected_values_recomputed": false
+    },
+    {
+      "scenario_id": "SLA-68",
+      "structural_status": "PASS",
+      "structural_assertions": 77,
+      "errors": [],
+      "events_after_as_of_allowed": [],
+      "expected_values_recomputed": false
+    },
+    {
+      "scenario_id": "SLA-69",
+      "structural_status": "PASS",
+      "structural_assertions": 85,
+      "errors": [],
+      "events_after_as_of_allowed": [],
+      "expected_values_recomputed": false
+    }
+  ],
+  "coverage_table": {
+    "1": [
+      "SLA-01",
+      "SLA-02",
+      "SLA-03",
+      "SLA-04",
+      "SLA-05"
+    ],
+    "2": [
+      "SLA-14",
+      "SLA-15",
+      "SLA-16",
+      "SLA-17",
+      "SLA-18"
+    ],
+    "3": [
+      "SLA-19",
+      "SLA-20",
+      "SLA-21"
+    ],
+    "4": [
+      "SLA-06",
+      "SLA-07",
+      "SLA-08",
+      "SLA-09",
+      "SLA-10",
+      "SLA-11",
+      "SLA-12",
+      "SLA-13"
+    ],
+    "5": [
+      "SLA-27",
+      "SLA-28",
+      "SLA-29",
+      "SLA-30"
+    ],
+    "6": [
+      "SLA-22",
+      "SLA-23",
+      "SLA-24",
+      "SLA-25",
+      "SLA-26",
+      "SLA-38",
+      "SLA-40",
+      "SLA-46",
+      "SLA-47",
+      "SLA-55"
+    ],
+    "7": [
+      "SLA-31",
+      "SLA-32",
+      "SLA-33",
+      "SLA-34",
+      "SLA-35"
+    ],
+    "8": [
+      "SLA-36",
+      "SLA-37",
+      "SLA-38",
+      "SLA-39",
+      "SLA-60",
+      "SLA-61",
+      "SLA-62",
+      "SLA-63",
+      "SLA-64"
+    ],
+    "9": [
+      "SLA-40",
+      "SLA-41",
+      "SLA-42",
+      "SLA-43",
+      "SLA-44",
+      "SLA-45",
+      "SLA-67",
+      "SLA-68",
+      "SLA-69"
+    ],
+    "10": [
+      "SLA-46",
+      "SLA-47",
+      "SLA-48",
+      "SLA-61",
+      "SLA-64"
+    ],
+    "11": [
+      "SLA-49",
+      "SLA-50",
+      "SLA-51",
+      "SLA-52",
+      "SLA-53",
+      "SLA-54",
+      "SLA-55",
+      "SLA-56",
+      "SLA-57"
+    ],
+    "12": [
+      "SLA-58",
+      "SLA-59",
+      "SLA-60",
+      "SLA-61",
+      "SLA-62",
+      "SLA-63",
+      "SLA-64",
+      "SLA-65",
+      "SLA-66",
+      "SLA-67",
+      "SLA-68",
+      "SLA-69"
+    ]
+  },
+  "fixture_coverage_groups": {
+    "1": [
+      "SLA-01",
+      "SLA-02",
+      "SLA-03",
+      "SLA-04",
+      "SLA-05"
+    ],
+    "2": [
+      "SLA-14",
+      "SLA-15",
+      "SLA-16",
+      "SLA-17",
+      "SLA-18"
+    ],
+    "3": [
+      "SLA-19",
+      "SLA-20",
+      "SLA-21"
+    ],
+    "4": [
+      "SLA-06",
+      "SLA-07",
+      "SLA-08",
+      "SLA-09",
+      "SLA-10",
+      "SLA-11",
+      "SLA-12",
+      "SLA-13"
+    ],
+    "5": [
+      "SLA-27",
+      "SLA-28",
+      "SLA-29",
+      "SLA-30"
+    ],
+    "6": [
+      "SLA-22",
+      "SLA-23",
+      "SLA-24",
+      "SLA-25",
+      "SLA-26"
+    ],
+    "7": [
+      "SLA-31",
+      "SLA-32",
+      "SLA-33",
+      "SLA-34",
+      "SLA-35"
+    ],
+    "8": [
+      "SLA-36",
+      "SLA-37",
+      "SLA-38",
+      "SLA-39",
+      "SLA-60",
+      "SLA-61",
+      "SLA-62",
+      "SLA-63",
+      "SLA-64"
+    ],
+    "9": [
+      "SLA-40",
+      "SLA-41",
+      "SLA-42",
+      "SLA-43",
+      "SLA-44",
+      "SLA-45"
+    ],
+    "10": [
+      "SLA-46",
+      "SLA-47",
+      "SLA-48"
+    ],
+    "11": [
+      "SLA-49",
+      "SLA-50",
+      "SLA-51",
+      "SLA-52",
+      "SLA-53",
+      "SLA-54",
+      "SLA-55",
+      "SLA-56",
+      "SLA-57"
+    ],
+    "12": [
+      "SLA-58",
+      "SLA-59",
+      "SLA-60",
+      "SLA-61",
+      "SLA-62",
+      "SLA-63",
+      "SLA-64",
+      "SLA-65",
+      "SLA-66",
+      "SLA-67",
+      "SLA-68",
+      "SLA-69"
+    ]
+  },
+  "documented_additional_links": {
+    "1": [],
+    "2": [],
+    "3": [],
+    "4": [],
+    "5": [],
+    "6": [
+      "SLA-38",
+      "SLA-40",
+      "SLA-46",
+      "SLA-47",
+      "SLA-55"
+    ],
+    "7": [],
+    "8": [],
+    "9": [
+      "SLA-67",
+      "SLA-68",
+      "SLA-69"
+    ],
+    "10": [
+      "SLA-61",
+      "SLA-64"
+    ],
+    "11": [],
+    "12": []
+  },
+  "provenance_values": {
+    "drafted_by": {
+      "\"AI advisor\"": 69
+    },
+    "reviewed_by": {
+      "null": 69
+    },
+    "verified_by": {
+      "\"project owner\"": 69
+    },
+    "verified_at": {
+      "\"2026-10-06T09:42:31+07:00\"": 69
+    },
+    "verification_method": {
+      "\"Chủ dự án xác nhận toàn bộ qua hội thoại; chưa cung cấp mô tả phương pháp kiểm chứng độc lập.\"": 69
+    },
+    "verification_basis": {
+      "\"owner_confirmation\"": 69
+    },
+    "verification_evidence_status": {
+      "\"not_provided_in_conversation\"": 69
+    },
+    "owner_confirmation": {
+      "\"tôi xác nhận tất cả, thành verified\"": 69
+    }
+  },
+  "branch_inventory": {
+    "maximum_customer_rejections_in_events": 4,
+    "rejected_action_codes": [
+      "REVIEW_REQUIRED"
+    ],
+    "created_on_sunday": [],
+    "running_resolution_remaining_3600_or_900": []
+  },
+  "summary": {
+    "cases": 69,
+    "structural_pass": 69,
+    "structural_fail": 0,
+    "structural_assertions": 3792,
+    "global_errors": 0
+  },
+  "exit_code": 0
+}

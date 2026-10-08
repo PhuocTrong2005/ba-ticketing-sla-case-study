@@ -1,0 +1,70 @@
+{
+  "checked_at": "2026-10-08T11:40:30+07:00",
+  "reference_run_reused": true,
+  "reference_hashes_match": {
+    "tests/sla/reference/validate_sla_reference.py": true,
+    "tests/sla/sla-scenarios.json": true,
+    "tests/evidence/sla-reference-results.json": true
+  },
+  "reference_result_69_0_1243": true,
+  "source_file_hashes_match_zip_snapshot": {
+    "sla_draft_data.json": true,
+    "sla_validation_results.json": true,
+    "SLA_Validation_Report.md": true,
+    "SLA_69_Draft_Verification.md": true
+  },
+  "checker_matches_zip_snapshot": true,
+  "source_comparison_inputs_unchanged": {
+    "tests/sla/sla-scenarios.json": true,
+    "tests/sla/reference/source/sla_draft_data.json": true,
+    "tests/sla/reference/compare_sla_sources.py": true
+  },
+  "scenario_equality_69_no_difference": true,
+  "old_audit_unchanged": true,
+  "preserved_existing_files": {
+    "tests/sla/sla-scenarios.json": true,
+    "tests/evidence/sla-fixture-audit.json": true,
+    "tests/evidence/sla-fixture-audit-run.json": true,
+    "docs/spec/business-rules.md": true,
+    "docs/spec/codes.md": true,
+    "docs/03-requirements/functional-requirements-draft.md": true,
+    "docs/03-requirements/non-functional-requirements-draft.md": true,
+    "docs/03-requirements/user-stories-draft.md": true
+  },
+  "missing_file_links": [],
+  "git_diff_check_exit_code": 0,
+  "git_diff_check_stderr": "warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'TASKS.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'docs/decision-log.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'docs/open-questions.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'docs/spec/business-rules.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'docs/spec/scenario-coverage.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'docs/traceability.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'tests/sla/sla-scenarios.json', LF will be replaced by CRLF the next time Git touches it\n",
+  "git_index_unchanged": true,
+  "git_branch_unchanged": true,
+  "git_head_unchanged": true,
+  "git_remote_unchanged": true,
+  "task_updated_files": [
+    "README.md",
+    "TASKS.md",
+    "docs/decision-log.md",
+    "docs/open-questions.md",
+    "docs/spec/scenario-coverage.md",
+    "docs/traceability.md",
+    "tests/evidence/sla-reconciliation.md",
+    "tests/evidence/sla-reconciliation.sha256"
+  ],
+  "task_added_or_preserved_artifacts": [
+    "tests/sla/audit_fixture_structure.py",
+    "tests/sla/reference/README.md",
+    "tests/sla/reference/validate_sla_reference.py",
+    "tests/sla/reference/compare_sla_sources.py",
+    "tests/sla/reference/source/sla_draft_data.json",
+    "tests/sla/reference/source/sla_validation_results.json",
+    "tests/sla/reference/source/SLA_Validation_Report.md",
+    "tests/sla/reference/source/SLA_69_Draft_Verification.md",
+    "tests/evidence/sla-reconciliation-baseline.json",
+    "tests/evidence/sla-reconciliation-checks.json",
+    "tests/evidence/sla-reference-baseline.json",
+    "tests/evidence/sla-reference-results.json",
+    "tests/evidence/sla-reference-run.json",
+    "tests/evidence/sla-source-comparison.json",
+    "tests/evidence/history/sla-reconciliation-before-reference.md",
+    "tests/evidence/history/sla-reconciliation-before-reference.sha256"
+  ],
+  "passed": true
+}

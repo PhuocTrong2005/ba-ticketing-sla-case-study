@@ -1,0 +1,353 @@
+{
+  "executed_at": "2026-10-08T13:09:40+07:00",
+  "kind": "Links, IDs and diff check; no SLA/API execution",
+  "links": [
+    {
+      "source": "README.md",
+      "target": "docs/spec/business-rules.md",
+      "exists": true,
+      "anchor_ok": null
+    },
+    {
+      "source": "README.md",
+      "target": "docs/spec/codes.md",
+      "exists": true,
+      "anchor_ok": null
+    },
+    {
+      "source": "README.md",
+      "target": "docs/decision-log.md",
+      "exists": true,
+      "anchor_ok": null
+    },
+    {
+      "source": "README.md",
+      "target": "docs/open-questions.md",
+      "exists": true,
+      "anchor_ok": null
+    },
+    {
+      "source": "README.md",
+      "target": "tests/evidence/sla-source-comparison.json",
+      "exists": true,
+      "anchor_ok": null
+    },
+    {
+      "source": "README.md",
+      "target": "tests/evidence/sla-reference-results.json",
+      "exists": true,
+      "anchor_ok": null
+    },
+    {
+      "source": "README.md",
+      "target": "tests/evidence/sla-reference-run.json",
+      "exists": true,
+      "anchor_ok": null
+    },
+    {
+      "source": "README.md",
+      "target": "tests/evidence/sla-fixture-audit.json",
+      "exists": true,
+      "anchor_ok": null
+    },
+    {
+      "source": "README.md",
+      "target": "tests/evidence/sla-reconciliation.md",
+      "exists": true,
+      "anchor_ok": null
+    },
+    {
+      "source": "README.md",
+      "target": "tests/evidence/sla-reconciliation.sha256",
+      "exists": true,
+      "anchor_ok": null
+    },
+    {
+      "source": "README.md",
+      "target": "tests/evidence/sla-draft-import.md",
+      "exists": true,
+      "anchor_ok": null
+    },
+    {
+      "source": "README.md",
+      "target": "docs/spec/scenario-coverage.md",
+      "exists": true,
+      "anchor_ok": null
+    },
+    {
+      "source": "README.md",
+      "target": "docs/traceability.md",
+      "exists": true,
+      "anchor_ok": null
+    },
+    {
+      "source": "README.md",
+      "target": "TASKS.md",
+      "exists": true,
+      "anchor_ok": null
+    },
+    {
+      "source": "TASKS.md",
+      "target": "tests/evidence/sla-reconciliation.md",
+      "exists": true,
+      "anchor_ok": null
+    },
+    {
+      "source": "TASKS.md",
+      "target": "tests/evidence/sla-draft-import.md",
+      "exists": true,
+      "anchor_ok": null
+    },
+    {
+      "source": "docs/spec/scenario-coverage.md",
+      "target": "../../tests/evidence/sla-draft-import.md",
+      "exists": true,
+      "anchor_ok": null
+    },
+    {
+      "source": "docs/spec/scenario-coverage.md",
+      "target": "../open-questions.md",
+      "exists": true,
+      "anchor_ok": null
+    },
+    {
+      "source": "docs/spec/scenario-coverage.md",
+      "target": "../../tests/evidence/sla-reference-results.json",
+      "exists": true,
+      "anchor_ok": null
+    },
+    {
+      "source": "docs/spec/scenario-coverage.md",
+      "target": "../../tests/evidence/sla-fixture-audit.json",
+      "exists": true,
+      "anchor_ok": null
+    },
+    {
+      "source": "docs/spec/scenario-coverage.md",
+      "target": "../../tests/evidence/sla-reconciliation.md",
+      "exists": true,
+      "anchor_ok": null
+    },
+    {
+      "source": "docs/decision-log.md",
+      "target": "open-questions.md",
+      "exists": true,
+      "anchor_ok": null
+    },
+    {
+      "source": "docs/decision-log.md",
+      "target": "../tests/evidence/sla-draft-import.md",
+      "exists": true,
+      "anchor_ok": null
+    },
+    {
+      "source": "docs/decision-log.md",
+      "target": "../tests/sla/audit_fixture_structure.py",
+      "exists": true,
+      "anchor_ok": null
+    },
+    {
+      "source": "docs/decision-log.md",
+      "target": "../tests/sla/reference/validate_sla_reference.py",
+      "exists": true,
+      "anchor_ok": null
+    },
+    {
+      "source": "docs/decision-log.md",
+      "target": "../tests/evidence/sla-reference-results.json",
+      "exists": true,
+      "anchor_ok": null
+    },
+    {
+      "source": "docs/decision-log.md",
+      "target": "../tests/evidence/sla-reconciliation.md",
+      "exists": true,
+      "anchor_ok": null
+    },
+    {
+      "source": "docs/decision-log.md",
+      "target": "../tests/evidence/sla-reconciliation.sha256",
+      "exists": true,
+      "anchor_ok": null
+    },
+    {
+      "source": "docs/open-questions.md",
+      "target": "spec/scenario-coverage.md#nhập-s1s12-ngày-08102026--draft-chưa-mở-gate",
+      "exists": true,
+      "anchor_ok": true
+    },
+    {
+      "source": "docs/open-questions.md",
+      "target": "spec/scenario-coverage.md#đối-soát-việc-1--06102026",
+      "exists": true,
+      "anchor_ok": true
+    },
+    {
+      "source": "docs/open-questions.md",
+      "target": "../tests/evidence/sla-reconciliation.md",
+      "exists": true,
+      "anchor_ok": null
+    },
+    {
+      "source": "docs/open-questions.md",
+      "target": "spec/scenario-coverage.md",
+      "exists": true,
+      "anchor_ok": null
+    },
+    {
+      "source": "docs/open-questions.md",
+      "target": "spec/scenario-coverage.md",
+      "exists": true,
+      "anchor_ok": null
+    },
+    {
+      "source": "docs/open-questions.md",
+      "target": "spec/scenario-coverage.md",
+      "exists": true,
+      "anchor_ok": null
+    },
+    {
+      "source": "docs/traceability.md",
+      "target": "spec/scenario-coverage.md#nhập-s1s12-ngày-08102026--draft-chưa-mở-gate",
+      "exists": true,
+      "anchor_ok": true
+    },
+    {
+      "source": "docs/traceability.md",
+      "target": "../tests/evidence/sla-draft-import.md",
+      "exists": true,
+      "anchor_ok": null
+    },
+    {
+      "source": "docs/traceability.md",
+      "target": "../tests/evidence/sla-reference-results.json",
+      "exists": true,
+      "anchor_ok": null
+    },
+    {
+      "source": "docs/traceability.md",
+      "target": "../tests/evidence/sla-reconciliation.md",
+      "exists": true,
+      "anchor_ok": null
+    },
+    {
+      "source": "docs/traceability.md",
+      "target": "../tests/evidence/sla-fixture-audit.json",
+      "exists": true,
+      "anchor_ok": null
+    },
+    {
+      "source": "docs/traceability.md",
+      "target": "../tests/sla/reference/validate_sla_reference.py",
+      "exists": true,
+      "anchor_ok": null
+    },
+    {
+      "source": "docs/traceability.md",
+      "target": "../tests/evidence/sla-reference-run.json",
+      "exists": true,
+      "anchor_ok": null
+    },
+    {
+      "source": "docs/traceability.md",
+      "target": "../tests/evidence/sla-source-comparison.json",
+      "exists": true,
+      "anchor_ok": null
+    },
+    {
+      "source": "docs/traceability.md",
+      "target": "../tests/evidence/sla-reconciliation.sha256",
+      "exists": true,
+      "anchor_ok": null
+    },
+    {
+      "source": "docs/traceability.md",
+      "target": "spec/scenario-coverage.md",
+      "exists": true,
+      "anchor_ok": null
+    },
+    {
+      "source": "tests/sla/reference/README.md",
+      "target": "../../evidence/sla-draft-import.md",
+      "exists": true,
+      "anchor_ok": null
+    },
+    {
+      "source": "tests/sla/reference/README.md",
+      "target": "../../evidence/sla-reconciliation.md",
+      "exists": true,
+      "anchor_ok": null
+    },
+    {
+      "source": "tests/evidence/sla-draft-import.md",
+      "target": "../sla/sla-scenarios.json",
+      "exists": true,
+      "anchor_ok": null
+    },
+    {
+      "source": "tests/evidence/sla-draft-import.md",
+      "target": "sla-draft-import-structure.json",
+      "exists": true,
+      "anchor_ok": null
+    },
+    {
+      "source": "tests/evidence/sla-draft-import.md",
+      "target": "../../docs/open-questions.md",
+      "exists": true,
+      "anchor_ok": null
+    },
+    {
+      "source": "tests/evidence/sla-draft-import.md",
+      "target": "sla-draft-import-run.json",
+      "exists": true,
+      "anchor_ok": null
+    },
+    {
+      "source": "tests/evidence/sla-draft-import.md",
+      "target": "sla-draft-import-old-reference.json",
+      "exists": true,
+      "anchor_ok": null
+    },
+    {
+      "source": "tests/evidence/sla-draft-import.md",
+      "target": "sla-draft-import-source-comparison.json",
+      "exists": true,
+      "anchor_ok": null
+    },
+    {
+      "source": "tests/evidence/sla-draft-import.md",
+      "target": "../sla/audit_draft_import.py",
+      "exists": true,
+      "anchor_ok": null
+    },
+    {
+      "source": "tests/evidence/sla-draft-import.md",
+      "target": "sla-draft-import-baseline.json",
+      "exists": true,
+      "anchor_ok": null
+    },
+    {
+      "source": "tests/evidence/sla-draft-import.md",
+      "target": "sla-draft-import-checks.json",
+      "exists": true,
+      "anchor_ok": null
+    },
+    {
+      "source": "tests/evidence/sla-draft-import.md",
+      "target": "../../docs/spec/scenario-coverage.md",
+      "exists": true,
+      "anchor_ok": null
+    }
+  ],
+  "broken_links": [],
+  "ids_unique": true,
+  "old_review_status_unchanged": true,
+  "new_all_draft": true,
+  "git_diff_check": {
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'TASKS.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'docs/decision-log.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'docs/open-questions.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'docs/spec/business-rules.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'docs/spec/scenario-coverage.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'docs/traceability.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'tests/sla/sla-scenarios.json', LF will be replaced by CRLF the next time Git touches it\n"
+  },
+  "fixture_sha256": "4ee909bf6afecffcdd9ac9c6b63609484fcb4ceb040129243ebc1bd92e005453",
+  "exit_code": 0
+}

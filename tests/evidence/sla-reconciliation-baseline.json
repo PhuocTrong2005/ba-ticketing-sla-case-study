@@ -1,0 +1,51 @@
+{
+  "captured_at": "2026-10-06T11:02:41+07:00",
+  "purpose": "Pre-task working-tree state; existing changes must be preserved",
+  "files": {
+    "AGENTS.md": "bf8a3370d11512fbc2b56b5194b926570135ad33df68cbb2e7b44862f295fc7c",
+    "README.md": "9145268ad39241a0b69ca8705fe26fc556180698e91c4beba9e3ab95874a3127",
+    "TASKS.md": "7a5b9f6c15ee9fce9c6f1b14bbbf29b7039f9eb9405dfeeab6c47a51230d83da",
+    "docs/decision-log.md": "79af7c0adf374455d73c2d3f30f20408cb48a512b1d46f19e211074e8a06af7c",
+    "docs/open-questions.md": "0f2bd44eb7bc65ad52e5102c268c9712bbb5773cf06c0b6b35f7ceec92e72ea9",
+    "docs/spec/business-rules.md": "6477f385deb9880a6336721d3b6de7f41d5598ac2338dc6c9e4eb68ddeaac5d0",
+    "docs/spec/codes.md": "90d05be76c2c5862b29c0862473fed36067c573a8034226cd2d4c2c25394671e",
+    "docs/spec/scenario-coverage.md": "804a838a494fd4197100165fb1abf15115ce1f0bf470898a89f5826dbf1bad2f",
+    "docs/traceability.md": "755e41989a310e78a75f6767300a77abe935f5fad71dd7111c85862e6ae6b8b1",
+    "tests/sla/sla-scenarios.json": "4bcad90141b1d6b86a28804b93a961cea2862d84011c6b463439c370c17397b9",
+    "docs/03-requirements/functional-requirements-draft.md": "f9f77a90520880ae60b3179fcfadbda57a5333657280449e0a4a380cecfe49f0",
+    "docs/03-requirements/non-functional-requirements-draft.md": "ceb993bbf6b7357c840551d2c138a962e378a5d187f83e7aa0ef10b6519f4a12",
+    "docs/03-requirements/user-stories-draft.md": "18345e1289e21712c7183b94d1ea7b24a4b113728c94f069c44d2d284c75fac1"
+  },
+  "git": {
+    "branch": {
+      "exit_code": 0,
+      "stdout": "main\n",
+      "stderr": ""
+    },
+    "head": {
+      "exit_code": 0,
+      "stdout": "3385b50a746d47db8976691fba6661bee0549307\n",
+      "stderr": ""
+    },
+    "remote": {
+      "exit_code": 0,
+      "stdout": "origin\thttps://github.com/PhuocTrong2005/ba-ticketing-sla-case-study.git (fetch)\norigin\thttps://github.com/PhuocTrong2005/ba-ticketing-sla-case-study.git (push)\n",
+      "stderr": ""
+    },
+    "status": {
+      "exit_code": 0,
+      "stdout": " M README.md\n M TASKS.md\n M docs/decision-log.md\n M docs/open-questions.md\n M docs/spec/business-rules.md\n M docs/spec/scenario-coverage.md\n M docs/traceability.md\n M tests/sla/sla-scenarios.json\n?? docs/03-requirements/functional-requirements-draft.md\n?? docs/03-requirements/non-functional-requirements-draft.md\n?? docs/03-requirements/user-stories-draft.md\n",
+      "stderr": ""
+    },
+    "staged": {
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  },
+  "task_source": {
+    "path": "C:\\Users\\ASUS\\.codex\\attachments\\8bb84ad0-083d-4752-ac35-2e3f6c47aba9\\Pasted text.txt",
+    "sha256": "c3a8d29f5a5ff6a86071f0fd8149a9121a797ed21ac449fa7ae1c38702717476",
+    "named_markdown_found": false
+  }
+}

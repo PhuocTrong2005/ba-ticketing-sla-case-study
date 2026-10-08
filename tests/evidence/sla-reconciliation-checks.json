@@ -1,0 +1,45 @@
+{
+  "checked_at": "2026-10-06T11:06:59+07:00",
+  "task_modified_files": [
+    "README.md",
+    "TASKS.md",
+    "docs/spec/scenario-coverage.md",
+    "docs/decision-log.md",
+    "docs/open-questions.md",
+    "docs/traceability.md"
+  ],
+  "task_added_files": [
+    "tests/sla/audit_fixture_structure.py",
+    "tests/evidence/sla-reconciliation-baseline.json",
+    "tests/evidence/sla-fixture-audit.json",
+    "tests/evidence/sla-fixture-audit-run.json",
+    "tests/evidence/sla-reconciliation.md",
+    "tests/evidence/sla-reconciliation-checks.json",
+    "tests/evidence/sla-reconciliation.sha256"
+  ],
+  "unchanged_from_baseline": {
+    "AGENTS.md": true,
+    "docs/spec/business-rules.md": true,
+    "docs/spec/codes.md": true,
+    "tests/sla/sla-scenarios.json": true,
+    "docs/03-requirements/functional-requirements-draft.md": true,
+    "docs/03-requirements/non-functional-requirements-draft.md": true,
+    "docs/03-requirements/user-stories-draft.md": true
+  },
+  "audit_hashes_match": {
+    "tests/sla/sla-scenarios.json": true,
+    "tests/sla/audit_fixture_structure.py": true,
+    "docs/spec/scenario-coverage.md": true
+  },
+  "missing_markdown_file_links": [],
+  "git_diff_check": {
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'TASKS.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'docs/decision-log.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'docs/open-questions.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'docs/spec/business-rules.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'docs/spec/scenario-coverage.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'docs/traceability.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'tests/sla/sla-scenarios.json', LF will be replaced by CRLF the next time Git touches it\n"
+  },
+  "index_unchanged": true,
+  "head_unchanged": true,
+  "branch_unchanged": true,
+  "remote_unchanged": true,
+  "passed": true
+}

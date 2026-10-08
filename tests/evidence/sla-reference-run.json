@@ -1,0 +1,26 @@
+{
+  "started_at": "2026-10-06T12:51:30+07:00",
+  "finished_at": "2026-10-06T12:51:30+07:00",
+  "argv": [
+    "C:\\Program Files\\Python313\\python.exe",
+    "tests/sla/reference/validate_sla_reference.py",
+    "tests/sla/sla-scenarios.json",
+    "--report",
+    "tests/evidence/sla-reference-results.json"
+  ],
+  "replay_command": "python tests/sla/reference/validate_sla_reference.py tests/sla/sla-scenarios.json --report tests/evidence/sla-reference-results.json",
+  "python_version": "3.13.3",
+  "cwd": "C:\\Users\\ASUS\\ba-ticketing-sla-case-study",
+  "exit_code": 0,
+  "stdout": "{\"scenario_count\": 69, \"passed\": 69, \"failed\": 0, \"field_comparisons\": 1243, \"source_sha256\": \"4bcad90141b1d6b86a28804b93a961cea2862d84011c6b463439c370c17397b9\"}\n",
+  "stderr": "",
+  "executor": "Codex AI assistant running local Python on behalf of project owner",
+  "source_zip": "D:\\Download\\SLA_Verification_Package.zip",
+  "source_zip_sha256": "d445c012818d17007506206a8e0b089afbb46ce2fd3195c1eb6df2efa559d2a8",
+  "adapter": null,
+  "hashes": {
+    "tests/sla/reference/validate_sla_reference.py": "764c284609d7074cbebc7c027576e9c8a16c9a8792456f8e4909ca221464f9ed",
+    "tests/sla/sla-scenarios.json": "4bcad90141b1d6b86a28804b93a961cea2862d84011c6b463439c370c17397b9",
+    "tests/evidence/sla-reference-results.json": "47f71b63cad28ac0c5f56f1548a1198eec75b105ed38cdbf4d70813ae856b0a6"
+  }
+}

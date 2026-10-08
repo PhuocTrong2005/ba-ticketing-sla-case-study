@@ -39,6 +39,16 @@
 | D-35 | BR-39: cảnh báo theo giây làm việc còn lại, không phụ thuộc `as_of` trong/ngoài giờ. | Chưa ghi nhận. | Chủ dự án chọn khi rà ca SLA-12. | Đã chốt |
 | D-36 | BR-25: cắt phần dưới giây, không làm tròn; đầu vào thô lưu riêng. | Làm tròn. | Chủ dự án chọn khi rà ca SLA-13. | Đã chốt |
 | D-37 | Định dạng file kịch bản là JSON (`tests/sla/sla-scenarios.json`), vì JSON lồng trong CSV dễ hỏng khi sửa bằng Excel. | Chưa ghi nhận. | Chủ dự án ủy quyền, cố vấn đề xuất. | Đã chốt |
-| D-38 | BR-59: thao tác ngoài giờ vẫn được ghi nhận nếu SLA chưa đến hạn; sau deadline vẫn ghi nhận nhưng breached. | Chưa ghi nhận. | Chủ dự án chọn khi rà SLA-17/SLA-18; cách diễn đạt “sau deadline vẫn ghi nhận nhưng breached” suy từ quyết định SLA-09 (D-34), cần chủ dự án xác nhận. | Đã chốt |
+| D-38 | BR-59: thao tác ngoài giờ vẫn được ghi nhận với timestamp thực; thao tác không sau deadline là met, thao tác sau deadline vẫn được ghi nhận nhưng breached. | Chưa ghi nhận. | Chủ dự án chốt khi rà SLA-17/SLA-18 ngày 06/10/2026; cách diễn đạt breached sau deadline nhất quán SLA-09/D-34. | Đã chốt |
+| D-39 | Chốt OQ-20/OQ-21: số giây còn lại được kẹp về 0 khi vượt ngân sách; Waiting giữ `breached` nếu đã vi phạm, không cộng giây và không phát cảnh báo sắp đến hạn. | Số giây còn lại âm; hạ trạng thái vi phạm khi Waiting. | Chủ dự án chốt theo phương án đề xuất ngày 06/10/2026. | Đã chốt |
+| D-40 | Ghi nhận nguồn gốc bộ 69 fixture: chủ dự án xác nhận; trợ lý AI chạy công cụ tham chiếu thay chủ dự án và báo cáo 69/69 PASS, 1.243 so sánh. | Coi xác nhận hoặc đối chiếu fixture là kết quả chạy backend/API/SQL/prototype, hoặc suy chủ dự án tự chạy công cụ. | Báo cáo đối chiếu do chủ dự án cung cấp ngày 06/10/2026; hash dữ liệu/script ghi tại README. Không bỏ gate hiện có và không khẳng định backend/API/SQL/prototype đúng. | Đã chốt |
 
 Đề xuất mới không thuộc lịch sử quyết định này phải được ghi vào [open-questions.md](open-questions.md) đến khi chủ dự án chốt.
+
+### Nhập nháp S1–S12 — 08/10/2026
+
+Theo yêu cầu chủ dự án, nhập SLA-70…SLA-81 ở `draft`, giữ nguyên 69 ca verified. S12 dùng hạn G `2026-10-06T08:30:00+07:00` và `expected_rejected_actions` như SLA-61. Đây là ghi nhận phạm vi nhập liệu, không thay quy tắc nghiệp vụ/D-33, không xác nhận verified hoặc mở gate. Không suy phương pháp tính tay hay bằng chứng chủ dự án từ xác nhận con số. Checker gốc và audit lịch sử giữ nguyên; [báo cáo nhập](../tests/evidence/sla-draft-import.md) ghi giới hạn thực thi.
+
+### Bổ sung artefact cho D-40 — đối soát việc 1 ngày 06/10/2026
+
+Giữ nguyên báo cáo lịch sử 69/69 PASS, 1.243 so sánh và vai trò chủ dự án xác nhận/trợ lý AI chạy thay. Lần đầu lúc 11:04:39 chỉ chạy [audit cấu trúc fixture](../tests/sla/audit_fixture_structure.py), 3.792 assertion; bằng chứng đó giữ nguyên. Sau khi nhận ZIP tại `D:\Download\SLA_Verification_Package.zip`, đã lưu [checker gốc](../tests/sla/reference/validate_sla_reference.py) và chạy trực tiếp trên fixture repo lúc `2026-10-06T12:51:30+07:00`: [69 PASS, 0 FAIL, 1.243 so sánh](../tests/evidence/sla-reference-results.json), exit code 0. Hash lịch sử fixture/script khớp byte trong gói; khác hash repo do wrapper metadata và định dạng, 69 scenario khớp toàn bộ. [Báo cáo hòa giải](../tests/evidence/sla-reconciliation.md) và [manifest SHA-256](../tests/evidence/sla-reconciliation.sha256) phân biệt các lần chạy và hash. Không thêm quyết định nghiệp vụ, không thay D-33, không coi fixture/reference check là bằng chứng backend/API/SQL/prototype/concurrency. Gate vẫn chưa được xác nhận mở do các nhánh coverage còn thiếu.

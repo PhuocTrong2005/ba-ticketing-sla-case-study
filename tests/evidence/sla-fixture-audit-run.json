@@ -1,0 +1,15 @@
+{
+  "started_at": "2026-10-06T11:04:39+07:00",
+  "finished_at": "2026-10-06T11:04:39+07:00",
+  "argv": [
+    "C:\\Program Files\\Python313\\python.exe",
+    "tests/sla/audit_fixture_structure.py",
+    "tests/sla/sla-scenarios.json",
+    "--report",
+    "tests/evidence/sla-fixture-audit.json"
+  ],
+  "exit_code": 0,
+  "stdout": "{\"summary\": {\"cases\": 69, \"structural_pass\": 69, \"structural_fail\": 0, \"structural_assertions\": 3792, \"global_errors\": 0}, \"exit_code\": 0, \"reference_check\": \"NOT_RUN_MISSING_SOURCE\"}\n",
+  "stderr": "",
+  "executor": "Codex AI assistant via local exec_command/PowerShell/Python; not project owner running manually"
+}

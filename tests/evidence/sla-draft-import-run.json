@@ -1,0 +1,64 @@
+{
+  "kind": "Actual original CLI executions; 81-case input rejected before comparison",
+  "executed_at": "2026-10-08T13:05:49+07:00",
+  "executor": "Codex AI assistant",
+  "python_version": "3.13.3",
+  "fixture_sha256": "4ee909bf6afecffcdd9ac9c6b63609484fcb4ceb040129243ebc1bd92e005453",
+  "old_projection_sha256": "4bcad90141b1d6b86a28804b93a961cea2862d84011c6b463439c370c17397b9",
+  "checker_sha256": "764c284609d7074cbebc7c027576e9c8a16c9a8792456f8e4909ca221464f9ed",
+  "runs": [
+    {
+      "kind": "reference_old_69",
+      "argv": [
+        "C:\\Program Files\\Python313\\python.exe",
+        "tests/sla/reference/validate_sla_reference.py",
+        "C:\\Users\\ASUS\\AppData\\Local\\Temp\\sla-import-check-wopy4gkg\\old-69.json",
+        "--report",
+        "tests/evidence/sla-draft-import-old-reference.json"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"scenario_count\": 69, \"passed\": 69, \"failed\": 0, \"field_comparisons\": 1243, \"source_sha256\": \"4bcad90141b1d6b86a28804b93a961cea2862d84011c6b463439c370c17397b9\"}\n",
+      "stderr": ""
+    },
+    {
+      "kind": "source_old_69",
+      "argv": [
+        "C:\\Program Files\\Python313\\python.exe",
+        "tests/sla/reference/compare_sla_sources.py",
+        "C:\\Users\\ASUS\\AppData\\Local\\Temp\\sla-import-check-wopy4gkg\\old-69.json",
+        "tests/sla/reference/source/sla_draft_data.json",
+        "--report",
+        "tests/evidence/sla-draft-import-source-comparison.json"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"scenario_count\": 69, \"business_field_equality_comparisons\": 1587, \"business_differences\": 0, \"metadata_or_description_differences_within_scenarios\": 0, \"all_scenarios_structurally_equal_including_metadata_and_order\": true, \"exit_code\": 0}\n",
+      "stderr": ""
+    },
+    {
+      "kind": "reference_full_81",
+      "argv": [
+        "C:\\Program Files\\Python313\\python.exe",
+        "tests/sla/reference/validate_sla_reference.py",
+        "tests/sla/sla-scenarios.json",
+        "--report",
+        "C:\\Users\\ASUS\\AppData\\Local\\Temp\\sla-import-check-wopy4gkg\\unsupported-full-report.json"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\ASUS\\ba-ticketing-sla-case-study\\tests\\sla\\reference\\validate_sla_reference.py\", line 128, in <module>\n    if __name__=='__main__':raise SystemExit(main())\n                                             ~~~~^^\n  File \"C:\\Users\\ASUS\\ba-ticketing-sla-case-study\\tests\\sla\\reference\\validate_sla_reference.py\", line 105, in main\n    if len(rows)!=69 or {r['scenario_id'] for r in rows}!={f'SLA-{i:02}' for i in range(1,70)}:raise ValueError('69 unique IDs required')\n                                                                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: 69 unique IDs required\n"
+    }
+  ],
+  "new_reference": {
+    "status": "UNSUPPORTED_BY_ORIGINAL_CLI",
+    "cases": 12,
+    "executed_cases": 0,
+    "passed": 0,
+    "failed": 0,
+    "field_comparisons": 0
+  },
+  "limitations": [
+    "No checker changes or invocation of calculation functions outside original CLI",
+    "No API/backend/SQL/prototype/concurrency execution",
+    "Original CLI refuses 81 cases before any calculation; this is a tool limit, not an SLA failure"
+  ]
+}

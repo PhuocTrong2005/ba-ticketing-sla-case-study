@@ -1,0 +1,2 @@
+# Preserve the original verification-package document byte for byte.
+tests/sla/reference/source/SLA_69_Draft_Verification.md -whitespace

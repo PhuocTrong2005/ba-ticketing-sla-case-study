@@ -1,0 +1,12 @@
+{
+  "kind": "Pre-import baseline and byte-preservation check",
+  "old_scenario_count": 69,
+  "new_scenario_count": 12,
+  "old_fixture_sha256": "4bcad90141b1d6b86a28804b93a961cea2862d84011c6b463439c370c17397b9",
+  "old_object_prefix_bytes": 318042,
+  "old_object_prefix_sha256": "a00237a5b66bcd8450f6cd3bdb2011bb28a31b6811df895836557b942a63f8c2",
+  "old_objects_byte_prefix_preserved": true,
+  "old_objects_equal_preserved_source": true,
+  "checker_sha256": "764c284609d7074cbebc7c027576e9c8a16c9a8792456f8e4909ca221464f9ed",
+  "historical_audit_sha256": "f780b258036de3bd0b9ccee560074efa1d426b6405cc9e34a93e10ce8a670127"
+}

@@ -1,0 +1,2584 @@
+{
+  "kind": "AI-assisted standalone reference cross-check",
+  "source_file": "old-69.json",
+  "source_sha256": "4bcad90141b1d6b86a28804b93a961cea2862d84011c6b463439c370c17397b9",
+  "checker_sha256": "764c284609d7074cbebc7c027576e9c8a16c9a8792456f8e4909ca221464f9ed",
+  "executed_at": "2026-10-08T13:05:49+07:00",
+  "execution_by": "AI assistant using Python reference checker on behalf of project owner",
+  "owner_confirmation": null,
+  "method": "Enumerate each working second in a calendar lattice, binary-search elapsed budgets/deadlines, replay source events; compare all recorded expected fields including intervals/snapshots/reviews. Does not import or invoke backend.",
+  "scenario_count": 69,
+  "passed": 69,
+  "failed": 0,
+  "field_comparisons": 1243,
+  "limitations": [
+    "Both fixtures and reference checker were authored with AI; method independence from backend does not establish independent human execution.",
+    "No actual FastAPI, SQLite, API permissions, concurrency, SQL reports or prototype tests executed.",
+    "Actors and required public/reject/review text are not specified in these mathematical fixtures; their permissions/content validation require separate API cases.",
+    "Group mapping does not prove every required coverage condition in the unseen repository specification."
+  ],
+  "scenarios": [
+    {
+      "scenario_id": "SLA-01",
+      "checks": 18,
+      "result": "PASS",
+      "mismatches": [],
+      "reference": {
+        "expected_first_response_due_at": "2026-10-05T10:00:00+07:00",
+        "expected_resolution_due_at": "2026-10-05T17:00:00+07:00",
+        "expected_first_response_consumed_seconds": 1800,
+        "expected_resolution_consumed_seconds": 1800,
+        "expected_first_response_remaining_seconds": 1800,
+        "expected_resolution_remaining_seconds": 27000,
+        "expected_first_response_status": "pending",
+        "expected_resolution_status": "pending",
+        "expected_first_response_warning_level": "soft",
+        "expected_resolution_warning_level": "none",
+        "expected_first_response_sla_status_at_assignment": null,
+        "expected_resolution_sla_status_at_assignment": null,
+        "expected_resolution_intervals": [
+          {
+            "started_at": "2026-10-05T09:00:00+07:00",
+            "ended_at": null,
+            "business_seconds_as_of": 1800
+          }
+        ],
+        "expected_ticket_state": "New",
+        "expected_rejection_count": 0,
+        "expected_open_review": null,
+        "expected_reviews": [],
+        "resolution_result_final": false
+      }
+    },
+    {
+      "scenario_id": "SLA-02",
+      "checks": 18,
+      "result": "PASS",
+      "mismatches": [],
+      "reference": {
+        "expected_first_response_due_at": "2026-10-05T11:00:00+07:00",
+        "expected_resolution_due_at": "2026-10-06T16:00:00+07:00",
+        "expected_first_response_consumed_seconds": 1800,
+        "expected_resolution_consumed_seconds": 1800,
+        "expected_first_response_remaining_seconds": 5400,
+        "expected_resolution_remaining_seconds": 55800,
+        "expected_first_response_status": "pending",
+        "expected_resolution_status": "pending",
+        "expected_first_response_warning_level": "none",
+        "expected_resolution_warning_level": "none",
+        "expected_first_response_sla_status_at_assignment": null,
+        "expected_resolution_sla_status_at_assignment": null,
+        "expected_resolution_intervals": [
+          {
+            "started_at": "2026-10-05T09:00:00+07:00",
+            "ended_at": null,
+            "business_seconds_as_of": 1800
+          }
+        ],
+        "expected_ticket_state": "New",
+        "expected_rejection_count": 0,
+        "expected_open_review": null,
+        "expected_reviews": [],
+        "resolution_result_final": false
+      }
+    },
+    {
+      "scenario_id": "SLA-03",
+      "checks": 18,
+      "result": "PASS",
+      "mismatches": [],
+      "reference": {
+        "expected_first_response_due_at": "2026-10-05T10:00:00+07:00",
+        "expected_resolution_due_at": "2026-10-05T17:00:00+07:00",
+        "expected_first_response_consumed_seconds": 2400,
+        "expected_resolution_consumed_seconds": 3000,
+        "expected_first_response_remaining_seconds": 1200,
+        "expected_resolution_remaining_seconds": 25800,
+        "expected_first_response_status": "met",
+        "expected_resolution_status": "pending",
+        "expected_first_response_warning_level": "none",
+        "expected_resolution_warning_level": "none",
+        "expected_first_response_sla_status_at_assignment": "pending",
+        "expected_resolution_sla_status_at_assignment": "pending",
+        "expected_resolution_intervals": [
+          {
+            "started_at": "2026-10-05T09:00:00+07:00",
+            "ended_at": null,
+            "business_seconds_as_of": 3000
+          }
+        ],
+        "expected_ticket_state": "In Progress",
+        "expected_rejection_count": 0,
+        "expected_open_review": null,
+        "expected_reviews": [],
+        "resolution_result_final": false
+      }
+    },
+    {
+      "scenario_id": "SLA-04",
+      "checks": 18,
+      "result": "PASS",
+      "mismatches": [],
+      "reference": {
+        "expected_first_response_due_at": "2026-10-05T10:00:00+07:00",
+        "expected_resolution_due_at": "2026-10-05T17:00:00+07:00",
+        "expected_first_response_consumed_seconds": 2400,
+        "expected_resolution_consumed_seconds": 5400,
+        "expected_first_response_remaining_seconds": 1200,
+        "expected_resolution_remaining_seconds": 23400,
+        "expected_first_response_status": "met",
+        "expected_resolution_status": "met",
+        "expected_first_response_warning_level": "none",
+        "expected_resolution_warning_level": "none",
+        "expected_first_response_sla_status_at_assignment": "pending",
+        "expected_resolution_sla_status_at_assignment": "pending",
+        "expected_resolution_intervals": [
+          {
+            "started_at": "2026-10-05T09:00:00+07:00",
+            "ended_at": "2026-10-05T10:30:00+07:00",
+            "business_seconds": 5400
+          }
+        ],
+        "expected_ticket_state": "Resolved",
+        "expected_rejection_count": 0,
+        "expected_open_review": null,
+        "expected_reviews": [],
+        "resolution_result_final": false
+      }
+    },
+    {
+      "scenario_id": "SLA-05",
+      "checks": 18,
+      "result": "PASS",
+      "mismatches": [],
+      "reference": {
+        "expected_first_response_due_at": "2026-10-05T11:00:00+07:00",
+        "expected_resolution_due_at": "2026-10-06T16:00:00+07:00",
+        "expected_first_response_consumed_seconds": 5400,
+        "expected_resolution_consumed_seconds": 10800,
+        "expected_first_response_remaining_seconds": 1800,
+        "expected_resolution_remaining_seconds": 46800,
+        "expected_first_response_status": "met",
+        "expected_resolution_status": "pending",
+        "expected_first_response_warning_level": "none",
+        "expected_resolution_warning_level": "none",
+        "expected_first_response_sla_status_at_assignment": "pending",
+        "expected_resolution_sla_status_at_assignment": "pending",
+        "expected_resolution_intervals": [
+          {
+            "started_at": "2026-10-05T09:00:00+07:00",
+            "ended_at": null,
+            "business_seconds_as_of": 10800
+          }
+        ],
+        "expected_ticket_state": "In Progress",
+        "expected_rejection_count": 0,
+        "expected_open_review": null,
+        "expected_reviews": [],
+        "resolution_result_final": false
+      }
+    },
+    {
+      "scenario_id": "SLA-06",
+      "checks": 18,
+      "result": "PASS",
+      "mismatches": [],
+      "reference": {
+        "expected_first_response_due_at": "2026-10-05T09:00:00+07:00",
+        "expected_resolution_due_at": "2026-10-05T16:00:00+07:00",
+        "expected_first_response_consumed_seconds": 0,
+        "expected_resolution_consumed_seconds": 0,
+        "expected_first_response_remaining_seconds": 3600,
+        "expected_resolution_remaining_seconds": 28800,
+        "expected_first_response_status": "pending",
+        "expected_resolution_status": "pending",
+        "expected_first_response_warning_level": "none",
+        "expected_resolution_warning_level": "none",
+        "expected_first_response_sla_status_at_assignment": null,
+        "expected_resolution_sla_status_at_assignment": null,
+        "expected_resolution_intervals": [
+          {
+            "started_at": "2026-10-05T08:00:00+07:00",
+            "ended_at": null,
+            "business_seconds_as_of": 0
+          }
+        ],
+        "expected_ticket_state": "New",
+        "expected_rejection_count": 0,
+        "expected_open_review": null,
+        "expected_reviews": [],
+        "resolution_result_final": false
+      }
+    },
+    {
+      "scenario_id": "SLA-07",
+      "checks": 18,
+      "result": "PASS",
+      "mismatches": [],
+      "reference": {
+        "expected_first_response_due_at": "2026-10-05T17:00:00+07:00",
+        "expected_resolution_due_at": "2026-10-06T15:00:00+07:00",
+        "expected_first_response_consumed_seconds": 3600,
+        "expected_resolution_consumed_seconds": 3600,
+        "expected_first_response_remaining_seconds": 0,
+        "expected_resolution_remaining_seconds": 25200,
+        "expected_first_response_status": "pending",
+        "expected_resolution_status": "pending",
+        "expected_first_response_warning_level": "due",
+        "expected_resolution_warning_level": "none",
+        "expected_first_response_sla_status_at_assignment": null,
+        "expected_resolution_sla_status_at_assignment": null,
+        "expected_resolution_intervals": [
+          {
+            "started_at": "2026-10-05T16:00:00+07:00",
+            "ended_at": null,
+            "business_seconds_as_of": 3600
+          }
+        ],
+        "expected_ticket_state": "New",
+        "expected_rejection_count": 0,
+        "expected_open_review": null,
+        "expected_reviews": [],
+        "resolution_result_final": false
+      }
+    },
+    {
+      "scenario_id": "SLA-08",
+      "checks": 18,
+      "result": "PASS",
+      "mismatches": [],
+      "reference": {
+        "expected_first_response_due_at": "2026-10-05T17:00:00+07:00",
+        "expected_resolution_due_at": "2026-10-06T15:00:00+07:00",
+        "expected_first_response_consumed_seconds": 3600,
+        "expected_resolution_consumed_seconds": 3600,
+        "expected_first_response_remaining_seconds": 0,
+        "expected_resolution_remaining_seconds": 25200,
+        "expected_first_response_status": "met",
+        "expected_resolution_status": "pending",
+        "expected_first_response_warning_level": "none",
+        "expected_resolution_warning_level": "none",
+        "expected_first_response_sla_status_at_assignment": "pending",
+        "expected_resolution_sla_status_at_assignment": "pending",
+        "expected_resolution_intervals": [
+          {
+            "started_at": "2026-10-05T16:00:00+07:00",
+            "ended_at": null,
+            "business_seconds_as_of": 3600
+          }
+        ],
+        "expected_ticket_state": "In Progress",
+        "expected_rejection_count": 0,
+        "expected_open_review": null,
+        "expected_reviews": [],
+        "resolution_result_final": false
+      }
+    },
+    {
+      "scenario_id": "SLA-09",
+      "checks": 18,
+      "result": "PASS",
+      "mismatches": [],
+      "reference": {
+        "expected_first_response_due_at": "2026-10-05T17:00:00+07:00",
+        "expected_resolution_due_at": "2026-10-06T15:00:00+07:00",
+        "expected_first_response_consumed_seconds": 3600,
+        "expected_resolution_consumed_seconds": 3600,
+        "expected_first_response_remaining_seconds": 0,
+        "expected_resolution_remaining_seconds": 25200,
+        "expected_first_response_status": "breached",
+        "expected_resolution_status": "pending",
+        "expected_first_response_warning_level": "breached",
+        "expected_resolution_warning_level": "none",
+        "expected_first_response_sla_status_at_assignment": "pending",
+        "expected_resolution_sla_status_at_assignment": "pending",
+        "expected_resolution_intervals": [
+          {
+            "started_at": "2026-10-05T16:00:00+07:00",
+            "ended_at": null,
+            "business_seconds_as_of": 3600
+          }
+        ],
+        "expected_ticket_state": "In Progress",
+        "expected_rejection_count": 0,
+        "expected_open_review": null,
+        "expected_reviews": [],
+        "resolution_result_final": false
+      }
+    },
+    {
+      "scenario_id": "SLA-10",
+      "checks": 18,
+      "result": "PASS",
+      "mismatches": [],
+      "reference": {
+        "expected_first_response_due_at": "2026-10-05T17:00:00+07:00",
+        "expected_resolution_due_at": "2026-10-06T15:00:00+07:00",
+        "expected_first_response_consumed_seconds": 3599,
+        "expected_resolution_consumed_seconds": 3600,
+        "expected_first_response_remaining_seconds": 1,
+        "expected_resolution_remaining_seconds": 25200,
+        "expected_first_response_status": "met",
+        "expected_resolution_status": "pending",
+        "expected_first_response_warning_level": "none",
+        "expected_resolution_warning_level": "none",
+        "expected_first_response_sla_status_at_assignment": "pending",
+        "expected_resolution_sla_status_at_assignment": "pending",
+        "expected_resolution_intervals": [
+          {
+            "started_at": "2026-10-05T16:00:00+07:00",
+            "ended_at": null,
+            "business_seconds_as_of": 3600
+          }
+        ],
+        "expected_ticket_state": "In Progress",
+        "expected_rejection_count": 0,
+        "expected_open_review": null,
+        "expected_reviews": [],
+        "resolution_result_final": false
+      }
+    },
+    {
+      "scenario_id": "SLA-11",
+      "checks": 18,
+      "result": "PASS",
+      "mismatches": [],
+      "reference": {
+        "expected_first_response_due_at": "2026-10-06T09:00:00+07:00",
+        "expected_resolution_due_at": "2026-10-06T16:00:00+07:00",
+        "expected_first_response_consumed_seconds": 0,
+        "expected_resolution_consumed_seconds": 0,
+        "expected_first_response_remaining_seconds": 3600,
+        "expected_resolution_remaining_seconds": 28800,
+        "expected_first_response_status": "pending",
+        "expected_resolution_status": "pending",
+        "expected_first_response_warning_level": "none",
+        "expected_resolution_warning_level": "none",
+        "expected_first_response_sla_status_at_assignment": null,
+        "expected_resolution_sla_status_at_assignment": null,
+        "expected_resolution_intervals": [
+          {
+            "started_at": "2026-10-05T17:00:00+07:00",
+            "ended_at": null,
+            "business_seconds_as_of": 0
+          }
+        ],
+        "expected_ticket_state": "New",
+        "expected_rejection_count": 0,
+        "expected_open_review": null,
+        "expected_reviews": [],
+        "resolution_result_final": false
+      }
+    },
+    {
+      "scenario_id": "SLA-12",
+      "checks": 18,
+      "result": "PASS",
+      "mismatches": [],
+      "reference": {
+        "expected_first_response_due_at": "2026-10-06T08:59:59+07:00",
+        "expected_resolution_due_at": "2026-10-06T15:59:59+07:00",
+        "expected_first_response_consumed_seconds": 1,
+        "expected_resolution_consumed_seconds": 1,
+        "expected_first_response_remaining_seconds": 3599,
+        "expected_resolution_remaining_seconds": 28799,
+        "expected_first_response_status": "pending",
+        "expected_resolution_status": "pending",
+        "expected_first_response_warning_level": "soft",
+        "expected_resolution_warning_level": "none",
+        "expected_first_response_sla_status_at_assignment": null,
+        "expected_resolution_sla_status_at_assignment": null,
+        "expected_resolution_intervals": [
+          {
+            "started_at": "2026-10-05T16:59:59+07:00",
+            "ended_at": null,
+            "business_seconds_as_of": 1
+          }
+        ],
+        "expected_ticket_state": "New",
+        "expected_rejection_count": 0,
+        "expected_open_review": null,
+        "expected_reviews": [],
+        "resolution_result_final": false
+      }
+    },
+    {
+      "scenario_id": "SLA-13",
+      "checks": 18,
+      "result": "PASS",
+      "mismatches": [],
+      "reference": {
+        "expected_first_response_due_at": "2026-10-05T09:00:00+07:00",
+        "expected_resolution_due_at": "2026-10-05T16:00:00+07:00",
+        "expected_first_response_consumed_seconds": 3600,
+        "expected_resolution_consumed_seconds": 3601,
+        "expected_first_response_remaining_seconds": 0,
+        "expected_resolution_remaining_seconds": 25199,
+        "expected_first_response_status": "met",
+        "expected_resolution_status": "pending",
+        "expected_first_response_warning_level": "none",
+        "expected_resolution_warning_level": "none",
+        "expected_first_response_sla_status_at_assignment": "pending",
+        "expected_resolution_sla_status_at_assignment": "pending",
+        "expected_resolution_intervals": [
+          {
+            "started_at": "2026-10-05T08:00:00+07:00",
+            "ended_at": null,
+            "business_seconds_as_of": 3601
+          }
+        ],
+        "expected_ticket_state": "In Progress",
+        "expected_rejection_count": 0,
+        "expected_open_review": null,
+        "expected_reviews": [],
+        "resolution_result_final": false
+      }
+    },
+    {
+      "scenario_id": "SLA-14",
+      "checks": 18,
+      "result": "PASS",
+      "mismatches": [],
+      "reference": {
+        "expected_first_response_due_at": "2026-10-05T09:00:00+07:00",
+        "expected_resolution_due_at": "2026-10-05T16:00:00+07:00",
+        "expected_first_response_consumed_seconds": 1800,
+        "expected_resolution_consumed_seconds": 1800,
+        "expected_first_response_remaining_seconds": 1800,
+        "expected_resolution_remaining_seconds": 27000,
+        "expected_first_response_status": "pending",
+        "expected_resolution_status": "pending",
+        "expected_first_response_warning_level": "soft",
+        "expected_resolution_warning_level": "none",
+        "expected_first_response_sla_status_at_assignment": null,
+        "expected_resolution_sla_status_at_assignment": null,
+        "expected_resolution_intervals": [
+          {
+            "started_at": "2026-10-05T07:30:00+07:00",
+            "ended_at": null,
+            "business_seconds_as_of": 1800
+          }
+        ],
+        "expected_ticket_state": "New",
+        "expected_rejection_count": 0,
+        "expected_open_review": null,
+        "expected_reviews": [],
+        "resolution_result_final": false
+      }
+    },
+    {
+      "scenario_id": "SLA-15",
+      "checks": 18,
+      "result": "PASS",
+      "mismatches": [],
+      "reference": {
+        "expected_first_response_due_at": "2026-10-06T09:00:00+07:00",
+        "expected_resolution_due_at": "2026-10-06T16:00:00+07:00",
+        "expected_first_response_consumed_seconds": 1200,
+        "expected_resolution_consumed_seconds": 1200,
+        "expected_first_response_remaining_seconds": 2400,
+        "expected_resolution_remaining_seconds": 27600,
+        "expected_first_response_status": "pending",
+        "expected_resolution_status": "pending",
+        "expected_first_response_warning_level": "soft",
+        "expected_resolution_warning_level": "none",
+        "expected_first_response_sla_status_at_assignment": null,
+        "expected_resolution_sla_status_at_assignment": null,
+        "expected_resolution_intervals": [
+          {
+            "started_at": "2026-10-05T18:00:00+07:00",
+            "ended_at": null,
+            "business_seconds_as_of": 1200
+          }
+        ],
+        "expected_ticket_state": "New",
+        "expected_rejection_count": 0,
+        "expected_open_review": null,
+        "expected_reviews": [],
+        "resolution_result_final": false
+      }
+    },
+    {
+      "scenario_id": "SLA-16",
+      "checks": 18,
+      "result": "PASS",
+      "mismatches": [],
+      "reference": {
+        "expected_first_response_due_at": "2026-10-06T10:00:00+07:00",
+        "expected_resolution_due_at": "2026-10-07T15:00:00+07:00",
+        "expected_first_response_consumed_seconds": 5400,
+        "expected_resolution_consumed_seconds": 7200,
+        "expected_first_response_remaining_seconds": 1800,
+        "expected_resolution_remaining_seconds": 50400,
+        "expected_first_response_status": "met",
+        "expected_resolution_status": "pending",
+        "expected_first_response_warning_level": "none",
+        "expected_resolution_warning_level": "none",
+        "expected_first_response_sla_status_at_assignment": "pending",
+        "expected_resolution_sla_status_at_assignment": "pending",
+        "expected_resolution_intervals": [
+          {
+            "started_at": "2026-10-05T20:00:00+07:00",
+            "ended_at": null,
+            "business_seconds_as_of": 7200
+          }
+        ],
+        "expected_ticket_state": "In Progress",
+        "expected_rejection_count": 0,
+        "expected_open_review": null,
+        "expected_reviews": [],
+        "resolution_result_final": false
+      }
+    },
+    {
+      "scenario_id": "SLA-17",
+      "checks": 18,
+      "result": "PASS",
+      "mismatches": [],
+      "reference": {
+        "expected_first_response_due_at": "2026-10-06T08:30:00+07:00",
+        "expected_resolution_due_at": "2026-10-06T15:30:00+07:00",
+        "expected_first_response_consumed_seconds": 1800,
+        "expected_resolution_consumed_seconds": 1800,
+        "expected_first_response_remaining_seconds": 1800,
+        "expected_resolution_remaining_seconds": 27000,
+        "expected_first_response_status": "met",
+        "expected_resolution_status": "pending",
+        "expected_first_response_warning_level": "none",
+        "expected_resolution_warning_level": "none",
+        "expected_first_response_sla_status_at_assignment": "pending",
+        "expected_resolution_sla_status_at_assignment": "pending",
+        "expected_resolution_intervals": [
+          {
+            "started_at": "2026-10-05T16:30:00+07:00",
+            "ended_at": null,
+            "business_seconds_as_of": 1800
+          }
+        ],
+        "expected_ticket_state": "In Progress",
+        "expected_rejection_count": 0,
+        "expected_open_review": null,
+        "expected_reviews": [],
+        "resolution_result_final": false
+      }
+    },
+    {
+      "scenario_id": "SLA-18",
+      "checks": 18,
+      "result": "PASS",
+      "mismatches": [],
+      "reference": {
+        "expected_first_response_due_at": "2026-10-05T10:00:00+07:00",
+        "expected_resolution_due_at": "2026-10-05T17:00:00+07:00",
+        "expected_first_response_consumed_seconds": 600,
+        "expected_resolution_consumed_seconds": 28800,
+        "expected_first_response_remaining_seconds": 3000,
+        "expected_resolution_remaining_seconds": 0,
+        "expected_first_response_status": "met",
+        "expected_resolution_status": "breached",
+        "expected_first_response_warning_level": "none",
+        "expected_resolution_warning_level": "breached",
+        "expected_first_response_sla_status_at_assignment": "pending",
+        "expected_resolution_sla_status_at_assignment": "pending",
+        "expected_resolution_intervals": [
+          {
+            "started_at": "2026-10-05T09:00:00+07:00",
+            "ended_at": "2026-10-05T17:30:00+07:00",
+            "business_seconds": 28800
+          }
+        ],
+        "expected_ticket_state": "Resolved",
+        "expected_rejection_count": 0,
+        "expected_open_review": null,
+        "expected_reviews": [],
+        "resolution_result_final": false
+      }
+    },
+    {
+      "scenario_id": "SLA-19",
+      "checks": 18,
+      "result": "PASS",
+      "mismatches": [],
+      "reference": {
+        "expected_first_response_due_at": "2026-10-12T08:50:00+07:00",
+        "expected_resolution_due_at": "2026-10-12T15:50:00+07:00",
+        "expected_first_response_consumed_seconds": 2400,
+        "expected_resolution_consumed_seconds": 2400,
+        "expected_first_response_remaining_seconds": 1200,
+        "expected_resolution_remaining_seconds": 26400,
+        "expected_first_response_status": "pending",
+        "expected_resolution_status": "pending",
+        "expected_first_response_warning_level": "soft",
+        "expected_resolution_warning_level": "none",
+        "expected_first_response_sla_status_at_assignment": null,
+        "expected_resolution_sla_status_at_assignment": null,
+        "expected_resolution_intervals": [
+          {
+            "started_at": "2026-10-09T16:50:00+07:00",
+            "ended_at": null,
+            "business_seconds_as_of": 2400
+          }
+        ],
+        "expected_ticket_state": "New",
+        "expected_rejection_count": 0,
+        "expected_open_review": null,
+        "expected_reviews": [],
+        "resolution_result_final": false
+      }
+    },
+    {
+      "scenario_id": "SLA-20",
+      "checks": 18,
+      "result": "PASS",
+      "mismatches": [],
+      "reference": {
+        "expected_first_response_due_at": "2026-10-12T10:00:00+07:00",
+        "expected_resolution_due_at": "2026-10-13T15:00:00+07:00",
+        "expected_first_response_consumed_seconds": 3600,
+        "expected_resolution_consumed_seconds": 3600,
+        "expected_first_response_remaining_seconds": 3600,
+        "expected_resolution_remaining_seconds": 54000,
+        "expected_first_response_status": "pending",
+        "expected_resolution_status": "pending",
+        "expected_first_response_warning_level": "none",
+        "expected_resolution_warning_level": "none",
+        "expected_first_response_sla_status_at_assignment": null,
+        "expected_resolution_sla_status_at_assignment": null,
+        "expected_resolution_intervals": [
+          {
+            "started_at": "2026-10-10T10:00:00+07:00",
+            "ended_at": null,
+            "business_seconds_as_of": 3600
+          }
+        ],
+        "expected_ticket_state": "New",
+        "expected_rejection_count": 0,
+        "expected_open_review": null,
+        "expected_reviews": [],
+        "resolution_result_final": false
+      }
+    },
+    {
+      "scenario_id": "SLA-21",
+      "checks": 18,
+      "result": "PASS",
+      "mismatches": [],
+      "reference": {
+        "expected_first_response_due_at": "2026-10-09T17:00:00+07:00",
+        "expected_resolution_due_at": "2026-10-13T13:00:00+07:00",
+        "expected_first_response_consumed_seconds": 9000,
+        "expected_resolution_consumed_seconds": 10800,
+        "expected_first_response_remaining_seconds": 0,
+        "expected_resolution_remaining_seconds": 46800,
+        "expected_first_response_status": "breached",
+        "expected_resolution_status": "pending",
+        "expected_first_response_warning_level": "breached",
+        "expected_resolution_warning_level": "none",
+        "expected_first_response_sla_status_at_assignment": "breached",
+        "expected_resolution_sla_status_at_assignment": "pending",
+        "expected_resolution_intervals": [
+          {
+            "started_at": "2026-10-09T15:00:00+07:00",
+            "ended_at": null,
+            "business_seconds_as_of": 10800
+          }
+        ],
+        "expected_ticket_state": "In Progress",
+        "expected_rejection_count": 0,
+        "expected_open_review": null,
+        "expected_reviews": [],
+        "resolution_result_final": false
+      }
+    },
+    {
+      "scenario_id": "SLA-22",
+      "checks": 18,
+      "result": "PASS",
+      "mismatches": [],
+      "reference": {
+        "expected_first_response_due_at": "2026-10-05T10:00:00+07:00",
+        "expected_resolution_due_at": "2026-10-06T09:00:00+07:00",
+        "expected_first_response_consumed_seconds": 600,
+        "expected_resolution_consumed_seconds": 5400,
+        "expected_first_response_remaining_seconds": 3000,
+        "expected_resolution_remaining_seconds": 23400,
+        "expected_first_response_status": "met",
+        "expected_resolution_status": "pending",
+        "expected_first_response_warning_level": "none",
+        "expected_resolution_warning_level": "none",
+        "expected_first_response_sla_status_at_assignment": "pending",
+        "expected_resolution_sla_status_at_assignment": "pending",
+        "expected_resolution_intervals": [
+          {
+            "started_at": "2026-10-05T09:00:00+07:00",
+            "ended_at": "2026-10-05T10:00:00+07:00",
+            "business_seconds": 3600
+          },
+          {
+            "started_at": "2026-10-05T11:00:00+07:00",
+            "ended_at": null,
+            "business_seconds_as_of": 1800
+          }
+        ],
+        "expected_ticket_state": "In Progress",
+        "expected_rejection_count": 0,
+        "expected_open_review": null,
+        "expected_reviews": [],
+        "resolution_result_final": false
+      }
+    },
+    {
+      "scenario_id": "SLA-23",
+      "checks": 18,
+      "result": "PASS",
+      "mismatches": [],
+      "reference": {
+        "expected_first_response_due_at": "2026-10-05T10:00:00+07:00",
+        "expected_resolution_due_at": null,
+        "expected_first_response_consumed_seconds": 600,
+        "expected_resolution_consumed_seconds": 3600,
+        "expected_first_response_remaining_seconds": 3000,
+        "expected_resolution_remaining_seconds": 25200,
+        "expected_first_response_status": "met",
+        "expected_resolution_status": "pending",
+        "expected_first_response_warning_level": "none",
+        "expected_resolution_warning_level": "none",
+        "expected_first_response_sla_status_at_assignment": "pending",
+        "expected_resolution_sla_status_at_assignment": "pending",
+        "expected_resolution_intervals": [
+          {
+            "started_at": "2026-10-05T09:00:00+07:00",
+            "ended_at": "2026-10-05T10:00:00+07:00",
+            "business_seconds": 3600
+          }
+        ],
+        "expected_ticket_state": "Waiting for Customer",
+        "expected_rejection_count": 0,
+        "expected_open_review": null,
+        "expected_reviews": [],
+        "resolution_result_final": false
+      }
+    },
+    {
+      "scenario_id": "SLA-24",
+      "checks": 18,
+      "result": "PASS",
+      "mismatches": [],
+      "reference": {
+        "expected_first_response_due_at": "2026-10-05T10:00:00+07:00",
+        "expected_resolution_due_at": "2026-10-06T09:00:00+07:00",
+        "expected_first_response_consumed_seconds": 600,
+        "expected_resolution_consumed_seconds": 28800,
+        "expected_first_response_remaining_seconds": 3000,
+        "expected_resolution_remaining_seconds": 0,
+        "expected_first_response_status": "met",
+        "expected_resolution_status": "pending",
+        "expected_first_response_warning_level": "none",
+        "expected_resolution_warning_level": "due",
+        "expected_first_response_sla_status_at_assignment": "pending",
+        "expected_resolution_sla_status_at_assignment": "pending",
+        "expected_resolution_intervals": [
+          {
+            "started_at": "2026-10-05T09:00:00+07:00",
+            "ended_at": "2026-10-05T16:30:00+07:00",
+            "business_seconds": 27000
+          },
+          {
+            "started_at": "2026-10-06T08:30:00+07:00",
+            "ended_at": null,
+            "business_seconds_as_of": 1800
+          }
+        ],
+        "expected_ticket_state": "In Progress",
+        "expected_rejection_count": 0,
+        "expected_open_review": null,
+        "expected_reviews": [],
+        "resolution_result_final": false
+      }
+    },
+    {
+      "scenario_id": "SLA-25",
+      "checks": 18,
+      "result": "PASS",
+      "mismatches": [],
+      "reference": {
+        "expected_first_response_due_at": "2026-10-09T10:00:00+07:00",
+        "expected_resolution_due_at": "2026-10-12T09:00:00+07:00",
+        "expected_first_response_consumed_seconds": 600,
+        "expected_resolution_consumed_seconds": 27000,
+        "expected_first_response_remaining_seconds": 3000,
+        "expected_resolution_remaining_seconds": 1800,
+        "expected_first_response_status": "met",
+        "expected_resolution_status": "pending",
+        "expected_first_response_warning_level": "none",
+        "expected_resolution_warning_level": "soft",
+        "expected_first_response_sla_status_at_assignment": "pending",
+        "expected_resolution_sla_status_at_assignment": "pending",
+        "expected_resolution_intervals": [
+          {
+            "started_at": "2026-10-09T09:00:00+07:00",
+            "ended_at": "2026-10-09T16:00:00+07:00",
+            "business_seconds": 25200
+          },
+          {
+            "started_at": "2026-10-12T08:00:00+07:00",
+            "ended_at": null,
+            "business_seconds_as_of": 1800
+          }
+        ],
+        "expected_ticket_state": "In Progress",
+        "expected_rejection_count": 0,
+        "expected_open_review": null,
+        "expected_reviews": [],
+        "resolution_result_final": false
+      }
+    },
+    {
+      "scenario_id": "SLA-26",
+      "checks": 18,
+      "result": "PASS",
+      "mismatches": [],
+      "reference": {
+        "expected_first_response_due_at": "2026-10-05T10:00:00+07:00",
+        "expected_resolution_due_at": "2026-10-06T11:30:00+07:00",
+        "expected_first_response_consumed_seconds": 600,
+        "expected_resolution_consumed_seconds": 7200,
+        "expected_first_response_remaining_seconds": 3000,
+        "expected_resolution_remaining_seconds": 21600,
+        "expected_first_response_status": "met",
+        "expected_resolution_status": "pending",
+        "expected_first_response_warning_level": "none",
+        "expected_resolution_warning_level": "none",
+        "expected_first_response_sla_status_at_assignment": "pending",
+        "expected_resolution_sla_status_at_assignment": "pending",
+        "expected_resolution_intervals": [
+          {
+            "started_at": "2026-10-05T09:00:00+07:00",
+            "ended_at": "2026-10-05T10:00:00+07:00",
+            "business_seconds": 3600
+          },
+          {
+            "started_at": "2026-10-05T10:30:00+07:00",
+            "ended_at": "2026-10-05T11:00:00+07:00",
+            "business_seconds": 1800
+          },
+          {
+            "started_at": "2026-10-05T14:00:00+07:00",
+            "ended_at": null,
+            "business_seconds_as_of": 1800
+          }
+        ],
+        "expected_ticket_state": "In Progress",
+        "expected_rejection_count": 0,
+        "expected_open_review": null,
+        "expected_reviews": [],
+        "resolution_result_final": false
+      }
+    },
+    {
+      "scenario_id": "SLA-27",
+      "checks": 18,
+      "result": "PASS",
+      "mismatches": [],
+      "reference": {
+        "expected_first_response_due_at": "2026-10-05T10:00:00+07:00",
+        "expected_resolution_due_at": "2026-10-05T17:00:00+07:00",
+        "expected_first_response_consumed_seconds": 3000,
+        "expected_resolution_consumed_seconds": 3000,
+        "expected_first_response_remaining_seconds": 600,
+        "expected_resolution_remaining_seconds": 25800,
+        "expected_first_response_status": "pending",
+        "expected_resolution_status": "pending",
+        "expected_first_response_warning_level": "emphasized",
+        "expected_resolution_warning_level": "none",
+        "expected_first_response_sla_status_at_assignment": "pending",
+        "expected_resolution_sla_status_at_assignment": "pending",
+        "expected_resolution_intervals": [
+          {
+            "started_at": "2026-10-05T09:00:00+07:00",
+            "ended_at": null,
+            "business_seconds_as_of": 3000
+          }
+        ],
+        "expected_ticket_state": "In Progress",
+        "expected_rejection_count": 0,
+        "expected_open_review": null,
+        "expected_reviews": [],
+        "resolution_result_final": false
+      }
+    },
+    {
+      "scenario_id": "SLA-28",
+      "checks": 18,
+      "result": "PASS",
+      "mismatches": [],
+      "reference": {
+        "expected_first_response_due_at": "2026-10-05T10:00:00+07:00",
+        "expected_resolution_due_at": "2026-10-05T17:00:00+07:00",
+        "expected_first_response_consumed_seconds": 3000,
+        "expected_resolution_consumed_seconds": 7200,
+        "expected_first_response_remaining_seconds": 600,
+        "expected_resolution_remaining_seconds": 21600,
+        "expected_first_response_status": "met",
+        "expected_resolution_status": "pending",
+        "expected_first_response_warning_level": "none",
+        "expected_resolution_warning_level": "none",
+        "expected_first_response_sla_status_at_assignment": "pending",
+        "expected_resolution_sla_status_at_assignment": "pending",
+        "expected_resolution_intervals": [
+          {
+            "started_at": "2026-10-05T09:00:00+07:00",
+            "ended_at": null,
+            "business_seconds_as_of": 7200
+          }
+        ],
+        "expected_ticket_state": "In Progress",
+        "expected_rejection_count": 0,
+        "expected_open_review": null,
+        "expected_reviews": [],
+        "resolution_result_final": false
+      }
+    },
+    {
+      "scenario_id": "SLA-29",
+      "checks": 18,
+      "result": "PASS",
+      "mismatches": [],
+      "reference": {
+        "expected_first_response_due_at": "2026-10-05T10:00:00+07:00",
+        "expected_resolution_due_at": "2026-10-05T17:00:00+07:00",
+        "expected_first_response_consumed_seconds": 2700,
+        "expected_resolution_consumed_seconds": 2700,
+        "expected_first_response_remaining_seconds": 900,
+        "expected_resolution_remaining_seconds": 26100,
+        "expected_first_response_status": "met",
+        "expected_resolution_status": "met",
+        "expected_first_response_warning_level": "none",
+        "expected_resolution_warning_level": "none",
+        "expected_first_response_sla_status_at_assignment": "pending",
+        "expected_resolution_sla_status_at_assignment": "pending",
+        "expected_resolution_intervals": [
+          {
+            "started_at": "2026-10-05T09:00:00+07:00",
+            "ended_at": "2026-10-05T09:45:00+07:00",
+            "business_seconds": 2700
+          }
+        ],
+        "expected_ticket_state": "Resolved",
+        "expected_rejection_count": 0,
+        "expected_open_review": null,
+        "expected_reviews": [],
+        "resolution_result_final": false
+      }
+    },
+    {
+      "scenario_id": "SLA-30",
+      "checks": 18,
+      "result": "PASS",
+      "mismatches": [],
+      "reference": {
+        "expected_first_response_due_at": "2026-10-05T10:00:00+07:00",
+        "expected_resolution_due_at": "2026-10-06T08:30:00+07:00",
+        "expected_first_response_consumed_seconds": 1200,
+        "expected_resolution_consumed_seconds": 5400,
+        "expected_first_response_remaining_seconds": 2400,
+        "expected_resolution_remaining_seconds": 23400,
+        "expected_first_response_status": "met",
+        "expected_resolution_status": "pending",
+        "expected_first_response_warning_level": "none",
+        "expected_resolution_warning_level": "none",
+        "expected_first_response_sla_status_at_assignment": "pending",
+        "expected_resolution_sla_status_at_assignment": "pending",
+        "expected_resolution_intervals": [
+          {
+            "started_at": "2026-10-05T09:00:00+07:00",
+            "ended_at": "2026-10-05T10:00:00+07:00",
+            "business_seconds": 3600
+          },
+          {
+            "started_at": "2026-10-05T10:30:00+07:00",
+            "ended_at": null,
+            "business_seconds_as_of": 1800
+          }
+        ],
+        "expected_ticket_state": "In Progress",
+        "expected_rejection_count": 1,
+        "expected_open_review": null,
+        "expected_reviews": [],
+        "resolution_result_final": false
+      }
+    },
+    {
+      "scenario_id": "SLA-31",
+      "checks": 18,
+      "result": "PASS",
+      "mismatches": [],
+      "reference": {
+        "expected_first_response_due_at": "2026-10-05T10:00:00+07:00",
+        "expected_resolution_due_at": "2026-10-05T17:00:00+07:00",
+        "expected_first_response_consumed_seconds": 600,
+        "expected_resolution_consumed_seconds": 25200,
+        "expected_first_response_remaining_seconds": 3000,
+        "expected_resolution_remaining_seconds": 3600,
+        "expected_first_response_status": "met",
+        "expected_resolution_status": "met",
+        "expected_first_response_warning_level": "none",
+        "expected_resolution_warning_level": "none",
+        "expected_first_response_sla_status_at_assignment": "pending",
+        "expected_resolution_sla_status_at_assignment": "pending",
+        "expected_resolution_intervals": [
+          {
+            "started_at": "2026-10-05T09:00:00+07:00",
+            "ended_at": "2026-10-05T16:00:00+07:00",
+            "business_seconds": 25200
+          }
+        ],
+        "expected_ticket_state": "Resolved",
+        "expected_rejection_count": 0,
+        "expected_open_review": null,
+        "expected_reviews": [],
+        "resolution_result_final": false
+      }
+    },
+    {
+      "scenario_id": "SLA-32",
+      "checks": 18,
+      "result": "PASS",
+      "mismatches": [],
+      "reference": {
+        "expected_first_response_due_at": "2026-10-05T10:00:00+07:00",
+        "expected_resolution_due_at": "2026-10-05T17:00:00+07:00",
+        "expected_first_response_consumed_seconds": 600,
+        "expected_resolution_consumed_seconds": 30600,
+        "expected_first_response_remaining_seconds": 3000,
+        "expected_resolution_remaining_seconds": 0,
+        "expected_first_response_status": "met",
+        "expected_resolution_status": "breached",
+        "expected_first_response_warning_level": "none",
+        "expected_resolution_warning_level": "breached",
+        "expected_first_response_sla_status_at_assignment": "pending",
+        "expected_resolution_sla_status_at_assignment": "pending",
+        "expected_resolution_intervals": [
+          {
+            "started_at": "2026-10-05T09:00:00+07:00",
+            "ended_at": "2026-10-06T08:30:00+07:00",
+            "business_seconds": 30600
+          }
+        ],
+        "expected_ticket_state": "Resolved",
+        "expected_rejection_count": 0,
+        "expected_open_review": null,
+        "expected_reviews": [],
+        "resolution_result_final": false
+      }
+    },
+    {
+      "scenario_id": "SLA-33",
+      "checks": 18,
+      "result": "PASS",
+      "mismatches": [],
+      "reference": {
+        "expected_first_response_due_at": "2026-10-05T10:00:00+07:00",
+        "expected_resolution_due_at": "2026-10-05T17:00:00+07:00",
+        "expected_first_response_consumed_seconds": 600,
+        "expected_resolution_consumed_seconds": 3600,
+        "expected_first_response_remaining_seconds": 3000,
+        "expected_resolution_remaining_seconds": 25200,
+        "expected_first_response_status": "met",
+        "expected_resolution_status": "met",
+        "expected_first_response_warning_level": "none",
+        "expected_resolution_warning_level": "none",
+        "expected_first_response_sla_status_at_assignment": "pending",
+        "expected_resolution_sla_status_at_assignment": "pending",
+        "expected_resolution_intervals": [
+          {
+            "started_at": "2026-10-05T09:00:00+07:00",
+            "ended_at": "2026-10-05T10:00:00+07:00",
+            "business_seconds": 3600
+          }
+        ],
+        "expected_ticket_state": "Closed",
+        "expected_rejection_count": 0,
+        "expected_open_review": null,
+        "expected_reviews": [],
+        "resolution_result_final": true
+      }
+    },
+    {
+      "scenario_id": "SLA-34",
+      "checks": 18,
+      "result": "PASS",
+      "mismatches": [],
+      "reference": {
+        "expected_first_response_due_at": "2026-10-05T10:00:00+07:00",
+        "expected_resolution_due_at": "2026-10-05T17:00:00+07:00",
+        "expected_first_response_consumed_seconds": 600,
+        "expected_resolution_consumed_seconds": 27000,
+        "expected_first_response_remaining_seconds": 3000,
+        "expected_resolution_remaining_seconds": 1800,
+        "expected_first_response_status": "met",
+        "expected_resolution_status": "met",
+        "expected_first_response_warning_level": "none",
+        "expected_resolution_warning_level": "none",
+        "expected_first_response_sla_status_at_assignment": "pending",
+        "expected_resolution_sla_status_at_assignment": "pending",
+        "expected_resolution_intervals": [
+          {
+            "started_at": "2026-10-05T09:00:00+07:00",
+            "ended_at": "2026-10-05T16:30:00+07:00",
+            "business_seconds": 27000
+          }
+        ],
+        "expected_ticket_state": "Closed",
+        "expected_rejection_count": 0,
+        "expected_open_review": null,
+        "expected_reviews": [],
+        "resolution_result_final": true
+      }
+    },
+    {
+      "scenario_id": "SLA-35",
+      "checks": 18,
+      "result": "PASS",
+      "mismatches": [],
+      "reference": {
+        "expected_first_response_due_at": "2026-10-05T10:00:00+07:00",
+        "expected_resolution_due_at": "2026-10-05T17:00:00+07:00",
+        "expected_first_response_consumed_seconds": 600,
+        "expected_resolution_consumed_seconds": 30600,
+        "expected_first_response_remaining_seconds": 3000,
+        "expected_resolution_remaining_seconds": 0,
+        "expected_first_response_status": "met",
+        "expected_resolution_status": "breached",
+        "expected_first_response_warning_level": "none",
+        "expected_resolution_warning_level": "breached",
+        "expected_first_response_sla_status_at_assignment": "pending",
+        "expected_resolution_sla_status_at_assignment": "pending",
+        "expected_resolution_intervals": [
+          {
+            "started_at": "2026-10-05T09:00:00+07:00",
+            "ended_at": "2026-10-06T08:30:00+07:00",
+            "business_seconds": 30600
+          }
+        ],
+        "expected_ticket_state": "Closed",
+        "expected_rejection_count": 0,
+        "expected_open_review": null,
+        "expected_reviews": [],
+        "resolution_result_final": true
+      }
+    },
+    {
+      "scenario_id": "SLA-36",
+      "checks": 18,
+      "result": "PASS",
+      "mismatches": [],
+      "reference": {
+        "expected_first_response_due_at": "2026-10-05T10:00:00+07:00",
+        "expected_resolution_due_at": "2026-10-06T09:00:00+07:00",
+        "expected_first_response_consumed_seconds": 600,
+        "expected_resolution_consumed_seconds": 10800,
+        "expected_first_response_remaining_seconds": 3000,
+        "expected_resolution_remaining_seconds": 18000,
+        "expected_first_response_status": "met",
+        "expected_resolution_status": "pending",
+        "expected_first_response_warning_level": "none",
+        "expected_resolution_warning_level": "none",
+        "expected_first_response_sla_status_at_assignment": "pending",
+        "expected_resolution_sla_status_at_assignment": "pending",
+        "expected_resolution_intervals": [
+          {
+            "started_at": "2026-10-05T09:00:00+07:00",
+            "ended_at": "2026-10-05T10:00:00+07:00",
+            "business_seconds": 3600
+          },
+          {
+            "started_at": "2026-10-05T10:30:00+07:00",
+            "ended_at": "2026-10-05T11:30:00+07:00",
+            "business_seconds": 3600
+          },
+          {
+            "started_at": "2026-10-05T12:00:00+07:00",
+            "ended_at": null,
+            "business_seconds_as_of": 3600
+          }
+        ],
+        "expected_ticket_state": "In Progress",
+        "expected_rejection_count": 2,
+        "expected_open_review": null,
+        "expected_reviews": [],
+        "resolution_result_final": false
+      }
+    },
+    {
+      "scenario_id": "SLA-37",
+      "checks": 18,
+      "result": "PASS",
+      "mismatches": [],
+      "reference": {
+        "expected_first_response_due_at": "2026-10-05T10:00:00+07:00",
+        "expected_resolution_due_at": "2026-10-06T15:00:00+07:00",
+        "expected_first_response_consumed_seconds": 600,
+        "expected_resolution_consumed_seconds": 5400,
+        "expected_first_response_remaining_seconds": 3000,
+        "expected_resolution_remaining_seconds": 23400,
+        "expected_first_response_status": "met",
+        "expected_resolution_status": "pending",
+        "expected_first_response_warning_level": "none",
+        "expected_resolution_warning_level": "none",
+        "expected_first_response_sla_status_at_assignment": "pending",
+        "expected_resolution_sla_status_at_assignment": "pending",
+        "expected_resolution_intervals": [
+          {
+            "started_at": "2026-10-05T09:00:00+07:00",
+            "ended_at": "2026-10-05T10:00:00+07:00",
+            "business_seconds": 3600
+          },
+          {
+            "started_at": "2026-10-05T18:00:00+07:00",
+            "ended_at": null,
+            "business_seconds_as_of": 1800
+          }
+        ],
+        "expected_ticket_state": "In Progress",
+        "expected_rejection_count": 1,
+        "expected_open_review": null,
+        "expected_reviews": [],
+        "resolution_result_final": false
+      }
+    },
+    {
+      "scenario_id": "SLA-38",
+      "checks": 18,
+      "result": "PASS",
+      "mismatches": [],
+      "reference": {
+        "expected_first_response_due_at": "2026-10-05T10:00:00+07:00",
+        "expected_resolution_due_at": "2026-10-06T09:30:00+07:00",
+        "expected_first_response_consumed_seconds": 600,
+        "expected_resolution_consumed_seconds": 10800,
+        "expected_first_response_remaining_seconds": 3000,
+        "expected_resolution_remaining_seconds": 18000,
+        "expected_first_response_status": "met",
+        "expected_resolution_status": "pending",
+        "expected_first_response_warning_level": "none",
+        "expected_resolution_warning_level": "none",
+        "expected_first_response_sla_status_at_assignment": "pending",
+        "expected_resolution_sla_status_at_assignment": "pending",
+        "expected_resolution_intervals": [
+          {
+            "started_at": "2026-10-05T09:00:00+07:00",
+            "ended_at": "2026-10-05T10:00:00+07:00",
+            "business_seconds": 3600
+          },
+          {
+            "started_at": "2026-10-05T10:30:00+07:00",
+            "ended_at": "2026-10-05T11:30:00+07:00",
+            "business_seconds": 3600
+          },
+          {
+            "started_at": "2026-10-05T12:00:00+07:00",
+            "ended_at": "2026-10-05T12:30:00+07:00",
+            "business_seconds": 1800
+          },
+          {
+            "started_at": "2026-10-05T13:00:00+07:00",
+            "ended_at": null,
+            "business_seconds_as_of": 1800
+          }
+        ],
+        "expected_ticket_state": "In Progress",
+        "expected_rejection_count": 1,
+        "expected_open_review": null,
+        "expected_reviews": [],
+        "resolution_result_final": false
+      }
+    },
+    {
+      "scenario_id": "SLA-39",
+      "checks": 18,
+      "result": "PASS",
+      "mismatches": [],
+      "reference": {
+        "expected_first_response_due_at": "2026-10-05T09:00:00+07:00",
+        "expected_resolution_due_at": "2026-10-05T17:00:00+07:00",
+        "expected_first_response_consumed_seconds": 600,
+        "expected_resolution_consumed_seconds": 23400,
+        "expected_first_response_remaining_seconds": 3000,
+        "expected_resolution_remaining_seconds": 5400,
+        "expected_first_response_status": "met",
+        "expected_resolution_status": "pending",
+        "expected_first_response_warning_level": "none",
+        "expected_resolution_warning_level": "none",
+        "expected_first_response_sla_status_at_assignment": "pending",
+        "expected_resolution_sla_status_at_assignment": "pending",
+        "expected_resolution_intervals": [
+          {
+            "started_at": "2026-10-05T08:00:00+07:00",
+            "ended_at": "2026-10-05T14:00:00+07:00",
+            "business_seconds": 21600
+          },
+          {
+            "started_at": "2026-10-05T15:00:00+07:00",
+            "ended_at": null,
+            "business_seconds_as_of": 1800
+          }
+        ],
+        "expected_ticket_state": "In Progress",
+        "expected_rejection_count": 1,
+        "expected_open_review": null,
+        "expected_reviews": [],
+        "resolution_result_final": false
+      }
+    },
+    {
+      "scenario_id": "SLA-40",
+      "checks": 18,
+      "result": "PASS",
+      "mismatches": [],
+      "reference": {
+        "expected_first_response_due_at": "2026-10-05T10:00:00+07:00",
+        "expected_resolution_due_at": null,
+        "expected_first_response_consumed_seconds": 600,
+        "expected_resolution_consumed_seconds": 28800,
+        "expected_first_response_remaining_seconds": 3000,
+        "expected_resolution_remaining_seconds": 0,
+        "expected_first_response_status": "met",
+        "expected_resolution_status": "breached",
+        "expected_first_response_warning_level": "none",
+        "expected_resolution_warning_level": "breached",
+        "expected_first_response_sla_status_at_assignment": "pending",
+        "expected_resolution_sla_status_at_assignment": "pending",
+        "expected_resolution_intervals": [
+          {
+            "started_at": "2026-10-05T09:00:00+07:00",
+            "ended_at": "2026-10-05T17:30:00+07:00",
+            "business_seconds": 28800
+          }
+        ],
+        "expected_ticket_state": "Waiting for Customer",
+        "expected_rejection_count": 0,
+        "expected_open_review": null,
+        "expected_reviews": [],
+        "resolution_result_final": false
+      }
+    },
+    {
+      "scenario_id": "SLA-41",
+      "checks": 18,
+      "result": "PASS",
+      "mismatches": [],
+      "reference": {
+        "expected_first_response_due_at": "2026-10-05T09:00:00+07:00",
+        "expected_resolution_due_at": "2026-10-06T10:00:00+07:00",
+        "expected_first_response_consumed_seconds": 600,
+        "expected_resolution_consumed_seconds": 28800,
+        "expected_first_response_remaining_seconds": 3000,
+        "expected_resolution_remaining_seconds": 0,
+        "expected_first_response_status": "met",
+        "expected_resolution_status": "pending",
+        "expected_first_response_warning_level": "none",
+        "expected_resolution_warning_level": "due",
+        "expected_first_response_sla_status_at_assignment": "pending",
+        "expected_resolution_sla_status_at_assignment": "pending",
+        "expected_resolution_intervals": [
+          {
+            "started_at": "2026-10-05T08:00:00+07:00",
+            "ended_at": "2026-10-05T16:00:00+07:00",
+            "business_seconds": 28800
+          },
+          {
+            "started_at": "2026-10-06T10:00:00+07:00",
+            "ended_at": null,
+            "business_seconds_as_of": 0
+          }
+        ],
+        "expected_ticket_state": "In Progress",
+        "expected_rejection_count": 1,
+        "expected_open_review": null,
+        "expected_reviews": [],
+        "resolution_result_final": false
+      }
+    },
+    {
+      "scenario_id": "SLA-42",
+      "checks": 18,
+      "result": "PASS",
+      "mismatches": [],
+      "reference": {
+        "expected_first_response_due_at": "2026-10-05T09:00:00+07:00",
+        "expected_resolution_due_at": "2026-10-06T10:00:00+07:00",
+        "expected_first_response_consumed_seconds": 600,
+        "expected_resolution_consumed_seconds": 28801,
+        "expected_first_response_remaining_seconds": 3000,
+        "expected_resolution_remaining_seconds": 0,
+        "expected_first_response_status": "met",
+        "expected_resolution_status": "breached",
+        "expected_first_response_warning_level": "none",
+        "expected_resolution_warning_level": "breached",
+        "expected_first_response_sla_status_at_assignment": "pending",
+        "expected_resolution_sla_status_at_assignment": "pending",
+        "expected_resolution_intervals": [
+          {
+            "started_at": "2026-10-05T08:00:00+07:00",
+            "ended_at": "2026-10-05T16:00:00+07:00",
+            "business_seconds": 28800
+          },
+          {
+            "started_at": "2026-10-06T10:00:00+07:00",
+            "ended_at": null,
+            "business_seconds_as_of": 1
+          }
+        ],
+        "expected_ticket_state": "In Progress",
+        "expected_rejection_count": 1,
+        "expected_open_review": null,
+        "expected_reviews": [],
+        "resolution_result_final": false
+      }
+    },
+    {
+      "scenario_id": "SLA-43",
+      "checks": 18,
+      "result": "PASS",
+      "mismatches": [],
+      "reference": {
+        "expected_first_response_due_at": "2026-10-05T09:00:00+07:00",
+        "expected_resolution_due_at": "2026-10-06T08:00:00+07:00",
+        "expected_first_response_consumed_seconds": 600,
+        "expected_resolution_consumed_seconds": 28800,
+        "expected_first_response_remaining_seconds": 3000,
+        "expected_resolution_remaining_seconds": 0,
+        "expected_first_response_status": "met",
+        "expected_resolution_status": "pending",
+        "expected_first_response_warning_level": "none",
+        "expected_resolution_warning_level": "due",
+        "expected_first_response_sla_status_at_assignment": "pending",
+        "expected_resolution_sla_status_at_assignment": "pending",
+        "expected_resolution_intervals": [
+          {
+            "started_at": "2026-10-05T08:00:00+07:00",
+            "ended_at": "2026-10-05T16:00:00+07:00",
+            "business_seconds": 28800
+          },
+          {
+            "started_at": "2026-10-05T18:00:00+07:00",
+            "ended_at": null,
+            "business_seconds_as_of": 0
+          }
+        ],
+        "expected_ticket_state": "In Progress",
+        "expected_rejection_count": 1,
+        "expected_open_review": null,
+        "expected_reviews": [],
+        "resolution_result_final": false
+      }
+    },
+    {
+      "scenario_id": "SLA-44",
+      "checks": 18,
+      "result": "PASS",
+      "mismatches": [],
+      "reference": {
+        "expected_first_response_due_at": "2026-10-05T09:00:00+07:00",
+        "expected_resolution_due_at": "2026-10-06T08:00:00+07:00",
+        "expected_first_response_consumed_seconds": 600,
+        "expected_resolution_consumed_seconds": 28801,
+        "expected_first_response_remaining_seconds": 3000,
+        "expected_resolution_remaining_seconds": 0,
+        "expected_first_response_status": "met",
+        "expected_resolution_status": "breached",
+        "expected_first_response_warning_level": "none",
+        "expected_resolution_warning_level": "breached",
+        "expected_first_response_sla_status_at_assignment": "pending",
+        "expected_resolution_sla_status_at_assignment": "pending",
+        "expected_resolution_intervals": [
+          {
+            "started_at": "2026-10-05T08:00:00+07:00",
+            "ended_at": "2026-10-05T16:00:00+07:00",
+            "business_seconds": 28800
+          },
+          {
+            "started_at": "2026-10-05T18:00:00+07:00",
+            "ended_at": null,
+            "business_seconds_as_of": 1
+          }
+        ],
+        "expected_ticket_state": "In Progress",
+        "expected_rejection_count": 1,
+        "expected_open_review": null,
+        "expected_reviews": [],
+        "resolution_result_final": false
+      }
+    },
+    {
+      "scenario_id": "SLA-45",
+      "checks": 18,
+      "result": "PASS",
+      "mismatches": [],
+      "reference": {
+        "expected_first_response_due_at": "2026-10-05T10:00:00+07:00",
+        "expected_resolution_due_at": "2026-10-05T17:00:00+07:00",
+        "expected_first_response_consumed_seconds": 33600,
+        "expected_resolution_consumed_seconds": 34200,
+        "expected_first_response_remaining_seconds": 0,
+        "expected_resolution_remaining_seconds": 0,
+        "expected_first_response_status": "breached",
+        "expected_resolution_status": "breached",
+        "expected_first_response_warning_level": "breached",
+        "expected_resolution_warning_level": "breached",
+        "expected_first_response_sla_status_at_assignment": "breached",
+        "expected_resolution_sla_status_at_assignment": "breached",
+        "expected_resolution_intervals": [
+          {
+            "started_at": "2026-10-05T09:00:00+07:00",
+            "ended_at": null,
+            "business_seconds_as_of": 34200
+          }
+        ],
+        "expected_ticket_state": "In Progress",
+        "expected_rejection_count": 0,
+        "expected_open_review": null,
+        "expected_reviews": [],
+        "resolution_result_final": false
+      }
+    },
+    {
+      "scenario_id": "SLA-46",
+      "checks": 18,
+      "result": "PASS",
+      "mismatches": [],
+      "reference": {
+        "expected_first_response_due_at": "2026-10-05T10:00:00+07:00",
+        "expected_resolution_due_at": "2026-10-06T09:00:00+07:00",
+        "expected_first_response_consumed_seconds": 600,
+        "expected_resolution_consumed_seconds": 5400,
+        "expected_first_response_remaining_seconds": 3000,
+        "expected_resolution_remaining_seconds": 23400,
+        "expected_first_response_status": "met",
+        "expected_resolution_status": "pending",
+        "expected_first_response_warning_level": "none",
+        "expected_resolution_warning_level": "none",
+        "expected_first_response_sla_status_at_assignment": "pending",
+        "expected_resolution_sla_status_at_assignment": "pending",
+        "expected_resolution_intervals": [
+          {
+            "started_at": "2026-10-05T09:00:00+07:00",
+            "ended_at": "2026-10-05T10:00:00+07:00",
+            "business_seconds": 3600
+          },
+          {
+            "started_at": "2026-10-05T10:30:00+07:00",
+            "ended_at": "2026-10-05T10:30:00+07:00",
+            "business_seconds": 0
+          },
+          {
+            "started_at": "2026-10-05T11:00:00+07:00",
+            "ended_at": null,
+            "business_seconds_as_of": 1800
+          }
+        ],
+        "expected_ticket_state": "In Progress",
+        "expected_rejection_count": 0,
+        "expected_open_review": null,
+        "expected_reviews": [],
+        "resolution_result_final": false
+      }
+    },
+    {
+      "scenario_id": "SLA-47",
+      "checks": 18,
+      "result": "PASS",
+      "mismatches": [],
+      "reference": {
+        "expected_first_response_due_at": "2026-10-05T10:00:00+07:00",
+        "expected_resolution_due_at": null,
+        "expected_first_response_consumed_seconds": 600,
+        "expected_resolution_consumed_seconds": 600,
+        "expected_first_response_remaining_seconds": 3000,
+        "expected_resolution_remaining_seconds": 28200,
+        "expected_first_response_status": "met",
+        "expected_resolution_status": "pending",
+        "expected_first_response_warning_level": "none",
+        "expected_resolution_warning_level": "none",
+        "expected_first_response_sla_status_at_assignment": "pending",
+        "expected_resolution_sla_status_at_assignment": "pending",
+        "expected_resolution_intervals": [
+          {
+            "started_at": "2026-10-05T09:00:00+07:00",
+            "ended_at": "2026-10-05T09:10:00+07:00",
+            "business_seconds": 600
+          }
+        ],
+        "expected_ticket_state": "Waiting for Customer",
+        "expected_rejection_count": 0,
+        "expected_open_review": null,
+        "expected_reviews": [],
+        "resolution_result_final": false
+      }
+    },
+    {
+      "scenario_id": "SLA-48",
+      "checks": 18,
+      "result": "PASS",
+      "mismatches": [],
+      "reference": {
+        "expected_first_response_due_at": "2026-10-05T10:00:00+07:00",
+        "expected_resolution_due_at": "2026-10-05T17:00:00+07:00",
+        "expected_first_response_consumed_seconds": 6000,
+        "expected_resolution_consumed_seconds": 7200,
+        "expected_first_response_remaining_seconds": 0,
+        "expected_resolution_remaining_seconds": 21600,
+        "expected_first_response_status": "breached",
+        "expected_resolution_status": "pending",
+        "expected_first_response_warning_level": "breached",
+        "expected_resolution_warning_level": "none",
+        "expected_first_response_sla_status_at_assignment": "breached",
+        "expected_resolution_sla_status_at_assignment": "pending",
+        "expected_resolution_intervals": [
+          {
+            "started_at": "2026-10-05T09:00:00+07:00",
+            "ended_at": null,
+            "business_seconds_as_of": 7200
+          }
+        ],
+        "expected_ticket_state": "In Progress",
+        "expected_rejection_count": 0,
+        "expected_open_review": null,
+        "expected_reviews": [],
+        "resolution_result_final": false
+      }
+    },
+    {
+      "scenario_id": "SLA-49",
+      "checks": 18,
+      "result": "PASS",
+      "mismatches": [],
+      "reference": {
+        "expected_first_response_due_at": "2026-10-05T10:00:00+07:00",
+        "expected_resolution_due_at": "2026-10-05T17:00:00+07:00",
+        "expected_first_response_consumed_seconds": 0,
+        "expected_resolution_consumed_seconds": 0,
+        "expected_first_response_remaining_seconds": 3600,
+        "expected_resolution_remaining_seconds": 28800,
+        "expected_first_response_status": "pending",
+        "expected_resolution_status": "pending",
+        "expected_first_response_warning_level": "none",
+        "expected_resolution_warning_level": "none",
+        "expected_first_response_sla_status_at_assignment": null,
+        "expected_resolution_sla_status_at_assignment": null,
+        "expected_resolution_intervals": [
+          {
+            "started_at": "2026-10-05T09:00:00+07:00",
+            "ended_at": null,
+            "business_seconds_as_of": 0
+          }
+        ],
+        "expected_ticket_state": "New",
+        "expected_rejection_count": 0,
+        "expected_open_review": null,
+        "expected_reviews": [],
+        "resolution_result_final": false
+      }
+    },
+    {
+      "scenario_id": "SLA-50",
+      "checks": 18,
+      "result": "PASS",
+      "mismatches": [],
+      "reference": {
+        "expected_first_response_due_at": "2026-10-05T10:00:00+07:00",
+        "expected_resolution_due_at": "2026-10-05T17:00:00+07:00",
+        "expected_first_response_consumed_seconds": 1,
+        "expected_resolution_consumed_seconds": 1,
+        "expected_first_response_remaining_seconds": 3599,
+        "expected_resolution_remaining_seconds": 28799,
+        "expected_first_response_status": "pending",
+        "expected_resolution_status": "pending",
+        "expected_first_response_warning_level": "soft",
+        "expected_resolution_warning_level": "none",
+        "expected_first_response_sla_status_at_assignment": null,
+        "expected_resolution_sla_status_at_assignment": null,
+        "expected_resolution_intervals": [
+          {
+            "started_at": "2026-10-05T09:00:00+07:00",
+            "ended_at": null,
+            "business_seconds_as_of": 1
+          }
+        ],
+        "expected_ticket_state": "New",
+        "expected_rejection_count": 0,
+        "expected_open_review": null,
+        "expected_reviews": [],
+        "resolution_result_final": false
+      }
+    },
+    {
+      "scenario_id": "SLA-51",
+      "checks": 18,
+      "result": "PASS",
+      "mismatches": [],
+      "reference": {
+        "expected_first_response_due_at": "2026-10-05T10:00:00+07:00",
+        "expected_resolution_due_at": "2026-10-05T17:00:00+07:00",
+        "expected_first_response_consumed_seconds": 2700,
+        "expected_resolution_consumed_seconds": 2700,
+        "expected_first_response_remaining_seconds": 900,
+        "expected_resolution_remaining_seconds": 26100,
+        "expected_first_response_status": "pending",
+        "expected_resolution_status": "pending",
+        "expected_first_response_warning_level": "soft",
+        "expected_resolution_warning_level": "none",
+        "expected_first_response_sla_status_at_assignment": null,
+        "expected_resolution_sla_status_at_assignment": null,
+        "expected_resolution_intervals": [
+          {
+            "started_at": "2026-10-05T09:00:00+07:00",
+            "ended_at": null,
+            "business_seconds_as_of": 2700
+          }
+        ],
+        "expected_ticket_state": "New",
+        "expected_rejection_count": 0,
+        "expected_open_review": null,
+        "expected_reviews": [],
+        "resolution_result_final": false
+      }
+    },
+    {
+      "scenario_id": "SLA-52",
+      "checks": 18,
+      "result": "PASS",
+      "mismatches": [],
+      "reference": {
+        "expected_first_response_due_at": "2026-10-05T10:00:00+07:00",
+        "expected_resolution_due_at": "2026-10-05T17:00:00+07:00",
+        "expected_first_response_consumed_seconds": 2701,
+        "expected_resolution_consumed_seconds": 2701,
+        "expected_first_response_remaining_seconds": 899,
+        "expected_resolution_remaining_seconds": 26099,
+        "expected_first_response_status": "pending",
+        "expected_resolution_status": "pending",
+        "expected_first_response_warning_level": "emphasized",
+        "expected_resolution_warning_level": "none",
+        "expected_first_response_sla_status_at_assignment": null,
+        "expected_resolution_sla_status_at_assignment": null,
+        "expected_resolution_intervals": [
+          {
+            "started_at": "2026-10-05T09:00:00+07:00",
+            "ended_at": null,
+            "business_seconds_as_of": 2701
+          }
+        ],
+        "expected_ticket_state": "New",
+        "expected_rejection_count": 0,
+        "expected_open_review": null,
+        "expected_reviews": [],
+        "resolution_result_final": false
+      }
+    },
+    {
+      "scenario_id": "SLA-53",
+      "checks": 18,
+      "result": "PASS",
+      "mismatches": [],
+      "reference": {
+        "expected_first_response_due_at": "2026-10-05T10:00:00+07:00",
+        "expected_resolution_due_at": "2026-10-05T17:00:00+07:00",
+        "expected_first_response_consumed_seconds": 3600,
+        "expected_resolution_consumed_seconds": 3600,
+        "expected_first_response_remaining_seconds": 0,
+        "expected_resolution_remaining_seconds": 25200,
+        "expected_first_response_status": "pending",
+        "expected_resolution_status": "pending",
+        "expected_first_response_warning_level": "due",
+        "expected_resolution_warning_level": "none",
+        "expected_first_response_sla_status_at_assignment": null,
+        "expected_resolution_sla_status_at_assignment": null,
+        "expected_resolution_intervals": [
+          {
+            "started_at": "2026-10-05T09:00:00+07:00",
+            "ended_at": null,
+            "business_seconds_as_of": 3600
+          }
+        ],
+        "expected_ticket_state": "New",
+        "expected_rejection_count": 0,
+        "expected_open_review": null,
+        "expected_reviews": [],
+        "resolution_result_final": false
+      }
+    },
+    {
+      "scenario_id": "SLA-54",
+      "checks": 18,
+      "result": "PASS",
+      "mismatches": [],
+      "reference": {
+        "expected_first_response_due_at": "2026-10-05T10:00:00+07:00",
+        "expected_resolution_due_at": "2026-10-05T17:00:00+07:00",
+        "expected_first_response_consumed_seconds": 3601,
+        "expected_resolution_consumed_seconds": 3601,
+        "expected_first_response_remaining_seconds": 0,
+        "expected_resolution_remaining_seconds": 25199,
+        "expected_first_response_status": "breached",
+        "expected_resolution_status": "pending",
+        "expected_first_response_warning_level": "breached",
+        "expected_resolution_warning_level": "none",
+        "expected_first_response_sla_status_at_assignment": null,
+        "expected_resolution_sla_status_at_assignment": null,
+        "expected_resolution_intervals": [
+          {
+            "started_at": "2026-10-05T09:00:00+07:00",
+            "ended_at": null,
+            "business_seconds_as_of": 3601
+          }
+        ],
+        "expected_ticket_state": "New",
+        "expected_rejection_count": 0,
+        "expected_open_review": null,
+        "expected_reviews": [],
+        "resolution_result_final": false
+      }
+    },
+    {
+      "scenario_id": "SLA-55",
+      "checks": 18,
+      "result": "PASS",
+      "mismatches": [],
+      "reference": {
+        "expected_first_response_due_at": "2026-10-05T09:00:00+07:00",
+        "expected_resolution_due_at": null,
+        "expected_first_response_consumed_seconds": 600,
+        "expected_resolution_consumed_seconds": 27000,
+        "expected_first_response_remaining_seconds": 3000,
+        "expected_resolution_remaining_seconds": 1800,
+        "expected_first_response_status": "met",
+        "expected_resolution_status": "pending",
+        "expected_first_response_warning_level": "none",
+        "expected_resolution_warning_level": "none",
+        "expected_first_response_sla_status_at_assignment": "pending",
+        "expected_resolution_sla_status_at_assignment": "pending",
+        "expected_resolution_intervals": [
+          {
+            "started_at": "2026-10-05T08:00:00+07:00",
+            "ended_at": "2026-10-05T15:30:00+07:00",
+            "business_seconds": 27000
+          }
+        ],
+        "expected_ticket_state": "Waiting for Customer",
+        "expected_rejection_count": 0,
+        "expected_open_review": null,
+        "expected_reviews": [],
+        "resolution_result_final": false
+      }
+    },
+    {
+      "scenario_id": "SLA-56",
+      "checks": 18,
+      "result": "PASS",
+      "mismatches": [],
+      "reference": {
+        "expected_first_response_due_at": "2026-10-05T09:00:00+07:00",
+        "expected_resolution_due_at": "2026-10-05T16:00:00+07:00",
+        "expected_first_response_consumed_seconds": 600,
+        "expected_resolution_consumed_seconds": 25201,
+        "expected_first_response_remaining_seconds": 3000,
+        "expected_resolution_remaining_seconds": 3599,
+        "expected_first_response_status": "met",
+        "expected_resolution_status": "pending",
+        "expected_first_response_warning_level": "none",
+        "expected_resolution_warning_level": "soft",
+        "expected_first_response_sla_status_at_assignment": "pending",
+        "expected_resolution_sla_status_at_assignment": "pending",
+        "expected_resolution_intervals": [
+          {
+            "started_at": "2026-10-05T08:00:00+07:00",
+            "ended_at": null,
+            "business_seconds_as_of": 25201
+          }
+        ],
+        "expected_ticket_state": "In Progress",
+        "expected_rejection_count": 0,
+        "expected_open_review": null,
+        "expected_reviews": [],
+        "resolution_result_final": false
+      }
+    },
+    {
+      "scenario_id": "SLA-57",
+      "checks": 18,
+      "result": "PASS",
+      "mismatches": [],
+      "reference": {
+        "expected_first_response_due_at": "2026-10-05T09:00:00+07:00",
+        "expected_resolution_due_at": "2026-10-05T16:00:00+07:00",
+        "expected_first_response_consumed_seconds": 600,
+        "expected_resolution_consumed_seconds": 27901,
+        "expected_first_response_remaining_seconds": 3000,
+        "expected_resolution_remaining_seconds": 899,
+        "expected_first_response_status": "met",
+        "expected_resolution_status": "pending",
+        "expected_first_response_warning_level": "none",
+        "expected_resolution_warning_level": "emphasized",
+        "expected_first_response_sla_status_at_assignment": "pending",
+        "expected_resolution_sla_status_at_assignment": "pending",
+        "expected_resolution_intervals": [
+          {
+            "started_at": "2026-10-05T08:00:00+07:00",
+            "ended_at": null,
+            "business_seconds_as_of": 27901
+          }
+        ],
+        "expected_ticket_state": "In Progress",
+        "expected_rejection_count": 0,
+        "expected_open_review": null,
+        "expected_reviews": [],
+        "resolution_result_final": false
+      }
+    },
+    {
+      "scenario_id": "SLA-58",
+      "checks": 18,
+      "result": "PASS",
+      "mismatches": [],
+      "reference": {
+        "expected_first_response_due_at": "2026-10-05T09:00:00+07:00",
+        "expected_resolution_due_at": "2026-10-05T16:10:00+07:00",
+        "expected_first_response_consumed_seconds": 600,
+        "expected_resolution_consumed_seconds": 4200,
+        "expected_first_response_remaining_seconds": 3000,
+        "expected_resolution_remaining_seconds": 24600,
+        "expected_first_response_status": "met",
+        "expected_resolution_status": "pending",
+        "expected_first_response_warning_level": "none",
+        "expected_resolution_warning_level": "none",
+        "expected_first_response_sla_status_at_assignment": "pending",
+        "expected_resolution_sla_status_at_assignment": "pending",
+        "expected_resolution_intervals": [
+          {
+            "started_at": "2026-10-05T08:00:00+07:00",
+            "ended_at": "2026-10-05T09:00:00+07:00",
+            "business_seconds": 3600
+          },
+          {
+            "started_at": "2026-10-05T09:10:00+07:00",
+            "ended_at": null,
+            "business_seconds_as_of": 600
+          }
+        ],
+        "expected_ticket_state": "In Progress",
+        "expected_rejection_count": 1,
+        "expected_open_review": null,
+        "expected_reviews": [],
+        "resolution_result_final": false
+      }
+    },
+    {
+      "scenario_id": "SLA-59",
+      "checks": 18,
+      "result": "PASS",
+      "mismatches": [],
+      "reference": {
+        "expected_first_response_due_at": "2026-10-05T09:00:00+07:00",
+        "expected_resolution_due_at": "2026-10-05T16:20:00+07:00",
+        "expected_first_response_consumed_seconds": 600,
+        "expected_resolution_consumed_seconds": 7200,
+        "expected_first_response_remaining_seconds": 3000,
+        "expected_resolution_remaining_seconds": 21600,
+        "expected_first_response_status": "met",
+        "expected_resolution_status": "pending",
+        "expected_first_response_warning_level": "none",
+        "expected_resolution_warning_level": "none",
+        "expected_first_response_sla_status_at_assignment": "pending",
+        "expected_resolution_sla_status_at_assignment": "pending",
+        "expected_resolution_intervals": [
+          {
+            "started_at": "2026-10-05T08:00:00+07:00",
+            "ended_at": "2026-10-05T09:00:00+07:00",
+            "business_seconds": 3600
+          },
+          {
+            "started_at": "2026-10-05T09:10:00+07:00",
+            "ended_at": "2026-10-05T10:00:00+07:00",
+            "business_seconds": 3000
+          },
+          {
+            "started_at": "2026-10-05T10:10:00+07:00",
+            "ended_at": null,
+            "business_seconds_as_of": 600
+          }
+        ],
+        "expected_ticket_state": "In Progress",
+        "expected_rejection_count": 2,
+        "expected_open_review": null,
+        "expected_reviews": [],
+        "resolution_result_final": false
+      }
+    },
+    {
+      "scenario_id": "SLA-60",
+      "checks": 18,
+      "result": "PASS",
+      "mismatches": [],
+      "reference": {
+        "expected_first_response_due_at": "2026-10-05T09:00:00+07:00",
+        "expected_resolution_due_at": "2026-10-05T16:30:00+07:00",
+        "expected_first_response_consumed_seconds": 600,
+        "expected_resolution_consumed_seconds": 10200,
+        "expected_first_response_remaining_seconds": 3000,
+        "expected_resolution_remaining_seconds": 18600,
+        "expected_first_response_status": "met",
+        "expected_resolution_status": "pending",
+        "expected_first_response_warning_level": "none",
+        "expected_resolution_warning_level": "none",
+        "expected_first_response_sla_status_at_assignment": "pending",
+        "expected_resolution_sla_status_at_assignment": "pending",
+        "expected_resolution_intervals": [
+          {
+            "started_at": "2026-10-05T08:00:00+07:00",
+            "ended_at": "2026-10-05T09:00:00+07:00",
+            "business_seconds": 3600
+          },
+          {
+            "started_at": "2026-10-05T09:10:00+07:00",
+            "ended_at": "2026-10-05T10:00:00+07:00",
+            "business_seconds": 3000
+          },
+          {
+            "started_at": "2026-10-05T10:10:00+07:00",
+            "ended_at": "2026-10-05T11:00:00+07:00",
+            "business_seconds": 3000
+          },
+          {
+            "started_at": "2026-10-05T11:10:00+07:00",
+            "ended_at": null,
+            "business_seconds_as_of": 600
+          }
+        ],
+        "expected_ticket_state": "In Progress",
+        "expected_rejection_count": 3,
+        "expected_open_review": "R1",
+        "expected_reviews": [
+          {
+            "review_key": "R1",
+            "requested_at": "2026-10-05T11:10:00+07:00",
+            "completed_at": null,
+            "wait_calendar_seconds": 600,
+            "wait_overlap_seconds": 600,
+            "breach_context": "none"
+          }
+        ],
+        "resolution_result_final": false
+      }
+    },
+    {
+      "scenario_id": "SLA-61",
+      "checks": 19,
+      "result": "PASS",
+      "mismatches": [],
+      "reference": {
+        "expected_first_response_due_at": "2026-10-05T09:00:00+07:00",
+        "expected_resolution_due_at": "2026-10-05T16:30:00+07:00",
+        "expected_first_response_consumed_seconds": 600,
+        "expected_resolution_consumed_seconds": 10200,
+        "expected_first_response_remaining_seconds": 3000,
+        "expected_resolution_remaining_seconds": 18600,
+        "expected_first_response_status": "met",
+        "expected_resolution_status": "pending",
+        "expected_first_response_warning_level": "none",
+        "expected_resolution_warning_level": "none",
+        "expected_first_response_sla_status_at_assignment": "pending",
+        "expected_resolution_sla_status_at_assignment": "pending",
+        "expected_resolution_intervals": [
+          {
+            "started_at": "2026-10-05T08:00:00+07:00",
+            "ended_at": "2026-10-05T09:00:00+07:00",
+            "business_seconds": 3600
+          },
+          {
+            "started_at": "2026-10-05T09:10:00+07:00",
+            "ended_at": "2026-10-05T10:00:00+07:00",
+            "business_seconds": 3000
+          },
+          {
+            "started_at": "2026-10-05T10:10:00+07:00",
+            "ended_at": "2026-10-05T11:00:00+07:00",
+            "business_seconds": 3000
+          },
+          {
+            "started_at": "2026-10-05T11:10:00+07:00",
+            "ended_at": null,
+            "business_seconds_as_of": 600
+          }
+        ],
+        "expected_ticket_state": "In Progress",
+        "expected_rejection_count": 3,
+        "expected_open_review": "R1",
+        "expected_reviews": [
+          {
+            "review_key": "R1",
+            "requested_at": "2026-10-05T11:10:00+07:00",
+            "completed_at": null,
+            "wait_calendar_seconds": 600,
+            "wait_overlap_seconds": 600,
+            "breach_context": "none"
+          }
+        ],
+        "resolution_result_final": false
+      }
+    },
+    {
+      "scenario_id": "SLA-62",
+      "checks": 18,
+      "result": "PASS",
+      "mismatches": [],
+      "reference": {
+        "expected_first_response_due_at": "2026-10-05T09:00:00+07:00",
+        "expected_resolution_due_at": "2026-10-05T16:30:00+07:00",
+        "expected_first_response_consumed_seconds": 600,
+        "expected_resolution_consumed_seconds": 12600,
+        "expected_first_response_remaining_seconds": 3000,
+        "expected_resolution_remaining_seconds": 16200,
+        "expected_first_response_status": "met",
+        "expected_resolution_status": "met",
+        "expected_first_response_warning_level": "none",
+        "expected_resolution_warning_level": "none",
+        "expected_first_response_sla_status_at_assignment": "pending",
+        "expected_resolution_sla_status_at_assignment": "pending",
+        "expected_resolution_intervals": [
+          {
+            "started_at": "2026-10-05T08:00:00+07:00",
+            "ended_at": "2026-10-05T09:00:00+07:00",
+            "business_seconds": 3600
+          },
+          {
+            "started_at": "2026-10-05T09:10:00+07:00",
+            "ended_at": "2026-10-05T10:00:00+07:00",
+            "business_seconds": 3000
+          },
+          {
+            "started_at": "2026-10-05T10:10:00+07:00",
+            "ended_at": "2026-10-05T11:00:00+07:00",
+            "business_seconds": 3000
+          },
+          {
+            "started_at": "2026-10-05T11:10:00+07:00",
+            "ended_at": "2026-10-05T12:00:00+07:00",
+            "business_seconds": 3000
+          }
+        ],
+        "expected_ticket_state": "Resolved",
+        "expected_rejection_count": 3,
+        "expected_open_review": null,
+        "expected_reviews": [
+          {
+            "review_key": "R1",
+            "requested_at": "2026-10-05T11:10:00+07:00",
+            "completed_at": "2026-10-05T11:40:00+07:00",
+            "wait_calendar_seconds": 1800,
+            "wait_overlap_seconds": 1800,
+            "breach_context": "none"
+          }
+        ],
+        "resolution_result_final": false
+      }
+    },
+    {
+      "scenario_id": "SLA-63",
+      "checks": 18,
+      "result": "PASS",
+      "mismatches": [],
+      "reference": {
+        "expected_first_response_due_at": "2026-10-05T09:00:00+07:00",
+        "expected_resolution_due_at": "2026-10-06T08:30:00+07:00",
+        "expected_first_response_consumed_seconds": 600,
+        "expected_resolution_consumed_seconds": 14400,
+        "expected_first_response_remaining_seconds": 3000,
+        "expected_resolution_remaining_seconds": 14400,
+        "expected_first_response_status": "met",
+        "expected_resolution_status": "pending",
+        "expected_first_response_warning_level": "none",
+        "expected_resolution_warning_level": "none",
+        "expected_first_response_sla_status_at_assignment": "pending",
+        "expected_resolution_sla_status_at_assignment": "pending",
+        "expected_resolution_intervals": [
+          {
+            "started_at": "2026-10-05T08:00:00+07:00",
+            "ended_at": "2026-10-05T09:00:00+07:00",
+            "business_seconds": 3600
+          },
+          {
+            "started_at": "2026-10-05T09:10:00+07:00",
+            "ended_at": "2026-10-05T10:00:00+07:00",
+            "business_seconds": 3000
+          },
+          {
+            "started_at": "2026-10-05T10:10:00+07:00",
+            "ended_at": "2026-10-05T11:00:00+07:00",
+            "business_seconds": 3000
+          },
+          {
+            "started_at": "2026-10-05T11:10:00+07:00",
+            "ended_at": "2026-10-05T11:30:00+07:00",
+            "business_seconds": 1200
+          },
+          {
+            "started_at": "2026-10-05T12:30:00+07:00",
+            "ended_at": null,
+            "business_seconds_as_of": 3600
+          }
+        ],
+        "expected_ticket_state": "In Progress",
+        "expected_rejection_count": 3,
+        "expected_open_review": null,
+        "expected_reviews": [
+          {
+            "review_key": "R1",
+            "requested_at": "2026-10-05T11:10:00+07:00",
+            "completed_at": "2026-10-05T13:00:00+07:00",
+            "wait_calendar_seconds": 6600,
+            "wait_overlap_seconds": 3000,
+            "breach_context": "none"
+          }
+        ],
+        "resolution_result_final": false
+      }
+    },
+    {
+      "scenario_id": "SLA-64",
+      "checks": 18,
+      "result": "PASS",
+      "mismatches": [],
+      "reference": {
+        "expected_first_response_due_at": "2026-10-05T09:00:00+07:00",
+        "expected_resolution_due_at": "2026-10-05T17:00:00+07:00",
+        "expected_first_response_consumed_seconds": 600,
+        "expected_resolution_consumed_seconds": 14400,
+        "expected_first_response_remaining_seconds": 3000,
+        "expected_resolution_remaining_seconds": 14400,
+        "expected_first_response_status": "met",
+        "expected_resolution_status": "pending",
+        "expected_first_response_warning_level": "none",
+        "expected_resolution_warning_level": "none",
+        "expected_first_response_sla_status_at_assignment": "pending",
+        "expected_resolution_sla_status_at_assignment": "pending",
+        "expected_resolution_intervals": [
+          {
+            "started_at": "2026-10-05T08:00:00+07:00",
+            "ended_at": "2026-10-05T09:00:00+07:00",
+            "business_seconds": 3600
+          },
+          {
+            "started_at": "2026-10-05T09:10:00+07:00",
+            "ended_at": "2026-10-05T10:00:00+07:00",
+            "business_seconds": 3000
+          },
+          {
+            "started_at": "2026-10-05T10:10:00+07:00",
+            "ended_at": "2026-10-05T11:00:00+07:00",
+            "business_seconds": 3000
+          },
+          {
+            "started_at": "2026-10-05T11:10:00+07:00",
+            "ended_at": "2026-10-05T12:00:00+07:00",
+            "business_seconds": 3000
+          },
+          {
+            "started_at": "2026-10-05T12:30:00+07:00",
+            "ended_at": null,
+            "business_seconds_as_of": 1800
+          }
+        ],
+        "expected_ticket_state": "In Progress",
+        "expected_rejection_count": 4,
+        "expected_open_review": "R2",
+        "expected_reviews": [
+          {
+            "review_key": "R1",
+            "requested_at": "2026-10-05T11:10:00+07:00",
+            "completed_at": "2026-10-05T11:40:00+07:00",
+            "wait_calendar_seconds": 1800,
+            "wait_overlap_seconds": 1800,
+            "breach_context": "none"
+          },
+          {
+            "review_key": "R2",
+            "requested_at": "2026-10-05T12:30:00+07:00",
+            "completed_at": null,
+            "wait_calendar_seconds": 1800,
+            "wait_overlap_seconds": 1800,
+            "breach_context": "none"
+          }
+        ],
+        "resolution_result_final": false
+      }
+    },
+    {
+      "scenario_id": "SLA-65",
+      "checks": 18,
+      "result": "PASS",
+      "mismatches": [],
+      "reference": {
+        "expected_first_response_due_at": "2026-10-05T09:00:00+07:00",
+        "expected_resolution_due_at": "2026-10-05T16:30:00+07:00",
+        "expected_first_response_consumed_seconds": 600,
+        "expected_resolution_consumed_seconds": 10200,
+        "expected_first_response_remaining_seconds": 3000,
+        "expected_resolution_remaining_seconds": 18600,
+        "expected_first_response_status": "met",
+        "expected_resolution_status": "pending",
+        "expected_first_response_warning_level": "none",
+        "expected_resolution_warning_level": "none",
+        "expected_first_response_sla_status_at_assignment": "pending",
+        "expected_resolution_sla_status_at_assignment": "pending",
+        "expected_resolution_intervals": [
+          {
+            "started_at": "2026-10-05T08:00:00+07:00",
+            "ended_at": "2026-10-05T09:00:00+07:00",
+            "business_seconds": 3600
+          },
+          {
+            "started_at": "2026-10-05T09:10:00+07:00",
+            "ended_at": "2026-10-05T10:00:00+07:00",
+            "business_seconds": 3000
+          },
+          {
+            "started_at": "2026-10-05T10:10:00+07:00",
+            "ended_at": "2026-10-05T11:00:00+07:00",
+            "business_seconds": 3000
+          },
+          {
+            "started_at": "2026-10-05T11:10:00+07:00",
+            "ended_at": null,
+            "business_seconds_as_of": 600
+          }
+        ],
+        "expected_ticket_state": "In Progress",
+        "expected_rejection_count": 3,
+        "expected_open_review": "R1",
+        "expected_reviews": [
+          {
+            "review_key": "R1",
+            "requested_at": "2026-10-05T11:10:00+07:00",
+            "completed_at": null,
+            "wait_calendar_seconds": 600,
+            "wait_overlap_seconds": 600,
+            "breach_context": "none"
+          }
+        ],
+        "resolution_result_final": false
+      }
+    },
+    {
+      "scenario_id": "SLA-66",
+      "checks": 18,
+      "result": "PASS",
+      "mismatches": [],
+      "reference": {
+        "expected_first_response_due_at": "2026-10-05T09:00:00+07:00",
+        "expected_resolution_due_at": "2026-10-05T16:20:00+07:00",
+        "expected_first_response_consumed_seconds": 600,
+        "expected_resolution_consumed_seconds": 9600,
+        "expected_first_response_remaining_seconds": 3000,
+        "expected_resolution_remaining_seconds": 19200,
+        "expected_first_response_status": "met",
+        "expected_resolution_status": "met",
+        "expected_first_response_warning_level": "none",
+        "expected_resolution_warning_level": "none",
+        "expected_first_response_sla_status_at_assignment": "pending",
+        "expected_resolution_sla_status_at_assignment": "pending",
+        "expected_resolution_intervals": [
+          {
+            "started_at": "2026-10-05T08:00:00+07:00",
+            "ended_at": "2026-10-05T09:00:00+07:00",
+            "business_seconds": 3600
+          },
+          {
+            "started_at": "2026-10-05T09:10:00+07:00",
+            "ended_at": "2026-10-05T10:00:00+07:00",
+            "business_seconds": 3000
+          },
+          {
+            "started_at": "2026-10-05T10:10:00+07:00",
+            "ended_at": "2026-10-05T11:00:00+07:00",
+            "business_seconds": 3000
+          }
+        ],
+        "expected_ticket_state": "Resolved",
+        "expected_rejection_count": 2,
+        "expected_open_review": null,
+        "expected_reviews": [],
+        "resolution_result_final": false
+      }
+    },
+    {
+      "scenario_id": "SLA-67",
+      "checks": 18,
+      "result": "PASS",
+      "mismatches": [],
+      "reference": {
+        "expected_first_response_due_at": "2026-10-05T09:00:00+07:00",
+        "expected_resolution_due_at": "2026-10-06T08:30:00+07:00",
+        "expected_first_response_consumed_seconds": 600,
+        "expected_resolution_consumed_seconds": 33000,
+        "expected_first_response_remaining_seconds": 3000,
+        "expected_resolution_remaining_seconds": 0,
+        "expected_first_response_status": "met",
+        "expected_resolution_status": "breached",
+        "expected_first_response_warning_level": "none",
+        "expected_resolution_warning_level": "breached",
+        "expected_first_response_sla_status_at_assignment": "pending",
+        "expected_resolution_sla_status_at_assignment": "pending",
+        "expected_resolution_intervals": [
+          {
+            "started_at": "2026-10-05T08:00:00+07:00",
+            "ended_at": "2026-10-05T10:00:00+07:00",
+            "business_seconds": 7200
+          },
+          {
+            "started_at": "2026-10-05T10:10:00+07:00",
+            "ended_at": "2026-10-05T12:00:00+07:00",
+            "business_seconds": 6600
+          },
+          {
+            "started_at": "2026-10-05T12:10:00+07:00",
+            "ended_at": "2026-10-05T17:00:00+07:00",
+            "business_seconds": 17400
+          },
+          {
+            "started_at": "2026-10-06T08:30:00+07:00",
+            "ended_at": null,
+            "business_seconds_as_of": 1800
+          }
+        ],
+        "expected_ticket_state": "In Progress",
+        "expected_rejection_count": 3,
+        "expected_open_review": "R1",
+        "expected_reviews": [
+          {
+            "review_key": "R1",
+            "requested_at": "2026-10-06T08:30:00+07:00",
+            "completed_at": null,
+            "wait_calendar_seconds": 1800,
+            "wait_overlap_seconds": 1800,
+            "breach_context": "before_request"
+          }
+        ],
+        "resolution_result_final": false
+      }
+    },
+    {
+      "scenario_id": "SLA-68",
+      "checks": 18,
+      "result": "PASS",
+      "mismatches": [],
+      "reference": {
+        "expected_first_response_due_at": "2026-10-05T09:00:00+07:00",
+        "expected_resolution_due_at": "2026-10-05T16:30:00+07:00",
+        "expected_first_response_consumed_seconds": 600,
+        "expected_resolution_consumed_seconds": 29700,
+        "expected_first_response_remaining_seconds": 3000,
+        "expected_resolution_remaining_seconds": 0,
+        "expected_first_response_status": "met",
+        "expected_resolution_status": "breached",
+        "expected_first_response_warning_level": "none",
+        "expected_resolution_warning_level": "breached",
+        "expected_first_response_sla_status_at_assignment": "pending",
+        "expected_resolution_sla_status_at_assignment": "pending",
+        "expected_resolution_intervals": [
+          {
+            "started_at": "2026-10-05T08:00:00+07:00",
+            "ended_at": "2026-10-05T09:00:00+07:00",
+            "business_seconds": 3600
+          },
+          {
+            "started_at": "2026-10-05T09:10:00+07:00",
+            "ended_at": "2026-10-05T10:00:00+07:00",
+            "business_seconds": 3000
+          },
+          {
+            "started_at": "2026-10-05T10:10:00+07:00",
+            "ended_at": "2026-10-05T11:00:00+07:00",
+            "business_seconds": 3000
+          },
+          {
+            "started_at": "2026-10-05T11:10:00+07:00",
+            "ended_at": null,
+            "business_seconds_as_of": 20100
+          }
+        ],
+        "expected_ticket_state": "In Progress",
+        "expected_rejection_count": 3,
+        "expected_open_review": "R1",
+        "expected_reviews": [
+          {
+            "review_key": "R1",
+            "requested_at": "2026-10-05T11:10:00+07:00",
+            "completed_at": null,
+            "wait_calendar_seconds": 20100,
+            "wait_overlap_seconds": 20100,
+            "breach_context": "during_wait"
+          }
+        ],
+        "resolution_result_final": false
+      }
+    },
+    {
+      "scenario_id": "SLA-69",
+      "checks": 18,
+      "result": "PASS",
+      "mismatches": [],
+      "reference": {
+        "expected_first_response_due_at": "2026-10-05T09:00:00+07:00",
+        "expected_resolution_due_at": "2026-10-06T08:50:00+07:00",
+        "expected_first_response_consumed_seconds": 600,
+        "expected_resolution_consumed_seconds": 33000,
+        "expected_first_response_remaining_seconds": 3000,
+        "expected_resolution_remaining_seconds": 0,
+        "expected_first_response_status": "met",
+        "expected_resolution_status": "breached",
+        "expected_first_response_warning_level": "none",
+        "expected_resolution_warning_level": "breached",
+        "expected_first_response_sla_status_at_assignment": "pending",
+        "expected_resolution_sla_status_at_assignment": "pending",
+        "expected_resolution_intervals": [
+          {
+            "started_at": "2026-10-05T08:00:00+07:00",
+            "ended_at": "2026-10-05T09:00:00+07:00",
+            "business_seconds": 3600
+          },
+          {
+            "started_at": "2026-10-05T09:10:00+07:00",
+            "ended_at": "2026-10-05T10:00:00+07:00",
+            "business_seconds": 3000
+          },
+          {
+            "started_at": "2026-10-05T10:10:00+07:00",
+            "ended_at": "2026-10-05T15:00:00+07:00",
+            "business_seconds": 17400
+          },
+          {
+            "started_at": "2026-10-05T16:30:00+07:00",
+            "ended_at": "2026-10-06T10:00:00+07:00",
+            "business_seconds": 9000
+          }
+        ],
+        "expected_ticket_state": "Resolved",
+        "expected_rejection_count": 3,
+        "expected_open_review": null,
+        "expected_reviews": [
+          {
+            "review_key": "R1",
+            "requested_at": "2026-10-05T16:30:00+07:00",
+            "completed_at": "2026-10-06T09:30:00+07:00",
+            "wait_calendar_seconds": 61200,
+            "wait_overlap_seconds": 7200,
+            "breach_context": "during_wait"
+          }
+        ],
+        "resolution_result_final": false
+      }
+    }
+  ]
+}
