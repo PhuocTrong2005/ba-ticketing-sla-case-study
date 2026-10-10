@@ -4,6 +4,11 @@
 
 Không có câu hỏi quyết định nghiệp vụ mới. OQ-20/OQ-21 vẫn đã đóng.
 
+### Sau SLA-82/SLA-83 — 10/10/2026 (hiện hành)
+
+- Không phát hiện mâu thuẫn đáp án/quy tắc hoặc blocker coverage mới. SLA-82/SLA-83 đã được chủ dự án xác nhận; [bằng chứng](../tests/evidence/sla-verification-83.md) ghi checker 83/83 PASS và kiểm tra phụ 08:00:00. Hai nhánh Waiting và biên 08:00:01 đã được phủ; gate logic SLA chính mở theo [coverage](spec/scenario-coverage.md), thay kết luận mốc 81. Gate M-07 tiếp tục đủ điều kiện viết logic.
+- Contract tên trường payload và các API test A1/A2, REVIEW_REQUIRED, quyền/nội dung/atomicity vẫn chưa có. Tiếp tục dừng phần phụ thuộc contract theo API-01/API-02; không đổi quy tắc SLA hoặc mở lại OQ-20/OQ-21. Không có bằng chứng backend/API trong lần này.
+
 ### Giới hạn nhập nháp S1–S12 — 08/10/2026 (lịch sử)
 
 - Không thấy mâu thuẫn đáp án với quy tắc đã chốt; SLA-61 và checker cùng dùng `expected_rejected_actions`. S11 giữ Waiting khi review hoàn tất, phù hợp BR-08/57.
@@ -11,7 +16,7 @@ Không có câu hỏi quyết định nghiệp vụ mới. OQ-20/OQ-21 vẫn đ�
 - Checker gốc chỉ nhận đúng 69 ID; audit cũ chỉ nhận verified. Bộ 12 draft có kiểm tra cấu trúc riêng, chưa có kết quả đối chiếu SLA từ CLI gốc. Không thay checker để tự xác nhận đáp án.
 - Coverage draft và các biến thể còn mở ghi tại [bảng nhập S1–S12](spec/scenario-coverage.md#nhập-s1s12-ngày-08102026--draft-chưa-mở-gate). A1/A2 và HTTP REVIEW_REQUIRED chờ API test. Hai gate vẫn chưa được xác nhận mở.
 
-### Sau xác nhận 12 ca — 08/10/2026
+### Sau xác nhận 12 ca — 08/10/2026 (lịch sử)
 
 - Chủ dự án đã xác nhận đúng SLA-70…SLA-81 qua hội thoại; `verified_at=null` vì không có giờ xác nhận đến giây. Không có thông tin về phương pháp kiểm tra của chủ dự án. Codex chạy đối chiếu tham chiếu riêng, kết quả và giới hạn ở [báo cáo 81 ca](../tests/evidence/sla-verification-81.md). Không mở lại OQ-20/OQ-21.
 - Gate logic SLA chính vẫn chặn: thiếu resume Waiting khi Customer trả lời ngay trong cuối tuần và resume ngoài giờ với 0 giây nhưng chưa từng breached. Cần rà riêng mốc một giây sau hạn trên đường Waiting còn 0 nếu tiêu chí nhánh biên đòi ca riêng. Đây là khoảng thiếu coverage, không phải mâu thuẫn đáp án hay bug backend.

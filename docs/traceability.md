@@ -2,7 +2,14 @@
 
 Khung truy vết này sẽ được bổ sung khi có yêu cầu, API/màn hình, kịch bản verified và bằng chứng hợp lệ. Không tự tạo bằng chứng hay gán trạng thái verified.
 
-Sau xác nhận ngày 08/10/2026, fixture có **SLA-01…SLA-81 verified**. Chủ dự án xác nhận SLA-70…SLA-81 qua hội thoại; Codex chạy checker tham chiếu 81/81 PASS, 1.460 phép so sánh và [audit cấu trúc](../tests/evidence/sla-fixture-current-audit.json) 81/81 PASS. [Báo cáo hiện hành](../tests/evidence/sla-verification-81.md) phân biệt xác nhận, đối chiếu fixture và các kiểm thử implementation chưa có. Gate SLA chính còn chặn bởi hai biến thể Waiting; gate tính bối cảnh M-07 đủ điều kiện viết logic theo D-33. A1/A2 và HTTP `REVIEW_REQUIRED` chờ API test. Chưa gán test backend hoặc trạng thái duyệt cho stories/FR/NFR.
+Sau xác nhận ngày 10/10/2026, fixture có **SLA-01…SLA-83 verified**; 81 ca cũ giữ nguyên nội dung và byte object. SLA-82/SLA-83 do chủ dự án xác nhận qua hội thoại; Codex ghi `verified_at=null` và chạy công cụ riêng. Checker: **83 PASS / 0 FAIL, 1.496 phép so sánh**; đối chiếu phụ SLA-83 tại 08:00:00: 5/5 phép đạt; [audit cấu trúc](../tests/evidence/sla-fixture-83-audit.json): 83 PASS / 0 FAIL, 4.876 assertion. [Báo cáo hiện hành](../tests/evidence/sla-verification-83.md) có mốc 69/81, hash và giới hạn. Gate logic SLA chính mở theo AGENTS/D-33 sau khi đóng hai nhánh Waiting và biên 08:00:01; gate M-07 tiếp tục đủ điều kiện viết logic. Chưa gán test backend hoặc trạng thái duyệt stories/FR/NFR.
+
+| Quy tắc / nhánh | Ca verified | Bằng chứng tham chiếu | Giới hạn |
+|---|---|---|---|
+| BR-17/20/23; resume Waiting ngay cuối tuần | SLA-82 | [83-case report](../tests/evidence/sla-reference-83-results.json): 18/18 phép đạt | Fixture toán học, chưa chạy backend/API |
+| BR-17/23/39/48/60; resume ngoài giờ với 0 chưa breached, sau hạn một giây | SLA-83 | Cùng report: 18/18 tại 08:00:01; 5/5 riêng tại 08:00:00 | Đối chiếu phụ dùng cùng events, không phải ca thứ 84 |
+
+Mốc 08/10/2026: [81 ca](../tests/evidence/sla-verification-81.md) đạt 81 PASS / 0 FAIL, 1.460 phép; gate chính khi đó chưa mở. Bằng chứng lịch sử giữ nguyên.
 
 Lịch sử lúc nhập nháp ngày 08/10/2026: S1–S12 → SLA-70…SLA-81 khi đó đều draft; [ánh xạ nhóm/nhánh](spec/scenario-coverage.md#nhập-s1s12-ngày-08102026--draft-chưa-mở-gate) và [báo cáo nhập](../tests/evidence/sla-draft-import.md) giữ nguyên trạng thái tại thời điểm đó. 69 object verified không đổi. Kiểm tra cấu trúc mới 12/12 lúc đó không phải PASS SLA/API; checker gốc chỉ chạy được 69 ca cũ. Kết luận hiện hành ở đoạn trên.
 
@@ -39,7 +46,7 @@ Lịch sử lúc nhập nháp ngày 08/10/2026: S1–S12 → SLA-70…SLA-81 khi
 
 ## Ma trận yêu cầu v1.0 (nháp)
 
-Artefact việc 1: [audit cấu trúc lịch sử](../tests/evidence/sla-fixture-audit.json), [checker tham chiếu gốc](../tests/sla/reference/validate_sla_reference.py), [run record](../tests/evidence/sla-reference-run.json), [đối chiếu nguồn](../tests/evidence/sla-source-comparison.json), [manifest SHA-256](../tests/evidence/sla-reconciliation.sha256). Audit không tính SLA; checker tính và đối chiếu fixture độc lập với backend. Cả hai không phải test backend/API/SQL/prototype/concurrency. Bảng verified đủ 12 nhóm nhưng còn thiếu nhánh theo [scenario coverage](spec/scenario-coverage.md); chưa xác nhận mở gate SLA chính/M-07. Stories/FR/NFR và các ma trận nháp giữ nguyên trạng thái, chưa được duyệt bởi lần chạy này.
+Artefact việc 1 (lịch sử 06/10/2026; kết luận hiện hành ở đầu tài liệu): [audit cấu trúc lịch sử](../tests/evidence/sla-fixture-audit.json), [checker tham chiếu gốc](../tests/sla/reference/validate_sla_reference.py), [run record](../tests/evidence/sla-reference-run.json), [đối chiếu nguồn](../tests/evidence/sla-source-comparison.json), [manifest SHA-256](../tests/evidence/sla-reconciliation.sha256). Audit không tính SLA; checker tính và đối chiếu fixture độc lập với backend. Cả hai không phải test backend/API/SQL/prototype/concurrency. Bảng verified đủ 12 nhóm nhưng còn thiếu nhánh theo [scenario coverage](spec/scenario-coverage.md); chưa xác nhận mở gate SLA chính/M-07. Stories/FR/NFR và các ma trận nháp giữ nguyên trạng thái, chưa được duyệt bởi lần chạy này.
 
 Không có liên kết code hoặc test đã tồn tại trong bảng này. “Kiểm chứng dự kiến” là hoạt động sẽ lập sau khi implementation được phép.
 

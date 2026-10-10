@@ -7547,5 +7547,161 @@
         "verified_by": "project owner",
         "verified_at": null,
         "owner_confirmation": "tôi đã verify bộ SLA đó; 08/10/2026; scope SLA-70..SLA-81"
+    },
+    {
+        "scenario_id": "SLA-82",
+        "description": "Resume Waiting ngay Chủ nhật, còn ngân sách",
+        "policy_id": "HIGH",
+        "created_at": "2026-10-09T15:00:00+07:00",
+        "as_of": "2026-10-12T08:30:00+07:00",
+        "events": [
+            {
+                "seq": 1,
+                "type": "agent_assigned",
+                "at": "2026-10-09T15:05:00+07:00"
+            },
+            {
+                "seq": 2,
+                "type": "agent_public_reply",
+                "at": "2026-10-09T15:10:00+07:00"
+            },
+            {
+                "seq": 3,
+                "type": "status_waiting",
+                "at": "2026-10-09T16:00:00+07:00"
+            },
+            {
+                "seq": 4,
+                "type": "customer_public_message",
+                "at": "2026-10-11T12:00:00+07:00"
+            }
+        ],
+        "expected_first_response_due_at": "2026-10-09T16:00:00+07:00",
+        "expected_resolution_due_at": "2026-10-12T15:00:00+07:00",
+        "expected_first_response_consumed_seconds": 600,
+        "expected_resolution_consumed_seconds": 5400,
+        "expected_first_response_remaining_seconds": 3000,
+        "expected_resolution_remaining_seconds": 23400,
+        "expected_first_response_status": "met",
+        "expected_resolution_status": "pending",
+        "expected_first_response_warning_level": "none",
+        "expected_resolution_warning_level": "none",
+        "expected_first_response_sla_status_at_assignment": "pending",
+        "expected_resolution_sla_status_at_assignment": "pending",
+        "calculation_note": "Theo đáp án chủ dự án ngày 10/10/2026: P 15:00–15:10 = 600 giây, còn 3000, met/none. G 09/10 15:00–16:00 = 3600; từ resume Chủ nhật 11/10 12:00 đến as_of Thứ Hai 12/10 08:30 = 1800 giây làm việc; tổng 5400, còn 23400, hạn mới 12/10 15:00, pending/none. Waiting và ngoài lịch không cộng SLA.",
+        "review_status": "verified",
+        "drafted_by": "AI advisor",
+        "reviewed_by": null,
+        "verification_method": "Project owner confirmed via conversation on 2026-10-10; owner verification method was not provided. Codex recorded the confirmation; reference execution is reported separately.",
+        "verification_basis": "owner_confirmation; SLA-82 input and expected results supplied in conversation on 2026-10-10",
+        "verification_evidence_status": "owner_confirmation_in_conversation; no_owner_method_or_execution_evidence",
+        "blocked_by": [],
+        "coverage_groups": [
+            3,
+            6
+        ],
+        "resolution_result_final": false,
+        "draft_assumptions": [
+            "Fixture toán học không lưu actor/nội dung; payload bắt buộc và quyền cần contract/API test riêng."
+        ],
+        "expected_rejected_actions": [],
+        "expected_reviews": [],
+        "expected_resolution_intervals": [
+            {
+                "started_at": "2026-10-09T15:00:00+07:00",
+                "ended_at": "2026-10-09T16:00:00+07:00",
+                "business_seconds": 3600
+            },
+            {
+                "started_at": "2026-10-11T12:00:00+07:00",
+                "ended_at": null,
+                "business_seconds_as_of": 1800
+            }
+        ],
+        "expected_ticket_state": "In Progress",
+        "expected_rejection_count": 0,
+        "expected_open_review": null,
+        "verified_by": "project owner",
+        "verified_at": null,
+        "owner_confirmation": "Chủ dự án xác nhận kết quả SLA-82 và SLA-83 trong hội thoại ngày 10/10/2026; yêu cầu nhập review_status: verified; không cung cấp giờ xác nhận chính xác hoặc phương pháp kiểm tra."
+    },
+    {
+        "scenario_id": "SLA-83",
+        "description": "Resume Waiting ngoài giờ với 0 giây chưa breached, đánh giá sau hạn một giây",
+        "policy_id": "HIGH",
+        "created_at": "2026-10-05T09:00:00+07:00",
+        "as_of": "2026-10-06T08:00:01+07:00",
+        "events": [
+            {
+                "seq": 1,
+                "type": "agent_assigned",
+                "at": "2026-10-05T09:05:00+07:00"
+            },
+            {
+                "seq": 2,
+                "type": "agent_public_reply",
+                "at": "2026-10-05T09:10:00+07:00"
+            },
+            {
+                "seq": 3,
+                "type": "status_waiting",
+                "at": "2026-10-05T17:00:00+07:00"
+            },
+            {
+                "seq": 4,
+                "type": "customer_public_message",
+                "at": "2026-10-05T18:00:00+07:00"
+            }
+        ],
+        "expected_first_response_due_at": "2026-10-05T10:00:00+07:00",
+        "expected_resolution_due_at": "2026-10-06T08:00:00+07:00",
+        "expected_first_response_consumed_seconds": 600,
+        "expected_resolution_consumed_seconds": 28801,
+        "expected_first_response_remaining_seconds": 3000,
+        "expected_resolution_remaining_seconds": 0,
+        "expected_first_response_status": "met",
+        "expected_resolution_status": "breached",
+        "expected_first_response_warning_level": "none",
+        "expected_resolution_warning_level": "breached",
+        "expected_first_response_sla_status_at_assignment": "pending",
+        "expected_resolution_sla_status_at_assignment": "pending",
+        "calculation_note": "Theo đáp án chủ dự án ngày 10/10/2026: P 09:00–09:10 = 600 giây, còn 3000, met/none. G 05/10 09:00–17:00 = 28800, vào Waiting đúng hạn chưa breached; Customer trả lời 18:00 ngoài giờ khi còn 0, hạn mới 06/10 08:00:00. Tại đúng hạn là pending/due; ca đánh giá 08:00:01, khoảng mở thêm 1 giây làm việc, tổng 28801, còn 0, breached/breached.",
+        "review_status": "verified",
+        "drafted_by": "AI advisor",
+        "reviewed_by": null,
+        "verification_method": "Project owner confirmed via conversation on 2026-10-10; owner verification method was not provided. Codex recorded the confirmation; reference execution is reported separately.",
+        "verification_basis": "owner_confirmation; SLA-83 input and expected results supplied in conversation on 2026-10-10",
+        "verification_evidence_status": "owner_confirmation_in_conversation; no_owner_method_or_execution_evidence",
+        "blocked_by": [],
+        "coverage_groups": [
+            4,
+            6,
+            9,
+            11
+        ],
+        "resolution_result_final": false,
+        "draft_assumptions": [
+            "Fixture toán học không lưu actor/nội dung; payload bắt buộc và quyền cần contract/API test riêng."
+        ],
+        "expected_rejected_actions": [],
+        "expected_reviews": [],
+        "expected_resolution_intervals": [
+            {
+                "started_at": "2026-10-05T09:00:00+07:00",
+                "ended_at": "2026-10-05T17:00:00+07:00",
+                "business_seconds": 28800
+            },
+            {
+                "started_at": "2026-10-05T18:00:00+07:00",
+                "ended_at": null,
+                "business_seconds_as_of": 1
+            }
+        ],
+        "expected_ticket_state": "In Progress",
+        "expected_rejection_count": 0,
+        "expected_open_review": null,
+        "verified_by": "project owner",
+        "verified_at": null,
+        "owner_confirmation": "Chủ dự án xác nhận kết quả SLA-82 và SLA-83 trong hội thoại ngày 10/10/2026; yêu cầu nhập review_status: verified; không cung cấp giờ xác nhận chính xác hoặc phương pháp kiểm tra."
     }
 ]

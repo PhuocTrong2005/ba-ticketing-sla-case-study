@@ -16,7 +16,7 @@
 | Mã | Hạng mục | Phụ thuộc | Trạng thái |
 |---|---|---|---|
 | DOC-01 | Hoàn thiện yêu cầu, traceability và decision log. | Quyết định chủ dự án | Đang có khung |
-| SLA-01 | 81 fixture đã được chủ dự án xác nhận; 69 ca đầu giữ nguyên, 12 ca mới được xác nhận ngày 08/10/2026. Checker 81 ca: 81 PASS / 0 FAIL, 1.460 so sánh; checker gốc 69 ca: 69 PASS / 0 FAIL, 1.243 so sánh. [Đối chiếu hiện hành](tests/evidence/sla-verification-81.md). | `docs/spec/scenario-coverage.md`, D-33/D-39/D-40 | Gate SLA chính chưa mở do còn biến thể Waiting; gate tính M-07 đủ điều kiện viết logic; chưa triển khai code |
+| SLA-01 | 83 fixture verified; giữ nguyên 81 ca cũ. Checker 83 PASS / 0 FAIL, 1.496 so sánh; thêm 5 phép biên SLA-83 tại 08:00:00 đạt. Mốc 69/81 lần lượt 1.243/1.460 phép, đều PASS. [Báo cáo hiện hành](tests/evidence/sla-verification-83.md). | `docs/spec/scenario-coverage.md`, D-33/D-39/D-40 | Gate SLA chính mở; gate tính M-07 đủ điều kiện viết logic; chưa triển khai code |
 | DATA-01 | Thiết kế schema và dựng lại dữ liệu dẫn xuất từ sự kiện; lưu số giây còn lại tại mỗi lần Resolved để kiểm chứng quy tắc không quy lỗi Agent khi Customer từ chối lúc hết ngân sách. | SLA-01 | Chưa bắt đầu |
 | DATA-02 | Thiết kế bảng `ticket_reviews`; lưu số giây còn lại tại mỗi lần Resolved nếu DATA-01 chưa bao phủ. | SLA-01 | Chưa bắt đầu |
 | API-01 | Xác định hợp đồng API và kiểm tra phân quyền backend. | DOC-01, SLA-01 | Chưa bắt đầu |
@@ -42,3 +42,9 @@
 - Gate logic SLA chính: **chưa mở**. Cần ca verified riêng cho Customer resume Waiting ngay trong cuối tuần và cho resume Waiting ngoài giờ với 0 giây còn lại nhưng chưa từng breached; rà thêm mốc sau deadline một giây cho đúng đường Waiting còn 0 theo tiêu chí nhánh biên. Không tự tạo SLA-82 trở đi.
 - Gate tính bối cảnh M-07: **đủ điều kiện mở cho việc viết logic** theo D-33; nhánh chờ Manager trong Waiting, R3/lần từ chối 5, overlap/breach/open/closed review đã có ca verified và khớp checker. Chưa viết hoặc kiểm tra implementation.
 - API-01/API-02: A1/A2 và HTTP `REVIEW_REQUIRED` của SLA-81, nội dung bắt buộc/quyền/atomicity vẫn chờ contract và API test. Không cộng các bước này vào PASS SLA/M-07.
+
+## Sau SLA-82/SLA-83 — 10/10/2026
+
+**Gate logic SLA chính: mở cho việc viết logic theo AGENTS/D-33.** Nhóm 1–11 đều có ca verified và bảng nhóm → mã không còn nhóm trống. SLA-82 đóng nhánh Customer resume ngay cuối tuần; SLA-83 đóng nhánh resume ngoài giờ với 0 giây nhưng chưa từng breached và mốc sau hạn 08:00:01. Đối chiếu phụ cùng events tại 08:00:00 xác nhận pending/due; không thêm ca hoặc tự xác nhận đáp án. Các nhánh còn lại đã được đối soát ở mốc 81; không còn blocker coverage cho logic SLA chính. Không đổi tiêu chí gate. Gate tính M-07 tiếp tục đủ điều kiện viết logic theo đánh giá mốc 81. API A1/A2, HTTP REVIEW_REQUIRED, payload/quyền/atomicity và các tiêu chí hoàn thành v1.0 vẫn chưa kiểm thử; đây không phải blocker mới cho gate phép tính và không phải xác nhận hoàn thành backend.
+
+Các ghi chú 08/10 phía trên giữ nguyên như lịch sử; yêu cầu hiện tại cho phép nhập đúng SLA-82/SLA-83 verified và thay kết luận gate cũ. Không tự thêm ca ngoài hai ca đã được xác nhận.
