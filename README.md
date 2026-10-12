@@ -15,6 +15,8 @@ Case study mô tả việc quản lý ticket, phân quyền Customer/Agent/Manag
 
 Nguồn sự thật: [business rules](docs/spec/business-rules.md), [bộ mã](docs/spec/codes.md), [decision log](docs/decision-log.md). Các điểm chưa chốt: [open questions](docs/open-questions.md).
 
+Tài liệu quy trình đã hoàn thành theo xác nhận chủ dự án: [As-Is (giả định)](docs/02-process/as-is.md), [To-Be v1.0](docs/02-process/to-be.md) và [vòng đời ticket](docs/02-process/ticket-states.md). Hai sơ đồ BPMN nằm trong cùng [file nguồn nhiều trang](docs/02-process/support-processes.drawio), mở trang **As-Is** hoặc **To-Be**; ảnh xuất và Mermaid xem nhanh có trong từng tài liệu.
+
 ## Cách chạy
 
 Sẽ cập nhật khi prototype, backend và hướng dẫn chạy đã được xây dựng, kiểm tra thực tế từ một thư mục mới.

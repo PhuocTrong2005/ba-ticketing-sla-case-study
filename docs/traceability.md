@@ -2,6 +2,18 @@
 
 Khung truy vết này sẽ được bổ sung khi có yêu cầu, API/màn hình, kịch bản verified và bằng chứng hợp lệ. Không tự tạo bằng chứng hay gán trạng thái verified.
 
+## Tài liệu quy trình — 12/10/2026
+
+Ba Markdown và sơ đồ đã hoàn thành theo xác nhận chủ dự án. Nguồn BPMN là [support-processes.drawio](02-process/support-processes.drawio), gồm hai trang **As-Is** và **To-Be**; ảnh xuất nằm trong tài liệu tương ứng. Các liên kết dưới đây là truy vết mô tả quy trình, không phải kết quả kiểm thử backend hoặc trạng thái duyệt stories/AC, FR/NFR.
+
+| Mục liên quan | Tài liệu quy trình |
+|---|---|
+| BR-01; mục tiêu G-01, G-02, G-03, G-05, G-06, G-08 | [As-Is (giả định, chưa khảo sát)](02-process/as-is.md) |
+| BR-07…BR-11, BR-13…BR-16; US-01…US-03 | [Vòng đời ticket](02-process/ticket-states.md); [luồng chính To-Be](02-process/to-be.md#1-luồng-chính-của-ticket) |
+| BR-16…BR-26, BR-38, BR-46, BR-48, BR-59…BR-61; US-04 | [Tác động đến SLA theo bước](02-process/to-be.md#3-tác-động-đến-sla-theo-bước) |
+| BR-52…BR-58; US-05 | [Review Manager](02-process/to-be.md#2-luồng-review-của-manager-chạy-song-song); [vòng đời ticket](02-process/ticket-states.md) |
+| BR-56; M-07; US-06 | [Bối cảnh chờ review và Waiting](02-process/to-be.md#2-luồng-review-của-manager-chạy-song-song) |
+
 Sau xác nhận ngày 10/10/2026, fixture có **SLA-01…SLA-83 verified**; 81 ca cũ giữ nguyên nội dung và byte object. SLA-82/SLA-83 do chủ dự án xác nhận qua hội thoại; Codex ghi `verified_at=null` và chạy công cụ riêng. Checker: **83 PASS / 0 FAIL, 1.496 phép so sánh**; đối chiếu phụ SLA-83 tại 08:00:00: 5/5 phép đạt; [audit cấu trúc](../tests/evidence/sla-fixture-83-audit.json): 83 PASS / 0 FAIL, 4.876 assertion. [Báo cáo hiện hành](../tests/evidence/sla-verification-83.md) có mốc 69/81, hash và giới hạn. Gate logic SLA chính mở theo AGENTS/D-33 sau khi đóng hai nhánh Waiting và biên 08:00:01; gate M-07 tiếp tục đủ điều kiện viết logic. Chưa gán test backend hoặc trạng thái duyệt stories/FR/NFR.
 
 | Quy tắc / nhánh | Ca verified | Bằng chứng tham chiếu | Giới hạn |

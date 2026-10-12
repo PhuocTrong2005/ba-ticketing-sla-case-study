@@ -16,6 +16,7 @@
 | Mã | Hạng mục | Phụ thuộc | Trạng thái |
 |---|---|---|---|
 | DOC-01 | Hoàn thiện yêu cầu, traceability và decision log. | Quyết định chủ dự án | Đang có khung |
+| DOC-02 | Tài liệu [As-Is](docs/02-process/as-is.md), [To-Be](docs/02-process/to-be.md), [vòng đời ticket](docs/02-process/ticket-states.md); [nguồn BPMN hai trang](docs/02-process/support-processes.drawio) và ảnh xuất tương ứng. | Nội dung và sơ đồ chủ dự án cung cấp | Hoàn thành theo xác nhận chủ dự án ngày 12/10/2026; chỉ phần tài liệu quy trình và sơ đồ |
 | SLA-01 | 83 fixture verified; giữ nguyên 81 ca cũ. Checker 83 PASS / 0 FAIL, 1.496 so sánh; thêm 5 phép biên SLA-83 tại 08:00:00 đạt. Mốc 69/81 lần lượt 1.243/1.460 phép, đều PASS. [Báo cáo hiện hành](tests/evidence/sla-verification-83.md). | `docs/spec/scenario-coverage.md`, D-33/D-39/D-40 | Gate SLA chính mở; gate tính M-07 đủ điều kiện viết logic; chưa triển khai code |
 | DATA-01 | Thiết kế schema và dựng lại dữ liệu dẫn xuất từ sự kiện; lưu số giây còn lại tại mỗi lần Resolved để kiểm chứng quy tắc không quy lỗi Agent khi Customer từ chối lúc hết ngân sách. | SLA-01 | Chưa bắt đầu |
 | DATA-02 | Thiết kế bảng `ticket_reviews`; lưu số giây còn lại tại mỗi lần Resolved nếu DATA-01 chưa bao phủ. | SLA-01 | Chưa bắt đầu |
