@@ -62,3 +62,11 @@ Giữ nguyên báo cáo lịch sử 69/69 PASS, 1.243 so sánh và vai trò ch�
 Chủ dự án xác nhận và yêu cầu nhập đúng hai ca SLA-82/SLA-83 ở `verified`, giữ nguyên 81 ca cũ. Nguồn là nội dung hội thoại ngày 10/10/2026, không có giờ xác nhận đến giây, phương pháp tự tính hay bằng chứng chủ dự án chạy công cụ; `verified_at=null`. SLA-82 phủ resume Waiting ngay Chủ nhật; SLA-83 phủ hết ngân sách nhưng chưa breached, resume ngoài giờ, pending/due tại 08:00:00 và breached/breached tại `as_of=08:00:01`. Codex chỉ ghi nhận đáp án và chạy đối chiếu tham chiếu riêng. Không đổi chính sách, schema, quy tắc SLA hay tiêu chí gate D-33; kết luận gate phải dựa trên coverage và kết quả thực thi, không phải số lượng ca. Không xác nhận backend/API/SQL/prototype.
 
 Sau đối chiếu thực tế 83/83 PASS và kiểm tra biên 08:00:00, gate logic SLA chính đủ điều kiện mở theo tiêu chí hiện hành; không thêm quyết định chính sách. Xem [coverage](spec/scenario-coverage.md) và [bằng chứng 83 ca](../tests/evidence/sla-verification-83.md). Kết luận chưa mở trong các bản đối soát trước là lịch sử.
+
+## Phê duyệt yêu cầu và thiết kế — 12/10/2026
+
+| Mã | Quyết định | Phương án đã bỏ | Lý do / nguồn | Trạng thái |
+|---|---|---|---|---|
+| D-41 | Duyệt sửa BR/codes, stories/AC và FR/NFR theo báo cáo rà soát; sửa invariant quá tải, warning, validation, khoảng 0 và coverage. | Diễn đạt mơ hồ trước rà soát. | Chủ dự án xác nhận trong hội thoại ngày 12/10/2026; không suy ra thời điểm chính xác hoặc test PASS. | Đã chốt |
+| D-42 | Duyệt bốn nhóm contract: chữ thường SLA, Agent đọc phương án trong ticket, payload và định nghĩa báo cáo BR-62/63; reports/prototype Must. | Diễn đạt mơ hồ trước rà soát. | Chủ dự án xác nhận trong hội thoại ngày 12/10/2026; không suy ra thời điểm chính xác hoặc test PASS. | Đã chốt |
+| D-43 | Duyệt ERD/data dictionary/API và triển khai FastAPI/SQLite, test implementation thực; traceability ghi planned trước khi chạy. | Diễn đạt mơ hồ trước rà soát. | Chủ dự án xác nhận trong hội thoại ngày 12/10/2026; không suy ra thời điểm chính xác hoặc test PASS. | Đã chốt |

@@ -1,0 +1,31 @@
+INFO:     Started server process [2484]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:65134 (Press CTRL+C to quit)
+INFO:     127.0.0.1:65135 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65138 - "GET /docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65139 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65140 - "POST /tickets HTTP/1.1" 201 Created
+INFO:     127.0.0.1:65141 - "POST /tickets/1/claim HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65142 - "POST /tickets/1/notes HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65143 - "GET /tickets/1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65144 - "GET /tickets/1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65145 - "POST /tickets/1/resolve HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65146 - "POST /tickets/1/confirm HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65147 - "GET /tickets HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65148 - "GET /tickets/1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65149 - "GET /tickets/1/reviews HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:65150 - "POST /tickets HTTP/1.1" 201 Created
+INFO:     127.0.0.1:65151 - "POST /tickets/2/claim HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65152 - "POST /tickets/2/resolve HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65153 - "POST /tickets/2/reject HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65154 - "POST /tickets/2/resolve HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65155 - "POST /tickets/2/reject HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65156 - "POST /tickets/2/resolve HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65157 - "POST /tickets/2/reject HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65158 - "GET /tickets/2/reviews HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65159 - "POST /tickets/2/reviews/complete HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65160 - "GET /tickets/2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65161 - "GET /tickets/2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65162 - "GET /tickets HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65163 - "GET /tickets/2/reviews HTTP/1.1" 404 Not Found

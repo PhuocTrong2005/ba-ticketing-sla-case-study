@@ -1,0 +1,60 @@
+{
+  "kind": "Actual Windows backend execution by Codex; separate from supplied Linux evidence",
+  "started_at": "2026-10-12T06:12:56.677696+00:00",
+  "base_commit": "9688b7889df0d91b1bb9d26d3626b283945d9d5e",
+  "python": "3.12.15 (main, Oct  9 2026, 15:21:55) [MSC v.1944 64 bit (AMD64)]",
+  "executable": "C:\\Users\\ASUS\\ba-ticketing-sla-case-study\\.venv\\Scripts\\python.exe",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "patch_path": "D:/Download/Backend_SLA.patch",
+  "patch_sha256": "11bbcb9ec6ce288935221cf1161e9ef59f0713c71f132ce41a98371f65f568d2",
+  "fixture_sha256_before": "6e75371714e5589eb78c45b0df3eb69595f2dfcc9362c9398b8c11989c0756ee",
+  "source_hashes": {
+    "backend/app.py": "ba48dae31178ea14d6d67d3c8432f6f3c010db72de5c37374cb5ddd4ff43a97f",
+    "backend/reports.py": "484db9c95b12b0a40b47e29dcd883f09084480852c65dde6d082bdae5f9555c1",
+    "backend/schema.sql": "5c6ea2fad94560e90551133078a71a95d0a698dfc1fa3ef78b71f573ea7792cf",
+    "backend/seed.py": "460780c4d8143c31493f19b90a67b0140e7b7f7088bc805d016850e1f90eb0ab",
+    "backend/sla.py": "8f6712ce4463c30e22c3f3ccfc6a5c8eda08b29ccb1c091fb243bff50e77b681",
+    "backend/store.py": "4eb1c548075b903be4d98d35dff9ee003388e30c0efdcdaa3ebf8bd26c0bd4b6",
+    "backend/__init__.py": "c0d121c0c05b4a634a4994a53fe8933e84d596d43b7de5e69c191b3379e01d09",
+    "backend/app/.gitkeep": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "tests/backend/conftest.py": "c4fa9abfda926d12ac2935ab24100296da34f733ab8bb8d9296db55275632b7a",
+    "tests/backend/test_api.py": "be7affff643acf633b44cfa7afb69c2e4f41ee6fdeca671cf1b094bb78ba5c52",
+    "tests/backend/test_integrity.py": "66ab052fadfdc25d1a88b8ed7de3a8cfb0ece6bb3a146bcdea524506d7ccd868",
+    "tests/backend/test_reports.py": "6316093d6f45e5cdcf3a3db7a2336b4ab9e087e96e0fb12a01230556bfa084e2",
+    "tests/backend/test_sla.py": "446dcf90e58c22c59313db1d853aacc314a731d46fcbc003eb5babd960644d47",
+    "tests/backend/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "sql/README.md": "3a3381bf289dcbff9e6861bc47ef888761f89d16937bc38cc36201ed26bb99f8",
+    "sql/queries/m01.sql": "db15174ad8e2fabb691e65c18258d594422dbd09c709468128161ee3bd326a3b",
+    "sql/queries/m02.sql": "a13e7d06e336a2c884a7cca2f617141dce0713fbd93216904076fd92ce30aac7",
+    "sql/queries/m03.sql": "9655d5faed31b74b5f7c8241124ae85691a30a4c04b7bb371000fb67997ba589",
+    "sql/queries/m06.sql": "63ef8240a0b65c0bb7976819aa2aacb0406e442584c1a249468448293bd0d512"
+  },
+  "command": [
+    "C:\\Users\\ASUS\\ba-ticketing-sla-case-study\\.venv\\Scripts\\python.exe",
+    "-m",
+    "pytest",
+    "--junitxml=C:\\Users\\ASUS\\ba-ticketing-sla-case-study\\tests\\evidence\\backend-windows-20261012-131256-junit.xml"
+  ],
+  "activation": "VIRTUAL_ENV and PATH set for child process; explicit virtualenv executable. Activate.ps1 blocked by host execution policy.",
+  "packages": "annotated-types==0.8.0\nanyio==4.15.1\ncertifi==2026.7.22\nclick==8.5.0\ncolorama==0.4.6\nfastapi==0.115.12\nh11==0.16.0\nhttpcore==1.0.9\nhttpx==0.28.1\nidna==3.20\niniconfig==2.3.1\npackaging==26.3\npluggy==1.6.0\npydantic==2.14.1\npydantic_core==2.50.1\npytest==8.3.5\nstarlette==0.46.2\ntyping-inspection==0.4.4\ntyping_extensions==4.16.0\ntzdata==2025.2\nuvicorn==0.34.2\n",
+  "exit_code": 0,
+  "stdout": "============================= test session starts =============================\nplatform win32 -- Python 3.12.15, pytest-8.3.5, pluggy-1.6.0\nrootdir: C:\\Users\\ASUS\\ba-ticketing-sla-case-study\nconfigfile: pytest.ini\ntestpaths: tests/backend\nplugins: anyio-4.15.1\ncollected 181 items\n\ntests\\backend\\test_api.py .............................................. [ 25%]\n.........................................                                [ 48%]\ntests\\backend\\test_integrity.py .....                                    [ 50%]\ntests\\backend\\test_reports.py ....                                       [ 53%]\ntests\\backend\\test_sla.py .............................................. [ 78%]\n.......................................                                  [100%]\n\n============================== warnings summary ===============================\n.venv\\Lib\\site-packages\\starlette\\testclient.py:37\n  C:\\Users\\ASUS\\ba-ticketing-sla-case-study\\.venv\\Lib\\site-packages\\starlette\\testclient.py:37: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.\n    _PortalFactoryType = typing.Callable[[], typing.ContextManager[anyio.abc.BlockingPortal]]\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n- generated xml file: C:\\Users\\ASUS\\ba-ticketing-sla-case-study\\tests\\evidence\\backend-windows-20261012-131256-junit.xml -\n======================= 181 passed, 1 warning in 13.76s =======================\n",
+  "stderr": "",
+  "finished_at": "2026-10-12T06:13:13.240523+00:00",
+  "fixture_sha256_after": "6e75371714e5589eb78c45b0df3eb69595f2dfcc9362c9398b8c11989c0756ee",
+  "fixture_unchanged": true,
+  "linux_evidence_unchanged": true,
+  "junit_suites": [
+    {
+      "name": "pytest",
+      "errors": "0",
+      "failures": "0",
+      "skipped": "0",
+      "tests": "181",
+      "time": "13.718",
+      "timestamp": "2026-10-12T13:12:59.375678+07:00",
+      "hostname": "PhuocTrong"
+    }
+  ],
+  "junit_sha256": "e1486fef1811e0a9e985b578f3a1e0901f57681c63ff551e8e138edd162b5f42"
+}

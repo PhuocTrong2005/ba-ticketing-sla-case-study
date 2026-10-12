@@ -1,0 +1,2856 @@
+{
+  "stamp": "20261012-162259",
+  "os": "Windows-11-10.0.26300-SP0",
+  "source": "C:\\Users\\ASUS\\ba-ticketing-sla-case-study",
+  "clean_directory": "C:\\Users\\ASUS\\ba-ticketing-sla-case-study\\.clean-start-20261012-162259",
+  "backup": "C:\\Users\\ASUS\\ba-ticketing-sla-case-study\\.venv-backup-20261012-162259",
+  "commands": [
+    {
+      "argv": [
+        "C:\\Users\\ASUS\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "-m",
+        "venv",
+        "C:\\Users\\ASUS\\ba-ticketing-sla-case-study\\.venv"
+      ],
+      "cwd": "C:\\Users\\ASUS\\ba-ticketing-sla-case-study",
+      "exit_code": 0,
+      "log": "step1-windows-20261012-162259-repo-venv.log"
+    },
+    {
+      "argv": [
+        "C:\\Users\\ASUS\\ba-ticketing-sla-case-study\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pip",
+        "install",
+        "-r",
+        "requirements.txt"
+      ],
+      "cwd": "C:\\Users\\ASUS\\ba-ticketing-sla-case-study",
+      "exit_code": 0,
+      "log": "step1-windows-20261012-162259-repo-install.log"
+    },
+    {
+      "argv": [
+        "C:\\Users\\ASUS\\ba-ticketing-sla-case-study\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "cwd": "C:\\Users\\ASUS\\ba-ticketing-sla-case-study",
+      "exit_code": 0,
+      "log": "step1-windows-20261012-162259-repo-pip-check.log"
+    },
+    {
+      "argv": [
+        "C:\\Users\\ASUS\\ba-ticketing-sla-case-study\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pip",
+        "freeze"
+      ],
+      "cwd": "C:\\Users\\ASUS\\ba-ticketing-sla-case-study",
+      "exit_code": 0,
+      "log": "step1-windows-20261012-162259-repo-freeze.log"
+    },
+    {
+      "argv": [
+        "C:\\Users\\ASUS\\ba-ticketing-sla-case-study\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pytest",
+        "--junitxml=C:\\Users\\ASUS\\ba-ticketing-sla-case-study\\tests\\evidence\\step1-windows-20261012-162259-repo-junit.xml"
+      ],
+      "cwd": "C:\\Users\\ASUS\\ba-ticketing-sla-case-study",
+      "exit_code": 0,
+      "log": "step1-windows-20261012-162259-repo-pytest.log"
+    },
+    {
+      "argv": [
+        "C:\\Users\\ASUS\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "-m",
+        "venv",
+        "C:\\Users\\ASUS\\ba-ticketing-sla-case-study\\.clean-start-20261012-162259\\.venv"
+      ],
+      "cwd": "C:\\Users\\ASUS\\ba-ticketing-sla-case-study\\.clean-start-20261012-162259",
+      "exit_code": 0,
+      "log": "step1-windows-20261012-162259-clean-venv.log"
+    },
+    {
+      "argv": [
+        "C:\\Users\\ASUS\\ba-ticketing-sla-case-study\\.clean-start-20261012-162259\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pip",
+        "install",
+        "-r",
+        "requirements.txt"
+      ],
+      "cwd": "C:\\Users\\ASUS\\ba-ticketing-sla-case-study\\.clean-start-20261012-162259",
+      "exit_code": 0,
+      "log": "step1-windows-20261012-162259-clean-install.log"
+    },
+    {
+      "argv": [
+        "C:\\Users\\ASUS\\ba-ticketing-sla-case-study\\.clean-start-20261012-162259\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "cwd": "C:\\Users\\ASUS\\ba-ticketing-sla-case-study\\.clean-start-20261012-162259",
+      "exit_code": 0,
+      "log": "step1-windows-20261012-162259-clean-pip-check.log"
+    },
+    {
+      "argv": [
+        "C:\\Users\\ASUS\\ba-ticketing-sla-case-study\\.clean-start-20261012-162259\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pip",
+        "freeze"
+      ],
+      "cwd": "C:\\Users\\ASUS\\ba-ticketing-sla-case-study\\.clean-start-20261012-162259",
+      "exit_code": 0,
+      "log": "step1-windows-20261012-162259-clean-freeze.log"
+    },
+    {
+      "argv": [
+        "C:\\Users\\ASUS\\ba-ticketing-sla-case-study\\.clean-start-20261012-162259\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pytest",
+        "--junitxml=C:\\Users\\ASUS\\ba-ticketing-sla-case-study\\tests\\evidence\\step1-windows-20261012-162259-clean-junit.xml"
+      ],
+      "cwd": "C:\\Users\\ASUS\\ba-ticketing-sla-case-study\\.clean-start-20261012-162259",
+      "exit_code": 0,
+      "log": "step1-windows-20261012-162259-clean-pytest.log"
+    }
+  ],
+  "http": [
+    {
+      "method": "GET",
+      "path": "/docs",
+      "user": null,
+      "payload": null,
+      "status": 200,
+      "response": "\n    <!DOCTYPE html>\n    <html>\n    <head>\n    <link type=\"text/css\" rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/swagger-ui-dist@5/swagger-ui.css\">\n    <link rel=\"shortcut icon\" href=\"https://fastapi.tiangolo.com/img/favicon.png\">\n    <title>Support Ticketing & SLA demo - Swagger UI</title>\n    </head>\n    <body>\n    <div id=\"swagger-ui\">\n    </div>\n    <script src=\"https://cdn.jsdelivr.net/npm/swagger-ui-dist@5/swagger-ui-bundle.js\"></script>\n    <!-- `SwaggerUIBundle` is now available on the page -->\n    <script>\n    const ui = SwaggerUIBundle({\n        url: '/openapi.json',\n    \"dom_id\": \"#swagger-ui\",\n\"layout\": \"BaseLayout\",\n\"deepLinking\": true,\n\"showExtensions\": true,\n\"showCommonExtensions\": true,\noauth2RedirectUrl: window.location.origin + '/docs/oauth2-redirect',\n    presets: [\n        SwaggerUIBundle.presets.apis,\n        SwaggerUIBundle.SwaggerUIStandalonePreset\n        ],\n    })\n    </script>\n    </body>\n    </html>\n    "
+    },
+    {
+      "method": "GET",
+      "path": "/openapi.json",
+      "user": null,
+      "payload": null,
+      "status": 200,
+      "response": {
+        "openapi": "3.1.0",
+        "info": {
+          "title": "Support Ticketing & SLA demo",
+          "version": "1.0.0"
+        },
+        "paths": {
+          "/tickets": {
+            "post": {
+              "summary": "Create",
+              "operationId": "create_tickets_post",
+              "parameters": [
+                {
+                  "name": "X-Demo-User-Id",
+                  "in": "header",
+                  "required": false,
+                  "schema": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "title": "X-Demo-User-Id"
+                  }
+                }
+              ],
+              "requestBody": {
+                "required": true,
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "$ref": "#/components/schemas/Create"
+                    }
+                  }
+                }
+              },
+              "responses": {
+                "201": {
+                  "description": "Successful Response",
+                  "content": {
+                    "application/json": {
+                      "schema": {}
+                    }
+                  }
+                },
+                "422": {
+                  "description": "Validation Error",
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "$ref": "#/components/schemas/HTTPValidationError"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "get": {
+              "summary": "Tickets",
+              "operationId": "tickets_tickets_get",
+              "parameters": [
+                {
+                  "name": "X-Demo-User-Id",
+                  "in": "header",
+                  "required": false,
+                  "schema": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "title": "X-Demo-User-Id"
+                  }
+                }
+              ],
+              "responses": {
+                "200": {
+                  "description": "Successful Response",
+                  "content": {
+                    "application/json": {
+                      "schema": {}
+                    }
+                  }
+                },
+                "422": {
+                  "description": "Validation Error",
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "$ref": "#/components/schemas/HTTPValidationError"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "/tickets/queue": {
+            "get": {
+              "summary": "Queue",
+              "operationId": "queue_tickets_queue_get",
+              "parameters": [
+                {
+                  "name": "X-Demo-User-Id",
+                  "in": "header",
+                  "required": false,
+                  "schema": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "title": "X-Demo-User-Id"
+                  }
+                }
+              ],
+              "responses": {
+                "200": {
+                  "description": "Successful Response",
+                  "content": {
+                    "application/json": {
+                      "schema": {}
+                    }
+                  }
+                },
+                "422": {
+                  "description": "Validation Error",
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "$ref": "#/components/schemas/HTTPValidationError"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "/tickets/{ticket_id}": {
+            "get": {
+              "summary": "Ticket Detail",
+              "operationId": "ticket_detail_tickets__ticket_id__get",
+              "parameters": [
+                {
+                  "name": "ticket_id",
+                  "in": "path",
+                  "required": true,
+                  "schema": {
+                    "type": "integer",
+                    "title": "Ticket Id"
+                  }
+                },
+                {
+                  "name": "X-Demo-User-Id",
+                  "in": "header",
+                  "required": false,
+                  "schema": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "title": "X-Demo-User-Id"
+                  }
+                }
+              ],
+              "responses": {
+                "200": {
+                  "description": "Successful Response",
+                  "content": {
+                    "application/json": {
+                      "schema": {}
+                    }
+                  }
+                },
+                "422": {
+                  "description": "Validation Error",
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "$ref": "#/components/schemas/HTTPValidationError"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "/tickets/{ticket_id}/claim": {
+            "post": {
+              "summary": "Claim",
+              "operationId": "claim_tickets__ticket_id__claim_post",
+              "parameters": [
+                {
+                  "name": "ticket_id",
+                  "in": "path",
+                  "required": true,
+                  "schema": {
+                    "type": "integer",
+                    "title": "Ticket Id"
+                  }
+                },
+                {
+                  "name": "X-Demo-User-Id",
+                  "in": "header",
+                  "required": false,
+                  "schema": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "title": "X-Demo-User-Id"
+                  }
+                }
+              ],
+              "requestBody": {
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "$ref": "#/components/schemas/Payload",
+                      "default": {}
+                    }
+                  }
+                }
+              },
+              "responses": {
+                "200": {
+                  "description": "Successful Response",
+                  "content": {
+                    "application/json": {
+                      "schema": {}
+                    }
+                  }
+                },
+                "422": {
+                  "description": "Validation Error",
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "$ref": "#/components/schemas/HTTPValidationError"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "/tickets/{ticket_id}/messages": {
+            "post": {
+              "summary": "Message",
+              "operationId": "message_tickets__ticket_id__messages_post",
+              "parameters": [
+                {
+                  "name": "ticket_id",
+                  "in": "path",
+                  "required": true,
+                  "schema": {
+                    "type": "integer",
+                    "title": "Ticket Id"
+                  }
+                },
+                {
+                  "name": "X-Demo-User-Id",
+                  "in": "header",
+                  "required": false,
+                  "schema": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "title": "X-Demo-User-Id"
+                  }
+                }
+              ],
+              "requestBody": {
+                "required": true,
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "$ref": "#/components/schemas/Message"
+                    }
+                  }
+                }
+              },
+              "responses": {
+                "200": {
+                  "description": "Successful Response",
+                  "content": {
+                    "application/json": {
+                      "schema": {}
+                    }
+                  }
+                },
+                "422": {
+                  "description": "Validation Error",
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "$ref": "#/components/schemas/HTTPValidationError"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "/tickets/{ticket_id}/notes": {
+            "post": {
+              "summary": "Note",
+              "operationId": "note_tickets__ticket_id__notes_post",
+              "parameters": [
+                {
+                  "name": "ticket_id",
+                  "in": "path",
+                  "required": true,
+                  "schema": {
+                    "type": "integer",
+                    "title": "Ticket Id"
+                  }
+                },
+                {
+                  "name": "X-Demo-User-Id",
+                  "in": "header",
+                  "required": false,
+                  "schema": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "title": "X-Demo-User-Id"
+                  }
+                }
+              ],
+              "requestBody": {
+                "required": true,
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "$ref": "#/components/schemas/Message"
+                    }
+                  }
+                }
+              },
+              "responses": {
+                "200": {
+                  "description": "Successful Response",
+                  "content": {
+                    "application/json": {
+                      "schema": {}
+                    }
+                  }
+                },
+                "422": {
+                  "description": "Validation Error",
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "$ref": "#/components/schemas/HTTPValidationError"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "/tickets/{ticket_id}/waiting": {
+            "post": {
+              "summary": "Waiting",
+              "operationId": "waiting_tickets__ticket_id__waiting_post",
+              "parameters": [
+                {
+                  "name": "ticket_id",
+                  "in": "path",
+                  "required": true,
+                  "schema": {
+                    "type": "integer",
+                    "title": "Ticket Id"
+                  }
+                },
+                {
+                  "name": "X-Demo-User-Id",
+                  "in": "header",
+                  "required": false,
+                  "schema": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "title": "X-Demo-User-Id"
+                  }
+                }
+              ],
+              "requestBody": {
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "$ref": "#/components/schemas/Payload",
+                      "default": {}
+                    }
+                  }
+                }
+              },
+              "responses": {
+                "200": {
+                  "description": "Successful Response",
+                  "content": {
+                    "application/json": {
+                      "schema": {}
+                    }
+                  }
+                },
+                "422": {
+                  "description": "Validation Error",
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "$ref": "#/components/schemas/HTTPValidationError"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "/tickets/{ticket_id}/resolve": {
+            "post": {
+              "summary": "Resolve",
+              "operationId": "resolve_tickets__ticket_id__resolve_post",
+              "parameters": [
+                {
+                  "name": "ticket_id",
+                  "in": "path",
+                  "required": true,
+                  "schema": {
+                    "type": "integer",
+                    "title": "Ticket Id"
+                  }
+                },
+                {
+                  "name": "X-Demo-User-Id",
+                  "in": "header",
+                  "required": false,
+                  "schema": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "title": "X-Demo-User-Id"
+                  }
+                }
+              ],
+              "requestBody": {
+                "required": true,
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "$ref": "#/components/schemas/Resolve"
+                    }
+                  }
+                }
+              },
+              "responses": {
+                "200": {
+                  "description": "Successful Response",
+                  "content": {
+                    "application/json": {
+                      "schema": {}
+                    }
+                  }
+                },
+                "422": {
+                  "description": "Validation Error",
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "$ref": "#/components/schemas/HTTPValidationError"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "/tickets/{ticket_id}/confirm": {
+            "post": {
+              "summary": "Confirm",
+              "operationId": "confirm_tickets__ticket_id__confirm_post",
+              "parameters": [
+                {
+                  "name": "ticket_id",
+                  "in": "path",
+                  "required": true,
+                  "schema": {
+                    "type": "integer",
+                    "title": "Ticket Id"
+                  }
+                },
+                {
+                  "name": "X-Demo-User-Id",
+                  "in": "header",
+                  "required": false,
+                  "schema": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "title": "X-Demo-User-Id"
+                  }
+                }
+              ],
+              "requestBody": {
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "$ref": "#/components/schemas/Payload",
+                      "default": {}
+                    }
+                  }
+                }
+              },
+              "responses": {
+                "200": {
+                  "description": "Successful Response",
+                  "content": {
+                    "application/json": {
+                      "schema": {}
+                    }
+                  }
+                },
+                "422": {
+                  "description": "Validation Error",
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "$ref": "#/components/schemas/HTTPValidationError"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "/tickets/{ticket_id}/reject": {
+            "post": {
+              "summary": "Reject",
+              "operationId": "reject_tickets__ticket_id__reject_post",
+              "parameters": [
+                {
+                  "name": "ticket_id",
+                  "in": "path",
+                  "required": true,
+                  "schema": {
+                    "type": "integer",
+                    "title": "Ticket Id"
+                  }
+                },
+                {
+                  "name": "X-Demo-User-Id",
+                  "in": "header",
+                  "required": false,
+                  "schema": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "title": "X-Demo-User-Id"
+                  }
+                }
+              ],
+              "requestBody": {
+                "required": true,
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "$ref": "#/components/schemas/Reject"
+                    }
+                  }
+                }
+              },
+              "responses": {
+                "200": {
+                  "description": "Successful Response",
+                  "content": {
+                    "application/json": {
+                      "schema": {}
+                    }
+                  }
+                },
+                "422": {
+                  "description": "Validation Error",
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "$ref": "#/components/schemas/HTTPValidationError"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "/tickets/{ticket_id}/reviews": {
+            "get": {
+              "summary": "Reviews",
+              "operationId": "reviews_tickets__ticket_id__reviews_get",
+              "parameters": [
+                {
+                  "name": "ticket_id",
+                  "in": "path",
+                  "required": true,
+                  "schema": {
+                    "type": "integer",
+                    "title": "Ticket Id"
+                  }
+                },
+                {
+                  "name": "X-Demo-User-Id",
+                  "in": "header",
+                  "required": false,
+                  "schema": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "title": "X-Demo-User-Id"
+                  }
+                }
+              ],
+              "responses": {
+                "200": {
+                  "description": "Successful Response",
+                  "content": {
+                    "application/json": {
+                      "schema": {}
+                    }
+                  }
+                },
+                "422": {
+                  "description": "Validation Error",
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "$ref": "#/components/schemas/HTTPValidationError"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "/tickets/{ticket_id}/reviews/complete": {
+            "post": {
+              "summary": "Complete",
+              "operationId": "complete_tickets__ticket_id__reviews_complete_post",
+              "parameters": [
+                {
+                  "name": "ticket_id",
+                  "in": "path",
+                  "required": true,
+                  "schema": {
+                    "type": "integer",
+                    "title": "Ticket Id"
+                  }
+                },
+                {
+                  "name": "X-Demo-User-Id",
+                  "in": "header",
+                  "required": false,
+                  "schema": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "title": "X-Demo-User-Id"
+                  }
+                }
+              ],
+              "requestBody": {
+                "required": true,
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "$ref": "#/components/schemas/Complete"
+                    }
+                  }
+                }
+              },
+              "responses": {
+                "200": {
+                  "description": "Successful Response",
+                  "content": {
+                    "application/json": {
+                      "schema": {}
+                    }
+                  }
+                },
+                "422": {
+                  "description": "Validation Error",
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "$ref": "#/components/schemas/HTTPValidationError"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "/reports/{metric_code}": {
+            "get": {
+              "summary": "Reports",
+              "operationId": "reports_reports__metric_code__get",
+              "parameters": [
+                {
+                  "name": "metric_code",
+                  "in": "path",
+                  "required": true,
+                  "schema": {
+                    "type": "string",
+                    "title": "Metric Code"
+                  }
+                },
+                {
+                  "name": "as_of",
+                  "in": "query",
+                  "required": false,
+                  "schema": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "title": "As Of"
+                  }
+                },
+                {
+                  "name": "from",
+                  "in": "query",
+                  "required": false,
+                  "schema": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "title": "From"
+                  }
+                },
+                {
+                  "name": "to",
+                  "in": "query",
+                  "required": false,
+                  "schema": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "title": "To"
+                  }
+                },
+                {
+                  "name": "priority",
+                  "in": "query",
+                  "required": false,
+                  "schema": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "title": "Priority"
+                  }
+                },
+                {
+                  "name": "agent_id",
+                  "in": "query",
+                  "required": false,
+                  "schema": {
+                    "anyOf": [
+                      {
+                        "type": "integer"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "title": "Agent Id"
+                  }
+                },
+                {
+                  "name": "X-Demo-User-Id",
+                  "in": "header",
+                  "required": false,
+                  "schema": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "title": "X-Demo-User-Id"
+                  }
+                }
+              ],
+              "responses": {
+                "200": {
+                  "description": "Successful Response",
+                  "content": {
+                    "application/json": {
+                      "schema": {}
+                    }
+                  }
+                },
+                "422": {
+                  "description": "Validation Error",
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "$ref": "#/components/schemas/HTTPValidationError"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "components": {
+          "schemas": {
+            "Complete": {
+              "properties": {
+                "handling_plan": {
+                  "anyOf": [
+                    {
+                      "$ref": "#/components/schemas/Plan"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                }
+              },
+              "additionalProperties": false,
+              "type": "object",
+              "title": "Complete"
+            },
+            "Create": {
+              "properties": {
+                "title": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "title": "Title"
+                },
+                "description": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "title": "Description"
+                },
+                "priority": {
+                  "anyOf": [
+                    {
+                      "type": "string",
+                      "enum": [
+                        "HIGH",
+                        "NORMAL"
+                      ]
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "title": "Priority"
+                }
+              },
+              "additionalProperties": false,
+              "type": "object",
+              "title": "Create"
+            },
+            "HTTPValidationError": {
+              "properties": {
+                "detail": {
+                  "items": {
+                    "$ref": "#/components/schemas/ValidationError"
+                  },
+                  "type": "array",
+                  "title": "Detail"
+                }
+              },
+              "type": "object",
+              "title": "HTTPValidationError"
+            },
+            "Message": {
+              "properties": {
+                "content": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "title": "Content"
+                }
+              },
+              "additionalProperties": false,
+              "type": "object",
+              "title": "Message"
+            },
+            "Payload": {
+              "properties": {},
+              "additionalProperties": false,
+              "type": "object",
+              "title": "Payload"
+            },
+            "Plan": {
+              "properties": {
+                "unresolved_reason": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "title": "Unresolved Reason"
+                },
+                "next_action": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "title": "Next Action"
+                },
+                "needs_expert_input": {
+                  "anyOf": [
+                    {
+                      "type": "boolean"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "title": "Needs Expert Input"
+                },
+                "expert_note": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "title": "Expert Note"
+                }
+              },
+              "additionalProperties": false,
+              "type": "object",
+              "title": "Plan"
+            },
+            "Reject": {
+              "properties": {
+                "reason": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "title": "Reason"
+                }
+              },
+              "additionalProperties": false,
+              "type": "object",
+              "title": "Reject"
+            },
+            "Resolve": {
+              "properties": {
+                "resolution_summary": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "title": "Resolution Summary"
+                }
+              },
+              "additionalProperties": false,
+              "type": "object",
+              "title": "Resolve"
+            },
+            "ValidationError": {
+              "properties": {
+                "loc": {
+                  "items": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "integer"
+                      }
+                    ]
+                  },
+                  "type": "array",
+                  "title": "Location"
+                },
+                "msg": {
+                  "type": "string",
+                  "title": "Message"
+                },
+                "type": {
+                  "type": "string",
+                  "title": "Error Type"
+                }
+              },
+              "type": "object",
+              "required": [
+                "loc",
+                "msg",
+                "type"
+              ],
+              "title": "ValidationError"
+            }
+          }
+        }
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/tickets",
+      "user": 1,
+      "payload": {
+        "title": "ENV-STEP1-01 clean-start",
+        "description": "Deterministic environment verification workflow",
+        "priority": "NORMAL"
+      },
+      "status": 201,
+      "response": {
+        "title": "ENV-STEP1-01 clean-start",
+        "description": "Deterministic environment verification workflow",
+        "priority": "NORMAL",
+        "policy_id": "NORMAL",
+        "customer_id": 1,
+        "id": 1,
+        "status": "NEW",
+        "assignee_id": null,
+        "created_at": "2026-10-12T16:27:24+07:00",
+        "assigned_at": null,
+        "closed_at": null,
+        "messages": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/tickets/1/claim",
+      "user": 3,
+      "payload": {},
+      "status": 200,
+      "response": {
+        "title": "ENV-STEP1-01 clean-start",
+        "description": "Deterministic environment verification workflow",
+        "priority": "NORMAL",
+        "policy_id": "NORMAL",
+        "customer_id": 1,
+        "id": 1,
+        "status": "IN_PROGRESS",
+        "assignee_id": 3,
+        "created_at": "2026-10-12T16:27:24+07:00",
+        "assigned_at": "2026-10-12T16:27:24+07:00",
+        "closed_at": null,
+        "messages": [],
+        "sla": {
+          "first_response": {
+            "due_at": "2026-10-13T09:27:24+07:00",
+            "consumed_seconds": 0,
+            "remaining_seconds": 7200,
+            "status": "pending",
+            "warning_level": "none",
+            "running": true
+          },
+          "resolution": {
+            "due_at": "2026-10-14T14:27:24+07:00",
+            "consumed_seconds": 0,
+            "remaining_seconds": 57600,
+            "status": "pending",
+            "warning_level": "none",
+            "running": true
+          }
+        },
+        "rejection_count": 0,
+        "needs_manager_review": false,
+        "reviews": [],
+        "assignment_snapshot": {
+          "assigned_at": "2026-10-12T16:27:24+07:00",
+          "first_response_sla_status_at_assignment": "pending",
+          "resolution_sla_status_at_assignment": "pending",
+          "assignment_event_id": 2
+        }
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/tickets/1/notes",
+      "user": 3,
+      "payload": {
+        "content": "STEP1-PRIVATE-NOTE"
+      },
+      "status": 200,
+      "response": {
+        "title": "ENV-STEP1-01 clean-start",
+        "description": "Deterministic environment verification workflow",
+        "priority": "NORMAL",
+        "policy_id": "NORMAL",
+        "customer_id": 1,
+        "id": 1,
+        "status": "IN_PROGRESS",
+        "assignee_id": 3,
+        "created_at": "2026-10-12T16:27:24+07:00",
+        "assigned_at": "2026-10-12T16:27:24+07:00",
+        "closed_at": null,
+        "messages": [
+          {
+            "source_event_id": 3,
+            "actor_id": 3,
+            "created_at": "2026-10-12T16:27:24+07:00",
+            "visibility": "INTERNAL",
+            "content": "STEP1-PRIVATE-NOTE"
+          }
+        ],
+        "sla": {
+          "first_response": {
+            "due_at": "2026-10-13T09:27:24+07:00",
+            "consumed_seconds": 0,
+            "remaining_seconds": 7200,
+            "status": "pending",
+            "warning_level": "none",
+            "running": true
+          },
+          "resolution": {
+            "due_at": "2026-10-14T14:27:24+07:00",
+            "consumed_seconds": 0,
+            "remaining_seconds": 57600,
+            "status": "pending",
+            "warning_level": "none",
+            "running": true
+          }
+        },
+        "rejection_count": 0,
+        "needs_manager_review": false,
+        "reviews": [],
+        "assignment_snapshot": {
+          "assigned_at": "2026-10-12T16:27:24+07:00",
+          "first_response_sla_status_at_assignment": "pending",
+          "resolution_sla_status_at_assignment": "pending",
+          "assignment_event_id": 2
+        }
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/tickets/1",
+      "user": 1,
+      "payload": null,
+      "status": 200,
+      "response": {
+        "title": "ENV-STEP1-01 clean-start",
+        "description": "Deterministic environment verification workflow",
+        "priority": "NORMAL",
+        "policy_id": "NORMAL",
+        "customer_id": 1,
+        "id": 1,
+        "status": "IN_PROGRESS",
+        "assignee_id": 3,
+        "created_at": "2026-10-12T16:27:24+07:00",
+        "assigned_at": "2026-10-12T16:27:24+07:00",
+        "closed_at": null,
+        "messages": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/tickets/1",
+      "user": 3,
+      "payload": null,
+      "status": 200,
+      "response": {
+        "title": "ENV-STEP1-01 clean-start",
+        "description": "Deterministic environment verification workflow",
+        "priority": "NORMAL",
+        "policy_id": "NORMAL",
+        "customer_id": 1,
+        "id": 1,
+        "status": "IN_PROGRESS",
+        "assignee_id": 3,
+        "created_at": "2026-10-12T16:27:24+07:00",
+        "assigned_at": "2026-10-12T16:27:24+07:00",
+        "closed_at": null,
+        "messages": [
+          {
+            "source_event_id": 3,
+            "actor_id": 3,
+            "created_at": "2026-10-12T16:27:24+07:00",
+            "visibility": "INTERNAL",
+            "content": "STEP1-PRIVATE-NOTE"
+          }
+        ],
+        "sla": {
+          "first_response": {
+            "due_at": "2026-10-13T09:27:24+07:00",
+            "consumed_seconds": 0,
+            "remaining_seconds": 7200,
+            "status": "pending",
+            "warning_level": "none",
+            "running": true
+          },
+          "resolution": {
+            "due_at": "2026-10-14T14:27:24+07:00",
+            "consumed_seconds": 0,
+            "remaining_seconds": 57600,
+            "status": "pending",
+            "warning_level": "none",
+            "running": true
+          }
+        },
+        "rejection_count": 0,
+        "needs_manager_review": false,
+        "reviews": [],
+        "assignment_snapshot": {
+          "assigned_at": "2026-10-12T16:27:24+07:00",
+          "first_response_sla_status_at_assignment": "pending",
+          "resolution_sla_status_at_assignment": "pending",
+          "assignment_event_id": 2
+        }
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/tickets/1/resolve",
+      "user": 3,
+      "payload": {
+        "resolution_summary": "ENV-STEP1-01 environment and workflow verified"
+      },
+      "status": 200,
+      "response": {
+        "title": "ENV-STEP1-01 clean-start",
+        "description": "Deterministic environment verification workflow",
+        "priority": "NORMAL",
+        "policy_id": "NORMAL",
+        "customer_id": 1,
+        "id": 1,
+        "status": "RESOLVED",
+        "assignee_id": 3,
+        "created_at": "2026-10-12T16:27:24+07:00",
+        "assigned_at": "2026-10-12T16:27:24+07:00",
+        "closed_at": null,
+        "messages": [
+          {
+            "source_event_id": 3,
+            "actor_id": 3,
+            "created_at": "2026-10-12T16:27:24+07:00",
+            "visibility": "INTERNAL",
+            "content": "STEP1-PRIVATE-NOTE"
+          },
+          {
+            "source_event_id": 4,
+            "actor_id": 3,
+            "created_at": "2026-10-12T16:27:24+07:00",
+            "visibility": "PUBLIC",
+            "content": "ENV-STEP1-01 environment and workflow verified"
+          }
+        ],
+        "sla": {
+          "first_response": {
+            "due_at": "2026-10-13T09:27:24+07:00",
+            "consumed_seconds": 0,
+            "remaining_seconds": 7200,
+            "status": "met",
+            "warning_level": "none",
+            "running": false
+          },
+          "resolution": {
+            "due_at": "2026-10-14T14:27:24+07:00",
+            "consumed_seconds": 0,
+            "remaining_seconds": 57600,
+            "status": "met",
+            "warning_level": "none",
+            "running": false
+          }
+        },
+        "rejection_count": 0,
+        "needs_manager_review": false,
+        "reviews": [],
+        "assignment_snapshot": {
+          "assigned_at": "2026-10-12T16:27:24+07:00",
+          "first_response_sla_status_at_assignment": "pending",
+          "resolution_sla_status_at_assignment": "pending",
+          "assignment_event_id": 2
+        }
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/tickets/1/confirm",
+      "user": 1,
+      "payload": {},
+      "status": 200,
+      "response": {
+        "title": "ENV-STEP1-01 clean-start",
+        "description": "Deterministic environment verification workflow",
+        "priority": "NORMAL",
+        "policy_id": "NORMAL",
+        "customer_id": 1,
+        "id": 1,
+        "status": "CLOSED",
+        "assignee_id": 3,
+        "created_at": "2026-10-12T16:27:24+07:00",
+        "assigned_at": "2026-10-12T16:27:24+07:00",
+        "closed_at": "2026-10-12T16:27:24+07:00",
+        "messages": [
+          {
+            "source_event_id": 4,
+            "actor_id": 3,
+            "created_at": "2026-10-12T16:27:24+07:00",
+            "visibility": "PUBLIC",
+            "content": "ENV-STEP1-01 environment and workflow verified"
+          }
+        ]
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/tickets",
+      "user": 1,
+      "payload": null,
+      "status": 200,
+      "response": [
+        {
+          "title": "ENV-STEP1-01 clean-start",
+          "description": "Deterministic environment verification workflow",
+          "priority": "NORMAL",
+          "policy_id": "NORMAL",
+          "customer_id": 1,
+          "id": 1,
+          "status": "CLOSED",
+          "assignee_id": 3,
+          "created_at": "2026-10-12T16:27:24+07:00",
+          "assigned_at": "2026-10-12T16:27:24+07:00",
+          "closed_at": "2026-10-12T16:27:24+07:00",
+          "messages": [
+            {
+              "source_event_id": 4,
+              "actor_id": 3,
+              "created_at": "2026-10-12T16:27:24+07:00",
+              "visibility": "PUBLIC",
+              "content": "ENV-STEP1-01 environment and workflow verified"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/tickets/1",
+      "user": 1,
+      "payload": null,
+      "status": 200,
+      "response": {
+        "title": "ENV-STEP1-01 clean-start",
+        "description": "Deterministic environment verification workflow",
+        "priority": "NORMAL",
+        "policy_id": "NORMAL",
+        "customer_id": 1,
+        "id": 1,
+        "status": "CLOSED",
+        "assignee_id": 3,
+        "created_at": "2026-10-12T16:27:24+07:00",
+        "assigned_at": "2026-10-12T16:27:24+07:00",
+        "closed_at": "2026-10-12T16:27:24+07:00",
+        "messages": [
+          {
+            "source_event_id": 4,
+            "actor_id": 3,
+            "created_at": "2026-10-12T16:27:24+07:00",
+            "visibility": "PUBLIC",
+            "content": "ENV-STEP1-01 environment and workflow verified"
+          }
+        ]
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/tickets/1/reviews",
+      "user": 1,
+      "payload": null,
+      "status": 404,
+      "response": {
+        "detail": {
+          "error_code": null,
+          "message": "Not found"
+        }
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/tickets",
+      "user": 1,
+      "payload": {
+        "title": "ENV-STEP1-02 review privacy",
+        "description": "Three rejected resolutions create an internal review",
+        "priority": "NORMAL"
+      },
+      "status": 201,
+      "response": {
+        "title": "ENV-STEP1-02 review privacy",
+        "description": "Three rejected resolutions create an internal review",
+        "priority": "NORMAL",
+        "policy_id": "NORMAL",
+        "customer_id": 1,
+        "id": 2,
+        "status": "NEW",
+        "assignee_id": null,
+        "created_at": "2026-10-12T16:27:24+07:00",
+        "assigned_at": null,
+        "closed_at": null,
+        "messages": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/tickets/2/claim",
+      "user": 3,
+      "payload": {},
+      "status": 200,
+      "response": {
+        "title": "ENV-STEP1-02 review privacy",
+        "description": "Three rejected resolutions create an internal review",
+        "priority": "NORMAL",
+        "policy_id": "NORMAL",
+        "customer_id": 1,
+        "id": 2,
+        "status": "IN_PROGRESS",
+        "assignee_id": 3,
+        "created_at": "2026-10-12T16:27:24+07:00",
+        "assigned_at": "2026-10-12T16:27:24+07:00",
+        "closed_at": null,
+        "messages": [],
+        "sla": {
+          "first_response": {
+            "due_at": "2026-10-13T09:27:24+07:00",
+            "consumed_seconds": 0,
+            "remaining_seconds": 7200,
+            "status": "pending",
+            "warning_level": "none",
+            "running": true
+          },
+          "resolution": {
+            "due_at": "2026-10-14T14:27:24+07:00",
+            "consumed_seconds": 0,
+            "remaining_seconds": 57600,
+            "status": "pending",
+            "warning_level": "none",
+            "running": true
+          }
+        },
+        "rejection_count": 0,
+        "needs_manager_review": false,
+        "reviews": [],
+        "assignment_snapshot": {
+          "assigned_at": "2026-10-12T16:27:24+07:00",
+          "first_response_sla_status_at_assignment": "pending",
+          "resolution_sla_status_at_assignment": "pending",
+          "assignment_event_id": 7
+        }
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/tickets/2/resolve",
+      "user": 3,
+      "payload": {
+        "resolution_summary": "ENV-STEP1-02 attempt 1"
+      },
+      "status": 200,
+      "response": {
+        "title": "ENV-STEP1-02 review privacy",
+        "description": "Three rejected resolutions create an internal review",
+        "priority": "NORMAL",
+        "policy_id": "NORMAL",
+        "customer_id": 1,
+        "id": 2,
+        "status": "RESOLVED",
+        "assignee_id": 3,
+        "created_at": "2026-10-12T16:27:24+07:00",
+        "assigned_at": "2026-10-12T16:27:24+07:00",
+        "closed_at": null,
+        "messages": [
+          {
+            "source_event_id": 8,
+            "actor_id": 3,
+            "created_at": "2026-10-12T16:27:24+07:00",
+            "visibility": "PUBLIC",
+            "content": "ENV-STEP1-02 attempt 1"
+          }
+        ],
+        "sla": {
+          "first_response": {
+            "due_at": "2026-10-13T09:27:24+07:00",
+            "consumed_seconds": 0,
+            "remaining_seconds": 7200,
+            "status": "met",
+            "warning_level": "none",
+            "running": false
+          },
+          "resolution": {
+            "due_at": "2026-10-14T14:27:24+07:00",
+            "consumed_seconds": 0,
+            "remaining_seconds": 57600,
+            "status": "met",
+            "warning_level": "none",
+            "running": false
+          }
+        },
+        "rejection_count": 0,
+        "needs_manager_review": false,
+        "reviews": [],
+        "assignment_snapshot": {
+          "assigned_at": "2026-10-12T16:27:24+07:00",
+          "first_response_sla_status_at_assignment": "pending",
+          "resolution_sla_status_at_assignment": "pending",
+          "assignment_event_id": 7
+        }
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/tickets/2/reject",
+      "user": 1,
+      "payload": {
+        "reason": "ENV-STEP1-02 unresolved 1"
+      },
+      "status": 200,
+      "response": {
+        "title": "ENV-STEP1-02 review privacy",
+        "description": "Three rejected resolutions create an internal review",
+        "priority": "NORMAL",
+        "policy_id": "NORMAL",
+        "customer_id": 1,
+        "id": 2,
+        "status": "IN_PROGRESS",
+        "assignee_id": 3,
+        "created_at": "2026-10-12T16:27:24+07:00",
+        "assigned_at": "2026-10-12T16:27:24+07:00",
+        "closed_at": null,
+        "messages": [
+          {
+            "source_event_id": 8,
+            "actor_id": 3,
+            "created_at": "2026-10-12T16:27:24+07:00",
+            "visibility": "PUBLIC",
+            "content": "ENV-STEP1-02 attempt 1"
+          },
+          {
+            "source_event_id": 9,
+            "actor_id": 1,
+            "created_at": "2026-10-12T16:27:24+07:00",
+            "visibility": "PUBLIC",
+            "content": "ENV-STEP1-02 unresolved 1"
+          }
+        ]
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/tickets/2/resolve",
+      "user": 3,
+      "payload": {
+        "resolution_summary": "ENV-STEP1-02 attempt 2"
+      },
+      "status": 200,
+      "response": {
+        "title": "ENV-STEP1-02 review privacy",
+        "description": "Three rejected resolutions create an internal review",
+        "priority": "NORMAL",
+        "policy_id": "NORMAL",
+        "customer_id": 1,
+        "id": 2,
+        "status": "RESOLVED",
+        "assignee_id": 3,
+        "created_at": "2026-10-12T16:27:24+07:00",
+        "assigned_at": "2026-10-12T16:27:24+07:00",
+        "closed_at": null,
+        "messages": [
+          {
+            "source_event_id": 8,
+            "actor_id": 3,
+            "created_at": "2026-10-12T16:27:24+07:00",
+            "visibility": "PUBLIC",
+            "content": "ENV-STEP1-02 attempt 1"
+          },
+          {
+            "source_event_id": 9,
+            "actor_id": 1,
+            "created_at": "2026-10-12T16:27:24+07:00",
+            "visibility": "PUBLIC",
+            "content": "ENV-STEP1-02 unresolved 1"
+          },
+          {
+            "source_event_id": 10,
+            "actor_id": 3,
+            "created_at": "2026-10-12T16:27:24+07:00",
+            "visibility": "PUBLIC",
+            "content": "ENV-STEP1-02 attempt 2"
+          }
+        ],
+        "sla": {
+          "first_response": {
+            "due_at": "2026-10-13T09:27:24+07:00",
+            "consumed_seconds": 0,
+            "remaining_seconds": 7200,
+            "status": "met",
+            "warning_level": "none",
+            "running": false
+          },
+          "resolution": {
+            "due_at": "2026-10-14T14:27:24+07:00",
+            "consumed_seconds": 0,
+            "remaining_seconds": 57600,
+            "status": "met",
+            "warning_level": "none",
+            "running": false
+          }
+        },
+        "rejection_count": 1,
+        "needs_manager_review": false,
+        "reviews": [],
+        "assignment_snapshot": {
+          "assigned_at": "2026-10-12T16:27:24+07:00",
+          "first_response_sla_status_at_assignment": "pending",
+          "resolution_sla_status_at_assignment": "pending",
+          "assignment_event_id": 7
+        }
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/tickets/2/reject",
+      "user": 1,
+      "payload": {
+        "reason": "ENV-STEP1-02 unresolved 2"
+      },
+      "status": 200,
+      "response": {
+        "title": "ENV-STEP1-02 review privacy",
+        "description": "Three rejected resolutions create an internal review",
+        "priority": "NORMAL",
+        "policy_id": "NORMAL",
+        "customer_id": 1,
+        "id": 2,
+        "status": "IN_PROGRESS",
+        "assignee_id": 3,
+        "created_at": "2026-10-12T16:27:24+07:00",
+        "assigned_at": "2026-10-12T16:27:24+07:00",
+        "closed_at": null,
+        "messages": [
+          {
+            "source_event_id": 8,
+            "actor_id": 3,
+            "created_at": "2026-10-12T16:27:24+07:00",
+            "visibility": "PUBLIC",
+            "content": "ENV-STEP1-02 attempt 1"
+          },
+          {
+            "source_event_id": 9,
+            "actor_id": 1,
+            "created_at": "2026-10-12T16:27:24+07:00",
+            "visibility": "PUBLIC",
+            "content": "ENV-STEP1-02 unresolved 1"
+          },
+          {
+            "source_event_id": 10,
+            "actor_id": 3,
+            "created_at": "2026-10-12T16:27:24+07:00",
+            "visibility": "PUBLIC",
+            "content": "ENV-STEP1-02 attempt 2"
+          },
+          {
+            "source_event_id": 11,
+            "actor_id": 1,
+            "created_at": "2026-10-12T16:27:24+07:00",
+            "visibility": "PUBLIC",
+            "content": "ENV-STEP1-02 unresolved 2"
+          }
+        ]
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/tickets/2/resolve",
+      "user": 3,
+      "payload": {
+        "resolution_summary": "ENV-STEP1-02 attempt 3"
+      },
+      "status": 200,
+      "response": {
+        "title": "ENV-STEP1-02 review privacy",
+        "description": "Three rejected resolutions create an internal review",
+        "priority": "NORMAL",
+        "policy_id": "NORMAL",
+        "customer_id": 1,
+        "id": 2,
+        "status": "RESOLVED",
+        "assignee_id": 3,
+        "created_at": "2026-10-12T16:27:24+07:00",
+        "assigned_at": "2026-10-12T16:27:24+07:00",
+        "closed_at": null,
+        "messages": [
+          {
+            "source_event_id": 8,
+            "actor_id": 3,
+            "created_at": "2026-10-12T16:27:24+07:00",
+            "visibility": "PUBLIC",
+            "content": "ENV-STEP1-02 attempt 1"
+          },
+          {
+            "source_event_id": 9,
+            "actor_id": 1,
+            "created_at": "2026-10-12T16:27:24+07:00",
+            "visibility": "PUBLIC",
+            "content": "ENV-STEP1-02 unresolved 1"
+          },
+          {
+            "source_event_id": 10,
+            "actor_id": 3,
+            "created_at": "2026-10-12T16:27:24+07:00",
+            "visibility": "PUBLIC",
+            "content": "ENV-STEP1-02 attempt 2"
+          },
+          {
+            "source_event_id": 11,
+            "actor_id": 1,
+            "created_at": "2026-10-12T16:27:24+07:00",
+            "visibility": "PUBLIC",
+            "content": "ENV-STEP1-02 unresolved 2"
+          },
+          {
+            "source_event_id": 12,
+            "actor_id": 3,
+            "created_at": "2026-10-12T16:27:24+07:00",
+            "visibility": "PUBLIC",
+            "content": "ENV-STEP1-02 attempt 3"
+          }
+        ],
+        "sla": {
+          "first_response": {
+            "due_at": "2026-10-13T09:27:24+07:00",
+            "consumed_seconds": 0,
+            "remaining_seconds": 7200,
+            "status": "met",
+            "warning_level": "none",
+            "running": false
+          },
+          "resolution": {
+            "due_at": "2026-10-14T14:27:24+07:00",
+            "consumed_seconds": 0,
+            "remaining_seconds": 57600,
+            "status": "met",
+            "warning_level": "none",
+            "running": false
+          }
+        },
+        "rejection_count": 2,
+        "needs_manager_review": false,
+        "reviews": [],
+        "assignment_snapshot": {
+          "assigned_at": "2026-10-12T16:27:24+07:00",
+          "first_response_sla_status_at_assignment": "pending",
+          "resolution_sla_status_at_assignment": "pending",
+          "assignment_event_id": 7
+        }
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/tickets/2/reject",
+      "user": 1,
+      "payload": {
+        "reason": "ENV-STEP1-02 unresolved 3"
+      },
+      "status": 200,
+      "response": {
+        "title": "ENV-STEP1-02 review privacy",
+        "description": "Three rejected resolutions create an internal review",
+        "priority": "NORMAL",
+        "policy_id": "NORMAL",
+        "customer_id": 1,
+        "id": 2,
+        "status": "IN_PROGRESS",
+        "assignee_id": 3,
+        "created_at": "2026-10-12T16:27:24+07:00",
+        "assigned_at": "2026-10-12T16:27:24+07:00",
+        "closed_at": null,
+        "messages": [
+          {
+            "source_event_id": 8,
+            "actor_id": 3,
+            "created_at": "2026-10-12T16:27:24+07:00",
+            "visibility": "PUBLIC",
+            "content": "ENV-STEP1-02 attempt 1"
+          },
+          {
+            "source_event_id": 9,
+            "actor_id": 1,
+            "created_at": "2026-10-12T16:27:24+07:00",
+            "visibility": "PUBLIC",
+            "content": "ENV-STEP1-02 unresolved 1"
+          },
+          {
+            "source_event_id": 10,
+            "actor_id": 3,
+            "created_at": "2026-10-12T16:27:24+07:00",
+            "visibility": "PUBLIC",
+            "content": "ENV-STEP1-02 attempt 2"
+          },
+          {
+            "source_event_id": 11,
+            "actor_id": 1,
+            "created_at": "2026-10-12T16:27:24+07:00",
+            "visibility": "PUBLIC",
+            "content": "ENV-STEP1-02 unresolved 2"
+          },
+          {
+            "source_event_id": 12,
+            "actor_id": 3,
+            "created_at": "2026-10-12T16:27:24+07:00",
+            "visibility": "PUBLIC",
+            "content": "ENV-STEP1-02 attempt 3"
+          },
+          {
+            "source_event_id": 13,
+            "actor_id": 1,
+            "created_at": "2026-10-12T16:27:24+07:00",
+            "visibility": "PUBLIC",
+            "content": "ENV-STEP1-02 unresolved 3"
+          }
+        ]
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/tickets/2/reviews",
+      "user": 6,
+      "payload": null,
+      "status": 200,
+      "response": [
+        {
+          "review_key": "R1",
+          "requested_at": "2026-10-12T16:27:24+07:00",
+          "completed_at": null,
+          "resolution_cycle_id": 13,
+          "requested_event_id": 13,
+          "completed_event_id": null,
+          "reviewed_by": null,
+          "handling_plan": null,
+          "wait_calendar_seconds": 0,
+          "wait_overlap_seconds": 0,
+          "breach_context": "none"
+        }
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/tickets/2/reviews/complete",
+      "user": 6,
+      "payload": {
+        "handling_plan": {
+          "unresolved_reason": "ENV-STEP1-02 repeated rejection",
+          "next_action": "STEP1-PRIVATE-PLAN",
+          "needs_expert_input": false
+        }
+      },
+      "status": 200,
+      "response": {
+        "title": "ENV-STEP1-02 review privacy",
+        "description": "Three rejected resolutions create an internal review",
+        "priority": "NORMAL",
+        "policy_id": "NORMAL",
+        "customer_id": 1,
+        "id": 2,
+        "status": "IN_PROGRESS",
+        "assignee_id": 3,
+        "created_at": "2026-10-12T16:27:24+07:00",
+        "assigned_at": "2026-10-12T16:27:24+07:00",
+        "closed_at": null,
+        "messages": [
+          {
+            "source_event_id": 8,
+            "actor_id": 3,
+            "created_at": "2026-10-12T16:27:24+07:00",
+            "visibility": "PUBLIC",
+            "content": "ENV-STEP1-02 attempt 1"
+          },
+          {
+            "source_event_id": 9,
+            "actor_id": 1,
+            "created_at": "2026-10-12T16:27:24+07:00",
+            "visibility": "PUBLIC",
+            "content": "ENV-STEP1-02 unresolved 1"
+          },
+          {
+            "source_event_id": 10,
+            "actor_id": 3,
+            "created_at": "2026-10-12T16:27:24+07:00",
+            "visibility": "PUBLIC",
+            "content": "ENV-STEP1-02 attempt 2"
+          },
+          {
+            "source_event_id": 11,
+            "actor_id": 1,
+            "created_at": "2026-10-12T16:27:24+07:00",
+            "visibility": "PUBLIC",
+            "content": "ENV-STEP1-02 unresolved 2"
+          },
+          {
+            "source_event_id": 12,
+            "actor_id": 3,
+            "created_at": "2026-10-12T16:27:24+07:00",
+            "visibility": "PUBLIC",
+            "content": "ENV-STEP1-02 attempt 3"
+          },
+          {
+            "source_event_id": 13,
+            "actor_id": 1,
+            "created_at": "2026-10-12T16:27:24+07:00",
+            "visibility": "PUBLIC",
+            "content": "ENV-STEP1-02 unresolved 3"
+          }
+        ],
+        "sla": {
+          "first_response": {
+            "due_at": "2026-10-13T09:27:24+07:00",
+            "consumed_seconds": 0,
+            "remaining_seconds": 7200,
+            "status": "met",
+            "warning_level": "none",
+            "running": false
+          },
+          "resolution": {
+            "due_at": "2026-10-14T14:27:24+07:00",
+            "consumed_seconds": 0,
+            "remaining_seconds": 57600,
+            "status": "pending",
+            "warning_level": "none",
+            "running": true
+          }
+        },
+        "rejection_count": 3,
+        "needs_manager_review": false,
+        "reviews": [
+          {
+            "review_key": "R1",
+            "requested_at": "2026-10-12T16:27:24+07:00",
+            "completed_at": "2026-10-12T16:27:24+07:00",
+            "resolution_cycle_id": 13,
+            "requested_event_id": 13,
+            "completed_event_id": 14,
+            "reviewed_by": 6,
+            "handling_plan": {
+              "unresolved_reason": "ENV-STEP1-02 repeated rejection",
+              "next_action": "STEP1-PRIVATE-PLAN",
+              "needs_expert_input": false,
+              "expert_note": null
+            },
+            "wait_calendar_seconds": 0,
+            "wait_overlap_seconds": 0,
+            "breach_context": "none"
+          }
+        ],
+        "assignment_snapshot": {
+          "assigned_at": "2026-10-12T16:27:24+07:00",
+          "first_response_sla_status_at_assignment": "pending",
+          "resolution_sla_status_at_assignment": "pending",
+          "assignment_event_id": 7
+        }
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/tickets/2",
+      "user": 3,
+      "payload": null,
+      "status": 200,
+      "response": {
+        "title": "ENV-STEP1-02 review privacy",
+        "description": "Three rejected resolutions create an internal review",
+        "priority": "NORMAL",
+        "policy_id": "NORMAL",
+        "customer_id": 1,
+        "id": 2,
+        "status": "IN_PROGRESS",
+        "assignee_id": 3,
+        "created_at": "2026-10-12T16:27:24+07:00",
+        "assigned_at": "2026-10-12T16:27:24+07:00",
+        "closed_at": null,
+        "messages": [
+          {
+            "source_event_id": 8,
+            "actor_id": 3,
+            "created_at": "2026-10-12T16:27:24+07:00",
+            "visibility": "PUBLIC",
+            "content": "ENV-STEP1-02 attempt 1"
+          },
+          {
+            "source_event_id": 9,
+            "actor_id": 1,
+            "created_at": "2026-10-12T16:27:24+07:00",
+            "visibility": "PUBLIC",
+            "content": "ENV-STEP1-02 unresolved 1"
+          },
+          {
+            "source_event_id": 10,
+            "actor_id": 3,
+            "created_at": "2026-10-12T16:27:24+07:00",
+            "visibility": "PUBLIC",
+            "content": "ENV-STEP1-02 attempt 2"
+          },
+          {
+            "source_event_id": 11,
+            "actor_id": 1,
+            "created_at": "2026-10-12T16:27:24+07:00",
+            "visibility": "PUBLIC",
+            "content": "ENV-STEP1-02 unresolved 2"
+          },
+          {
+            "source_event_id": 12,
+            "actor_id": 3,
+            "created_at": "2026-10-12T16:27:24+07:00",
+            "visibility": "PUBLIC",
+            "content": "ENV-STEP1-02 attempt 3"
+          },
+          {
+            "source_event_id": 13,
+            "actor_id": 1,
+            "created_at": "2026-10-12T16:27:24+07:00",
+            "visibility": "PUBLIC",
+            "content": "ENV-STEP1-02 unresolved 3"
+          }
+        ],
+        "sla": {
+          "first_response": {
+            "due_at": "2026-10-13T09:27:24+07:00",
+            "consumed_seconds": 0,
+            "remaining_seconds": 7200,
+            "status": "met",
+            "warning_level": "none",
+            "running": false
+          },
+          "resolution": {
+            "due_at": "2026-10-14T14:27:24+07:00",
+            "consumed_seconds": 0,
+            "remaining_seconds": 57600,
+            "status": "pending",
+            "warning_level": "none",
+            "running": true
+          }
+        },
+        "rejection_count": 3,
+        "needs_manager_review": false,
+        "reviews": [
+          {
+            "review_key": "R1",
+            "requested_at": "2026-10-12T16:27:24+07:00",
+            "completed_at": "2026-10-12T16:27:24+07:00",
+            "resolution_cycle_id": 13,
+            "requested_event_id": 13,
+            "completed_event_id": 14,
+            "reviewed_by": 6,
+            "handling_plan": {
+              "unresolved_reason": "ENV-STEP1-02 repeated rejection",
+              "next_action": "STEP1-PRIVATE-PLAN",
+              "needs_expert_input": false,
+              "expert_note": null
+            },
+            "wait_calendar_seconds": 0,
+            "wait_overlap_seconds": 0,
+            "breach_context": "none"
+          }
+        ],
+        "assignment_snapshot": {
+          "assigned_at": "2026-10-12T16:27:24+07:00",
+          "first_response_sla_status_at_assignment": "pending",
+          "resolution_sla_status_at_assignment": "pending",
+          "assignment_event_id": 7
+        }
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/tickets/2",
+      "user": 1,
+      "payload": null,
+      "status": 200,
+      "response": {
+        "title": "ENV-STEP1-02 review privacy",
+        "description": "Three rejected resolutions create an internal review",
+        "priority": "NORMAL",
+        "policy_id": "NORMAL",
+        "customer_id": 1,
+        "id": 2,
+        "status": "IN_PROGRESS",
+        "assignee_id": 3,
+        "created_at": "2026-10-12T16:27:24+07:00",
+        "assigned_at": "2026-10-12T16:27:24+07:00",
+        "closed_at": null,
+        "messages": [
+          {
+            "source_event_id": 8,
+            "actor_id": 3,
+            "created_at": "2026-10-12T16:27:24+07:00",
+            "visibility": "PUBLIC",
+            "content": "ENV-STEP1-02 attempt 1"
+          },
+          {
+            "source_event_id": 9,
+            "actor_id": 1,
+            "created_at": "2026-10-12T16:27:24+07:00",
+            "visibility": "PUBLIC",
+            "content": "ENV-STEP1-02 unresolved 1"
+          },
+          {
+            "source_event_id": 10,
+            "actor_id": 3,
+            "created_at": "2026-10-12T16:27:24+07:00",
+            "visibility": "PUBLIC",
+            "content": "ENV-STEP1-02 attempt 2"
+          },
+          {
+            "source_event_id": 11,
+            "actor_id": 1,
+            "created_at": "2026-10-12T16:27:24+07:00",
+            "visibility": "PUBLIC",
+            "content": "ENV-STEP1-02 unresolved 2"
+          },
+          {
+            "source_event_id": 12,
+            "actor_id": 3,
+            "created_at": "2026-10-12T16:27:24+07:00",
+            "visibility": "PUBLIC",
+            "content": "ENV-STEP1-02 attempt 3"
+          },
+          {
+            "source_event_id": 13,
+            "actor_id": 1,
+            "created_at": "2026-10-12T16:27:24+07:00",
+            "visibility": "PUBLIC",
+            "content": "ENV-STEP1-02 unresolved 3"
+          }
+        ]
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/tickets",
+      "user": 1,
+      "payload": null,
+      "status": 200,
+      "response": [
+        {
+          "title": "ENV-STEP1-01 clean-start",
+          "description": "Deterministic environment verification workflow",
+          "priority": "NORMAL",
+          "policy_id": "NORMAL",
+          "customer_id": 1,
+          "id": 1,
+          "status": "CLOSED",
+          "assignee_id": 3,
+          "created_at": "2026-10-12T16:27:24+07:00",
+          "assigned_at": "2026-10-12T16:27:24+07:00",
+          "closed_at": "2026-10-12T16:27:24+07:00",
+          "messages": [
+            {
+              "source_event_id": 4,
+              "actor_id": 3,
+              "created_at": "2026-10-12T16:27:24+07:00",
+              "visibility": "PUBLIC",
+              "content": "ENV-STEP1-01 environment and workflow verified"
+            }
+          ]
+        },
+        {
+          "title": "ENV-STEP1-02 review privacy",
+          "description": "Three rejected resolutions create an internal review",
+          "priority": "NORMAL",
+          "policy_id": "NORMAL",
+          "customer_id": 1,
+          "id": 2,
+          "status": "IN_PROGRESS",
+          "assignee_id": 3,
+          "created_at": "2026-10-12T16:27:24+07:00",
+          "assigned_at": "2026-10-12T16:27:24+07:00",
+          "closed_at": null,
+          "messages": [
+            {
+              "source_event_id": 8,
+              "actor_id": 3,
+              "created_at": "2026-10-12T16:27:24+07:00",
+              "visibility": "PUBLIC",
+              "content": "ENV-STEP1-02 attempt 1"
+            },
+            {
+              "source_event_id": 9,
+              "actor_id": 1,
+              "created_at": "2026-10-12T16:27:24+07:00",
+              "visibility": "PUBLIC",
+              "content": "ENV-STEP1-02 unresolved 1"
+            },
+            {
+              "source_event_id": 10,
+              "actor_id": 3,
+              "created_at": "2026-10-12T16:27:24+07:00",
+              "visibility": "PUBLIC",
+              "content": "ENV-STEP1-02 attempt 2"
+            },
+            {
+              "source_event_id": 11,
+              "actor_id": 1,
+              "created_at": "2026-10-12T16:27:24+07:00",
+              "visibility": "PUBLIC",
+              "content": "ENV-STEP1-02 unresolved 2"
+            },
+            {
+              "source_event_id": 12,
+              "actor_id": 3,
+              "created_at": "2026-10-12T16:27:24+07:00",
+              "visibility": "PUBLIC",
+              "content": "ENV-STEP1-02 attempt 3"
+            },
+            {
+              "source_event_id": 13,
+              "actor_id": 1,
+              "created_at": "2026-10-12T16:27:24+07:00",
+              "visibility": "PUBLIC",
+              "content": "ENV-STEP1-02 unresolved 3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/tickets/2/reviews",
+      "user": 1,
+      "payload": null,
+      "status": 404,
+      "response": {
+        "detail": {
+          "error_code": null,
+          "message": "Not found"
+        }
+      }
+    }
+  ],
+  "initial_changed_files": [
+    " M README.md",
+    " M TASKS.md",
+    " M docs/01-context/scope.md",
+    " M docs/03-requirements/functional-requirements-draft.md",
+    " M docs/03-requirements/non-functional-requirements-draft.md",
+    " M docs/03-requirements/user-stories-draft.md",
+    " M docs/decision-log.md",
+    " M docs/open-questions.md",
+    " M docs/spec/business-rules.md",
+    " M docs/spec/codes.md",
+    " M docs/traceability.md",
+    "?? .gitignore",
+    "?? api/openapi.json",
+    "?? backend/__init__.py",
+    "?? backend/app.py",
+    "?? backend/reports.py",
+    "?? backend/schema.sql",
+    "?? backend/seed.py",
+    "?? backend/sla.py",
+    "?? backend/store.py",
+    "?? docs/04-data-api/api-contract.md",
+    "?? docs/04-data-api/data-design.md",
+    "?? docs/04-data-api/implementation-handoff.md",
+    "?? pytest.ini",
+    "?? requirements.txt",
+    "?? sql/README.md",
+    "?? sql/queries/m01.sql",
+    "?? sql/queries/m02.sql",
+    "?? sql/queries/m03.sql",
+    "?? sql/queries/m06.sql",
+    "?? tests/__init__.py",
+    "?? tests/backend/__init__.py",
+    "?? tests/backend/conftest.py",
+    "?? tests/backend/test_api.py",
+    "?? tests/backend/test_integrity.py",
+    "?? tests/backend/test_reports.py",
+    "?? tests/backend/test_sla.py",
+    "?? tests/evidence/backend-clean-junit.xml",
+    "?? tests/evidence/backend-clean-start.json",
+    "?? tests/evidence/backend-junit.xml",
+    "?? tests/evidence/backend-run.json",
+    "?? tests/evidence/backend-test-report.md",
+    "?? tests/evidence/backend-windows-20261012-131256-junit.xml",
+    "?? tests/evidence/backend-windows-20261012-131256.json",
+    "?? tests/evidence/backend-windows-http-20261012-131408-server.log",
+    "?? tests/evidence/backend-windows-http-20261012-131408.json",
+    "?? tests/evidence/backend-windows-report-20261012.md",
+    "?? tests/evidence/history/README.md"
+  ],
+  "fixture_before": "6e75371714e5589eb78c45b0df3eb69595f2dfcc9362c9398b8c11989c0756ee",
+  "fixture_count": 83,
+  "old_environment": {
+    "executable": "C:\\Users\\ASUS\\ba-ticketing-sla-case-study\\.venv\\Scripts\\python.exe",
+    "version": "3.12.15 (main, Oct  9 2026, 15:21:55) [MSC v.1944 64 bit (AMD64)]",
+    "base_prefix": "C:\\Users\\ASUS\\AppData\\Local\\Temp\\ba-ticketing-sla-windows-tools\\python\\cpython-3.12.15-windows-x86_64-none",
+    "base_executable": "C:\\Users\\ASUS\\AppData\\Local\\Temp\\ba-ticketing-sla-windows-tools\\python\\cpython-3.12.15-windows-x86_64-none\\python.exe"
+  },
+  "stable_python": {
+    "executable": "C:\\Users\\ASUS\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+    "version": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+    "base_prefix": "C:\\Users\\ASUS\\AppData\\Local\\Programs\\Python\\Python312",
+    "base_executable": "C:\\Users\\ASUS\\AppData\\Local\\Programs\\Python\\Python312\\python.exe"
+  },
+  "repo_environment": {
+    "executable": "C:\\Users\\ASUS\\ba-ticketing-sla-case-study\\.venv\\Scripts\\python.exe",
+    "version": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+    "base_prefix": "C:\\Users\\ASUS\\AppData\\Local\\Programs\\Python\\Python312",
+    "base_executable": "C:\\Users\\ASUS\\AppData\\Local\\Programs\\Python\\Python312\\python.exe"
+  },
+  "source_manifest": [
+    {
+      "path": ".gitignore",
+      "sha256": "d077a091b85110ea3a3da582a397c37ca6ea5168170eaac531d7dfa183d9c0b0"
+    },
+    {
+      "path": "api/openapi.json",
+      "sha256": "c896181300cf60c618e1271b4612842a6afdb725fb78921f0d44bc92b7d37470"
+    },
+    {
+      "path": "backend/__init__.py",
+      "sha256": "c0d121c0c05b4a634a4994a53fe8933e84d596d43b7de5e69c191b3379e01d09"
+    },
+    {
+      "path": "backend/app.py",
+      "sha256": "ba48dae31178ea14d6d67d3c8432f6f3c010db72de5c37374cb5ddd4ff43a97f"
+    },
+    {
+      "path": "backend/reports.py",
+      "sha256": "484db9c95b12b0a40b47e29dcd883f09084480852c65dde6d082bdae5f9555c1"
+    },
+    {
+      "path": "backend/schema.sql",
+      "sha256": "5c6ea2fad94560e90551133078a71a95d0a698dfc1fa3ef78b71f573ea7792cf"
+    },
+    {
+      "path": "backend/seed.py",
+      "sha256": "460780c4d8143c31493f19b90a67b0140e7b7f7088bc805d016850e1f90eb0ab"
+    },
+    {
+      "path": "backend/sla.py",
+      "sha256": "8f6712ce4463c30e22c3f3ccfc6a5c8eda08b29ccb1c091fb243bff50e77b681"
+    },
+    {
+      "path": "backend/store.py",
+      "sha256": "4eb1c548075b903be4d98d35dff9ee003388e30c0efdcdaa3ebf8bd26c0bd4b6"
+    },
+    {
+      "path": "docs/04-data-api/api-contract.md",
+      "sha256": "7f8f751d5e1d3a28d65eee362baf0a7953926c8abc9fcd75fa7b17e80c02ae0a"
+    },
+    {
+      "path": "docs/04-data-api/data-design.md",
+      "sha256": "e7a7996dc86d4096e3da486cefe492df83592d8be802e4872ffb2faec57069c0"
+    },
+    {
+      "path": "docs/04-data-api/implementation-handoff.md",
+      "sha256": "d442b6b7718ee997ccbbfd818e2916c28b7ad9dd6eb464c1ff6c4234ecfae7a4"
+    },
+    {
+      "path": "pytest.ini",
+      "sha256": "af49cd61f731acbde99420a87745449d082dff8141f3bdb288e4e930c2b47219"
+    },
+    {
+      "path": "requirements.txt",
+      "sha256": "cd33e0d0405544ecc2538244991d21c8fc598857ba37d76542de5fb7be19fe05"
+    },
+    {
+      "path": "sql/README.md",
+      "sha256": "3a3381bf289dcbff9e6861bc47ef888761f89d16937bc38cc36201ed26bb99f8"
+    },
+    {
+      "path": "sql/queries/m01.sql",
+      "sha256": "db15174ad8e2fabb691e65c18258d594422dbd09c709468128161ee3bd326a3b"
+    },
+    {
+      "path": "sql/queries/m02.sql",
+      "sha256": "a13e7d06e336a2c884a7cca2f617141dce0713fbd93216904076fd92ce30aac7"
+    },
+    {
+      "path": "sql/queries/m03.sql",
+      "sha256": "9655d5faed31b74b5f7c8241124ae85691a30a4c04b7bb371000fb67997ba589"
+    },
+    {
+      "path": "sql/queries/m06.sql",
+      "sha256": "63ef8240a0b65c0bb7976819aa2aacb0406e442584c1a249468448293bd0d512"
+    },
+    {
+      "path": "tests/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tests/backend/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tests/backend/conftest.py",
+      "sha256": "c4fa9abfda926d12ac2935ab24100296da34f733ab8bb8d9296db55275632b7a"
+    },
+    {
+      "path": "tests/backend/test_api.py",
+      "sha256": "be7affff643acf633b44cfa7afb69c2e4f41ee6fdeca671cf1b094bb78ba5c52"
+    },
+    {
+      "path": "tests/backend/test_integrity.py",
+      "sha256": "66ab052fadfdc25d1a88b8ed7de3a8cfb0ece6bb3a146bcdea524506d7ccd868"
+    },
+    {
+      "path": "tests/backend/test_reports.py",
+      "sha256": "6316093d6f45e5cdcf3a3db7a2336b4ab9e087e96e0fb12a01230556bfa084e2"
+    },
+    {
+      "path": "tests/backend/test_sla.py",
+      "sha256": "446dcf90e58c22c59313db1d853aacc314a731d46fcbc003eb5babd960644d47"
+    },
+    {
+      "path": "AGENTS.md",
+      "sha256": "bf8a3370d11512fbc2b56b5194b926570135ad33df68cbb2e7b44862f295fc7c"
+    },
+    {
+      "path": "README.md",
+      "sha256": "f9cc761a2f1b1f1295ddf7ab94082bfd5d1130bbe38c2f20bc29ba221210e5b4"
+    },
+    {
+      "path": "TASKS.md",
+      "sha256": "bccbe347a348db20d8fa8ae3075072895d7a5124cc91bd674ec5e1e73a92d89d"
+    },
+    {
+      "path": "docs/01-context/project-brief.md",
+      "sha256": "eaac70d3b18a7f668e5c247b8d8feedddbbd2217be26d6b9a80ad32c2e6e9c27"
+    },
+    {
+      "path": "docs/01-context/scope.md",
+      "sha256": "1aad69c114f3f01888dc27c1244de273d8bb5df854e5ea94651338b4c6493584"
+    },
+    {
+      "path": "docs/01-context/stakeholders.md",
+      "sha256": "0f5996e9ac76cffceaf25b6b7d484db3e9825230f2ea847b0bf72e66b3c41b39"
+    },
+    {
+      "path": "docs/02-process/as-is.md",
+      "sha256": "0f3b24799e14d99be91c89272bfb056e6f3d3814524b670ce07d191c759595ef"
+    },
+    {
+      "path": "docs/02-process/as-is.png",
+      "sha256": "4aa4c5c648d1a0a84b05426da22bf11a62e8f1675dfd85332f6aab5da25ea7a3"
+    },
+    {
+      "path": "docs/02-process/support-processes.drawio",
+      "sha256": "a2ea9a27fcf64dc46b65ea99451140dcdb9a21c65dae48d94938a8e0912abd47"
+    },
+    {
+      "path": "docs/02-process/ticket-states.md",
+      "sha256": "0ce70faa1cf67e2a1edd279a416f90b1306003841cfe6ea3289fc81448a3fd1b"
+    },
+    {
+      "path": "docs/02-process/to-be.md",
+      "sha256": "8ec24989a30b9fc2cf7dbd33cd0cfc4969d67525f04f126f66943bcc7b6e34fe"
+    },
+    {
+      "path": "docs/02-process/to-be.png",
+      "sha256": "ea9cfb2ea85344b56cf401872b01156b5d03c40e9543a20502be2194f4c0da33"
+    },
+    {
+      "path": "docs/03-requirements/functional-requirements-draft.md",
+      "sha256": "0940e7f8d773cccdd3546c777d2fb5454480e8c3b9ba6a025bc77389a5e69a8f"
+    },
+    {
+      "path": "docs/03-requirements/non-functional-requirements-draft.md",
+      "sha256": "388ba6a552188d689fc6e4984ad16db7e247cae265fa0ab2b0b5cc05a971245c"
+    },
+    {
+      "path": "docs/03-requirements/user-stories-draft.md",
+      "sha256": "8af468e56ded5755985bc397925d484cba8a751521b1973e07d1dc47536d894c"
+    },
+    {
+      "path": "docs/decision-log.md",
+      "sha256": "21eca7556b9337992f5ac076698c93fa1290ce5754e1b622f21f0df408ce0812"
+    },
+    {
+      "path": "docs/open-questions.md",
+      "sha256": "40799fbc8db89b999d838c19ac6af011af5d27daae8d75665bef6d3d1d6e2831"
+    },
+    {
+      "path": "docs/spec/business-rules.md",
+      "sha256": "bc4491b755bb57abaa54c39bf08dd1de44f2f67c8397340a7241cd0d2eca94b9"
+    },
+    {
+      "path": "docs/spec/codes.md",
+      "sha256": "fd524d10b44a3caf52b28a5e196300ac17d0996beda822b5b1fd280563d96d80"
+    },
+    {
+      "path": "docs/spec/scenario-coverage.md",
+      "sha256": "18a6f6b7153f9a9128f7a77ec89c09207278e833ed86e023a1a921286f38174a"
+    },
+    {
+      "path": "docs/traceability.md",
+      "sha256": "b305a0d8c06d072bffc4a0de7392242c87b9df79b2717ccbf6ea35ded79de428"
+    },
+    {
+      "path": "tests/sla/audit_draft_import.py",
+      "sha256": "cd4f7c1842c7ddc7368d129997fc6b799495c8b971d0ddeeb9726c4f8022c991"
+    },
+    {
+      "path": "tests/sla/audit_fixture_83.py",
+      "sha256": "835259a4b6f7be686fb2a21b79841261be538845018fd93446c0c2e71db08f0b"
+    },
+    {
+      "path": "tests/sla/audit_fixture_current.py",
+      "sha256": "6136ea7fdc2bf51c6899b0c3ce48368a40d61b7b61be57e28082128d2a247e19"
+    },
+    {
+      "path": "tests/sla/audit_fixture_structure.py",
+      "sha256": "f780b258036de3bd0b9ccee560074efa1d426b6405cc9e34a93e10ce8a670127"
+    },
+    {
+      "path": "tests/sla/reference/README.md",
+      "sha256": "ce978de83c2efd03e1b7f8983c5065f7fc9eff23e4697b7715083740a4487cdd"
+    },
+    {
+      "path": "tests/sla/reference/compare_sla_sources.py",
+      "sha256": "3337af420a016b59f93a71d450e428d6302e21e4517bd3ebfb7a24896af63d86"
+    },
+    {
+      "path": "tests/sla/reference/source/SLA_69_Draft_Verification.md",
+      "sha256": "fbd8eeec048eb50fa52c7d7a0195e3bf12e43f62bb7010870e9e535c4a2da65f"
+    },
+    {
+      "path": "tests/sla/reference/source/SLA_Validation_Report.md",
+      "sha256": "eaedb9b63cfa0c2716ff1deb880a3def0103d6b9d5d04f1db675edd19259656a"
+    },
+    {
+      "path": "tests/sla/reference/source/sla_draft_data.json",
+      "sha256": "91c3163a6dcb6707832e2e3c2f6ada4677a8f01e0e67ae6a8f0b5ad0af4c569f"
+    },
+    {
+      "path": "tests/sla/reference/source/sla_validation_results.json",
+      "sha256": "adcb70c7a20d2da9a09b1566e11b42c6ef68df2c51825abb721d13221ad62c2b"
+    },
+    {
+      "path": "tests/sla/reference/validate_sla_reference.py",
+      "sha256": "764c284609d7074cbebc7c027576e9c8a16c9a8792456f8e4909ca221464f9ed"
+    },
+    {
+      "path": "tests/sla/reference/validate_sla_reference_81.py",
+      "sha256": "d0284a0c4bf9524f1149c623637431aa65b3d0c337b0d9bc19262d801f04d81f"
+    },
+    {
+      "path": "tests/sla/reference/validate_sla_reference_current.py",
+      "sha256": "b3e87a20d15f82a6fca0e9f2ab16631e6108e31aa4fc13a1a48ae87941b48cb2"
+    },
+    {
+      "path": "tests/sla/sla-scenarios.json",
+      "sha256": "6e75371714e5589eb78c45b0df3eb69595f2dfcc9362c9398b8c11989c0756ee"
+    },
+    {
+      "path": "tests/sla/verify_sla_83_evidence.py",
+      "sha256": "14fd642fed674286219adee3390a6173fef145ff722fc0b281580e9b4fa60b02"
+    }
+  ],
+  "copy_policy": "Allowlisted source/docs/test extensions from current tracked and untracked files; excludes evidence, .git, virtualenvs, caches, databases, env files, credentials and other local data.",
+  "clean_environment": {
+    "executable": "C:\\Users\\ASUS\\ba-ticketing-sla-case-study\\.clean-start-20261012-162259\\.venv\\Scripts\\python.exe",
+    "version": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+    "base_prefix": "C:\\Users\\ASUS\\AppData\\Local\\Programs\\Python\\Python312",
+    "base_executable": "C:\\Users\\ASUS\\AppData\\Local\\Programs\\Python\\Python312\\python.exe"
+  },
+  "server": {
+    "url": "http://127.0.0.1:65134",
+    "database": "C:\\Users\\ASUS\\ba-ticketing-sla-case-study\\.clean-start-20261012-162259\\data\\step1-workflow.sqlite3",
+    "pid": 11576,
+    "argv": [
+      "C:\\Users\\ASUS\\ba-ticketing-sla-case-study\\.clean-start-20261012-162259\\.venv\\Scripts\\python.exe",
+      "-m",
+      "uvicorn",
+      "backend.app:app",
+      "--host",
+      "127.0.0.1",
+      "--port",
+      "65134"
+    ],
+    "cwd": "C:\\Users\\ASUS\\ba-ticketing-sla-case-study\\.clean-start-20261012-162259",
+    "stopped_owned_process": true
+  },
+  "http_workflow": "PASS",
+  "fixture_after": "6e75371714e5589eb78c45b0df3eb69595f2dfcc9362c9398b8c11989c0756ee",
+  "original_files_byte_preserved_before_doc_updates": true,
+  "python313_byte_preserved": true,
+  "repo_pytest": {
+    "name": "pytest",
+    "errors": "0",
+    "failures": "0",
+    "skipped": "0",
+    "tests": "181",
+    "time": "11.086",
+    "timestamp": "2026-10-12T16:26:40.585119+07:00",
+    "hostname": "PhuocTrong"
+  },
+  "clean_pytest": {
+    "name": "pytest",
+    "errors": "0",
+    "failures": "0",
+    "skipped": "0",
+    "tests": "181",
+    "time": "11.160",
+    "timestamp": "2026-10-12T16:27:12.070761+07:00",
+    "hostname": "PhuocTrong"
+  },
+  "status": "PASS"
+}

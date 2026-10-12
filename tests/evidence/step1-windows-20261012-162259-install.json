@@ -1,0 +1,9 @@
+﻿{
+    "url":  "https://www.python.org/ftp/python/3.12.10/python-3.12.10-amd64.exe",
+    "installer":  "C:\\Users\\ASUS\\AppData\\Local\\Temp\\python-3.12.10-amd64-step1-20261012-162259.exe",
+    "sha256":  "67B5635E80EA51072B87941312D00EC8927C4DB9BA18938F7AD2D27B328B95FB",
+    "signature":  "Valid",
+    "signer":  "CN=Python Software Foundation, O=Python Software Foundation, L=Beaverton, S=Oregon, C=US",
+    "target":  "C:\\Users\\ASUS\\AppData\\Local\\Programs\\Python\\Python312",
+    "exit_code":  0
+}

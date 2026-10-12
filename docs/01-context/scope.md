@@ -47,7 +47,7 @@ Hướng phát triển sau v1.0 nằm ở Roadmap trong README; không phải m�
 ## 4. Điều kiện hoàn thành v1.0
 - Luồng chính chạy được trên prototype và trên API tương ứng.
 - Quyền được kiểm tra ở backend, gồm quyền ghi phương án của Manager.
-- Các ca bao phủ đủ 12 nhóm có đáp án được chủ dự án xác nhận `verified` (tự tính độc lập) và kết quả kiểm thử thực tế tương ứng đạt.
+- Các ca bao phủ đủ 12 nhóm có đáp án được chủ dự án xác nhận `verified` (ghi phương pháp xác nhận thực có, không suy thành tự tính tay) và kết quả kiểm thử thực tế tương ứng đạt.
 - Hai ca nhận đồng thời đạt; lần từ chối tạo review chạy trong một giao dịch.
 - Dữ liệu dẫn xuất dựng lại đúng từ sự kiện gốc.
 - Báo cáo SQL, gồm M-07, khớp dữ liệu mẫu có kết quả biết trước.

@@ -56,11 +56,11 @@ Lịch sử lúc nhập nháp ngày 08/10/2026: S1–S12 → SLA-70…SLA-81 khi
 | _Chưa lập_ | BR-57 | _Chưa lập_ | _Chưa lập_ | _Chưa có_ | Draft |
 | _Chưa lập_ | BR-58 | _Chưa lập_ | _Chưa lập_ | _Chưa có_ | Draft |
 
-## Ma trận yêu cầu v1.0 (nháp)
+## Ma trận yêu cầu v1.0 — approved 12/10/2026
 
-Artefact việc 1 (lịch sử 06/10/2026; kết luận hiện hành ở đầu tài liệu): [audit cấu trúc lịch sử](../tests/evidence/sla-fixture-audit.json), [checker tham chiếu gốc](../tests/sla/reference/validate_sla_reference.py), [run record](../tests/evidence/sla-reference-run.json), [đối chiếu nguồn](../tests/evidence/sla-source-comparison.json), [manifest SHA-256](../tests/evidence/sla-reconciliation.sha256). Audit không tính SLA; checker tính và đối chiếu fixture độc lập với backend. Cả hai không phải test backend/API/SQL/prototype/concurrency. Bảng verified đủ 12 nhóm nhưng còn thiếu nhánh theo [scenario coverage](spec/scenario-coverage.md); chưa xác nhận mở gate SLA chính/M-07. Stories/FR/NFR và các ma trận nháp giữ nguyên trạng thái, chưa được duyệt bởi lần chạy này.
+Artefact việc 1 (lịch sử 06/10/2026; kết luận hiện hành ở đầu tài liệu): [audit cấu trúc lịch sử](../tests/evidence/sla-fixture-audit.json), [checker tham chiếu gốc](../tests/sla/reference/validate_sla_reference.py), [run record](../tests/evidence/sla-reference-run.json), [đối chiếu nguồn](../tests/evidence/sla-source-comparison.json), [manifest SHA-256](../tests/evidence/sla-reconciliation.sha256). Audit không tính SLA; checker tính và đối chiếu fixture độc lập với backend. Cả hai không phải test backend/API/SQL/prototype/concurrency. Ở mốc lịch sử 06/10 bảng chưa đủ nhánh; kết luận này đã bị thay bởi gate mở ở mốc 83, xem [coverage](spec/scenario-coverage.md). Ở mốc lịch sử đó stories/FR/NFR chưa duyệt; chủ dự án đã duyệt ngày 12/10/2026.
 
-Không có liên kết code hoặc test đã tồn tại trong bảng này. “Kiểm chứng dự kiến” là hoạt động sẽ lập sau khi implementation được phép.
+Ma trận dưới đây ánh xạ yêu cầu đã duyệt; cách kiểm chứng vẫn là kế hoạch. Liên kết implementation và kết quả thực thi nằm ở cuối tài liệu; không gán kết quả prototype từ test backend.
 
 | BR | Story / AC | FR / NFR | Kiểm chứng dự kiến |
 |---|---|---|---|
@@ -69,7 +69,7 @@ Không có liên kết code hoặc test đã tồn tại trong bảng này. “K
 | BR-06, BR-32…BR-34, BR-49, BR-54, BR-58 | US-01/03/05; AC-03, AC-12…AC-13, AC-16, AC-21, AC-27 | FR-02; NFR-01 | Contract lỗi, thứ tự kiểm tra và lọc dữ liệu theo role |
 | BR-16…BR-26, BR-38…BR-39, BR-46…BR-49, BR-59…BR-61 | US-04; AC-17…AC-22 | FR-05; NFR-04, NFR-05 | Fixture SLA và ca dựng lại sau khi logic được phép |
 | BR-27…BR-31, BR-47 | US-04; AC-22 | FR-08; NFR-03, NFR-04 | Kiểm tra append-only và dựng lại dữ liệu dẫn xuất |
-| BR-40…BR-41 | US-04; AC-21 | FR-09; NFR-06 | Review giao diện prototype sau khi được xây |
+| BR-40…BR-41 | US-04; AC-32 | FR-09; NFR-06 | Review giao diện prototype sau khi được xây |
 | BR-52…BR-58 | US-05; AC-23…AC-27 | FR-06; NFR-02 | Contract review, lỗi và tính nguyên tử từ chối/review |
 | BR-13, BR-35, BR-42, BR-56 | US-06; AC-28…AC-31 | FR-07; NFR-05 | Đối chiếu report với dữ liệu mẫu sau khi triển khai |
 
@@ -81,5 +81,36 @@ Không có liên kết code hoặc test đã tồn tại trong bảng này. “K
 | BR-06 | Được bao phủ bằng FR/NFR | FR-02; NFR-01 | Contract quyền backend |
 | BR-27…BR-31, BR-47 | Thuộc thiết kế dữ liệu / kiến trúc | FR-08; NFR-03, NFR-04 | Dựng lại từ event và kiểm tra dữ liệu |
 | BR-32, BR-33 | Được bao phủ bằng FR/NFR | FR-01…FR-04; NFR-01 | Contract lỗi và thứ tự kiểm tra |
-| BR-40, BR-41 | Cần bổ sung AC hành vi khi có prototype | FR-09; NFR-06 | Review prototype; chưa tạo AC chỉ để đủ số lượng |
+| BR-40, BR-41 | Đã có AC hành vi, chưa có prototype | FR-09; NFR-06; AC-32 | Prototype review: planned |
 | BR-53 | Được bao phủ bằng FR | FR-04, FR-06; AC-24 | Contract `REVIEW_REQUIRED` và hành vi sau review |
+
+## Backend được duyệt 12/10/2026 — planned trước triển khai
+
+Nguồn xác nhận: chủ dự án duyệt báo cáo rà soát, BR, stories/AC, FR/NFR, thiết kế và backend trong hội thoại. Những dòng lịch sử “coverage incomplete” phía trên mô tả mốc cũ, không là gate hiện hành. Fixture vẫn 83 verified; test implementation ghi riêng.
+
+| BR/FR/NFR | AC | Kiểm chứng dự kiến | Trạng thái ban đầu |
+|---|---|---|---|
+| BR-17…26,38,39,46…48,59…61 / FR-05 | AC-17…21 | tests/backend/test_sla.py: 83 fixture + các biên lịch | planned |
+| BR-03…16,32…34,37,43…45,49…51,62 / FR-01…04 / NFR-01 | AC-01…16,27,33 | tests/backend/test_api.py: quyền/payload/workflow | planned |
+| BR-15,52…58 / FR-06 / NFR-02 | AC-08,09,23…26,34 | tests/backend/test_integrity.py: threads/transactions/review | planned |
+| BR-25,27…31,47 / FR-08 / NFR-03…05 | AC-07,22,34 | tests/backend/test_integrity.py: replay/zero/raw/event order | planned |
+| BR-35,42,56,63 / FR-07 | AC-28…31 | tests/backend/test_reports.py: kỳ/filter/as_of/M-01…07 | planned |
+| BR-40,41 / FR-09 / NFR-06 | AC-32 | Prototype review bằng tay, chưa triển khai | planned |
+
+## Liên kết ca implementation đã thực thi (kết quả trong evidence, không gán cho ca planned)
+
+- AC-01…16,27,33: [test_api.py](../tests/backend/test_api.py), gồm test_roles_privacy_and_queue, test_validation_state_order_and_forbidden_fields, test_review_errors_plan_and_waiting, test_customer_return_can_overload.
+- AC-17…22: [test_sla.py](../tests/backend/test_sla.py) và test_fixture_through_http[SLA-01…SLA-83]; actor/nội dung được adapter test thêm minh bạch, không sửa fixture.
+- AC-08/09/23/34, NFR-02…05: [test_integrity.py](../tests/backend/test_integrity.py); real threads, SQLite file, rào cản, transaction rollback, append-only, rebuild, zero/raw/order.
+- AC-28…31: [test_reports.py](../tests/backend/test_reports.py), bốn ca về cohort, filter và snapshot quá khứ.
+- AC-32/UI: planned; bộ test backend không chứng minh prototype.
+- Kết quả từng test và giới hạn: [backend test report](../tests/evidence/backend-test-report.md), [JUnit](../tests/evidence/backend-junit.xml), [khởi động môi trường mới](../tests/evidence/backend-clean-start.json).
+
+BR-62…BR-64 được cụ thể hóa trong API/data contract; AC-01/14/27/29/30 và các sửa NFR-02, FR-09 áp dụng theo các BR này. Các hàng _Chưa lập_/Draft phía trên là khung lịch sử, không là trạng thái yêu cầu hiện hành.
+
+## Bước 1 Windows với Python nền ổn định — 12/10/2026
+
+- Kiểm chứng cách chạy README/clean-start: Python 3.12.10, hai virtualenv riêng, `pip check` PASS; [JUnit repo 181/181](../tests/evidence/step1-windows-20261012-162259-repo-junit.xml), [JUnit source mới 181/181](../tests/evidence/step1-windows-20261012-162259-clean-junit.xml). Cả hai chạy toàn bộ suite cấu hình `pytest.ini` hiện tại, không sửa test/expected.
+- FR-01…04 / NFR-01, AC-01…16 (phần luồng ngắn và riêng tư): HTTP thật Customer tạo → Agent nhận → Resolved có kết quả → Customer Closed; Customer không thấy SLA/cảnh báo/ghi chú và nội dung review/handling_plan đã tạo thực; endpoint reviews trả 404 cho Customer. Không suy luồng ngắn này phủ toàn bộ AC.
+- [Run record HTTP, môi trường, lệnh và manifest source](../tests/evidence/step1-windows-20261012-162259-run.json); [báo cáo/giới hạn và kiểm tra bảo toàn](../tests/evidence/step1-windows-20261012-162259-report.md). Fixture và bằng chứng Linux/Windows trước đó giữ nguyên byte.
+- AC-32/prototype, Postman, video, deploy chưa thực hiện trong bước này; không thay trạng thái planned của prototype hoặc kết luận hoàn thành v1.0.

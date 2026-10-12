@@ -4,3 +4,9 @@ tests/sla/reference/source/SLA_69_Draft_Verification.md -whitespace
 # Keep fixture, checker and evidence hashes stable across Windows checkouts.
 *.json text eol=lf
 *.py text eol=lf
+
+# Preserve the bytes hashed in newly imported backend and Windows run records.
+# Existing historical evidence and SLA fixture attributes stay unchanged.
+tests/evidence/backend-* -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+tests/evidence/step1-windows-* -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+tests/evidence/history/README.md -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol

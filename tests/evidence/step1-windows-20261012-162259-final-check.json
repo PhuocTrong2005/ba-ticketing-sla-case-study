@@ -1,0 +1,336 @@
+{
+  "status": "PASS",
+  "initial_project_changed_file_count": 48,
+  "original_files_preserved": [
+    ".gitignore",
+    "api/openapi.json",
+    "backend/__init__.py",
+    "backend/app.py",
+    "backend/reports.py",
+    "backend/schema.sql",
+    "backend/seed.py",
+    "backend/sla.py",
+    "backend/store.py",
+    "docs/04-data-api/api-contract.md",
+    "docs/04-data-api/data-design.md",
+    "docs/04-data-api/implementation-handoff.md",
+    "pytest.ini",
+    "requirements.txt",
+    "sql/README.md",
+    "sql/queries/m01.sql",
+    "sql/queries/m02.sql",
+    "sql/queries/m03.sql",
+    "sql/queries/m06.sql",
+    "tests/__init__.py",
+    "tests/backend/__init__.py",
+    "tests/backend/conftest.py",
+    "tests/backend/test_api.py",
+    "tests/backend/test_integrity.py",
+    "tests/backend/test_reports.py",
+    "tests/backend/test_sla.py",
+    "tests/evidence/backend-clean-junit.xml",
+    "tests/evidence/backend-clean-start.json",
+    "tests/evidence/backend-junit.xml",
+    "tests/evidence/backend-run.json",
+    "tests/evidence/backend-test-report.md",
+    "tests/evidence/backend-windows-20261012-131256-junit.xml",
+    "tests/evidence/backend-windows-20261012-131256.json",
+    "tests/evidence/backend-windows-http-20261012-131408-server.log",
+    "tests/evidence/backend-windows-http-20261012-131408.json",
+    "tests/evidence/backend-windows-report-20261012.md",
+    "tests/evidence/history/README.md",
+    ".gitattributes",
+    ".github/workflows/.gitkeep",
+    "AGENTS.md",
+    "api/.gitkeep",
+    "backend/app/.gitkeep",
+    "database/queries/.gitkeep",
+    "docs/01-context/.gitkeep",
+    "docs/01-context/project-brief.md",
+    "docs/01-context/scope.md",
+    "docs/01-context/stakeholders.md",
+    "docs/02-process/.gitkeep",
+    "docs/02-process/as-is.md",
+    "docs/02-process/as-is.png",
+    "docs/02-process/support-processes.drawio",
+    "docs/02-process/ticket-states.md",
+    "docs/02-process/to-be.md",
+    "docs/02-process/to-be.png",
+    "docs/03-requirements/.gitkeep",
+    "docs/03-requirements/functional-requirements-draft.md",
+    "docs/03-requirements/non-functional-requirements-draft.md",
+    "docs/03-requirements/user-stories-draft.md",
+    "docs/04-data-api/.gitkeep",
+    "docs/decision-log.md",
+    "docs/open-questions.md",
+    "docs/spec/business-rules.md",
+    "docs/spec/codes.md",
+    "docs/spec/scenario-coverage.md",
+    "prototype/.gitkeep",
+    "tests/api/.gitkeep",
+    "tests/concurrency/.gitkeep",
+    "tests/evidence/.gitkeep",
+    "tests/evidence/history/sla-reconciliation-before-reference.md",
+    "tests/evidence/history/sla-reconciliation-before-reference.sha256",
+    "tests/evidence/sla-draft-import-baseline.json",
+    "tests/evidence/sla-draft-import-checks.json",
+    "tests/evidence/sla-draft-import-old-reference.json",
+    "tests/evidence/sla-draft-import-run.json",
+    "tests/evidence/sla-draft-import-source-comparison.json",
+    "tests/evidence/sla-draft-import-structure.json",
+    "tests/evidence/sla-draft-import.md",
+    "tests/evidence/sla-fixture-83-audit.json",
+    "tests/evidence/sla-fixture-audit-run.json",
+    "tests/evidence/sla-fixture-audit.json",
+    "tests/evidence/sla-fixture-current-audit.json",
+    "tests/evidence/sla-reconciliation-baseline.json",
+    "tests/evidence/sla-reconciliation-checks.json",
+    "tests/evidence/sla-reconciliation.md",
+    "tests/evidence/sla-reconciliation.sha256",
+    "tests/evidence/sla-reference-69-rerun.json",
+    "tests/evidence/sla-reference-81-results.json",
+    "tests/evidence/sla-reference-83-milestone-69.json",
+    "tests/evidence/sla-reference-83-milestone-81.json",
+    "tests/evidence/sla-reference-83-original-69.json",
+    "tests/evidence/sla-reference-83-results.json",
+    "tests/evidence/sla-reference-baseline.json",
+    "tests/evidence/sla-reference-checks.json",
+    "tests/evidence/sla-reference-results.json",
+    "tests/evidence/sla-reference-run.json",
+    "tests/evidence/sla-source-comparison.json",
+    "tests/evidence/sla-verification-81-checks.json",
+    "tests/evidence/sla-verification-81.md",
+    "tests/evidence/sla-verification-83-baseline.json",
+    "tests/evidence/sla-verification-83-checks.json",
+    "tests/evidence/sla-verification-83.md",
+    "tests/evidence/sla-verification-83.sha256",
+    "tests/sla/.gitkeep",
+    "tests/sla/audit_draft_import.py",
+    "tests/sla/audit_fixture_83.py",
+    "tests/sla/audit_fixture_current.py",
+    "tests/sla/audit_fixture_structure.py",
+    "tests/sla/reference/README.md",
+    "tests/sla/reference/compare_sla_sources.py",
+    "tests/sla/reference/source/SLA_69_Draft_Verification.md",
+    "tests/sla/reference/source/SLA_Validation_Report.md",
+    "tests/sla/reference/source/sla_draft_data.json",
+    "tests/sla/reference/source/sla_validation_results.json",
+    "tests/sla/reference/validate_sla_reference.py",
+    "tests/sla/reference/validate_sla_reference_81.py",
+    "tests/sla/reference/validate_sla_reference_current.py",
+    "tests/sla/sla-scenarios.json",
+    "tests/sla/verify_sla_83_evidence.py"
+  ],
+  "authorized_doc_changes": [
+    "README.md",
+    "TASKS.md",
+    "docs/traceability.md"
+  ],
+  "missing_original_files": [],
+  "previous_evidence_preserved": [
+    "tests/evidence/backend-clean-junit.xml",
+    "tests/evidence/backend-clean-start.json",
+    "tests/evidence/backend-junit.xml",
+    "tests/evidence/backend-run.json",
+    "tests/evidence/backend-test-report.md",
+    "tests/evidence/backend-windows-20261012-131256-junit.xml",
+    "tests/evidence/backend-windows-20261012-131256.json",
+    "tests/evidence/backend-windows-http-20261012-131408-server.log",
+    "tests/evidence/backend-windows-http-20261012-131408.json",
+    "tests/evidence/backend-windows-report-20261012.md",
+    "tests/evidence/history/README.md",
+    "tests/evidence/.gitkeep",
+    "tests/evidence/history/sla-reconciliation-before-reference.md",
+    "tests/evidence/history/sla-reconciliation-before-reference.sha256",
+    "tests/evidence/sla-draft-import-baseline.json",
+    "tests/evidence/sla-draft-import-checks.json",
+    "tests/evidence/sla-draft-import-old-reference.json",
+    "tests/evidence/sla-draft-import-run.json",
+    "tests/evidence/sla-draft-import-source-comparison.json",
+    "tests/evidence/sla-draft-import-structure.json",
+    "tests/evidence/sla-draft-import.md",
+    "tests/evidence/sla-fixture-83-audit.json",
+    "tests/evidence/sla-fixture-audit-run.json",
+    "tests/evidence/sla-fixture-audit.json",
+    "tests/evidence/sla-fixture-current-audit.json",
+    "tests/evidence/sla-reconciliation-baseline.json",
+    "tests/evidence/sla-reconciliation-checks.json",
+    "tests/evidence/sla-reconciliation.md",
+    "tests/evidence/sla-reconciliation.sha256",
+    "tests/evidence/sla-reference-69-rerun.json",
+    "tests/evidence/sla-reference-81-results.json",
+    "tests/evidence/sla-reference-83-milestone-69.json",
+    "tests/evidence/sla-reference-83-milestone-81.json",
+    "tests/evidence/sla-reference-83-original-69.json",
+    "tests/evidence/sla-reference-83-results.json",
+    "tests/evidence/sla-reference-baseline.json",
+    "tests/evidence/sla-reference-checks.json",
+    "tests/evidence/sla-reference-results.json",
+    "tests/evidence/sla-reference-run.json",
+    "tests/evidence/sla-source-comparison.json",
+    "tests/evidence/sla-verification-81-checks.json",
+    "tests/evidence/sla-verification-81.md",
+    "tests/evidence/sla-verification-83-baseline.json",
+    "tests/evidence/sla-verification-83-checks.json",
+    "tests/evidence/sla-verification-83.md",
+    "tests/evidence/sla-verification-83.sha256"
+  ],
+  "execution_policy_unchanged": true,
+  "python313_executable_unchanged": true,
+  "backup_config_byte_preserved": true,
+  "owned_server_port_closed": true,
+  "git_diff_check": {
+    "argv": [
+      "git",
+      "diff",
+      "--check"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "task_new_files": [
+    {
+      "path": "tests/evidence/step1-windows-20261012-162259-baseline.json",
+      "sha256": "ff65f4a2f3cd90bdd6b24ca391decb77b4a884bcba54dd89c57c73091272842e",
+      "bytes": 21393
+    },
+    {
+      "path": "tests/evidence/step1-windows-20261012-162259-clean-freeze.log",
+      "sha256": "ce7eeb8eb1e29d0df6488ed6d0b43564729641daf3910c3199e08e549744020a",
+      "bytes": 377
+    },
+    {
+      "path": "tests/evidence/step1-windows-20261012-162259-clean-install.log",
+      "sha256": "ff660004e36554b8361c9f85424eaad16b2343564bd1ba8b2f47968a7c804879",
+      "bytes": 5238
+    },
+    {
+      "path": "tests/evidence/step1-windows-20261012-162259-clean-junit.xml",
+      "sha256": "ea1162340ee8e68040b4c8c911c704eb04fb3bd29081da968f85605db12dbf9e",
+      "bytes": 18380
+    },
+    {
+      "path": "tests/evidence/step1-windows-20261012-162259-clean-pip-check.log",
+      "sha256": "672aec65a45bed50e70229c70934a7eebf0462595c459b83023027645d57cccf",
+      "bytes": 31
+    },
+    {
+      "path": "tests/evidence/step1-windows-20261012-162259-clean-pytest.log",
+      "sha256": "a7462d1476c3828e01ba8b8896ebae53977bba4be5bc41d7003f4c1fde61e66f",
+      "bytes": 1562
+    },
+    {
+      "path": "tests/evidence/step1-windows-20261012-162259-clean-venv.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "tests/evidence/step1-windows-20261012-162259-install.json",
+      "sha256": "97cd24a55f560248c7d21682e2edc812826908cf65489736b02e8131913f7d69",
+      "bytes": 521
+    },
+    {
+      "path": "tests/evidence/step1-windows-20261012-162259-inventory.json",
+      "sha256": "a10236df02eb8883a764a148b9194956d26c16beae96667b7d529fad8a9aaa14",
+      "bytes": 2078
+    },
+    {
+      "path": "tests/evidence/step1-windows-20261012-162259-python-install.log",
+      "sha256": "00dc5f7445bde06d1714cb382429d4d59d1f251e3d1c256e39e086daa5c3c4ef",
+      "bytes": 72727
+    },
+    {
+      "path": "tests/evidence/step1-windows-20261012-162259-python-install_000_core_JustForMe.log",
+      "sha256": "365b248e2c68b66a056d6c60b9d6749db6b22bf880a4b059ef5705eaf4079f49",
+      "bytes": 89588
+    },
+    {
+      "path": "tests/evidence/step1-windows-20261012-162259-python-install_001_exe_JustForMe.log",
+      "sha256": "9608cc64292411cd28150437b6d287c6df01fa4b4905005c670044d8a49e2f79",
+      "bytes": 117908
+    },
+    {
+      "path": "tests/evidence/step1-windows-20261012-162259-python-install_002_dev_JustForMe.log",
+      "sha256": "bd231366422ccac12716fbf4bb786301deb8fb5051ec36135673bd8f1967669e",
+      "bytes": 529850
+    },
+    {
+      "path": "tests/evidence/step1-windows-20261012-162259-python-install_003_lib_JustForMe.log",
+      "sha256": "6cd4a4e087f866a840678eb2bd8ab429244d37d530b50b383c30a482a87a1358",
+      "bytes": 1531150
+    },
+    {
+      "path": "tests/evidence/step1-windows-20261012-162259-python-install_004_doc_JustForMe.log",
+      "sha256": "b82a2d0ccd1c15b6293c6aecc995d9ad676b27e725e5324f7ae7ab74f00cae1b",
+      "bytes": 1302892
+    },
+    {
+      "path": "tests/evidence/step1-windows-20261012-162259-python-install_005_tcltk_JustForMe.log",
+      "sha256": "0901fe5cf584d12ee6eddb88a9de5e48bda5ab59da6acbad5622ee4dc99c639c",
+      "bytes": 3192798
+    },
+    {
+      "path": "tests/evidence/step1-windows-20261012-162259-python-install_006_pip_JustForMe.log",
+      "sha256": "773cbe673bc6afe0bbfdff34d3b3ac5c0d440886e09da79643249d637dc7bc0e",
+      "bytes": 116656
+    },
+    {
+      "path": "tests/evidence/step1-windows-20261012-162259-repo-freeze.log",
+      "sha256": "ce7eeb8eb1e29d0df6488ed6d0b43564729641daf3910c3199e08e549744020a",
+      "bytes": 377
+    },
+    {
+      "path": "tests/evidence/step1-windows-20261012-162259-repo-install.log",
+      "sha256": "b1aa60326a6816c86df6510efb8985add217f03f93fa75571e5f5f759e0922aa",
+      "bytes": 5209
+    },
+    {
+      "path": "tests/evidence/step1-windows-20261012-162259-repo-junit.xml",
+      "sha256": "e9fe3a54dddd28ade9432648b4490251ec4580842640cce7304b9d6bee0c84e3",
+      "bytes": 18380
+    },
+    {
+      "path": "tests/evidence/step1-windows-20261012-162259-repo-pip-check.log",
+      "sha256": "672aec65a45bed50e70229c70934a7eebf0462595c459b83023027645d57cccf",
+      "bytes": 31
+    },
+    {
+      "path": "tests/evidence/step1-windows-20261012-162259-repo-pytest.log",
+      "sha256": "6f8139b80f2de42027773b1fe6cbee81b755986b4c5c8805fdf14d52f066e7f1",
+      "bytes": 1503
+    },
+    {
+      "path": "tests/evidence/step1-windows-20261012-162259-repo-venv.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "tests/evidence/step1-windows-20261012-162259-report.md",
+      "sha256": "edec46418f5565b223a2e7e9af0c01e9abacba94c894e15cf8deeb30d3af4305",
+      "bytes": 10037
+    },
+    {
+      "path": "tests/evidence/step1-windows-20261012-162259-run.json",
+      "sha256": "0387bf5cabb0bc76f5ca3eef66e0cc4b9d8a0bed3ca9818a10f5c25c9790786d",
+      "bytes": 93739
+    },
+    {
+      "path": "tests/evidence/step1-windows-20261012-162259-server.log",
+      "sha256": "d24c0510830a794f7e62b0f692b7d44e7fccbcc958d138488311a74861a1f7a3",
+      "bytes": 2027
+    },
+    {
+      "path": "tests/evidence/step1_windows_runner.py",
+      "sha256": "400426a3e36a3f834e1bec7d8c749145cce9c413c74f804a96657ea16782b04d",
+      "bytes": 11963
+    }
+  ],
+  "manifest_excludes_own_file": "step1-windows-20261012-162259-final-check.json",
+  "retained_directories": [
+    ".venv",
+    ".venv-backup-20261012-162259",
+    ".clean-start-20261012-162259"
+  ],
+  "fixture_sha256": "6e75371714e5589eb78c45b0df3eb69595f2dfcc9362c9398b8c11989c0756ee"
+}

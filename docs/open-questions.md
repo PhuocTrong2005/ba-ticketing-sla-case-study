@@ -1,6 +1,10 @@
 # Open questions
 
-## Đang mở
+## Hiện hành — 12/10/2026
+
+Chủ dự án đã duyệt báo cáo rà soát, bốn nhóm contract và thiết kế/backend; blocker payload API-01/API-02 được giải quyết bằng BR-62/63. Không còn blocker quyết định của phần backend này. Các đoạn bên dưới là lịch sử, không chặn contract đã duyệt.
+
+## Lịch sử
 
 Không có câu hỏi quyết định nghiệp vụ mới. OQ-20/OQ-21 vẫn đã đóng.
 

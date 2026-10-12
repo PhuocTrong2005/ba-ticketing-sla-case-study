@@ -1,6 +1,6 @@
-# Non-functional Requirements v1.0 (nháp)
+# Non-functional Requirements v1.0 (đã duyệt)
 
-Mọi NFR là `draft`. Không có mục nào đặt mục tiêu hiệu năng, uptime, tải hay quy mô mới; bất kỳ ngưỡng mới nào cần được chủ dự án chốt trước khi có hiệu lực.
+NFR được chủ dự án duyệt ngày 12/10/2026; trạng thái approved. Không có mục nào đặt mục tiêu hiệu năng, uptime, tải hay quy mô mới; bất kỳ ngưỡng mới nào cần được chủ dự án chốt trước khi có hiệu lực.
 
 ## NFR-01 — Bảo vệ dữ liệu và thực thi quyền
 
@@ -10,7 +10,7 @@ Mọi NFR là `draft`. Không có mục nào đặt mục tiêu hiệu năng, up
 
 ## NFR-02 — Tính toàn vẹn và atomicity
 
-- Yêu cầu: Nhận ticket cạnh tranh và giao dịch từ chối tạo review phải nguyên tử; không có trạng thái cuối vi phạm giới hạn tải, nhiều Agent phụ trách hoặc nhiều review mở.
+- Yêu cầu: Nhận ticket cạnh tranh và giao dịch từ chối tạo review phải nguyên tử; nhận mới không được gây vượt 3; Customer đưa ticket trở lại vẫn được phép quá tải theo BR-14. Không có nhiều Agent phụ trách hoặc nhiều review mở.
 - Kiểm chứng dự kiến: ca đồng thời, kiểm tra kết quả từng thao tác và trạng thái dữ liệu cuối; ca từ chối lần ba/các lần tiếp theo.
 - Liên kết: BR-15, BR-52; FR-03, FR-06; US-02/05; AC-08…AC-09, AC-23.
 
@@ -32,7 +32,7 @@ Mọi NFR là `draft`. Không có mục nào đặt mục tiêu hiệu năng, up
 - Kiểm chứng dự kiến: sau khi được phép viết logic, chạy lại cùng fixture với đồng hồ inject được và so sánh kết quả; không coi đây là kiểm chứng backend đã có.
 - Liên kết: BR-18, BR-23, BR-27…BR-29; FR-05, FR-07, FR-08; D-09, D-16.
 
-## NFR-06 — Khả dụng của prototype demo
+## NFR-06 — Khả năng sử dụng prototype demo
 
 - Yêu cầu: Prototype tĩnh phải trình bày trạng thái, bộ đếm và lỗi rõ ràng theo BR-40…BR-41; không giả vờ gọi API thật hoặc có đăng nhập thật.
 - Kiểm chứng dự kiến: review giao diện theo luồng documented sau khi prototype được xây; kiểm tra mô tả mô phỏng/giới hạn.
@@ -43,3 +43,5 @@ Mọi NFR là `draft`. Không có mục nào đặt mục tiêu hiệu năng, up
 - Yêu cầu: Không tự áp số liệu hiệu năng, uptime, số người dùng, giới hạn dung lượng hoặc SLA kỹ thuật. Các ngưỡng loại này là TBD và chỉ có hiệu lực sau decision log.
 - Kiểm chứng dự kiến: review tài liệu/decision log trước khi triển khai.
 - Liên kết: BR-01, D-08; scope v1.0.
+
+Contract và các làm rõ áp dụng theo BR-62…BR-64; validation cấu trúc có ngoại lệ BR-33. Prototype chưa được kiểm thử; ngưỡng hiệu năng/uptime vẫn TBD.

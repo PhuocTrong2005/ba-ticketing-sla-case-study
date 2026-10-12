@@ -1,0 +1,40 @@
+{
+  "executed_at_runtime_utc": "2026-10-12T05:46:46.954007+00:00",
+  "python": "3.12.14",
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+  "method": "Fresh temporary source directory plus newly created virtualenv; pip install pinned requirements; full pytest; deterministic seed; launch actual Uvicorn and call /docs, /tickets and /openapi.json over loopback HTTP",
+  "dependency_install_exit_code": 0,
+  "test_exit_code": 0,
+  "test_stdout": "........................................................................ [ 39%]\n........................................................................ [ 79%]\n.....................................                                    [100%]\n=============================== warnings summary ===============================\n.venv/lib/python3.12/site-packages/starlette/testclient.py:37\n  /tmp/ticketing-isolated-3c_nwpra/.venv/lib/python3.12/site-packages/starlette/testclient.py:37: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.\n    _PortalFactoryType = typing.Callable[[], typing.ContextManager[anyio.abc.BlockingPortal]]\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n----- generated xml file: /tmp/ticketing-isolated-3c_nwpra/clean-junit.xml -----\n181 passed, 1 warning in 5.18s\n",
+  "test_stderr": "",
+  "seed_stdout": "Created 4 scenario tickets; users 1/2 Customers, 3/4/5 Agents, 6 Manager.\n",
+  "seed_exit_code": 0,
+  "seeded_tickets": 4,
+  "http_smoke": "PASS",
+  "dependencies": [
+    "annotated-types==0.8.0",
+    "anyio==4.15.1",
+    "certifi==2026.7.22",
+    "click==8.5.0",
+    "fastapi==0.115.12",
+    "h11==0.16.0",
+    "httpcore==1.0.9",
+    "httpx==0.28.1",
+    "idna==3.20",
+    "iniconfig==2.3.1",
+    "packaging==26.3",
+    "pluggy==1.6.0",
+    "pydantic==2.14.1",
+    "pydantic_core==2.50.1",
+    "pytest==8.3.5",
+    "starlette==0.46.2",
+    "typing-inspection==0.4.4",
+    "typing_extensions==4.16.0",
+    "tzdata==2025.2",
+    "uvicorn==0.34.2"
+  ],
+  "limitations": [
+    "Linux/Python 3.12 only; Windows has not been verified",
+    "No prototype, Postman/Newman, deployment or load/availability benchmark"
+  ]
+}

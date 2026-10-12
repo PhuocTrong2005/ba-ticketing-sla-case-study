@@ -1,0 +1,39 @@
+﻿{
+    "searched_locations":  [
+                               "PATH",
+                               "HKCU/HKLM PythonCore InstallPath",
+                               "HKLM WOW6432Node PythonCore",
+                               "Program Files",
+                               "Program Files (x86)",
+                               "LocalAppData/Programs",
+                               "AppData/Python",
+                               ".local/share/uv/python",
+                               "LocalAppData/uv/python",
+                               "Temp/ba-ticketing-sla-windows-tools"
+                           ],
+    "python_launcher":  "py not found",
+    "candidates":  [
+                       {
+                           "path":  "C:\\Program Files\\Python313\\python.exe",
+                           "product_version":  "3.13.3",
+                           "file_version":  "3.13.3"
+                       },
+                       {
+                           "path":  "C:\\Program Files\\MySQL\\MySQL Workbench 8.0 CE\\python.exe",
+                           "product_version":  "3.12.2",
+                           "file_version":  "3.12.2"
+                       },
+                       {
+                           "path":  "C:\\Users\\ASUS\\AppData\\Local\\Temp\\ba-ticketing-sla-windows-tools\\python\\cpython-3.12.15-windows-x86_64-none\\python.exe",
+                           "product_version":  "3.12.15",
+                           "file_version":  "3.12.15"
+                       },
+                       {
+                           "path":  "C:\\Users\\ASUS\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+                           "product_version":  "3.12.10",
+                           "file_version":  "3.12.10"
+                       }
+                   ],
+    "selection":  "Official standalone per-user Python 3.12.10; MySQL-bundled Python 3.12.2 left unchanged",
+    "limits":  "Targeted standard install locations and prior tools directory; not an exhaustive scan of every drive"
+}

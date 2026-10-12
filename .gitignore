@@ -1,0 +1,16 @@
+.venv/
+__pycache__/
+.pytest_cache/
+*.pyc
+*.sqlite3
+*.sqlite3-wal
+*.sqlite3-shm
+
+# Retained local environments and source copy from Windows clean-start checks.
+.venv-backup-*/
+.clean-start-*/
+
+# Raw installer diagnostics and empty venv logs remain local; metadata is shared.
+tests/evidence/step1-windows-*-python-install*.log
+tests/evidence/step1-windows-*-repo-venv.log
+tests/evidence/step1-windows-*-clean-venv.log

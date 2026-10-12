@@ -1,0 +1,56 @@
+{
+  "kind": "Backend implementation execution, separate from historical reference",
+  "executed_at_runtime_utc": "2026-10-12T05:51:20.493222+00:00",
+  "base_commit": "9688b7889df0d91b1bb9d26d3626b283945d9d5e",
+  "command": "python -m pytest -q --junitxml=tests/evidence/backend-junit.xml",
+  "exit_code": 0,
+  "python_version": "3.12.14",
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+  "tests": 181,
+  "failures": 0,
+  "errors": 0,
+  "groups": {
+    "test_sla": 85,
+    "test_api": 87,
+    "test_integrity": 5,
+    "test_reports": 4
+  },
+  "fixture_unchanged_from_base": true,
+  "fixture_sha256": "6e75371714e5589eb78c45b0df3eb69595f2dfcc9362c9398b8c11989c0756ee",
+  "source_hashes": {
+    "api/openapi.json": "c896181300cf60c618e1271b4612842a6afdb725fb78921f0d44bc92b7d37470",
+    "backend/__init__.py": "c0d121c0c05b4a634a4994a53fe8933e84d596d43b7de5e69c191b3379e01d09",
+    "backend/app.py": "ba48dae31178ea14d6d67d3c8432f6f3c010db72de5c37374cb5ddd4ff43a97f",
+    "backend/reports.py": "484db9c95b12b0a40b47e29dcd883f09084480852c65dde6d082bdae5f9555c1",
+    "backend/schema.sql": "722866b35d8d6d47de12bb07265b14c93cd0524b7d74bac198830c17dd9e16f7",
+    "backend/seed.py": "460780c4d8143c31493f19b90a67b0140e7b7f7088bc805d016850e1f90eb0ab",
+    "backend/sla.py": "8f6712ce4463c30e22c3f3ccfc6a5c8eda08b29ccb1c091fb243bff50e77b681",
+    "backend/store.py": "4eb1c548075b903be4d98d35dff9ee003388e30c0efdcdaa3ebf8bd26c0bd4b6",
+    "pytest.ini": "c57a3de0fcdd47cfa1e9eecfca90ea346b6fedcb47ed80ca5a2a9b57d74c4cd3",
+    "requirements.txt": "1fdf441628ed457bfe3075e137c3153159efa39080f5fbd06c48594441b0fd89",
+    "sql/README.md": "eec7b26f61e78f60a51e5b3c4ae75555aa70707c08123627f2e4091e09134238",
+    "sql/queries/m01.sql": "441b51801446e0c2d8ab885ef5ff15ba46e91ab851631297be902e5eb18e10df",
+    "sql/queries/m02.sql": "9a608d69a6499adb2e10ced8f182324d54a96a3721f8d889043dbffc9ab87ca9",
+    "sql/queries/m03.sql": "17c9b370a55cd4935c2973b6e8f7a500030c1d1112d35c663dae87984c4e53a6",
+    "sql/queries/m06.sql": "e45cf12f4224ec28c134185f4e95c61e0be53ee28cad5e8fb7e469a11af46392",
+    "tests/backend/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "tests/backend/conftest.py": "c4fa9abfda926d12ac2935ab24100296da34f733ab8bb8d9296db55275632b7a",
+    "tests/backend/test_api.py": "be7affff643acf633b44cfa7afb69c2e4f41ee6fdeca671cf1b094bb78ba5c52",
+    "tests/backend/test_integrity.py": "66ab052fadfdc25d1a88b8ed7de3a8cfb0ece6bb3a146bcdea524506d7ccd868",
+    "tests/backend/test_reports.py": "6316093d6f45e5cdcf3a3db7a2336b4ab9e087e96e0fb12a01230556bfa084e2",
+    "tests/backend/test_sla.py": "446dcf90e58c22c59313db1d853aacc314a731d46fcbc003eb5babd960644d47",
+    "tests/sla/sla-scenarios.json": "6e75371714e5589eb78c45b0df3eb69595f2dfcc9362c9398b8c11989c0756ee"
+  },
+  "evidence_hashes": {
+    "tests/evidence/backend-junit.xml": "c7f05ff9b0fe4f5c2bc25a744d4651dc161922954ecfdffac953a9f8db4baeeb",
+    "tests/evidence/backend-clean-start.json": "325a2318967d928e29b04648bd88093630f59b52bab2be96d5210fae9a4043ce",
+    "tests/evidence/backend-clean-junit.xml": "bd81720239e4d88e42694b0f6882ae2ec6ab569259c7bfecdfc93973d21ac0b7"
+  },
+  "limitations": [
+    "AI assistant execution, not execution by project owner",
+    "Fixture HTTP adapter adds deterministic actors/text without editing expected values",
+    "Two specified claim races, not a load/stress benchmark",
+    "Linux/Python 3.12 and timezone fallback tested; Windows not verified",
+    "Prototype/Postman/Newman/video/deployment not tested; v1.0 incomplete"
+  ]
+}

@@ -1,13 +1,13 @@
-# Functional Requirements v1.0 (nháp)
+# Functional Requirements v1.0 (đã duyệt)
 
-Mọi FR trong tài liệu này là `draft`. Business rules là nguồn chính sách; FR chỉ diễn giải hành vi cần có, không thay thế hoặc đổi quy tắc SLA. Fixture SLA không phải test API/backend.
+FR được chủ dự án duyệt ngày 12/10/2026; trạng thái approved. Business rules là nguồn chính sách; FR chỉ diễn giải hành vi cần có, không thay thế hoặc đổi quy tắc SLA. Fixture SLA không phải test API/backend.
 
 ## FR-01 — Tạo và truy cập ticket Customer
 
 - Hành vi: Customer tạo ticket High/Normal, xem ticket của mình và trao đổi công khai theo trạng thái hợp lệ.
 - Vai trò: Customer.
 - Điều kiện: Danh tính demo hợp lệ; ticket truy cập thuộc Customer.
-- Đầu vào / đầu ra: ưu tiên khi tạo; trả ticket với `policy_id` cố định, trạng thái New và dữ liệu công khai được phép xem.
+- Đầu vào / đầu ra: title/description không trắng, priority HIGH/NORMAL theo BR-62; trả ticket với `policy_id` cố định, trạng thái New và dữ liệu công khai được phép xem.
 - Lỗi: 401 danh tính sai/thiếu; 404 ticket không tồn tại hoặc không thuộc Customer; 409 `INVALID_TICKET_STATE`/`TICKET_CLOSED` cho thao tác không hợp lệ; 422 khi thiếu nội dung/lý do bắt buộc.
 - Ưu tiên: Must.
 - Liên kết: BR-03, BR-07…BR-11, BR-32…BR-33, BR-36, BR-50; US-01; AC-01…AC-05.
@@ -50,7 +50,7 @@ Mọi FR trong tài liệu này là `draft`. Business rules là nguồn chính s
 - Đầu vào / đầu ra: `policy_id`, sự kiện, `as_of`; trả dữ liệu SLA dẫn xuất/hiển thị đúng quyền. `remaining_seconds` không âm; `consumed_seconds` giữ giá trị thật.
 - Lỗi: Không có mã lỗi SLA riêng được chốt; lỗi thao tác nguồn áp dụng FR-01…FR-04.
 - Ưu tiên: Must.
-- Liên kết: BR-16…BR-26, BR-38…BR-41, BR-46…BR-49, BR-59…BR-61; US-04; AC-17…AC-22; SLA-01…SLA-57 fixture.
+- Liên kết: BR-16…BR-26, BR-38…BR-41, BR-46…BR-49, BR-59…BR-61; US-04; AC-17…AC-22; SLA-01…SLA-83 fixture.
 
 ## FR-06 — Escalation và review Manager
 
@@ -60,7 +60,7 @@ Mọi FR trong tài liệu này là `draft`. Business rules là nguồn chính s
 - Đầu vào / đầu ra: reject, chuyển trạng thái, `handling_plan`; trả review mở/hoàn tất và trạng thái ticket đúng quy tắc.
 - Lỗi: 403 Agent ghi phương án; 404 Customer truy cập review; 409 `REVIEW_REQUIRED`, `INVALID_TICKET_STATE`, `TICKET_CLOSED`; 422 thiếu trường bắt buộc.
 - Ưu tiên: Must.
-- Liên kết: BR-05, BR-21, BR-52…BR-58; US-05; AC-23…AC-27; SLA-58…SLA-69 fixture.
+- Liên kết: BR-05, BR-21, BR-52…BR-58; US-05; AC-23…AC-27; SLA-58…SLA-69, SLA-79…SLA-81 fixture.
 
 ## FR-07 — Báo cáo M-01 đến M-07
 
@@ -69,18 +69,18 @@ Mọi FR trong tài liệu này là `draft`. Business rules là nguồn chính s
 - Điều kiện: Áp dụng kỳ chọn theo BR-35; M-07 tính tại `as_of`; không tạo xếp hạng/điểm Agent.
 - Đầu vào / đầu ra: kỳ/bộ lọc/as_of; trả M-01…M-07 cùng ngữ cảnh và cách đọc giới hạn.
 - Lỗi: Không có mã lỗi báo cáo riêng được chốt; quyền áp dụng FR-02.
-- Ưu tiên: Should.
+- Ưu tiên: Must.
 - Liên kết: BR-05, BR-13, BR-35, BR-42, BR-49, BR-56; US-06; AC-28…AC-31.
 
 ## FR-08 — Dữ liệu sự kiện và dữ liệu SLA dẫn xuất
 
 - Hành vi: Ghi lịch sử sự kiện bổ sung; dựng/cập nhật dữ liệu dẫn xuất SLA từ lịch sử mà không sửa độc lập dữ liệu dẫn xuất.
 - Vai trò: Hệ thống.
-- Điều kiện: `event_id` do database cấp; timestamp/interval tuân thủ quy tắc giây; khoảng chạy 0 giây vẫn có thể lưu.
+- Điều kiện: `event_id` do database cấp; timestamp/interval tuân thủ quy tắc giây; khoảng chạy 0 giây phải được giữ; khoảng mở không lưu giây động.
 - Đầu vào / đầu ra: sự kiện gốc; trả/lưu interval, consumed, remaining, deadline và trạng thái dựng lại được.
-- Lỗi: Client không được gửi `event_id`; chi tiết contract lỗi chưa được chốt, áp dụng 422 khi payload sai theo BR-32.
+- Lỗi: Client không được gửi event_id, actor, assignee, status hoặc timestamp; trường dư trả 422 theo BR-62.
 - Ưu tiên: Must.
-- Liên kết: BR-25, BR-27…BR-31, BR-47; US-04; AC-22.
+- Liên kết: BR-25, BR-27…BR-31, BR-47; US-04; AC-22, AC-34.
 
 ## FR-09 — Hiển thị trạng thái quá hạn và thời gian
 
@@ -89,5 +89,7 @@ Mọi FR trong tài liệu này là `draft`. Business rules là nguồn chính s
 - Điều kiện: Dữ liệu SLA đã dẫn xuất; Customer không nhận cảnh báo.
 - Đầu vào / đầu ra: trạng thái/remaining SLA; trả nhãn quá hạn và thời lượng hiển thị phù hợp bối cảnh.
 - Lỗi: Không có mã lỗi riêng được chốt.
-- Ưu tiên: Should.
-- Liên kết: BR-40…BR-41, BR-49; US-04; AC-21.
+- Ưu tiên: Must.
+- Liên kết: BR-40…BR-41, BR-49; US-04; AC-32.
+
+Contract và các làm rõ áp dụng theo BR-62…BR-64; validation cấu trúc có ngoại lệ BR-33. Prototype chưa được kiểm thử; ngưỡng hiệu năng/uptime vẫn TBD.

@@ -15,18 +15,18 @@
 
 | Mã | Hạng mục | Phụ thuộc | Trạng thái |
 |---|---|---|---|
-| DOC-01 | Hoàn thiện yêu cầu, traceability và decision log. | Quyết định chủ dự án | Đang có khung |
+| DOC-01 | Hoàn thiện yêu cầu, traceability và decision log. | Quyết định chủ dự án | Đã duyệt và sửa theo xác nhận 12/10/2026; traceability có test planned và evidence riêng |
 | DOC-02 | Tài liệu [As-Is](docs/02-process/as-is.md), [To-Be](docs/02-process/to-be.md), [vòng đời ticket](docs/02-process/ticket-states.md); [nguồn BPMN hai trang](docs/02-process/support-processes.drawio) và ảnh xuất tương ứng. | Nội dung và sơ đồ chủ dự án cung cấp | Hoàn thành theo xác nhận chủ dự án ngày 12/10/2026; chỉ phần tài liệu quy trình và sơ đồ |
-| SLA-01 | 83 fixture verified; giữ nguyên 81 ca cũ. Checker 83 PASS / 0 FAIL, 1.496 so sánh; thêm 5 phép biên SLA-83 tại 08:00:00 đạt. Mốc 69/81 lần lượt 1.243/1.460 phép, đều PASS. [Báo cáo hiện hành](tests/evidence/sla-verification-83.md). | `docs/spec/scenario-coverage.md`, D-33/D-39/D-40 | Gate SLA chính mở; gate tính M-07 đủ điều kiện viết logic; chưa triển khai code |
-| DATA-01 | Thiết kế schema và dựng lại dữ liệu dẫn xuất từ sự kiện; lưu số giây còn lại tại mỗi lần Resolved để kiểm chứng quy tắc không quy lỗi Agent khi Customer từ chối lúc hết ngân sách. | SLA-01 | Chưa bắt đầu |
-| DATA-02 | Thiết kế bảng `ticket_reviews`; lưu số giây còn lại tại mỗi lần Resolved nếu DATA-01 chưa bao phủ. | SLA-01 | Chưa bắt đầu |
-| API-01 | Xác định hợp đồng API và kiểm tra phân quyền backend. | DOC-01, SLA-01 | Chưa bắt đầu |
-| API-02 | Kiểm tra `REVIEW_REQUIRED`; Agent chuyển Waiting khi review mở; Manager ghi phương án ở Waiting; Manager/Agent/Customer ghi phương án (Customer 404, Agent 403); `INVALID_TICKET_STATE`/`TICKET_CLOSED` khi không có review mở; tính nguyên tử từ chối và tạo review. | DOC-01, SLA-01 | Chưa bắt đầu |
+| SLA-01 | 83 fixture verified; giữ nguyên 81 ca cũ. Checker 83 PASS / 0 FAIL, 1.496 so sánh; thêm 5 phép biên SLA-83 tại 08:00:00 đạt. Mốc 69/81 lần lượt 1.243/1.460 phép, đều PASS. [Báo cáo hiện hành](tests/evidence/sla-verification-83.md). | `docs/spec/scenario-coverage.md`, D-33/D-39/D-40 | Gate mở; đã triển khai và đối chiếu 83 fixture trên backend; checker cũ giữ nguyên bằng chứng |
+| DATA-01 | Thiết kế schema và dựng lại dữ liệu dẫn xuất từ sự kiện; lưu số giây còn lại tại mỗi lần Resolved để kiểm chứng quy tắc không quy lỗi Agent khi Customer từ chối lúc hết ngân sách. | SLA-01 | Đã có schema/replay và snapshot mỗi Resolved; xem backend test report |
+| DATA-02 | Thiết kế bảng `ticket_reviews`; lưu số giây còn lại tại mỗi lần Resolved nếu DATA-01 chưa bao phủ. | SLA-01 | Đã triển khai review theo chu kỳ, snapshot Resolved được DATA-01 phủ |
+| API-01 | Xác định hợp đồng API và kiểm tra phân quyền backend. | DOC-01, SLA-01 | Đã có contract/OpenAPI và kiểm thử HTTP; xem evidence implementation |
+| API-02 | Kiểm tra `REVIEW_REQUIRED`; Agent chuyển Waiting khi review mở; Manager ghi phương án ở Waiting; Manager/Agent/Customer ghi phương án (Customer 404, Agent 403); `INVALID_TICKET_STATE`/`TICKET_CLOSED` khi không có review mở; tính nguyên tử từ chối và tạo review. | DOC-01, SLA-01 | Đã thực thi A1/A2, REVIEW_REQUIRED, quyền/nội dung và rollback; xem evidence |
 | PROTO-01 | Xây prototype tĩnh cho luồng chính. | DOC-01 | Chưa bắt đầu |
-| CON-01 | Chứng minh hai ca nhận đồng thời. | DATA-01, API-01 | Chưa bắt đầu |
-| RPT-01 | Báo cáo SQL khớp dữ liệu mẫu. | DATA-01 | Chưa bắt đầu |
-| RPT-02 | Báo cáo M-07 về chờ Manager review. | DATA-02 | Chưa bắt đầu |
-| EVD-01 | Thu thập bằng chứng kiểm thử hợp lệ và hoàn chỉnh ma trận truy vết. | Các hạng mục liên quan | Chưa bắt đầu |
+| CON-01 | Chứng minh hai ca nhận đồng thời. | DATA-01, API-01 | Đã kiểm thử hai tình huống bằng threads/kết nối riêng, SQLite file và barrier |
+| RPT-01 | Báo cáo SQL khớp dữ liệu mẫu. | DATA-01 | Đã triển khai SQL trên snapshot as_of và kiểm thử dữ liệu xác định |
+| RPT-02 | Báo cáo M-07 về chờ Manager review. | DATA-02 | Đã triển khai và kiểm thử M-07; không phải SQL thuần cho phép giao khoảng |
+| EVD-01 | Thu thập bằng chứng kiểm thử hợp lệ và hoàn chỉnh ma trận truy vết. | Các hạng mục liên quan | Đã có bằng chứng backend; prototype/Postman/video chưa làm |
 
 ## Bổ sung sau nhập S1–S12 — 08/10/2026 (lịch sử lúc còn draft)
 
@@ -49,3 +49,11 @@
 **Gate logic SLA chính: mở cho việc viết logic theo AGENTS/D-33.** Nhóm 1–11 đều có ca verified và bảng nhóm → mã không còn nhóm trống. SLA-82 đóng nhánh Customer resume ngay cuối tuần; SLA-83 đóng nhánh resume ngoài giờ với 0 giây nhưng chưa từng breached và mốc sau hạn 08:00:01. Đối chiếu phụ cùng events tại 08:00:00 xác nhận pending/due; không thêm ca hoặc tự xác nhận đáp án. Các nhánh còn lại đã được đối soát ở mốc 81; không còn blocker coverage cho logic SLA chính. Không đổi tiêu chí gate. Gate tính M-07 tiếp tục đủ điều kiện viết logic theo đánh giá mốc 81. API A1/A2, HTTP REVIEW_REQUIRED, payload/quyền/atomicity và các tiêu chí hoàn thành v1.0 vẫn chưa kiểm thử; đây không phải blocker mới cho gate phép tính và không phải xác nhận hoàn thành backend.
 
 Các ghi chú 08/10 phía trên giữ nguyên như lịch sử; yêu cầu hiện tại cho phép nhập đúng SLA-82/SLA-83 verified và thay kết luận gate cũ. Không tự thêm ca ngoài hai ca đã được xác nhận.
+
+## Hiện hành — triển khai backend 12/10/2026
+
+Các mục chưa triển khai ở phần lịch sử 08/10 và 10/10 không còn là trạng thái backend hiện tại. Kết quả thực thi nằm trong [backend test report](tests/evidence/backend-test-report.md); prototype/Postman/video vẫn chưa làm, v1.0 chưa hoàn thành. Fixture 83 verified giữ nguyên; không tạo scenario mới.
+
+### Bước 1 — ổn định Python và clean-start Windows, 12/10/2026
+
+Hoàn tất phần môi trường: Python 3.12.10 chính thức cài theo người dùng ngoài Temp; giữ `.venv-backup-20261012-162259` và tạo `.venv` mới. Repo gốc và `.clean-start-20261012-162259` đều `pip check` PASS, pytest 181/181 PASS. Clean-start dùng source hiện tại gồm file chưa commit, database mới, Uvicorn riêng; HTTP docs/OpenAPI, luồng Closed và quyền riêng tư Customer đạt. SHA-256 fixture 83 ca và mọi evidence cũ giữ nguyên. [Báo cáo bước 1](tests/evidence/step1-windows-20261012-162259-report.md) ghi lệnh, kết quả, giới hạn và danh sách file riêng. Chưa làm prototype/Postman/video/deploy; chưa commit/push và chưa hoàn thành v1.0.

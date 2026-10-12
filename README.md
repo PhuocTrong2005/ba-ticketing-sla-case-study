@@ -19,17 +19,47 @@ Tài liệu quy trình đã hoàn thành theo xác nhận chủ dự án: [As-Is
 
 ## Cách chạy
 
-Sẽ cập nhật khi prototype, backend và hướng dẫn chạy đã được xây dựng, kiểm tra thực tế từ một thư mục mới.
+Python 3.12 (môi trường đã kiểm tra). Từ thư mục repo, tạo virtualenv rồi gọi Python của môi trường đó.
+
+Windows PowerShell đã kiểm tra ngày 12/10/2026 với Python 3.12.10 cài theo người dùng ở vị trí ổn định. Dùng đường dẫn Python 3.12 đã cài trên máy của bạn; không chạy lệnh tạo lại nếu `.venv` đã tồn tại cần giữ:
+
+```powershell
+& "$env:LOCALAPPDATA\Programs\Python\Python312\python.exe" -m venv .venv
+& .\.venv\Scripts\python.exe -m pip install -r requirements.txt
+& .\.venv\Scripts\python.exe -m pip check
+& .\.venv\Scripts\python.exe -m pytest
+& .\.venv\Scripts\python.exe -m uvicorn backend.app:app --host 127.0.0.1 --port 8000
+```
+
+Không cần activation hoặc đổi ExecutionPolicy. Trên hệ thống khác, sau khi tạo và kích hoạt virtualenv:
+
+```bash
+python -m pip install -r requirements.txt
+python -m pytest
+python -m uvicorn backend.app:app --port 8000
+```
+
+Mở http://127.0.0.1:8000/docs. Header `X-Demo-User-Id`: Customer 1/2, Agent 3/4/5, Manager 6. Không phải đăng nhập thật. SQLite tự tạo tại data/ticketing.sqlite3; có thể đặt biến môi trường TICKETING_DB để chọn file khác.
+
+Tùy chọn trước khi chạy API: `python -m backend.seed` tạo 4 tình huống demo trên database chưa có ticket, không xóa dữ liệu có sẵn. Seed có timestamp cố định 12/10/2026 08:00 UTC+7, không đại diện dữ liệu doanh nghiệp thật.
+
+Thiết kế: [ERD/data dictionary](docs/04-data-api/data-design.md), [API contract](docs/04-data-api/api-contract.md), [OpenAPI](api/openapi.json), [SQL](sql/README.md). Prototype chưa xây.
 
 ## Kiểm thử
 
-### Trạng thái hiện hành — mốc commit 4769e84
+### Backend implementation — 12/10/2026
+
+Yêu cầu và thiết kế đã được chủ dự án duyệt. FastAPI/SQLite có workflow, quyền, hai SLA, review, sự kiện/projection và báo cáo M-01…M-07. Kết quả thực thi và giới hạn: [backend test report](tests/evidence/backend-test-report.md); không gán kết quả prototype vào backend.
+
+Bước 1 Windows với Python nền ổn định: pytest **181/181 PASS** tại repo và thư mục source mới có cả backend chưa commit; `pip check` đạt ở cả hai môi trường. `/docs`, `/openapi.json`, luồng tạo → nhận → Resolved → Closed và kiểm tra Customer không thấy SLA/cảnh báo/ghi chú/review nội bộ đã chạy qua HTTP thật. [Báo cáo và giới hạn](tests/evidence/step1-windows-20261012-162259-report.md), [JUnit repo](tests/evidence/step1-windows-20261012-162259-repo-junit.xml), [JUnit clean-start](tests/evidence/step1-windows-20261012-162259-clean-junit.xml). Fixture 83 ca và bằng chứng cũ giữ nguyên byte; virtualenv dự phòng và thư mục kiểm tra vẫn được giữ. Kết quả này chỉ hoàn tất bước ổn định môi trường/clean-start, không xác nhận toàn bộ v1.0.
+
+### Đối chiếu fixture trước triển khai — mốc commit 4769e84
 
 Fixture hiện có **83 verified, 0 draft**. Theo [báo cáo đối chiếu 83 ca](tests/evidence/sla-verification-83.md), checker tham chiếu đạt **83 PASS, 0 FAIL, 1.496 phép so sánh**; đối chiếu phụ SLA-83 tại **08:00:00 đạt 5 phép so sánh**, ghi riêng với kết quả chính tại `as_of=08:00:01`. Đây là kết quả đã ghi nhận ở commit `4769e84`, không phải lần chạy mới khi cập nhật README.
 
 Theo [coverage hiện hành ngày 10/10/2026](docs/spec/scenario-coverage.md#nhập-sla-82-và-sla-83--10102026), **gate logic SLA chính đã mở cho việc viết logic**; **gate tính bối cảnh M-07 đủ điều kiện viết logic**. SLA-82/SLA-83 đã phủ hai nhánh Waiting còn thiếu và biên 08:00:01. Gate mở không đồng nghĩa backend đã được triển khai hoặc kiểm thử.
 
-Xác nhận đáp án của chủ dự án qua hội thoại được ghi riêng với kết quả chạy công cụ tham chiếu do Codex thực hiện; không suy ra phương pháp tự tính hoặc bằng chứng chủ dự án tự chạy công cụ. A1/A2, HTTP `REVIEW_REQUIRED`, quyền/nội dung và tính nguyên tử vẫn cần API test riêng. Workflow review không bị gate phép tính chặn theo D-33. Trạng thái truy vết tại [docs/traceability.md](docs/traceability.md).
+Xác nhận đáp án của chủ dự án qua hội thoại được ghi riêng với kết quả chạy công cụ tham chiếu do Codex thực hiện; không suy ra phương pháp tự tính hoặc bằng chứng chủ dự án tự chạy công cụ. Tại mốc này A1/A2, HTTP `REVIEW_REQUIRED`, quyền/nội dung và tính nguyên tử chưa có API test; kết quả implementation hiện hành nằm trong backend test report. Workflow review không bị gate phép tính chặn theo D-33. Trạng thái truy vết tại [docs/traceability.md](docs/traceability.md).
 
 Hướng dẫn chạy checker cho các mốc 69/81/83 và audit cấu trúc hiện hành nằm trong [README công cụ tham chiếu](tests/sla/reference/README.md). Audit cấu trúc không tính SLA; đối chiếu fixture không phải test implementation.
 
@@ -43,7 +73,7 @@ Ngày 08/10/2026, sau [lần nhập nháp](tests/evidence/sla-draft-import.md), 
 
 ## Phần đã làm, mô phỏng và giới hạn
 
-Hiện repository có tài liệu nền, decision log, open questions, fixture, audit cấu trúc và checker tham chiếu độc lập đã chạy. Chưa có backend/API, SQL, prototype, test implementation hoặc workflow thực thi. Khi được xây dựng, prototype sẽ mô phỏng dữ liệu trong trình duyệt; backend là mô phỏng dùng dữ liệu demo cố định, không có đăng nhập thật.
+Hiện repository có tài liệu nền, decision log, open questions, fixture, audit cấu trúc và checker tham chiếu độc lập đã chạy. Đã có backend/API, SQL tổng hợp trên snapshot và test implementation. Prototype, Postman collection và video demo chưa làm; prototype sẽ mô phỏng độc lập trong trình duyệt. Backend dùng danh tính demo cố định, không có đăng nhập thật. Chưa xác nhận hoàn thành toàn bộ v1.0.
 
 Giới hạn đã biết: Ticket High có SLA phản hồi đầu 3.600 giây; ngưỡng cảnh báo cố định 3.600 giây nên cảnh báo nhẹ xuất hiện sau giây làm việc đầu tiên (còn 3.599 giây) và gần như toàn bộ thời hạn phản hồi đầu của High ở trạng thái cảnh báo. SLA phản hồi đầu Normal 7.200 giây: 3.600 giây đầu chưa cảnh báo. Từ chối trong giờ với ngân sách 0 giây khiến ticket thành breached ngay sau thời điểm quay lại; M-02/M-03 chỉ gồm ticket Closed trong kỳ nên ticket chưa Closed chưa được tính và báo cáo có dòng “Còn N ticket chưa Closed, chưa tính vào các tỷ lệ này”. Escalation dùng một Manager demo, không có người thay thế; không bảo đảm giải quyết triệt để vì Customer vẫn là người xác nhận Closed. Hỗ trợ chuyên môn chỉ là cờ và ghi chú nội bộ; ngưỡng từ chối 3 là cấu hình demo.
 

@@ -1,0 +1,23 @@
+============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-8.3.5, pluggy-1.6.0
+rootdir: C:\Users\ASUS\ba-ticketing-sla-case-study
+configfile: pytest.ini
+testpaths: tests/backend
+plugins: anyio-4.15.1
+collected 181 items
+
+tests\backend\test_api.py .............................................. [ 25%]
+.........................................                                [ 48%]
+tests\backend\test_integrity.py .....                                    [ 50%]
+tests\backend\test_reports.py ....                                       [ 53%]
+tests\backend\test_sla.py .............................................. [ 78%]
+.......................................                                  [100%]
+
+============================== warnings summary ===============================
+.venv\Lib\site-packages\starlette\testclient.py:37
+  C:\Users\ASUS\ba-ticketing-sla-case-study\.venv\Lib\site-packages\starlette\testclient.py:37: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.
+    _PortalFactoryType = typing.Callable[[], typing.ContextManager[anyio.abc.BlockingPortal]]
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: C:\Users\ASUS\ba-ticketing-sla-case-study\tests\evidence\step1-windows-20261012-162259-repo-junit.xml -
+======================= 181 passed, 1 warning in 11.12s =======================

@@ -33,9 +33,9 @@ Tài liệu này quy định các mã dùng thống nhất trong case study. Ngu
 
 | Mã | Ý nghĩa |
 |---|---|
-| `PENDING` | Đồng hồ chưa hoàn thành và chưa vi phạm, hoặc đang tạm dừng khi chưa vi phạm. |
-| `MET` | Hoàn thành đúng hạn; với giải quyết tại Resolved, đây là kết quả tạm thời đến khi Closed. |
-| `BREACHED` | Hoàn thành trễ, hoặc đồng hồ đang chạy đã quá hạn. Vi phạm không bị xóa khi tiếp tục. |
+| `pending` | Đồng hồ chưa hoàn thành và chưa vi phạm, hoặc đang tạm dừng khi chưa vi phạm. |
+| `met` | Hoàn thành đúng hạn; với giải quyết tại Resolved, đây là kết quả tạm thời đến khi Closed. |
+| `breached` | Hoàn thành trễ, hoặc đồng hồ đang chạy đã quá hạn. Vi phạm không bị xóa khi tiếp tục. |
 
 ## HTTP và error_code
 
@@ -88,9 +88,9 @@ Các mức là dẫn xuất và không lưu. Áp dụng riêng cho từng đồn
 
 | Mã | Ý nghĩa |
 |---|---|
-| `none` | Không cảnh báo; gồm đúng 3.600 giây còn lại, đồng hồ tạm dừng hoặc đã hoàn tất. |
+| `none` | Không cảnh báo; gồm đúng 3.600 giây còn lại, đồng hồ tạm dừng chưa breached hoặc đã met. |
 | `soft` | Còn từ 900 đến 3.599 giây làm việc. |
-| `emphasized` | Còn từ 1 đến 899 giây làm việc. |
+| `emphasized` | Còn từ 0 đến 899 giây làm việc. |
 | `due` | Đúng deadline. |
 | `breached` | Sau deadline, gồm cả đồng hồ đã hoàn tất trễ. |
 
@@ -103,7 +103,7 @@ Các mức là dẫn xuất và không lưu. Áp dụng riêng cho từng đồn
 | `NFR` | Non-functional requirement |
 | `API` | API requirement/contract |
 | `TC` | Test case |
-| `A` | Acceptance criterion |
+| `AC` | Acceptance criterion |
 | `G` | Mục tiêu |
 | `AS` | Giả định |
 | `C` | Ràng buộc |
@@ -111,3 +111,5 @@ Các mức là dẫn xuất và không lưu. Áp dụng riêng cho từng đồn
 | `M` | Metric báo cáo |
 | `BR` | Business rule |
 | `OQ` | Open question |
+
+Mức breached được ưu tiên trước none/due/emphasized/soft, kể cả khi Waiting hoặc hoàn tất trễ. 0 giây trước deadline ở phiên kế tiếp là emphasized; đúng deadline là due.

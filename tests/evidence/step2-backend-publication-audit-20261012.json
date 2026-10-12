@@ -1,0 +1,1081 @@
+{
+  "scope": "Pre-commit publication review; no new pytest execution",
+  "base_commit": "9688b7889df0d91b1bb9d26d3626b283945d9d5e",
+  "fetched_origin_main": "9688b7889df0d91b1bb9d26d3626b283945d9d5e",
+  "selected_files": [
+    ".gitattributes",
+    ".gitignore",
+    "README.md",
+    "TASKS.md",
+    "api/openapi.json",
+    "backend/__init__.py",
+    "backend/app.py",
+    "backend/reports.py",
+    "backend/schema.sql",
+    "backend/seed.py",
+    "backend/sla.py",
+    "backend/store.py",
+    "docs/01-context/scope.md",
+    "docs/03-requirements/functional-requirements-draft.md",
+    "docs/03-requirements/non-functional-requirements-draft.md",
+    "docs/03-requirements/user-stories-draft.md",
+    "docs/04-data-api/api-contract.md",
+    "docs/04-data-api/data-design.md",
+    "docs/04-data-api/implementation-handoff.md",
+    "docs/decision-log.md",
+    "docs/open-questions.md",
+    "docs/spec/business-rules.md",
+    "docs/spec/codes.md",
+    "docs/traceability.md",
+    "pytest.ini",
+    "requirements.txt",
+    "sql/README.md",
+    "sql/queries/m01.sql",
+    "sql/queries/m02.sql",
+    "sql/queries/m03.sql",
+    "sql/queries/m06.sql",
+    "tests/__init__.py",
+    "tests/backend/__init__.py",
+    "tests/backend/conftest.py",
+    "tests/backend/test_api.py",
+    "tests/backend/test_integrity.py",
+    "tests/backend/test_reports.py",
+    "tests/backend/test_sla.py",
+    "tests/evidence/backend-clean-junit.xml",
+    "tests/evidence/backend-clean-start.json",
+    "tests/evidence/backend-junit.xml",
+    "tests/evidence/backend-run.json",
+    "tests/evidence/backend-test-report.md",
+    "tests/evidence/backend-windows-20261012-131256-junit.xml",
+    "tests/evidence/backend-windows-20261012-131256.json",
+    "tests/evidence/backend-windows-http-20261012-131408-server.log",
+    "tests/evidence/backend-windows-http-20261012-131408.json",
+    "tests/evidence/backend-windows-report-20261012.md",
+    "tests/evidence/history/README.md",
+    "tests/evidence/step1-windows-20261012-162259-baseline.json",
+    "tests/evidence/step1-windows-20261012-162259-clean-freeze.log",
+    "tests/evidence/step1-windows-20261012-162259-clean-install.log",
+    "tests/evidence/step1-windows-20261012-162259-clean-junit.xml",
+    "tests/evidence/step1-windows-20261012-162259-clean-pip-check.log",
+    "tests/evidence/step1-windows-20261012-162259-clean-pytest.log",
+    "tests/evidence/step1-windows-20261012-162259-final-check.json",
+    "tests/evidence/step1-windows-20261012-162259-install.json",
+    "tests/evidence/step1-windows-20261012-162259-inventory.json",
+    "tests/evidence/step1-windows-20261012-162259-repo-freeze.log",
+    "tests/evidence/step1-windows-20261012-162259-repo-install.log",
+    "tests/evidence/step1-windows-20261012-162259-repo-junit.xml",
+    "tests/evidence/step1-windows-20261012-162259-repo-pip-check.log",
+    "tests/evidence/step1-windows-20261012-162259-repo-pytest.log",
+    "tests/evidence/step1-windows-20261012-162259-report.md",
+    "tests/evidence/step1-windows-20261012-162259-run.json",
+    "tests/evidence/step1-windows-20261012-162259-server.log",
+    "tests/evidence/step1_windows_runner.py",
+    "tests/evidence/step2-backend-publication-audit-20261012.json",
+    "tests/evidence/step2-backend-publication-review-20261012.md"
+  ],
+  "selected_count": 69,
+  "step1_review": {
+    "total": 28,
+    "included": 18,
+    "excluded": [
+      "tests/evidence/step1-windows-20261012-162259-clean-venv.log",
+      "tests/evidence/step1-windows-20261012-162259-python-install.log",
+      "tests/evidence/step1-windows-20261012-162259-python-install_000_core_JustForMe.log",
+      "tests/evidence/step1-windows-20261012-162259-python-install_001_exe_JustForMe.log",
+      "tests/evidence/step1-windows-20261012-162259-python-install_002_dev_JustForMe.log",
+      "tests/evidence/step1-windows-20261012-162259-python-install_003_lib_JustForMe.log",
+      "tests/evidence/step1-windows-20261012-162259-python-install_004_doc_JustForMe.log",
+      "tests/evidence/step1-windows-20261012-162259-python-install_005_tcltk_JustForMe.log",
+      "tests/evidence/step1-windows-20261012-162259-python-install_006_pip_JustForMe.log",
+      "tests/evidence/step1-windows-20261012-162259-repo-venv.log"
+    ]
+  },
+  "untracked_files_reviewed": [
+    ".gitignore",
+    "api/openapi.json",
+    "backend/__init__.py",
+    "backend/app.py",
+    "backend/reports.py",
+    "backend/schema.sql",
+    "backend/seed.py",
+    "backend/sla.py",
+    "backend/store.py",
+    "docs/04-data-api/api-contract.md",
+    "docs/04-data-api/data-design.md",
+    "docs/04-data-api/implementation-handoff.md",
+    "pytest.ini",
+    "requirements.txt",
+    "sql/README.md",
+    "sql/queries/m01.sql",
+    "sql/queries/m02.sql",
+    "sql/queries/m03.sql",
+    "sql/queries/m06.sql",
+    "tests/__init__.py",
+    "tests/backend/__init__.py",
+    "tests/backend/conftest.py",
+    "tests/backend/test_api.py",
+    "tests/backend/test_integrity.py",
+    "tests/backend/test_reports.py",
+    "tests/backend/test_sla.py",
+    "tests/evidence/backend-clean-junit.xml",
+    "tests/evidence/backend-clean-start.json",
+    "tests/evidence/backend-junit.xml",
+    "tests/evidence/backend-run.json",
+    "tests/evidence/backend-test-report.md",
+    "tests/evidence/backend-windows-20261012-131256-junit.xml",
+    "tests/evidence/backend-windows-20261012-131256.json",
+    "tests/evidence/backend-windows-http-20261012-131408-server.log",
+    "tests/evidence/backend-windows-http-20261012-131408.json",
+    "tests/evidence/backend-windows-report-20261012.md",
+    "tests/evidence/history/README.md",
+    "tests/evidence/step1-windows-20261012-162259-baseline.json",
+    "tests/evidence/step1-windows-20261012-162259-clean-freeze.log",
+    "tests/evidence/step1-windows-20261012-162259-clean-install.log",
+    "tests/evidence/step1-windows-20261012-162259-clean-junit.xml",
+    "tests/evidence/step1-windows-20261012-162259-clean-pip-check.log",
+    "tests/evidence/step1-windows-20261012-162259-clean-pytest.log",
+    "tests/evidence/step1-windows-20261012-162259-final-check.json",
+    "tests/evidence/step1-windows-20261012-162259-install.json",
+    "tests/evidence/step1-windows-20261012-162259-inventory.json",
+    "tests/evidence/step1-windows-20261012-162259-repo-freeze.log",
+    "tests/evidence/step1-windows-20261012-162259-repo-install.log",
+    "tests/evidence/step1-windows-20261012-162259-repo-junit.xml",
+    "tests/evidence/step1-windows-20261012-162259-repo-pip-check.log",
+    "tests/evidence/step1-windows-20261012-162259-repo-pytest.log",
+    "tests/evidence/step1-windows-20261012-162259-report.md",
+    "tests/evidence/step1-windows-20261012-162259-run.json",
+    "tests/evidence/step1-windows-20261012-162259-server.log",
+    "tests/evidence/step1_windows_runner.py",
+    "tests/evidence/step2-backend-publication-review-20261012.md"
+  ],
+  "ignored_files_groups": {
+    ".clean-start-20261012-162259": 2756,
+    ".venv-backup-20261012-162259": 2684,
+    ".venv": 2682,
+    "backend": 5,
+    "data": 1,
+    "tests": 17
+  },
+  "ignored_file_count": 8145,
+  "fixture_count": 83,
+  "fixture_sha256": "6e75371714e5589eb78c45b0df3eb69595f2dfcc9362c9398b8c11989c0756ee",
+  "fixture_matches_HEAD_bytes": true,
+  "step1_artifact_hashes_match": true,
+  "baseline_preserved_except_authorized_docs_and_gitignore": [
+    "api/openapi.json",
+    "backend/__init__.py",
+    "backend/app.py",
+    "backend/reports.py",
+    "backend/schema.sql",
+    "backend/seed.py",
+    "backend/sla.py",
+    "backend/store.py",
+    "docs/04-data-api/api-contract.md",
+    "docs/04-data-api/data-design.md",
+    "docs/04-data-api/implementation-handoff.md",
+    "pytest.ini",
+    "requirements.txt",
+    "sql/README.md",
+    "sql/queries/m01.sql",
+    "sql/queries/m02.sql",
+    "sql/queries/m03.sql",
+    "sql/queries/m06.sql",
+    "tests/__init__.py",
+    "tests/backend/__init__.py",
+    "tests/backend/conftest.py",
+    "tests/backend/test_api.py",
+    "tests/backend/test_integrity.py",
+    "tests/backend/test_reports.py",
+    "tests/backend/test_sla.py",
+    "tests/evidence/backend-clean-junit.xml",
+    "tests/evidence/backend-clean-start.json",
+    "tests/evidence/backend-junit.xml",
+    "tests/evidence/backend-run.json",
+    "tests/evidence/backend-test-report.md",
+    "tests/evidence/backend-windows-20261012-131256-junit.xml",
+    "tests/evidence/backend-windows-20261012-131256.json",
+    "tests/evidence/backend-windows-http-20261012-131408-server.log",
+    "tests/evidence/backend-windows-http-20261012-131408.json",
+    "tests/evidence/backend-windows-report-20261012.md",
+    "tests/evidence/history/README.md",
+    ".github/workflows/.gitkeep",
+    "AGENTS.md",
+    "api/.gitkeep",
+    "backend/app/.gitkeep",
+    "database/queries/.gitkeep",
+    "docs/01-context/.gitkeep",
+    "docs/01-context/project-brief.md",
+    "docs/01-context/scope.md",
+    "docs/01-context/stakeholders.md",
+    "docs/02-process/.gitkeep",
+    "docs/02-process/as-is.md",
+    "docs/02-process/as-is.png",
+    "docs/02-process/support-processes.drawio",
+    "docs/02-process/ticket-states.md",
+    "docs/02-process/to-be.md",
+    "docs/02-process/to-be.png",
+    "docs/03-requirements/.gitkeep",
+    "docs/03-requirements/functional-requirements-draft.md",
+    "docs/03-requirements/non-functional-requirements-draft.md",
+    "docs/03-requirements/user-stories-draft.md",
+    "docs/04-data-api/.gitkeep",
+    "docs/decision-log.md",
+    "docs/open-questions.md",
+    "docs/spec/business-rules.md",
+    "docs/spec/codes.md",
+    "docs/spec/scenario-coverage.md",
+    "prototype/.gitkeep",
+    "tests/api/.gitkeep",
+    "tests/concurrency/.gitkeep",
+    "tests/evidence/.gitkeep",
+    "tests/evidence/history/sla-reconciliation-before-reference.md",
+    "tests/evidence/history/sla-reconciliation-before-reference.sha256",
+    "tests/evidence/sla-draft-import-baseline.json",
+    "tests/evidence/sla-draft-import-checks.json",
+    "tests/evidence/sla-draft-import-old-reference.json",
+    "tests/evidence/sla-draft-import-run.json",
+    "tests/evidence/sla-draft-import-source-comparison.json",
+    "tests/evidence/sla-draft-import-structure.json",
+    "tests/evidence/sla-draft-import.md",
+    "tests/evidence/sla-fixture-83-audit.json",
+    "tests/evidence/sla-fixture-audit-run.json",
+    "tests/evidence/sla-fixture-audit.json",
+    "tests/evidence/sla-fixture-current-audit.json",
+    "tests/evidence/sla-reconciliation-baseline.json",
+    "tests/evidence/sla-reconciliation-checks.json",
+    "tests/evidence/sla-reconciliation.md",
+    "tests/evidence/sla-reconciliation.sha256",
+    "tests/evidence/sla-reference-69-rerun.json",
+    "tests/evidence/sla-reference-81-results.json",
+    "tests/evidence/sla-reference-83-milestone-69.json",
+    "tests/evidence/sla-reference-83-milestone-81.json",
+    "tests/evidence/sla-reference-83-original-69.json",
+    "tests/evidence/sla-reference-83-results.json",
+    "tests/evidence/sla-reference-baseline.json",
+    "tests/evidence/sla-reference-checks.json",
+    "tests/evidence/sla-reference-results.json",
+    "tests/evidence/sla-reference-run.json",
+    "tests/evidence/sla-source-comparison.json",
+    "tests/evidence/sla-verification-81-checks.json",
+    "tests/evidence/sla-verification-81.md",
+    "tests/evidence/sla-verification-83-baseline.json",
+    "tests/evidence/sla-verification-83-checks.json",
+    "tests/evidence/sla-verification-83.md",
+    "tests/evidence/sla-verification-83.sha256",
+    "tests/sla/.gitkeep",
+    "tests/sla/audit_draft_import.py",
+    "tests/sla/audit_fixture_83.py",
+    "tests/sla/audit_fixture_current.py",
+    "tests/sla/audit_fixture_structure.py",
+    "tests/sla/reference/README.md",
+    "tests/sla/reference/compare_sla_sources.py",
+    "tests/sla/reference/source/SLA_69_Draft_Verification.md",
+    "tests/sla/reference/source/SLA_Validation_Report.md",
+    "tests/sla/reference/source/sla_draft_data.json",
+    "tests/sla/reference/source/sla_validation_results.json",
+    "tests/sla/reference/validate_sla_reference.py",
+    "tests/sla/reference/validate_sla_reference_81.py",
+    "tests/sla/reference/validate_sla_reference_current.py",
+    "tests/sla/sla-scenarios.json",
+    "tests/sla/verify_sla_83_evidence.py"
+  ],
+  "execution_sources_match_step1_manifest": [
+    "api/openapi.json",
+    "backend/__init__.py",
+    "backend/app.py",
+    "backend/reports.py",
+    "backend/schema.sql",
+    "backend/seed.py",
+    "backend/sla.py",
+    "backend/store.py",
+    "pytest.ini",
+    "requirements.txt",
+    "sql/README.md",
+    "sql/queries/m01.sql",
+    "sql/queries/m02.sql",
+    "sql/queries/m03.sql",
+    "sql/queries/m06.sql",
+    "tests/backend/__init__.py",
+    "tests/backend/conftest.py",
+    "tests/backend/test_api.py",
+    "tests/backend/test_integrity.py",
+    "tests/backend/test_reports.py",
+    "tests/backend/test_sla.py"
+  ],
+  "junit_consistent_with_run_record": {
+    "repo": {
+      "name": "pytest",
+      "errors": "0",
+      "failures": "0",
+      "skipped": "0",
+      "tests": "181",
+      "time": "11.086",
+      "timestamp": "2026-10-12T16:26:40.585119+07:00",
+      "hostname": "PhuocTrong"
+    },
+    "clean": {
+      "name": "pytest",
+      "errors": "0",
+      "failures": "0",
+      "skipped": "0",
+      "tests": "181",
+      "time": "11.160",
+      "timestamp": "2026-10-12T16:27:12.070761+07:00",
+      "hostname": "PhuocTrong"
+    }
+  },
+  "http_record_requests": 26,
+  "openapi_matches_captured_http": true,
+  "all_recorded_commands_exit_zero": true,
+  "secret_patterns_checked": [
+    "github_token",
+    "private_key",
+    "aws_key",
+    "openai_key",
+    "url_credentials"
+  ],
+  "secret_pattern_matches": 0,
+  "secret_scan_limit": "Pattern scan and content review, not a guarantee against every secret type",
+  "local_markdown_links_checked": [
+    {
+      "source": "README.md",
+      "target": "docs/spec/business-rules.md"
+    },
+    {
+      "source": "README.md",
+      "target": "docs/spec/codes.md"
+    },
+    {
+      "source": "README.md",
+      "target": "docs/decision-log.md"
+    },
+    {
+      "source": "README.md",
+      "target": "docs/open-questions.md"
+    },
+    {
+      "source": "README.md",
+      "target": "docs/02-process/as-is.md"
+    },
+    {
+      "source": "README.md",
+      "target": "docs/02-process/to-be.md"
+    },
+    {
+      "source": "README.md",
+      "target": "docs/02-process/ticket-states.md"
+    },
+    {
+      "source": "README.md",
+      "target": "docs/02-process/support-processes.drawio"
+    },
+    {
+      "source": "README.md",
+      "target": "docs/04-data-api/data-design.md"
+    },
+    {
+      "source": "README.md",
+      "target": "docs/04-data-api/api-contract.md"
+    },
+    {
+      "source": "README.md",
+      "target": "api/openapi.json"
+    },
+    {
+      "source": "README.md",
+      "target": "sql/README.md"
+    },
+    {
+      "source": "README.md",
+      "target": "tests/evidence/backend-test-report.md"
+    },
+    {
+      "source": "README.md",
+      "target": "tests/evidence/step1-windows-20261012-162259-report.md"
+    },
+    {
+      "source": "README.md",
+      "target": "tests/evidence/step1-windows-20261012-162259-repo-junit.xml"
+    },
+    {
+      "source": "README.md",
+      "target": "tests/evidence/step1-windows-20261012-162259-clean-junit.xml"
+    },
+    {
+      "source": "README.md",
+      "target": "tests/evidence/sla-verification-83.md"
+    },
+    {
+      "source": "README.md",
+      "target": "docs/spec/scenario-coverage.md#nhập-sla-82-và-sla-83--10102026"
+    },
+    {
+      "source": "README.md",
+      "target": "docs/traceability.md"
+    },
+    {
+      "source": "README.md",
+      "target": "tests/sla/reference/README.md"
+    },
+    {
+      "source": "README.md",
+      "target": "tests/evidence/sla-source-comparison.json"
+    },
+    {
+      "source": "README.md",
+      "target": "tests/evidence/sla-reference-results.json"
+    },
+    {
+      "source": "README.md",
+      "target": "tests/evidence/sla-reference-run.json"
+    },
+    {
+      "source": "README.md",
+      "target": "tests/evidence/sla-fixture-audit.json"
+    },
+    {
+      "source": "README.md",
+      "target": "tests/evidence/sla-reconciliation.md"
+    },
+    {
+      "source": "README.md",
+      "target": "tests/evidence/sla-reconciliation.sha256"
+    },
+    {
+      "source": "README.md",
+      "target": "tests/evidence/sla-draft-import.md"
+    },
+    {
+      "source": "README.md",
+      "target": "tests/evidence/sla-verification-81.md"
+    },
+    {
+      "source": "README.md",
+      "target": "TASKS.md"
+    },
+    {
+      "source": "TASKS.md",
+      "target": "docs/02-process/as-is.md"
+    },
+    {
+      "source": "TASKS.md",
+      "target": "docs/02-process/to-be.md"
+    },
+    {
+      "source": "TASKS.md",
+      "target": "docs/02-process/ticket-states.md"
+    },
+    {
+      "source": "TASKS.md",
+      "target": "docs/02-process/support-processes.drawio"
+    },
+    {
+      "source": "TASKS.md",
+      "target": "tests/evidence/sla-verification-83.md"
+    },
+    {
+      "source": "TASKS.md",
+      "target": "tests/evidence/sla-draft-import.md"
+    },
+    {
+      "source": "TASKS.md",
+      "target": "tests/evidence/sla-verification-81.md"
+    },
+    {
+      "source": "TASKS.md",
+      "target": "tests/evidence/backend-test-report.md"
+    },
+    {
+      "source": "TASKS.md",
+      "target": "tests/evidence/step1-windows-20261012-162259-report.md"
+    },
+    {
+      "source": "docs/04-data-api/data-design.md",
+      "target": "../../backend/schema.sql"
+    },
+    {
+      "source": "docs/decision-log.md",
+      "target": "open-questions.md"
+    },
+    {
+      "source": "docs/decision-log.md",
+      "target": "../tests/evidence/sla-draft-import.md"
+    },
+    {
+      "source": "docs/decision-log.md",
+      "target": "../tests/sla/audit_fixture_structure.py"
+    },
+    {
+      "source": "docs/decision-log.md",
+      "target": "../tests/sla/reference/validate_sla_reference.py"
+    },
+    {
+      "source": "docs/decision-log.md",
+      "target": "../tests/evidence/sla-reference-results.json"
+    },
+    {
+      "source": "docs/decision-log.md",
+      "target": "../tests/evidence/sla-reconciliation.md"
+    },
+    {
+      "source": "docs/decision-log.md",
+      "target": "../tests/evidence/sla-reconciliation.sha256"
+    },
+    {
+      "source": "docs/decision-log.md",
+      "target": "spec/scenario-coverage.md"
+    },
+    {
+      "source": "docs/decision-log.md",
+      "target": "../tests/evidence/sla-verification-83.md"
+    },
+    {
+      "source": "docs/open-questions.md",
+      "target": "../tests/evidence/sla-verification-83.md"
+    },
+    {
+      "source": "docs/open-questions.md",
+      "target": "spec/scenario-coverage.md"
+    },
+    {
+      "source": "docs/open-questions.md",
+      "target": "spec/scenario-coverage.md#nhập-s1s12-ngày-08102026--draft-chưa-mở-gate"
+    },
+    {
+      "source": "docs/open-questions.md",
+      "target": "../tests/evidence/sla-verification-81.md"
+    },
+    {
+      "source": "docs/open-questions.md",
+      "target": "spec/scenario-coverage.md#đối-soát-việc-1--06102026"
+    },
+    {
+      "source": "docs/open-questions.md",
+      "target": "../tests/evidence/sla-reconciliation.md"
+    },
+    {
+      "source": "docs/open-questions.md",
+      "target": "spec/scenario-coverage.md"
+    },
+    {
+      "source": "docs/open-questions.md",
+      "target": "spec/scenario-coverage.md"
+    },
+    {
+      "source": "docs/open-questions.md",
+      "target": "spec/scenario-coverage.md"
+    },
+    {
+      "source": "docs/spec/business-rules.md",
+      "target": "../open-questions.md"
+    },
+    {
+      "source": "docs/spec/business-rules.md",
+      "target": "#phạm-vi-và-công-nghệ"
+    },
+    {
+      "source": "docs/spec/business-rules.md",
+      "target": "#vai-trò-và-quyền"
+    },
+    {
+      "source": "docs/spec/business-rules.md",
+      "target": "#vòng-đời-ticket"
+    },
+    {
+      "source": "docs/spec/business-rules.md",
+      "target": "#tin-nhắn"
+    },
+    {
+      "source": "docs/spec/business-rules.md",
+      "target": "#nhận-ticket-và-tải"
+    },
+    {
+      "source": "docs/spec/business-rules.md",
+      "target": "#sla"
+    },
+    {
+      "source": "docs/spec/business-rules.md",
+      "target": "#dữ-liệu-và-khả-năng-dựng-lại"
+    },
+    {
+      "source": "docs/spec/business-rules.md",
+      "target": "#hiển-thị"
+    },
+    {
+      "source": "docs/spec/business-rules.md",
+      "target": "#api-quyền-và-lỗi"
+    },
+    {
+      "source": "docs/spec/business-rules.md",
+      "target": "#báo-cáo"
+    },
+    {
+      "source": "docs/spec/business-rules.md",
+      "target": "#escalation-sau-nhiều-lần-customer-từ-chối"
+    },
+    {
+      "source": "docs/spec/codes.md",
+      "target": "business-rules.md"
+    },
+    {
+      "source": "docs/spec/codes.md",
+      "target": "business-rules.md"
+    },
+    {
+      "source": "docs/spec/codes.md",
+      "target": "../open-questions.md"
+    },
+    {
+      "source": "docs/traceability.md",
+      "target": "02-process/support-processes.drawio"
+    },
+    {
+      "source": "docs/traceability.md",
+      "target": "02-process/as-is.md"
+    },
+    {
+      "source": "docs/traceability.md",
+      "target": "02-process/ticket-states.md"
+    },
+    {
+      "source": "docs/traceability.md",
+      "target": "02-process/to-be.md#1-luồng-chính-của-ticket"
+    },
+    {
+      "source": "docs/traceability.md",
+      "target": "02-process/to-be.md#3-tác-động-đến-sla-theo-bước"
+    },
+    {
+      "source": "docs/traceability.md",
+      "target": "02-process/to-be.md#2-luồng-review-của-manager-chạy-song-song"
+    },
+    {
+      "source": "docs/traceability.md",
+      "target": "02-process/ticket-states.md"
+    },
+    {
+      "source": "docs/traceability.md",
+      "target": "02-process/to-be.md#2-luồng-review-của-manager-chạy-song-song"
+    },
+    {
+      "source": "docs/traceability.md",
+      "target": "../tests/evidence/sla-fixture-83-audit.json"
+    },
+    {
+      "source": "docs/traceability.md",
+      "target": "../tests/evidence/sla-verification-83.md"
+    },
+    {
+      "source": "docs/traceability.md",
+      "target": "../tests/evidence/sla-reference-83-results.json"
+    },
+    {
+      "source": "docs/traceability.md",
+      "target": "../tests/evidence/sla-verification-81.md"
+    },
+    {
+      "source": "docs/traceability.md",
+      "target": "spec/scenario-coverage.md#nhập-s1s12-ngày-08102026--draft-chưa-mở-gate"
+    },
+    {
+      "source": "docs/traceability.md",
+      "target": "../tests/evidence/sla-draft-import.md"
+    },
+    {
+      "source": "docs/traceability.md",
+      "target": "../tests/evidence/sla-reference-results.json"
+    },
+    {
+      "source": "docs/traceability.md",
+      "target": "../tests/evidence/sla-reconciliation.md"
+    },
+    {
+      "source": "docs/traceability.md",
+      "target": "../tests/evidence/sla-fixture-audit.json"
+    },
+    {
+      "source": "docs/traceability.md",
+      "target": "../tests/sla/reference/validate_sla_reference.py"
+    },
+    {
+      "source": "docs/traceability.md",
+      "target": "../tests/evidence/sla-reference-run.json"
+    },
+    {
+      "source": "docs/traceability.md",
+      "target": "../tests/evidence/sla-source-comparison.json"
+    },
+    {
+      "source": "docs/traceability.md",
+      "target": "../tests/evidence/sla-reconciliation.sha256"
+    },
+    {
+      "source": "docs/traceability.md",
+      "target": "spec/scenario-coverage.md"
+    },
+    {
+      "source": "docs/traceability.md",
+      "target": "../tests/backend/test_api.py"
+    },
+    {
+      "source": "docs/traceability.md",
+      "target": "../tests/backend/test_sla.py"
+    },
+    {
+      "source": "docs/traceability.md",
+      "target": "../tests/backend/test_integrity.py"
+    },
+    {
+      "source": "docs/traceability.md",
+      "target": "../tests/backend/test_reports.py"
+    },
+    {
+      "source": "docs/traceability.md",
+      "target": "../tests/evidence/backend-test-report.md"
+    },
+    {
+      "source": "docs/traceability.md",
+      "target": "../tests/evidence/backend-junit.xml"
+    },
+    {
+      "source": "docs/traceability.md",
+      "target": "../tests/evidence/backend-clean-start.json"
+    },
+    {
+      "source": "docs/traceability.md",
+      "target": "../tests/evidence/step1-windows-20261012-162259-repo-junit.xml"
+    },
+    {
+      "source": "docs/traceability.md",
+      "target": "../tests/evidence/step1-windows-20261012-162259-clean-junit.xml"
+    },
+    {
+      "source": "docs/traceability.md",
+      "target": "../tests/evidence/step1-windows-20261012-162259-run.json"
+    },
+    {
+      "source": "docs/traceability.md",
+      "target": "../tests/evidence/step1-windows-20261012-162259-report.md"
+    },
+    {
+      "source": "tests/evidence/backend-test-report.md",
+      "target": "backend-run.json"
+    },
+    {
+      "source": "tests/evidence/backend-test-report.md",
+      "target": "backend-junit.xml"
+    },
+    {
+      "source": "tests/evidence/backend-test-report.md",
+      "target": "backend-clean-start.json"
+    },
+    {
+      "source": "tests/evidence/backend-test-report.md",
+      "target": "backend-clean-junit.xml"
+    },
+    {
+      "source": "tests/evidence/backend-test-report.md",
+      "target": "history/README.md"
+    },
+    {
+      "source": "tests/evidence/backend-windows-report-20261012.md",
+      "target": "backend-windows-20261012-131256.json"
+    },
+    {
+      "source": "tests/evidence/backend-windows-report-20261012.md",
+      "target": "backend-windows-20261012-131256-junit.xml"
+    },
+    {
+      "source": "tests/evidence/backend-windows-report-20261012.md",
+      "target": "backend-windows-http-20261012-131408.json"
+    },
+    {
+      "source": "tests/evidence/backend-windows-report-20261012.md",
+      "target": "backend-windows-http-20261012-131408-server.log"
+    },
+    {
+      "source": "tests/evidence/history/README.md",
+      "target": "../sla-reconciliation-baseline.json"
+    },
+    {
+      "source": "tests/evidence/history/README.md",
+      "target": "../sla-fixture-audit-run.json"
+    },
+    {
+      "source": "tests/evidence/history/README.md",
+      "target": "../sla-fixture-audit.json"
+    },
+    {
+      "source": "tests/evidence/history/README.md",
+      "target": "../../sla/audit_fixture_structure.py"
+    },
+    {
+      "source": "tests/evidence/history/README.md",
+      "target": "../sla-reconciliation.sha256"
+    },
+    {
+      "source": "tests/evidence/history/README.md",
+      "target": "../../../docs/spec/scenario-coverage.md"
+    },
+    {
+      "source": "tests/evidence/history/README.md",
+      "target": "../../../docs/open-questions.md"
+    },
+    {
+      "source": "tests/evidence/history/README.md",
+      "target": "../sla-reconciliation-checks.json"
+    },
+    {
+      "source": "tests/evidence/history/README.md",
+      "target": "../backend-test-report.md"
+    },
+    {
+      "source": "tests/evidence/step1-windows-20261012-162259-report.md",
+      "target": "step1-windows-20261012-162259-baseline.json"
+    },
+    {
+      "source": "tests/evidence/step1-windows-20261012-162259-report.md",
+      "target": "step1-windows-20261012-162259-run.json"
+    },
+    {
+      "source": "tests/evidence/step1-windows-20261012-162259-report.md",
+      "target": "step1-windows-20261012-162259-inventory.json"
+    },
+    {
+      "source": "tests/evidence/step1-windows-20261012-162259-report.md",
+      "target": "step1-windows-20261012-162259-install.json"
+    },
+    {
+      "source": "tests/evidence/step1-windows-20261012-162259-report.md",
+      "target": "step1_windows_runner.py"
+    },
+    {
+      "source": "tests/evidence/step1-windows-20261012-162259-report.md",
+      "target": "step1-windows-20261012-162259-repo-junit.xml"
+    },
+    {
+      "source": "tests/evidence/step1-windows-20261012-162259-report.md",
+      "target": "step1-windows-20261012-162259-clean-junit.xml"
+    },
+    {
+      "source": "tests/evidence/step1-windows-20261012-162259-report.md",
+      "target": "step1-windows-20261012-162259-run.json"
+    },
+    {
+      "source": "tests/evidence/step1-windows-20261012-162259-report.md",
+      "target": "step1-windows-20261012-162259-server.log"
+    },
+    {
+      "source": "tests/evidence/step1-windows-20261012-162259-report.md",
+      "target": "step1-windows-20261012-162259-final-check.json"
+    },
+    {
+      "source": "tests/evidence/step1-windows-20261012-162259-report.md",
+      "target": "step1-windows-20261012-162259-final-check.json"
+    },
+    {
+      "source": "tests/evidence/step2-backend-publication-review-20261012.md",
+      "target": "step2-backend-publication-audit-20261012.json"
+    },
+    {
+      "source": "tests/evidence/step2-backend-publication-review-20261012.md",
+      "target": "history/README.md"
+    },
+    {
+      "source": "tests/evidence/step2-backend-publication-review-20261012.md",
+      "target": "step1-windows-20261012-162259-repo-junit.xml"
+    },
+    {
+      "source": "tests/evidence/step2-backend-publication-review-20261012.md",
+      "target": "step1-windows-20261012-162259-clean-junit.xml"
+    }
+  ],
+  "local_markdown_link_count": 138,
+  "historical_link_limit": "Eight known old links inside unchanged archived evidence are mapped by tests/evidence/history/README.md; only new/modified documents checked.",
+  "status": "PASS",
+  "staged_scope_matches_selection": true,
+  "staged_evidence_exact_source_bytes": [
+    {
+      "path": "tests/evidence/backend-clean-junit.xml",
+      "sha256": "bd81720239e4d88e42694b0f6882ae2ec6ab569259c7bfecdfc93973d21ac0b7",
+      "bytes": 18381
+    },
+    {
+      "path": "tests/evidence/backend-clean-start.json",
+      "sha256": "325a2318967d928e29b04648bd88093630f59b52bab2be96d5210fae9a4043ce",
+      "bytes": 2195
+    },
+    {
+      "path": "tests/evidence/backend-junit.xml",
+      "sha256": "c7f05ff9b0fe4f5c2bc25a744d4651dc161922954ecfdffac953a9f8db4baeeb",
+      "bytes": 18381
+    },
+    {
+      "path": "tests/evidence/backend-run.json",
+      "sha256": "331163ba42389447d4fe0985711bf607e7a8f2f5ce097a2176a0dc2a1aa097e8",
+      "bytes": 3559
+    },
+    {
+      "path": "tests/evidence/backend-test-report.md",
+      "sha256": "6306fe780823a2e602d3d8097f197f1af409f9f26aec71a72e5764db8147b183",
+      "bytes": 4276
+    },
+    {
+      "path": "tests/evidence/backend-windows-20261012-131256-junit.xml",
+      "sha256": "e1486fef1811e0a9e985b578f3a1e0901f57681c63ff551e8e138edd162b5f42",
+      "bytes": 18380
+    },
+    {
+      "path": "tests/evidence/backend-windows-20261012-131256.json",
+      "sha256": "55feb0ff926b16c184a1e560bfc9f220e8450d2e036bb858536e65fee4984e26",
+      "bytes": 5485
+    },
+    {
+      "path": "tests/evidence/backend-windows-http-20261012-131408-server.log",
+      "sha256": "022827fdf691d04b1a6a542f0d828816b6be4c0648b5198124cda79a5d0e037c",
+      "bytes": 1236
+    },
+    {
+      "path": "tests/evidence/backend-windows-http-20261012-131408.json",
+      "sha256": "3ece28837fe781e3104b88e6ef601114ca3f88558a3a3025641dc25cac367763",
+      "bytes": 5975
+    },
+    {
+      "path": "tests/evidence/backend-windows-report-20261012.md",
+      "sha256": "152247b1c1574d781754e3998e6a8e4d29bcb5c570e4af99a2cc0471d55eac5e",
+      "bytes": 5934
+    },
+    {
+      "path": "tests/evidence/history/README.md",
+      "sha256": "5e9a300b5605759817b1d9420143c531cb0c60284a3541bedc00bb7eff3630f2",
+      "bytes": 1210
+    },
+    {
+      "path": "tests/evidence/step1-windows-20261012-162259-baseline.json",
+      "sha256": "ff65f4a2f3cd90bdd6b24ca391decb77b4a884bcba54dd89c57c73091272842e",
+      "bytes": 21393
+    },
+    {
+      "path": "tests/evidence/step1-windows-20261012-162259-clean-freeze.log",
+      "sha256": "ce7eeb8eb1e29d0df6488ed6d0b43564729641daf3910c3199e08e549744020a",
+      "bytes": 377
+    },
+    {
+      "path": "tests/evidence/step1-windows-20261012-162259-clean-install.log",
+      "sha256": "ff660004e36554b8361c9f85424eaad16b2343564bd1ba8b2f47968a7c804879",
+      "bytes": 5238
+    },
+    {
+      "path": "tests/evidence/step1-windows-20261012-162259-clean-junit.xml",
+      "sha256": "ea1162340ee8e68040b4c8c911c704eb04fb3bd29081da968f85605db12dbf9e",
+      "bytes": 18380
+    },
+    {
+      "path": "tests/evidence/step1-windows-20261012-162259-clean-pip-check.log",
+      "sha256": "672aec65a45bed50e70229c70934a7eebf0462595c459b83023027645d57cccf",
+      "bytes": 31
+    },
+    {
+      "path": "tests/evidence/step1-windows-20261012-162259-clean-pytest.log",
+      "sha256": "a7462d1476c3828e01ba8b8896ebae53977bba4be5bc41d7003f4c1fde61e66f",
+      "bytes": 1562
+    },
+    {
+      "path": "tests/evidence/step1-windows-20261012-162259-final-check.json",
+      "sha256": "257f5bcdb45439d3ae9cd262bb0a65ca2a8470c9f75828561580e7ce6269eb9c",
+      "bytes": 13901
+    },
+    {
+      "path": "tests/evidence/step1-windows-20261012-162259-install.json",
+      "sha256": "97cd24a55f560248c7d21682e2edc812826908cf65489736b02e8131913f7d69",
+      "bytes": 521
+    },
+    {
+      "path": "tests/evidence/step1-windows-20261012-162259-inventory.json",
+      "sha256": "a10236df02eb8883a764a148b9194956d26c16beae96667b7d529fad8a9aaa14",
+      "bytes": 2078
+    },
+    {
+      "path": "tests/evidence/step1-windows-20261012-162259-repo-freeze.log",
+      "sha256": "ce7eeb8eb1e29d0df6488ed6d0b43564729641daf3910c3199e08e549744020a",
+      "bytes": 377
+    },
+    {
+      "path": "tests/evidence/step1-windows-20261012-162259-repo-install.log",
+      "sha256": "b1aa60326a6816c86df6510efb8985add217f03f93fa75571e5f5f759e0922aa",
+      "bytes": 5209
+    },
+    {
+      "path": "tests/evidence/step1-windows-20261012-162259-repo-junit.xml",
+      "sha256": "e9fe3a54dddd28ade9432648b4490251ec4580842640cce7304b9d6bee0c84e3",
+      "bytes": 18380
+    },
+    {
+      "path": "tests/evidence/step1-windows-20261012-162259-repo-pip-check.log",
+      "sha256": "672aec65a45bed50e70229c70934a7eebf0462595c459b83023027645d57cccf",
+      "bytes": 31
+    },
+    {
+      "path": "tests/evidence/step1-windows-20261012-162259-repo-pytest.log",
+      "sha256": "6f8139b80f2de42027773b1fe6cbee81b755986b4c5c8805fdf14d52f066e7f1",
+      "bytes": 1503
+    },
+    {
+      "path": "tests/evidence/step1-windows-20261012-162259-report.md",
+      "sha256": "edec46418f5565b223a2e7e9af0c01e9abacba94c894e15cf8deeb30d3af4305",
+      "bytes": 10037
+    },
+    {
+      "path": "tests/evidence/step1-windows-20261012-162259-run.json",
+      "sha256": "0387bf5cabb0bc76f5ca3eef66e0cc4b9d8a0bed3ca9818a10f5c25c9790786d",
+      "bytes": 93739
+    },
+    {
+      "path": "tests/evidence/step1-windows-20261012-162259-server.log",
+      "sha256": "d24c0510830a794f7e62b0f692b7d44e7fccbcc958d138488311a74861a1f7a3",
+      "bytes": 2027
+    },
+    {
+      "path": "tests/evidence/step1_windows_runner.py",
+      "sha256": "400426a3e36a3f834e1bec7d8c749145cce9c413c74f804a96657ea16782b04d",
+      "bytes": 11963
+    }
+  ],
+  "staged_execution_source_matches_tested_source_after_git_EOL_normalization": [
+    "api/openapi.json",
+    "backend/__init__.py",
+    "backend/app.py",
+    "backend/reports.py",
+    "backend/schema.sql",
+    "backend/seed.py",
+    "backend/sla.py",
+    "backend/store.py",
+    "pytest.ini",
+    "requirements.txt",
+    "sql/README.md",
+    "sql/queries/m01.sql",
+    "sql/queries/m02.sql",
+    "sql/queries/m03.sql",
+    "sql/queries/m06.sql",
+    "tests/backend/__init__.py",
+    "tests/backend/conftest.py",
+    "tests/backend/test_api.py",
+    "tests/backend/test_integrity.py",
+    "tests/backend/test_reports.py",
+    "tests/backend/test_sla.py"
+  ],
+  "staged_whitespace_check": {
+    "argv": [
+      "git",
+      "diff",
+      "--cached",
+      "--check"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "worktree_diff_check_exit_code": 0,
+  "ignored_inventory_limit": "Git could not enumerate root and clean-copy .pytest_cache due to permissions; both cache directories excluded by policy and not staged. Visible ignored files counted, not an exhaustive cache inventory.",
+  "review_limit": "Windows Uvicorn launcher PID in run record differs from interpreter PID in server log; step1 port-closure check preserved. No evidence was rewritten."
+}

@@ -1,0 +1,200 @@
+{
+  "started_at": "2026-10-12T06:14:08.086998+00:00",
+  "python": "3.12.15 (main, Oct  9 2026, 15:21:55) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "requests": [
+    {
+      "path": "/docs",
+      "headers": {},
+      "status": 200,
+      "expected_status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "body_sha256": "0d2b41644fa2cd8baae906eda6e4b514f396d411469a011a0807c986c6889939",
+      "body_bytes": 952
+    },
+    {
+      "path": "/openapi.json",
+      "headers": {},
+      "status": 200,
+      "expected_status": 200,
+      "content_type": "application/json",
+      "body_sha256": "d70016945733f51344653cad3dbefe45169a3a698eb1b76df1d9c7c01b7e6abc",
+      "body_bytes": 11810
+    },
+    {
+      "path": "/tickets",
+      "headers": {},
+      "status": 401,
+      "expected_status": 401,
+      "content_type": "application/json",
+      "body_sha256": "8195207927f3a2766034755e3f487d9bde693988638034c31ea70dea6fe5f2f6",
+      "body_bytes": 75
+    },
+    {
+      "path": "/tickets",
+      "headers": {
+        "X-Demo-User-Id": "1"
+      },
+      "status": 200,
+      "expected_status": 200,
+      "content_type": "application/json",
+      "body_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "body_bytes": 2
+    },
+    {
+      "path": "/tickets/queue",
+      "headers": {
+        "X-Demo-User-Id": "1"
+      },
+      "status": 403,
+      "expected_status": 403,
+      "content_type": "application/json",
+      "body_sha256": "7eba50a2f73383389c50f89e14cca7f19348d1ee2f44efea8a1b48b7c11cb190",
+      "body_bytes": 61
+    },
+    {
+      "path": "/tickets",
+      "headers": {
+        "X-Demo-User-Id": "2"
+      },
+      "status": 200,
+      "expected_status": 200,
+      "content_type": "application/json",
+      "body_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "body_bytes": 2
+    },
+    {
+      "path": "/tickets/queue",
+      "headers": {
+        "X-Demo-User-Id": "2"
+      },
+      "status": 403,
+      "expected_status": 403,
+      "content_type": "application/json",
+      "body_sha256": "7eba50a2f73383389c50f89e14cca7f19348d1ee2f44efea8a1b48b7c11cb190",
+      "body_bytes": 61
+    },
+    {
+      "path": "/tickets",
+      "headers": {
+        "X-Demo-User-Id": "3"
+      },
+      "status": 200,
+      "expected_status": 200,
+      "content_type": "application/json",
+      "body_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "body_bytes": 2
+    },
+    {
+      "path": "/tickets/queue",
+      "headers": {
+        "X-Demo-User-Id": "3"
+      },
+      "status": 200,
+      "expected_status": 200,
+      "content_type": "application/json",
+      "body_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "body_bytes": 2
+    },
+    {
+      "path": "/tickets",
+      "headers": {
+        "X-Demo-User-Id": "4"
+      },
+      "status": 200,
+      "expected_status": 200,
+      "content_type": "application/json",
+      "body_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "body_bytes": 2
+    },
+    {
+      "path": "/tickets/queue",
+      "headers": {
+        "X-Demo-User-Id": "4"
+      },
+      "status": 200,
+      "expected_status": 200,
+      "content_type": "application/json",
+      "body_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "body_bytes": 2
+    },
+    {
+      "path": "/tickets",
+      "headers": {
+        "X-Demo-User-Id": "5"
+      },
+      "status": 200,
+      "expected_status": 200,
+      "content_type": "application/json",
+      "body_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "body_bytes": 2
+    },
+    {
+      "path": "/tickets/queue",
+      "headers": {
+        "X-Demo-User-Id": "5"
+      },
+      "status": 200,
+      "expected_status": 200,
+      "content_type": "application/json",
+      "body_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "body_bytes": 2
+    },
+    {
+      "path": "/tickets",
+      "headers": {
+        "X-Demo-User-Id": "6"
+      },
+      "status": 200,
+      "expected_status": 200,
+      "content_type": "application/json",
+      "body_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "body_bytes": 2
+    },
+    {
+      "path": "/tickets/queue",
+      "headers": {
+        "X-Demo-User-Id": "6"
+      },
+      "status": 403,
+      "expected_status": 403,
+      "content_type": "application/json",
+      "body_sha256": "7eba50a2f73383389c50f89e14cca7f19348d1ee2f44efea8a1b48b7c11cb190",
+      "body_bytes": 61
+    }
+  ],
+  "database": "C:\\Users\\ASUS\\ba-ticketing-sla-case-study\\.venv\\windows-http-smoke.sqlite3",
+  "kind": "Actual local Uvicorn HTTP smoke, demo identities, no real login",
+  "command": [
+    "C:\\Users\\ASUS\\ba-ticketing-sla-case-study\\.venv\\Scripts\\python.exe",
+    "-m",
+    "uvicorn",
+    "backend.app:app",
+    "--port",
+    "8000"
+  ],
+  "server_pid": 20184,
+  "docs_has_swagger_ui": true,
+  "openapi_title": "Support Ticketing & SLA demo",
+  "openapi_paths": [
+    "/tickets",
+    "/tickets/queue",
+    "/tickets/{ticket_id}",
+    "/tickets/{ticket_id}/claim",
+    "/tickets/{ticket_id}/messages",
+    "/tickets/{ticket_id}/notes",
+    "/tickets/{ticket_id}/waiting",
+    "/tickets/{ticket_id}/resolve",
+    "/tickets/{ticket_id}/confirm",
+    "/tickets/{ticket_id}/reject",
+    "/tickets/{ticket_id}/reviews",
+    "/tickets/{ticket_id}/reviews/complete",
+    "/reports/{metric_code}"
+  ],
+  "openapi_matches_supplied_semantically": true,
+  "openapi_has_demo_identity_header": true,
+  "server_stopped_by_runner": true,
+  "errors": [],
+  "finished_at": "2026-10-12T06:14:09.748612+00:00",
+  "exit_code": 0
+}
