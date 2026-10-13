@@ -1,8 +1,10 @@
 # Nghiệm thu portfolio v1.0
 
+**Quyết định phát hành D-51, 13/10/2026:** chủ dự án chốt v1.0 theo các tiêu chí ở [TASKS](../TASKS.md) và [scope](01-context/scope.md). [GitHub Pages](https://phuoctrong2005.github.io/ba-ticketing-sla-case-study/) là demo tương tác đang có; video demo chuyển sang roadmap, **chưa tạo hoặc kiểm thử** và không là điều kiện hoàn thành v1.0. Các giới hạn dưới đây vẫn áp dụng.
+
 [Lần clean-start độc lập thứ hai](../tests/evidence/portfolio-clean-start-repeat-20261013.md) trên commit `7c35b2c` tái hiện 181 pytest, 110 prototype, 24 static smoke và Newman 191/514. Hai lỗi sandbox khi cài pip/tạo `%TEMP%` có log trước khi chạy lại thành công. DOC-CS-01 trong hướng dẫn commit cũ tái hiện; prototype README hiện hành đã bỏ auditor lịch sử khỏi bước clone sạch và bản sửa docs được kiểm tra riêng. Chưa chạy toàn bộ suite từ commit mới.
 
-Hiện hành 13/10/2026. Giữ tiêu chí [TASKS](../TASKS.md)/[project brief](01-context/project-brief.md), không thêm feature/thay gate/bỏ tiêu chí để gán hoàn thành. [D-48](decision-log.md): chủ dự án chấp nhận Postman và cho phép xuất bản tài liệu. **Video Chưa có; portfolio v1.0 chưa hoàn tất; chưa tạo tag.**
+Giữ các tiêu chí nghiệp vụ/kỹ thuật [TASKS](../TASKS.md)/[project brief](01-context/project-brief.md), không thêm feature hoặc thay kết quả để gán đạt. [D-48](decision-log.md) ghi chủ dự án chấp nhận Postman; D-51 chỉ chuyển video sang roadmap. Không suy ra mọi AC hoặc mọi môi trường đã được kiểm tra đầy đủ.
 
 “Có bằng chứng” áp dụng phạm vi mô tả. [Ma trận từng AC](ac-traceability.md) không tự gán tất cả AC PASS từ tổng suite.
 
@@ -24,10 +26,10 @@ Hiện hành 13/10/2026. Giữ tiêu chí [TASKS](../TASKS.md)/[project brief](0
 | BA/BPMN/rules/stories/data contract | Đã được duyệt; [điều hướng README](../README.md). Không phỏng vấn/số liệu doanh nghiệp thật. |
 | Backend | 181 pytest đạt/0 lỗi; Windows JUnit/manifest khớp source, không chạy lại khi cập nhật docs. |
 | Prototype local | 110 JS case đạt/0 lỗi; 83 fixture + controller/DOM/UX; chủ dự án chấp nhận UX/kết quả/ảnh tự động. |
-| Pages | [Demo](https://phuoctrong2005.github.io/ba-ticketing-sla-case-study/), [74 smoke](../tests/evidence/pages-public-smoke-20261013-002741.json), [workflow runtime](https://github.com/PhuocTrong2005/ba-ticketing-sla-case-study/actions/runs/38327310064). Sáu nhóm chỉ smoke, không full local suite. |
+| Pages | [Demo](https://phuoctrong2005.github.io/ba-ticketing-sla-case-study/), [74 smoke](../tests/evidence/pages-public-smoke-20261013-002741.json), [workflow DOC-CS-01 thành công](https://github.com/PhuocTrong2005/ba-ticketing-sla-case-study/actions/runs/38337859165). Site/`app.js`/`styles.css` trả HTTP 200 sau workflow; workflow và HTTP check không là lần chạy lại 74 smoke. Sáu nhóm chỉ smoke, không full local suite. |
 | Postman | [Collection/environment](../api/README.md), Newman 191 request/514 assertion/0 lỗi/exit 0; chủ dự án chấp nhận D-48. Chưa Postman UI Runner, không khẳng định tự chạy mọi request. |
 | Traceability/nghiệm thu | Đủ hàng AC-01…34, implementation/test/evidence/giới hạn rõ; không blanket PASS. |
-| Video | **Chưa có — còn thiếu.** Không link/thumbnail giả, không làm trong nhiệm vụ. |
-| Tag/release v1.0 | **Chưa tạo**, không công bố hoàn thành. Video còn thiếu; clean-start runtime từ clone mới đã có evidence, sửa DOC-CS-01 chỉ kiểm tra trong phạm vi docs. |
+| Video | **Chưa có, chưa kiểm thử; roadmap sau v1.0 theo D-51.** Không link/thumbnail giả hoặc tính là bằng chứng phát hành. |
+| Tag/release v1.0 | Chủ dự án chốt phát hành theo D-51 sau khi DOC-CS-01 đã lên origin/main; tag annotated `v1.0` phải trỏ đúng commit tài liệu phát hành. Runtime clean-start có evidence từ clone mới; sửa DOC-CS-01 được kiểm tra riêng, không gán hướng dẫn `7c35b2c` PASS. |
 
-Cross-browser/thiết bị vật lý/performance/uptime chưa evidence; không tự thêm thành gate v1.0 hoặc đặt ngưỡng mới. Roadmap giữ ngoài v1.0. [Audit xuất bản](../tests/evidence/portfolio-publication-report-20261013.md) ghi bảo toàn/diff/hash/Git; trigger/deploy không là lần test mới.
+Cross-browser/thiết bị vật lý/performance/uptime chưa evidence; không tự thêm thành gate v1.0 hoặc đặt ngưỡng mới. Video và các mở rộng trong [README](../README.md#roadmap-ngoài-v10) thuộc roadmap. [Audit xuất bản trước](../tests/evidence/portfolio-publication-report-20261013.md) ghi bảo toàn/diff/hash/Git; trigger/deploy không là lần test mới.

@@ -67,7 +67,7 @@ Hiện hành 13/10/2026, theo [stories/AC đã duyệt](03-requirements/user-sto
 
 NFR-03…05: [integrity][IT], fixture/clock inject/manifest Windows. README/clean-start: [Windows report](../tests/evidence/step1-windows-20261012-162259-report.md), 181 case source copy mới; Postman DB mới được [run helper](../tests/postman/run_newman.py) tạo trước import. NFR-06: P/G và chủ dự án chấp nhận UX. NFR-07 performance/uptime chưa có tiêu chí/evidence; không thêm ngưỡng.
 
-[Clean-start từ clone mới tại `7c35b2c`](../tests/evidence/portfolio-clean-start-report-20261013.md) có evidence install/check/181 pytest/HTTP backend/110 JS/static smoke/Newman 191–514; [lần clone thứ hai](../tests/evidence/portfolio-clean-start-repeat-20261013.md) tái hiện kết quả. DOC-CS-01 là lỗi hướng dẫn auditor lịch sử tại commit cũ, bản sửa docs đã thử riêng; không gán toàn bộ hướng dẫn commit cũ PASS hoặc suy ra đã chạy trọn suite từ commit mới. Video **Chưa có**; [release checklist](release-checklist.md) giữ tiêu chí gốc/giới hạn, không tag v1.0.
+[Clean-start từ clone mới tại `7c35b2c`](../tests/evidence/portfolio-clean-start-report-20261013.md) có evidence install/check/181 pytest/HTTP backend/110 JS/static smoke/Newman 191–514; [lần clone thứ hai](../tests/evidence/portfolio-clean-start-repeat-20261013.md) tái hiện kết quả. DOC-CS-01 là lỗi hướng dẫn auditor lịch sử tại commit cũ, bản sửa docs đã thử riêng; không gán toàn bộ hướng dẫn commit cũ PASS hoặc suy ra đã chạy trọn suite từ commit mới. Video **Chưa có**, thuộc roadmap D-51; [release checklist](release-checklist.md) giữ tiêu chí nghiệp vụ/kỹ thuật và giới hạn.
 
 [S]: ../backend/store.py
 [A]: ../backend/app.py

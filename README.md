@@ -1,5 +1,7 @@
 # BA Ticketing & SLA Case Study
 
+**Portfolio v1.0** — [demo tương tác trên GitHub Pages](https://phuoctrong2005.github.io/ba-ticketing-sla-case-study/) · [tiêu chí và bằng chứng phát hành](docs/release-checklist.md). Chủ dự án chốt phát hành ngày 13/10/2026 theo D-51; video demo được chuyển sang roadmap.
+
 Một case study Business Analyst cho doanh nghiệp phần mềm B2B **giả định**: yêu cầu hỗ trợ rời rạc, trách nhiệm chưa rõ và cách hiểu “đã giải quyết” chưa thống nhất. Giải pháp mẫu gồm quy trình, yêu cầu, prototype và backend mô phỏng; không dùng dữ liệu doanh nghiệp thật hoặc tuyên bố hiệu quả vận hành thực.
 
 **Vai trò BA của chủ dự án:** xác định vấn đề/phạm vi, mô hình hóa quy trình, chốt business rules, stories/AC, thiết kế dữ liệu/API và phê duyệt kịch bản/kết quả. Codex hỗ trợ implementation, chạy công cụ và lưu bằng chứng. Việc chấp nhận kết quả không có nghĩa chủ dự án tự thao tác mọi test.
@@ -68,12 +70,12 @@ Mở `http://127.0.0.1:8000/docs`. Danh tính demo: Customer 1/2, Agent 3/4/5, M
 
 Đây là đối chiếu bằng chứng đã chạy, không phải lần chạy mới khi sửa README. Không cộng các số trên; fixture được dùng lại giữa các suite. [Traceability](docs/traceability.md) phân biệt chức năng, UI, SLA, đồng thời và tái lập.
 
-## Giới hạn và phần còn thiếu
+## Giới hạn của bản phát hành
 
 Danh tính demo không phải đăng nhập thật. Prototype lưu trong trình duyệt, **không gọi API**; dữ liệu đọc được qua DevTools. Pages smoke khác suite đầy đủ ở local; Newman tuần tự không chứng minh race hoặc biên lịch/deadline SLA. Các phần đó có bằng chứng pytest riêng. Chưa xác nhận cross-browser, thiết bị vật lý, hiệu năng hoặc uptime production.
 
-**Video: Chưa có. Portfolio v1.0 chưa hoàn tất; chưa có tag v1.0.** [Checklist](docs/release-checklist.md) nêu bằng chứng và phần còn thiếu. Lịch sử dài/hashes: [evidence index](tests/evidence/README.md) và [README trước bản portfolio](https://github.com/PhuocTrong2005/ba-ticketing-sla-case-study/blob/41d0ebf5fc2c96b745fa65301f0f9ba7ece08221/README.md).
+**Video: Chưa có, chưa kiểm thử; không thuộc điều kiện hoàn thành v1.0 theo D-51.** [Checklist](docs/release-checklist.md) nêu bằng chứng và giới hạn. Lịch sử dài/hashes: [evidence index](tests/evidence/README.md) và [README trước bản portfolio](https://github.com/PhuocTrong2005/ba-ticketing-sla-case-study/blob/41d0ebf5fc2c96b745fa65301f0f9ba7ece08221/README.md).
 
 ## Roadmap ngoài v1.0
 
-Chuyển/tự phân công Agent; đổi ưu tiên, mở lại hoặc tự đóng ticket; CSAT; lịch ngày lễ; email/SMS; đa kênh/tenant; đăng nhập thật; nối prototype với API; xếp hạng Agent; thời hạn phản hồi công khai cho Customer. Các mục này chưa triển khai, cần chốt phạm vi trước khi làm.
+Video demo; chuyển/tự phân công Agent; đổi ưu tiên, mở lại hoặc tự đóng ticket; CSAT; lịch ngày lễ; email/SMS; đa kênh/tenant; đăng nhập thật; nối prototype với API; xếp hạng Agent; thời hạn phản hồi công khai cho Customer. Các mục này chưa triển khai, cần chốt phạm vi trước khi làm.

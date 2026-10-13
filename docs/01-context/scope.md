@@ -42,7 +42,7 @@ Hướng phát triển sau v1.0 nằm ở Roadmap trong README; không phải m�
 | Schema, dữ liệu mẫu, truy vấn SQL | `database/` |
 | Postman collection và environment | `api/` |
 | Test SLA, API, đồng thời; bằng chứng | `tests/` |
-| README, video demo | gốc repo |
+| README portfolio | gốc repo |
 
 ## 4. Điều kiện hoàn thành v1.0
 - Luồng chính chạy được trên prototype và trên API tương ứng.
@@ -53,6 +53,8 @@ Hướng phát triển sau v1.0 nằm ở Roadmap trong README; không phải m�
 - Báo cáo SQL, gồm M-07, khớp dữ liệu mẫu có kết quả biết trước.
 - README đã được thử thực tế từ thư mục mới.
 - Phần chạy thật, phần mô phỏng và giới hạn được nêu trung thực.
+
+Theo D-51, video demo chuyển sang roadmap sau v1.0, không là hiện vật hoặc điều kiện nghiệm thu của bản phát hành này. GitHub Pages là demo tương tác hiện có; video chưa được tạo hay kiểm thử.
 
 ## 5. Giới hạn đã chấp nhận
 - Prototype không gọi API thật; backend chạy local.
