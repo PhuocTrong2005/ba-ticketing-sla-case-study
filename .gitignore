@@ -19,3 +19,7 @@ tests/evidence/step1-windows-*-clean-venv.log
 tests/evidence/prototype-*-edge.log
 tests/evidence/pages-public-smoke-*-edge.log
 _site/
+
+# Isolated Postman/Newman tooling and retained fresh test databases.
+.postman-tools/
+.postman-runs/

@@ -1,5 +1,13 @@
 # Traceability matrix
 
+## Hiện hành — portfolio 13/10/2026, D-48
+
+[Ma trận AC-01…34](ac-traceability.md) là điểm đọc hiện hành: mỗi AC có implementation, test/request cụ thể, evidence và giới hạn. Tách chức năng/quyền, đồng thời/dữ liệu, SLA, UI/báo cáo và tái lập; không gán toàn bộ AC PASS từ tổng suite. [Release checklist](release-checklist.md) giữ tiêu chí gốc/khoảng thiếu: video Chưa có, README chưa clean-start toàn bộ bằng checkout mới sau xuất bản.
+
+Đã đối chiếu nguồn: Windows 181 pytest/0 lỗi; JS local 110/0; Pages 74 smoke check; Newman 191 request/514 assertion/0 lỗi. [Evidence index](../tests/evidence/README.md), [audit xuất bản](../tests/evidence/portfolio-publication-report-20261013.md). Postman được chủ dự án chấp nhận; runner/Codex thực thi, không suy chủ dự án tự thao tác mọi ca. Không chạy lại suite khi source/collection/helper và hash khớp.
+
+Các phần dưới giữ nguyên như lịch sử từng mốc; “planned”, “chưa prototype/Postman/deploy” ở mốc cũ không là trạng thái hiện hành. Không thay BR/verified; portfolio v1.0 chưa hoàn tất.
+
 Khung truy vết này sẽ được bổ sung khi có yêu cầu, API/màn hình, kịch bản verified và bằng chứng hợp lệ. Không tự tạo bằng chứng hay gán trạng thái verified.
 
 ## Tài liệu quy trình — 12/10/2026
@@ -167,3 +175,24 @@ Chủ dự án phê duyệt yêu cầu/kịch bản và UX; chấp nhận kết 
 | Bảo toàn | [Audit bàn giao](../tests/evidence/pages-audit-20261013-003014.json) PASS: 261 protected, 228 evidence cũ nguyên byte, 218 file index đúng byte disk; không thay đổi fixture/backend/dependencies, không chạy lại backend. |
 
 Postman/video chưa làm; không gán kiểm tra UI cho race/atomicity/database event_id hoặc bảo mật production.
+
+## Postman/Newman — D-47, thực thi 13/10/2026
+
+[Collection v2.1](../api/ticketing-sla.postman_collection.json), [environment](../api/ticketing-sla.postman_environment.json), [API README](../api/README.md). Request name/description/script có mã PM, AC/BR, HTTP status/error_code. Không đổi BR/codes/83 fixture hoặc tự tạo scenario verified. “Postman chưa làm” ở phần mốc lịch sử phía trên được thay bằng kết quả hiện hành này; video chưa làm.
+
+| Nhánh kiểm tra | Request thực | Liên kết / giới hạn |
+|---|---|---|
+| Identity, role, ownership, New queue | PM-001…004,030…040,050…059,126/127,155/156,227/228 | BR-32…34/50/54/62; AC-01/03/06/12/13/21/27. 401/403/404 và queue chỉ 5 field; không là auth production |
+| Create/content/structure/priority | PM-020…029,045…049,073/074,104…109,220…226,230…233 | AC-01/16, BR-33/62. Thiếu/trắng theo handler, type/JSON/extra-field có thể 422 structural trước handler; không gửi trường hệ thống cấm |
+| Workflow và Waiting | PM-041/043/044,057/060…066,070/075,080/085,090/095,116…118 | AC-02/04/05/07/14/15/18/19; BR-08/19…21/50. Có state/running flag; không đối chiếu toán học SLA biên/calendar |
+| Review threshold và giữ review khi resume | PM-076/086/096/097,110/110a…d/111 | AC-23/24, BR-52/53/57. Không review sau reject 1/2; reject 3 mở review; Customer resume không gỡ chặn Resolved. HTTP tuần tự không chứng minh rollback giữa giao dịch |
+| Review quyền/phương án/Waiting/A1/A2 | PM-042,098…109,112…115,119 | AC-25…27; BR-54…58/62. Manager hoàn tất khi Waiting giữ status/running/consumed; Agent đọc plan trên ticket, Customer không nội bộ; A1 INVALID_TICKET_STATE, A2 TICKET_CLOSED |
+| Closed và thứ tự lỗi | PM-120…128,145…147,220…229 | AC-03/05/11/12/13/16; BR-33/37/50/51. Closed → assigned → capacity khi claim; access trước state với body đúng kiểu; structural exception kiểm tra riêng |
+| Tải 3 / return 4 / Waiting mở slot | PM-130…153,140/143/198 M06 | AC-10, BR-10/20/21/37/63. Các request tuần tự, không phải race AC-08/09 |
+| Reports M-01…07, quyền, zero denominator và filter | PM-011…017,111,161…167,171…177,181…187,191…198,200…210 | AC-28…31, BR-35/63. Contract/counts/kỳ/filter/as_of/quyền; M04 không chứng minh breached branch tức thời; M07 không phủ mọi overlap/breach-context |
+
+Kết quả thực theo [run record cuối](../tests/evidence/newman-20261013-004259-750031-run.json): **191 request / 514 assertion, 0 lỗi, exit 0**, Node v22.23.3/Newman 6.2.1, một iteration, mới 8 ticket qua giao dịch xác định; OpenAPI live khớp tracked. [JSON](../tests/evidence/newman-20261013-004259-750031.json), [JUnit](../tests/evidence/newman-20261013-004259-750031.xml), [báo cáo](../tests/evidence/postman-report-20261013.md) giữ cả run đầu 183/491 trước mở rộng source, không gộp hai run.
+
+Không phát hiện implementation bug trong nhánh đã chạy. Backend/dependencies/prototype/83 fixture/bằng chứng trước và `Run Project.txt` giữ nguyên; database demo không bị thay thế; server thử đã dừng, database thử giữ local riêng. Không chạy lại 181 pytest. Không cộng assertion Newman vào số pytest hoặc tự gán PASS toàn bộ AC. Race AC-08/09, replay/atomicity AC-07/22/23, phép tính biên SLA/calendar/83 fixture giữ [bằng chứng backend riêng](../tests/evidence/backend-test-report.md). Chưa dùng Postman UI Runner; chưa commit/push/video/README tổng thể hoặc xác nhận toàn bộ v1.0.
+
+[Audit bàn giao](../tests/evidence/postman-audit-20261013-004951-140523.json): PASS, 343 protected/291 evidence cũ/database demo nguyên byte, source/collection/environment khớp hash run cuối; 121 links hợp lệ, diff-check exit 0, không payload hệ thống/ID ticket hardcode/token/đường dẫn riêng máy trong collection/environment; requests chỉ đến loopback server thử. Audit đầu nhận nhầm URL trong regex, đã sửa auditor và giữ record lịch sử; không sửa assertion/expected/nghiệp vụ để đạt.

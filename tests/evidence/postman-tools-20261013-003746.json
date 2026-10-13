@@ -1,0 +1,14 @@
+{
+  "node_download": "https://nodejs.org/dist/latest-v22.x/node-v22.23.3-win-x64.zip",
+  "node_archive_sha256": "2b0ff57b049cda1bbcea2240eec20467018713c1efe1f7360c2681859b90ed71",
+  "node_version": "v22.23.3",
+  "npm_version": "10.9.9",
+  "newman_version": "6.2.1",
+  "install_options": [
+    "--ignore-scripts",
+    "--no-audit",
+    "--no-fund",
+    "newman@6.2.1"
+  ],
+  "scope": "Ignored .postman-tools only; no backend dependencies or global PATH changes."
+}

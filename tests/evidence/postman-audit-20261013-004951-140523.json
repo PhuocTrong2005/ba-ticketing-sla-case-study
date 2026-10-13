@@ -1,0 +1,53 @@
+{
+  "run_record": "tests/evidence/newman-20261013-004259-750031-run.json",
+  "protected_files": 343,
+  "old_evidence_preserved_count": 291,
+  "changed_or_deleted_protected": [],
+  "existing_database_changes": [],
+  "current_source_hash_mismatches": [],
+  "collection_requests": 191,
+  "unique_request_names": true,
+  "newman_execution_order_matches_collection": true,
+  "nonlocal_newman_requests": [],
+  "payload_reserved_field_violations": [],
+  "hardcoded_ticket_id_requests": [],
+  "identity_environment_correct": true,
+  "secret_or_private_path_pattern_hits": false,
+  "live_openapi_matches_tracked": true,
+  "requests": {
+    "total": 191,
+    "pending": 0,
+    "failed": 0
+  },
+  "assertions": {
+    "total": 514,
+    "pending": 0,
+    "failed": 0
+  },
+  "runner_exit_code": 0,
+  "runner": "Newman CLI",
+  "database_readonly_summary": {
+    "tickets": 8,
+    "states": {
+      "CLOSED": 1,
+      "IN_PROGRESS": 3,
+      "NEW": 1,
+      "RESOLVED": 1,
+      "WAITING_FOR_CUSTOMER": 2
+    },
+    "reviews": 1,
+    "events": 42
+  },
+  "owned_server_stopped": true,
+  "owned_port_closed_after_run": true,
+  "local_links_checked": 121,
+  "broken_links": [],
+  "git_diff_check_exit_code": 0,
+  "trailing_whitespace_source_files": [],
+  "head_unchanged_no_commit": true,
+  "staged_files": [],
+  "fixture_sha256": "6e75371714e5589eb78c45b0df3eb69595f2dfcc9362c9398b8c11989c0756ee",
+  "backend_pytest_rerun": false,
+  "limitations": "Sequential Newman HTTP; no race/calendar/deadline/fixture calculation claims. No Postman UI runner.",
+  "passed": true
+}

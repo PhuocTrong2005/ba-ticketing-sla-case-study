@@ -1,0 +1,899 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="BA Ticketing SLA · Deterministic API checks" tests="191" time="1.695">
+  <testsuite name="01 · Fresh database, identity and empty reports / PM-001 · Fresh database precondition → 200" id="16b1d22e-201a-45a2-ab31-14a13361958d" timestamp="2026-10-13T00:43:03.438Z" tests="3" failures="0" errors="0" time="0.053">
+    <testcase name="PM-001 HTTP 200" time="0.053" classname="01FreshDatabaseIdentityAndEmptyReportsPm001FreshDatabasePrecondition200"/>
+    <testcase name="Fresh DB has no tickets" time="0.053" classname="01FreshDatabaseIdentityAndEmptyReportsPm001FreshDatabasePrecondition200"/>
+    <testcase name="Server Date is available" time="0.053" classname="01FreshDatabaseIdentityAndEmptyReportsPm001FreshDatabasePrecondition200"/>
+  </testsuite>
+  <testsuite name="01 · Fresh database, identity and empty reports / PM-002 · Missing/invalid demo identity → 401" id="49b27e14-6452-4783-bbf8-67ac189f2ace" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.005">
+    <testcase name="PM-002 HTTP 401" time="0.005" classname="01FreshDatabaseIdentityAndEmptyReportsPm002MissingInvalidDemoIdentity401"/>
+    <testcase name="Handler error envelope and code" time="0.005" classname="01FreshDatabaseIdentityAndEmptyReportsPm002MissingInvalidDemoIdentity401"/>
+  </testsuite>
+  <testsuite name="01 · Fresh database, identity and empty reports / PM-003 · Missing/invalid demo identity → 401" id="422f5fcd-c2fe-4cae-8f7a-6cd0d6547ba3" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.007">
+    <testcase name="PM-003 HTTP 401" time="0.007" classname="01FreshDatabaseIdentityAndEmptyReportsPm003MissingInvalidDemoIdentity401"/>
+    <testcase name="Handler error envelope and code" time="0.007" classname="01FreshDatabaseIdentityAndEmptyReportsPm003MissingInvalidDemoIdentity401"/>
+  </testsuite>
+  <testsuite name="01 · Fresh database, identity and empty reports / PM-004 · Missing/invalid demo identity → 401" id="3de4d387-e2ce-436f-88af-7bb6c807b5bf" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.006">
+    <testcase name="PM-004 HTTP 401" time="0.006" classname="01FreshDatabaseIdentityAndEmptyReportsPm004MissingInvalidDemoIdentity401"/>
+    <testcase name="Handler error envelope and code" time="0.006" classname="01FreshDatabaseIdentityAndEmptyReportsPm004MissingInvalidDemoIdentity401"/>
+  </testsuite>
+  <testsuite name="01 · Fresh database, identity and empty reports / PM-011 · M-01 ?from={{period_from}}&amp;to={{period_to}} → 200" id="59fdfc39-d0ab-41fc-9ba9-18f40d0d152e" timestamp="2026-10-13T00:43:03.438Z" tests="3" failures="0" errors="0" time="0.010">
+    <testcase name="PM-011 HTTP 200" time="0.010" classname="01FreshDatabaseIdentityAndEmptyReportsPm011M01FromPeriodFromAmpToPeriodTo200"/>
+    <testcase name="M-01 report contract" time="0.010" classname="01FreshDatabaseIdentityAndEmptyReportsPm011M01FromPeriodFromAmpToPeriodTo200"/>
+    <testcase name="Empty numerator/denominator" time="0.010" classname="01FreshDatabaseIdentityAndEmptyReportsPm011M01FromPeriodFromAmpToPeriodTo200"/>
+  </testsuite>
+  <testsuite name="01 · Fresh database, identity and empty reports / PM-012 · M-02 ?from={{period_from}}&amp;to={{period_to}} → 200" id="1d99f780-a7ab-4be1-af84-9d381bf7bd11" timestamp="2026-10-13T00:43:03.438Z" tests="3" failures="0" errors="0" time="0.010">
+    <testcase name="PM-012 HTTP 200" time="0.010" classname="01FreshDatabaseIdentityAndEmptyReportsPm012M02FromPeriodFromAmpToPeriodTo200"/>
+    <testcase name="M-02 report contract" time="0.010" classname="01FreshDatabaseIdentityAndEmptyReportsPm012M02FromPeriodFromAmpToPeriodTo200"/>
+    <testcase name="Empty numerator/denominator" time="0.010" classname="01FreshDatabaseIdentityAndEmptyReportsPm012M02FromPeriodFromAmpToPeriodTo200"/>
+  </testsuite>
+  <testsuite name="01 · Fresh database, identity and empty reports / PM-013 · M-03 ?from={{period_from}}&amp;to={{period_to}} → 200" id="be46f7ea-7b37-401f-b0f1-57af31d8c859" timestamp="2026-10-13T00:43:03.438Z" tests="3" failures="0" errors="0" time="0.009">
+    <testcase name="PM-013 HTTP 200" time="0.009" classname="01FreshDatabaseIdentityAndEmptyReportsPm013M03FromPeriodFromAmpToPeriodTo200"/>
+    <testcase name="M-03 report contract" time="0.009" classname="01FreshDatabaseIdentityAndEmptyReportsPm013M03FromPeriodFromAmpToPeriodTo200"/>
+    <testcase name="Empty numerator/denominator" time="0.009" classname="01FreshDatabaseIdentityAndEmptyReportsPm013M03FromPeriodFromAmpToPeriodTo200"/>
+  </testsuite>
+  <testsuite name="01 · Fresh database, identity and empty reports / PM-014 · M-04 → 200" id="9e1b6552-9d8e-41ac-8a4b-e4a73b609e95" timestamp="2026-10-13T00:43:03.438Z" tests="3" failures="0" errors="0" time="0.009">
+    <testcase name="PM-014 HTTP 200" time="0.009" classname="01FreshDatabaseIdentityAndEmptyReportsPm014M04200"/>
+    <testcase name="M-04 report contract" time="0.009" classname="01FreshDatabaseIdentityAndEmptyReportsPm014M04200"/>
+    <testcase name="Empty snapshot" time="0.009" classname="01FreshDatabaseIdentityAndEmptyReportsPm014M04200"/>
+  </testsuite>
+  <testsuite name="01 · Fresh database, identity and empty reports / PM-015 · M-05 → 200" id="6cef9544-96c2-4d98-84d8-de4ab3b55afa" timestamp="2026-10-13T00:43:03.438Z" tests="3" failures="0" errors="0" time="0.009">
+    <testcase name="PM-015 HTTP 200" time="0.009" classname="01FreshDatabaseIdentityAndEmptyReportsPm015M05200"/>
+    <testcase name="M-05 report contract" time="0.009" classname="01FreshDatabaseIdentityAndEmptyReportsPm015M05200"/>
+    <testcase name="Empty snapshot" time="0.009" classname="01FreshDatabaseIdentityAndEmptyReportsPm015M05200"/>
+  </testsuite>
+  <testsuite name="01 · Fresh database, identity and empty reports / PM-016 · M-06 → 200" id="66308a56-6802-4fd7-8313-bd784c462636" timestamp="2026-10-13T00:43:03.438Z" tests="4" failures="0" errors="0" time="0.009">
+    <testcase name="PM-016 HTTP 200" time="0.009" classname="01FreshDatabaseIdentityAndEmptyReportsPm016M06200"/>
+    <testcase name="M-06 report contract" time="0.009" classname="01FreshDatabaseIdentityAndEmptyReportsPm016M06200"/>
+    <testcase name="Three demo Agents" time="0.009" classname="01FreshDatabaseIdentityAndEmptyReportsPm016M06200"/>
+    <testcase name="All loads zero" time="0.009" classname="01FreshDatabaseIdentityAndEmptyReportsPm016M06200"/>
+  </testsuite>
+  <testsuite name="01 · Fresh database, identity and empty reports / PM-017 · M-07 → 200" id="c1022255-fd22-4998-9e9e-f8e26a63ea7d" timestamp="2026-10-13T00:43:03.438Z" tests="3" failures="0" errors="0" time="0.008">
+    <testcase name="PM-017 HTTP 200" time="0.008" classname="01FreshDatabaseIdentityAndEmptyReportsPm017M07200"/>
+    <testcase name="M-07 report contract" time="0.008" classname="01FreshDatabaseIdentityAndEmptyReportsPm017M07200"/>
+    <testcase name="Empty snapshot" time="0.008" classname="01FreshDatabaseIdentityAndEmptyReportsPm017M07200"/>
+  </testsuite>
+  <testsuite name="02 · Create validation and New ticket permissions / PM-020 · Create: missing title → 422" id="891fc5ef-4a57-4fdd-8f7a-7b6f4c6cf433" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.007">
+    <testcase name="PM-020 HTTP 422" time="0.007" classname="02CreateValidationAndNewTicketPermissionsPm020CreateMissingTitle422"/>
+    <testcase name="Handler error envelope and code" time="0.007" classname="02CreateValidationAndNewTicketPermissionsPm020CreateMissingTitle422"/>
+  </testsuite>
+  <testsuite name="02 · Create validation and New ticket permissions / PM-021 · Create: blank title → 422" id="dae9b0d8-7c59-4166-b4ee-c69339894eee" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.005">
+    <testcase name="PM-021 HTTP 422" time="0.005" classname="02CreateValidationAndNewTicketPermissionsPm021CreateBlankTitle422"/>
+    <testcase name="Handler error envelope and code" time="0.005" classname="02CreateValidationAndNewTicketPermissionsPm021CreateBlankTitle422"/>
+  </testsuite>
+  <testsuite name="02 · Create validation and New ticket permissions / PM-022 · Create: numeric title → 422" id="149e94e5-f14a-4f01-ae22-6c985fb41263" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.005">
+    <testcase name="PM-022 HTTP 422" time="0.005" classname="02CreateValidationAndNewTicketPermissionsPm022CreateNumericTitle422"/>
+    <testcase name="FastAPI structural 422 before handler is allowed by BR-33" time="0.005" classname="02CreateValidationAndNewTicketPermissionsPm022CreateNumericTitle422"/>
+  </testsuite>
+  <testsuite name="02 · Create validation and New ticket permissions / PM-023 · Create: missing description → 422" id="b02c615f-e85a-4c13-87b5-8e59869c46f4" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.006">
+    <testcase name="PM-023 HTTP 422" time="0.006" classname="02CreateValidationAndNewTicketPermissionsPm023CreateMissingDescription422"/>
+    <testcase name="Handler error envelope and code" time="0.006" classname="02CreateValidationAndNewTicketPermissionsPm023CreateMissingDescription422"/>
+  </testsuite>
+  <testsuite name="02 · Create validation and New ticket permissions / PM-024 · Create: blank description → 422" id="24e3c8f3-8e45-445e-b885-2dfde380dd7b" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.005">
+    <testcase name="PM-024 HTTP 422" time="0.005" classname="02CreateValidationAndNewTicketPermissionsPm024CreateBlankDescription422"/>
+    <testcase name="Handler error envelope and code" time="0.005" classname="02CreateValidationAndNewTicketPermissionsPm024CreateBlankDescription422"/>
+  </testsuite>
+  <testsuite name="02 · Create validation and New ticket permissions / PM-025 · Create: object description → 422" id="fa192355-98a9-44c8-bfe6-493a45ae9160" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.005">
+    <testcase name="PM-025 HTTP 422" time="0.005" classname="02CreateValidationAndNewTicketPermissionsPm025CreateObjectDescription422"/>
+    <testcase name="FastAPI structural 422 before handler is allowed by BR-33" time="0.005" classname="02CreateValidationAndNewTicketPermissionsPm025CreateObjectDescription422"/>
+  </testsuite>
+  <testsuite name="02 · Create validation and New ticket permissions / PM-026 · Create: missing priority → 422" id="5eb8d7c3-c5cf-44a3-a765-70efa4b04a0b" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.005">
+    <testcase name="PM-026 HTTP 422" time="0.005" classname="02CreateValidationAndNewTicketPermissionsPm026CreateMissingPriority422"/>
+    <testcase name="Handler error envelope and code" time="0.005" classname="02CreateValidationAndNewTicketPermissionsPm026CreateMissingPriority422"/>
+  </testsuite>
+  <testsuite name="02 · Create validation and New ticket permissions / PM-027 · Create: unsupported priority → 422" id="f6575951-9edc-4edb-b4bc-02605bd37cfe" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.005">
+    <testcase name="PM-027 HTTP 422" time="0.005" classname="02CreateValidationAndNewTicketPermissionsPm027CreateUnsupportedPriority422"/>
+    <testcase name="FastAPI structural 422 before handler is allowed by BR-33" time="0.005" classname="02CreateValidationAndNewTicketPermissionsPm027CreateUnsupportedPriority422"/>
+  </testsuite>
+  <testsuite name="02 · Create validation and New ticket permissions / PM-028 · Create: priority wrong type → 422" id="b46129b7-b963-4504-be51-a8d317fd1c33" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.006">
+    <testcase name="PM-028 HTTP 422" time="0.006" classname="02CreateValidationAndNewTicketPermissionsPm028CreatePriorityWrongType422"/>
+    <testcase name="FastAPI structural 422 before handler is allowed by BR-33" time="0.006" classname="02CreateValidationAndNewTicketPermissionsPm028CreatePriorityWrongType422"/>
+  </testsuite>
+  <testsuite name="02 · Create validation and New ticket permissions / PM-029 · Create: unknown field → 422" id="2d322c40-9272-4fe2-848c-a4ab298054a2" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.006">
+    <testcase name="PM-029 HTTP 422" time="0.006" classname="02CreateValidationAndNewTicketPermissionsPm029CreateUnknownField422"/>
+    <testcase name="FastAPI structural 422 before handler is allowed by BR-33" time="0.006" classname="02CreateValidationAndNewTicketPermissionsPm029CreateUnknownField422"/>
+  </testsuite>
+  <testsuite name="02 · Create validation and New ticket permissions / PM-030 · Agent create role before missing text → 403" id="80854c39-304c-4938-8b98-4d13cb9ee286" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.005">
+    <testcase name="PM-030 HTTP 403" time="0.005" classname="02CreateValidationAndNewTicketPermissionsPm030AgentCreateRoleBeforeMissingText403"/>
+    <testcase name="Handler error envelope and code" time="0.005" classname="02CreateValidationAndNewTicketPermissionsPm030AgentCreateRoleBeforeMissingText403"/>
+  </testsuite>
+  <testsuite name="02 · Create validation and New ticket permissions / PM-031 · Create ticket_id → 201" id="c12dd970-39e9-406d-b541-bbabc2227475" timestamp="2026-10-13T00:43:03.438Z" tests="4" failures="0" errors="0" time="0.012">
+    <testcase name="PM-031 HTTP 201" time="0.012" classname="02CreateValidationAndNewTicketPermissionsPm031CreateTicketId201"/>
+    <testcase name="customer ticket response contract" time="0.012" classname="02CreateValidationAndNewTicketPermissionsPm031CreateTicketId201"/>
+    <testcase name="Ticket state NEW" time="0.012" classname="02CreateValidationAndNewTicketPermissionsPm031CreateTicketId201"/>
+    <testcase name="No assignee on create" time="0.012" classname="02CreateValidationAndNewTicketPermissionsPm031CreateTicketId201"/>
+  </testsuite>
+  <testsuite name="02 · Create validation and New ticket permissions / PM-032 · Owner sees New ticket → 200" id="88172d97-8bef-4e49-a107-113b9d32fcbc" timestamp="2026-10-13T00:43:03.438Z" tests="3" failures="0" errors="0" time="0.009">
+    <testcase name="PM-032 HTTP 200" time="0.009" classname="02CreateValidationAndNewTicketPermissionsPm032OwnerSeesNewTicket200"/>
+    <testcase name="customer ticket response contract" time="0.009" classname="02CreateValidationAndNewTicketPermissionsPm032OwnerSeesNewTicket200"/>
+    <testcase name="Ticket state NEW" time="0.009" classname="02CreateValidationAndNewTicketPermissionsPm032OwnerSeesNewTicket200"/>
+  </testsuite>
+  <testsuite name="02 · Create validation and New ticket permissions / PM-033 · Other Customer gets 404 → 404" id="ea847569-46a0-4c69-af00-d07b7f52d67a" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.008">
+    <testcase name="PM-033 HTTP 404" time="0.008" classname="02CreateValidationAndNewTicketPermissionsPm033OtherCustomerGets404404"/>
+    <testcase name="Handler error envelope and code" time="0.008" classname="02CreateValidationAndNewTicketPermissionsPm033OtherCustomerGets404404"/>
+  </testsuite>
+  <testsuite name="02 · Create validation and New ticket permissions / PM-034 · Missing ticket derived from response ID → 404" id="cbcc48ac-b8e3-49a1-aa2c-9a595979ce93" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.008">
+    <testcase name="PM-034 HTTP 404" time="0.008" classname="02CreateValidationAndNewTicketPermissionsPm034MissingTicketDerivedFromResponseId404"/>
+    <testcase name="Handler error envelope and code" time="0.008" classname="02CreateValidationAndNewTicketPermissionsPm034MissingTicketDerivedFromResponseId404"/>
+  </testsuite>
+  <testsuite name="02 · Create validation and New ticket permissions / PM-035 · Agent cannot view unclaimed New → 403" id="9ff75cff-6aee-4753-a6db-f3a497b80ee1" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.008">
+    <testcase name="PM-035 HTTP 403" time="0.008" classname="02CreateValidationAndNewTicketPermissionsPm035AgentCannotViewUnclaimedNew403"/>
+    <testcase name="Handler error envelope and code" time="0.008" classname="02CreateValidationAndNewTicketPermissionsPm035AgentCannotViewUnclaimedNew403"/>
+  </testsuite>
+  <testsuite name="02 · Create validation and New ticket permissions / PM-036 · Agent cannot reply to unclaimed New → 403" id="756173a0-ce71-4d43-a0a1-92defe0f5374" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.008">
+    <testcase name="PM-036 HTTP 403" time="0.008" classname="02CreateValidationAndNewTicketPermissionsPm036AgentCannotReplyToUnclaimedNew403"/>
+    <testcase name="Handler error envelope and code" time="0.008" classname="02CreateValidationAndNewTicketPermissionsPm036AgentCannotReplyToUnclaimedNew403"/>
+  </testsuite>
+  <testsuite name="02 · Create validation and New ticket permissions / PM-037 · Customer cannot claim → 403" id="071b9103-f6b7-4df2-8475-364b0d2ef497" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.005">
+    <testcase name="PM-037 HTTP 403" time="0.005" classname="02CreateValidationAndNewTicketPermissionsPm037CustomerCannotClaim403"/>
+    <testcase name="Handler error envelope and code" time="0.005" classname="02CreateValidationAndNewTicketPermissionsPm037CustomerCannotClaim403"/>
+  </testsuite>
+  <testsuite name="02 · Create validation and New ticket permissions / PM-038 · Manager cannot claim → 403" id="cdec400a-f09d-477d-9e53-d0672c81ed09" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.006">
+    <testcase name="PM-038 HTTP 403" time="0.006" classname="02CreateValidationAndNewTicketPermissionsPm038ManagerCannotClaim403"/>
+    <testcase name="Handler error envelope and code" time="0.006" classname="02CreateValidationAndNewTicketPermissionsPm038ManagerCannotClaim403"/>
+  </testsuite>
+  <testsuite name="02 · Create validation and New ticket permissions / PM-039 · Agent queue exact allowed fields → 200" id="c31d67a1-3ba3-4f08-9c90-aaf10c7c499c" timestamp="2026-10-13T00:43:03.438Z" tests="3" failures="0" errors="0" time="0.007">
+    <testcase name="PM-039 HTTP 200" time="0.007" classname="02CreateValidationAndNewTicketPermissionsPm039AgentQueueExactAllowedFields200"/>
+    <testcase name="Queue has workflow ticket" time="0.007" classname="02CreateValidationAndNewTicketPermissionsPm039AgentQueueExactAllowedFields200"/>
+    <testcase name="Queue contract" time="0.007" classname="02CreateValidationAndNewTicketPermissionsPm039AgentQueueExactAllowedFields200"/>
+  </testsuite>
+  <testsuite name="02 · Create validation and New ticket permissions / PM-040 · Customer cannot read Agent queue → 403" id="48b8c1a5-4556-4192-a06a-039b72e1205c" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.005">
+    <testcase name="PM-040 HTTP 403" time="0.005" classname="02CreateValidationAndNewTicketPermissionsPm040CustomerCannotReadAgentQueue403"/>
+    <testcase name="Handler error envelope and code" time="0.005" classname="02CreateValidationAndNewTicketPermissionsPm040CustomerCannotReadAgentQueue403"/>
+  </testsuite>
+  <testsuite name="03 · Workflow, privacy, review escalation and Closed / PM-041 · Customer public message at New → 200" id="da7b5dee-81d0-4802-a556-14b6336dd50c" timestamp="2026-10-13T00:43:03.438Z" tests="3" failures="0" errors="0" time="0.013">
+    <testcase name="PM-041 HTTP 200" time="0.013" classname="03WorkflowPrivacyReviewEscalationAndClosedPm041CustomerPublicMessageAtNew200"/>
+    <testcase name="customer ticket response contract" time="0.013" classname="03WorkflowPrivacyReviewEscalationAndClosedPm041CustomerPublicMessageAtNew200"/>
+    <testcase name="Ticket state NEW" time="0.013" classname="03WorkflowPrivacyReviewEscalationAndClosedPm041CustomerPublicMessageAtNew200"/>
+  </testsuite>
+  <testsuite name="03 · Workflow, privacy, review escalation and Closed / PM-042 · A1 Manager without open review before content → 409 INVALID_TICKET_STATE" id="e0290a8b-2a85-4821-9bc7-8d43f4caaec4" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.009">
+    <testcase name="PM-042 HTTP 409" time="0.009" classname="03WorkflowPrivacyReviewEscalationAndClosedPm042A1ManagerWithoutOpenReviewBeforeContent409InvalidTicketState"/>
+    <testcase name="Handler error envelope and code" time="0.009" classname="03WorkflowPrivacyReviewEscalationAndClosedPm042A1ManagerWithoutOpenReviewBeforeContent409InvalidTicketState"/>
+  </testsuite>
+  <testsuite name="03 · Workflow, privacy, review escalation and Closed / PM-043 · Claim and assignment snapshot → 200" id="f38b5c3d-6c6f-4684-9323-b6da35a35872" timestamp="2026-10-13T00:43:03.438Z" tests="4" failures="0" errors="0" time="0.012">
+    <testcase name="PM-043 HTTP 200" time="0.012" classname="03WorkflowPrivacyReviewEscalationAndClosedPm043ClaimAndAssignmentSnapshot200"/>
+    <testcase name="internal ticket response contract" time="0.012" classname="03WorkflowPrivacyReviewEscalationAndClosedPm043ClaimAndAssignmentSnapshot200"/>
+    <testcase name="Ticket state IN_PROGRESS" time="0.012" classname="03WorkflowPrivacyReviewEscalationAndClosedPm043ClaimAndAssignmentSnapshot200"/>
+    <testcase name="Snapshot captures assignment" time="0.012" classname="03WorkflowPrivacyReviewEscalationAndClosedPm043ClaimAndAssignmentSnapshot200"/>
+  </testsuite>
+  <testsuite name="03 · Workflow, privacy, review escalation and Closed / PM-044 · Waiting before first public reply blocked → 409 INVALID_TICKET_STATE" id="6175ce34-33fb-4185-a829-cced919077f5" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.008">
+    <testcase name="PM-044 HTTP 409" time="0.008" classname="03WorkflowPrivacyReviewEscalationAndClosedPm044WaitingBeforeFirstPublicReplyBlocked409InvalidTicketState"/>
+    <testcase name="Handler error envelope and code" time="0.008" classname="03WorkflowPrivacyReviewEscalationAndClosedPm044WaitingBeforeFirstPublicReplyBlocked409InvalidTicketState"/>
+  </testsuite>
+  <testsuite name="03 · Workflow, privacy, review escalation and Closed / PM-045 · messages missing/invalid content → 422" id="ded0b1f3-1bb3-4c53-ada9-4909b7e71375" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.009">
+    <testcase name="PM-045 HTTP 422" time="0.009" classname="03WorkflowPrivacyReviewEscalationAndClosedPm045MessagesMissingInvalidContent422"/>
+    <testcase name="Handler error envelope and code" time="0.009" classname="03WorkflowPrivacyReviewEscalationAndClosedPm045MessagesMissingInvalidContent422"/>
+  </testsuite>
+  <testsuite name="03 · Workflow, privacy, review escalation and Closed / PM-046 · messages missing/invalid content → 422" id="180c674d-2d36-44a2-9081-3f635650cf56" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.008">
+    <testcase name="PM-046 HTTP 422" time="0.008" classname="03WorkflowPrivacyReviewEscalationAndClosedPm046MessagesMissingInvalidContent422"/>
+    <testcase name="Handler error envelope and code" time="0.008" classname="03WorkflowPrivacyReviewEscalationAndClosedPm046MessagesMissingInvalidContent422"/>
+  </testsuite>
+  <testsuite name="03 · Workflow, privacy, review escalation and Closed / PM-047 · notes missing/invalid content → 422" id="239d73a2-7f05-4364-b2b9-3e3fce82f013" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.009">
+    <testcase name="PM-047 HTTP 422" time="0.009" classname="03WorkflowPrivacyReviewEscalationAndClosedPm047NotesMissingInvalidContent422"/>
+    <testcase name="Handler error envelope and code" time="0.009" classname="03WorkflowPrivacyReviewEscalationAndClosedPm047NotesMissingInvalidContent422"/>
+  </testsuite>
+  <testsuite name="03 · Workflow, privacy, review escalation and Closed / PM-048 · resolve missing/invalid content → 422" id="5173c849-fc27-4cbd-962a-5a39585323a1" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.011">
+    <testcase name="PM-048 HTTP 422" time="0.011" classname="03WorkflowPrivacyReviewEscalationAndClosedPm048ResolveMissingInvalidContent422"/>
+    <testcase name="Handler error envelope and code" time="0.011" classname="03WorkflowPrivacyReviewEscalationAndClosedPm048ResolveMissingInvalidContent422"/>
+  </testsuite>
+  <testsuite name="03 · Workflow, privacy, review escalation and Closed / PM-049 · messages missing/invalid content → 422" id="bdf73a2f-a76c-4acf-a377-fac4d7dfad8e" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.007">
+    <testcase name="PM-049 HTTP 422" time="0.007" classname="03WorkflowPrivacyReviewEscalationAndClosedPm049MessagesMissingInvalidContent422"/>
+    <testcase name="FastAPI structural 422 before handler is allowed by BR-33" time="0.007" classname="03WorkflowPrivacyReviewEscalationAndClosedPm049MessagesMissingInvalidContent422"/>
+  </testsuite>
+  <testsuite name="03 · Workflow, privacy, review escalation and Closed / PM-050 · Other Agent denied before business content → 403" id="b0277570-9704-410f-97d6-287470cafdf3" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.007">
+    <testcase name="PM-050 HTTP 403" time="0.007" classname="03WorkflowPrivacyReviewEscalationAndClosedPm050OtherAgentDeniedBeforeBusinessContent403"/>
+    <testcase name="Handler error envelope and code" time="0.007" classname="03WorkflowPrivacyReviewEscalationAndClosedPm050OtherAgentDeniedBeforeBusinessContent403"/>
+  </testsuite>
+  <testsuite name="03 · Workflow, privacy, review escalation and Closed / PM-051 · Other Agent denied before business content → 403" id="09400e82-0006-4901-bfe3-07be0a6f4311" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.006">
+    <testcase name="PM-051 HTTP 403" time="0.006" classname="03WorkflowPrivacyReviewEscalationAndClosedPm051OtherAgentDeniedBeforeBusinessContent403"/>
+    <testcase name="Handler error envelope and code" time="0.006" classname="03WorkflowPrivacyReviewEscalationAndClosedPm051OtherAgentDeniedBeforeBusinessContent403"/>
+  </testsuite>
+  <testsuite name="03 · Workflow, privacy, review escalation and Closed / PM-052 · Other Agent denied before business content → 403" id="09bd8680-04de-404e-b32f-1f71f6353fc5" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.008">
+    <testcase name="PM-052 HTTP 403" time="0.008" classname="03WorkflowPrivacyReviewEscalationAndClosedPm052OtherAgentDeniedBeforeBusinessContent403"/>
+    <testcase name="Handler error envelope and code" time="0.008" classname="03WorkflowPrivacyReviewEscalationAndClosedPm052OtherAgentDeniedBeforeBusinessContent403"/>
+  </testsuite>
+  <testsuite name="03 · Workflow, privacy, review escalation and Closed / PM-053 · Other Agent detail denied → 403" id="2a7894d0-92cc-4078-9bd5-ba5c7483babf" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.008">
+    <testcase name="PM-053 HTTP 403" time="0.008" classname="03WorkflowPrivacyReviewEscalationAndClosedPm053OtherAgentDetailDenied403"/>
+    <testcase name="Handler error envelope and code" time="0.008" classname="03WorkflowPrivacyReviewEscalationAndClosedPm053OtherAgentDetailDenied403"/>
+  </testsuite>
+  <testsuite name="03 · Workflow, privacy, review escalation and Closed / PM-054 · Manager cannot public message → 403" id="cad1c2e8-0c01-4e6c-9681-576f5d43bc99" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.006">
+    <testcase name="PM-054 HTTP 403" time="0.006" classname="03WorkflowPrivacyReviewEscalationAndClosedPm054ManagerCannotPublicMessage403"/>
+    <testcase name="Handler error envelope and code" time="0.006" classname="03WorkflowPrivacyReviewEscalationAndClosedPm054ManagerCannotPublicMessage403"/>
+  </testsuite>
+  <testsuite name="03 · Workflow, privacy, review escalation and Closed / PM-055 · Manager cannot Resolved → 403" id="fe5c8bd4-9e4d-4068-9cfa-ff3bae414e24" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.005">
+    <testcase name="PM-055 HTTP 403" time="0.005" classname="03WorkflowPrivacyReviewEscalationAndClosedPm055ManagerCannotResolved403"/>
+    <testcase name="Handler error envelope and code" time="0.005" classname="03WorkflowPrivacyReviewEscalationAndClosedPm055ManagerCannotResolved403"/>
+  </testsuite>
+  <testsuite name="03 · Workflow, privacy, review escalation and Closed / PM-056 · Customer cannot internal note → 403" id="c793bb90-05fc-4960-96a6-14fdc7c0f478" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.006">
+    <testcase name="PM-056 HTTP 403" time="0.006" classname="03WorkflowPrivacyReviewEscalationAndClosedPm056CustomerCannotInternalNote403"/>
+    <testcase name="Handler error envelope and code" time="0.006" classname="03WorkflowPrivacyReviewEscalationAndClosedPm056CustomerCannotInternalNote403"/>
+  </testsuite>
+  <testsuite name="03 · Workflow, privacy, review escalation and Closed / PM-057 · Internal note does not end first response → 200" id="af9ea6bf-ea60-425c-8226-53bc5ad0e3ce" timestamp="2026-10-13T00:43:03.438Z" tests="4" failures="0" errors="0" time="0.011">
+    <testcase name="PM-057 HTTP 200" time="0.011" classname="03WorkflowPrivacyReviewEscalationAndClosedPm057InternalNoteDoesNotEndFirstResponse200"/>
+    <testcase name="internal ticket response contract" time="0.011" classname="03WorkflowPrivacyReviewEscalationAndClosedPm057InternalNoteDoesNotEndFirstResponse200"/>
+    <testcase name="Ticket state IN_PROGRESS" time="0.011" classname="03WorkflowPrivacyReviewEscalationAndClosedPm057InternalNoteDoesNotEndFirstResponse200"/>
+    <testcase name="First response still running" time="0.011" classname="03WorkflowPrivacyReviewEscalationAndClosedPm057InternalNoteDoesNotEndFirstResponse200"/>
+  </testsuite>
+  <testsuite name="03 · Workflow, privacy, review escalation and Closed / PM-058 · Manager sees Agent note → 200" id="e99ee95f-15a5-4f87-bd9d-39f1ca92bdc0" timestamp="2026-10-13T00:43:03.438Z" tests="3" failures="0" errors="0" time="0.011">
+    <testcase name="PM-058 HTTP 200" time="0.011" classname="03WorkflowPrivacyReviewEscalationAndClosedPm058ManagerSeesAgentNote200"/>
+    <testcase name="internal ticket response contract" time="0.011" classname="03WorkflowPrivacyReviewEscalationAndClosedPm058ManagerSeesAgentNote200"/>
+    <testcase name="Manager sees internal note" time="0.011" classname="03WorkflowPrivacyReviewEscalationAndClosedPm058ManagerSeesAgentNote200"/>
+  </testsuite>
+  <testsuite name="03 · Workflow, privacy, review escalation and Closed / PM-059 · Customer detail excludes internal data → 200" id="fe97c0f1-29a1-4a77-9c48-32da284978ac" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.008">
+    <testcase name="PM-059 HTTP 200" time="0.008" classname="03WorkflowPrivacyReviewEscalationAndClosedPm059CustomerDetailExcludesInternalData200"/>
+    <testcase name="customer ticket response contract" time="0.008" classname="03WorkflowPrivacyReviewEscalationAndClosedPm059CustomerDetailExcludesInternalData200"/>
+  </testsuite>
+  <testsuite name="03 · Workflow, privacy, review escalation and Closed / PM-060 · Agent public reply ends first response → 200" id="c9d25d9c-d874-4ffb-85c7-a58a2bf1740d" timestamp="2026-10-13T00:43:03.438Z" tests="4" failures="0" errors="0" time="0.012">
+    <testcase name="PM-060 HTTP 200" time="0.012" classname="03WorkflowPrivacyReviewEscalationAndClosedPm060AgentPublicReplyEndsFirstResponse200"/>
+    <testcase name="internal ticket response contract" time="0.012" classname="03WorkflowPrivacyReviewEscalationAndClosedPm060AgentPublicReplyEndsFirstResponse200"/>
+    <testcase name="Ticket state IN_PROGRESS" time="0.012" classname="03WorkflowPrivacyReviewEscalationAndClosedPm060AgentPublicReplyEndsFirstResponse200"/>
+    <testcase name="First response ended" time="0.012" classname="03WorkflowPrivacyReviewEscalationAndClosedPm060AgentPublicReplyEndsFirstResponse200"/>
+  </testsuite>
+  <testsuite name="03 · Workflow, privacy, review escalation and Closed / PM-061 · Waiting after reply → 200" id="55e217d4-c353-41f9-b710-95f2406c2dae" timestamp="2026-10-13T00:43:03.438Z" tests="4" failures="0" errors="0" time="0.012">
+    <testcase name="PM-061 HTTP 200" time="0.012" classname="03WorkflowPrivacyReviewEscalationAndClosedPm061WaitingAfterReply200"/>
+    <testcase name="internal ticket response contract" time="0.012" classname="03WorkflowPrivacyReviewEscalationAndClosedPm061WaitingAfterReply200"/>
+    <testcase name="Ticket state WAITING_FOR_CUSTOMER" time="0.012" classname="03WorkflowPrivacyReviewEscalationAndClosedPm061WaitingAfterReply200"/>
+    <testcase name="Resolution paused" time="0.012" classname="03WorkflowPrivacyReviewEscalationAndClosedPm061WaitingAfterReply200"/>
+  </testsuite>
+  <testsuite name="03 · Workflow, privacy, review escalation and Closed / PM-062 · Agent public message keeps Waiting → 200" id="f8a21967-779e-459a-b957-48080c02fbcb" timestamp="2026-10-13T00:43:03.438Z" tests="3" failures="0" errors="0" time="0.013">
+    <testcase name="PM-062 HTTP 200" time="0.013" classname="03WorkflowPrivacyReviewEscalationAndClosedPm062AgentPublicMessageKeepsWaiting200"/>
+    <testcase name="internal ticket response contract" time="0.013" classname="03WorkflowPrivacyReviewEscalationAndClosedPm062AgentPublicMessageKeepsWaiting200"/>
+    <testcase name="Ticket state WAITING_FOR_CUSTOMER" time="0.013" classname="03WorkflowPrivacyReviewEscalationAndClosedPm062AgentPublicMessageKeepsWaiting200"/>
+  </testsuite>
+  <testsuite name="03 · Workflow, privacy, review escalation and Closed / PM-063 · Agent note keeps Waiting → 200" id="a98d94d5-3759-4e95-a482-96777a3ad197" timestamp="2026-10-13T00:43:03.438Z" tests="3" failures="0" errors="0" time="0.015">
+    <testcase name="PM-063 HTTP 200" time="0.015" classname="03WorkflowPrivacyReviewEscalationAndClosedPm063AgentNoteKeepsWaiting200"/>
+    <testcase name="internal ticket response contract" time="0.015" classname="03WorkflowPrivacyReviewEscalationAndClosedPm063AgentNoteKeepsWaiting200"/>
+    <testcase name="Ticket state WAITING_FOR_CUSTOMER" time="0.015" classname="03WorkflowPrivacyReviewEscalationAndClosedPm063AgentNoteKeepsWaiting200"/>
+  </testsuite>
+  <testsuite name="03 · Workflow, privacy, review escalation and Closed / PM-064 · Customer resume from Waiting → 200" id="be1ee294-c06c-4d86-a07f-95564a1e01a8" timestamp="2026-10-13T00:43:03.438Z" tests="3" failures="0" errors="0" time="0.014">
+    <testcase name="PM-064 HTTP 200" time="0.014" classname="03WorkflowPrivacyReviewEscalationAndClosedPm064CustomerResumeFromWaiting200"/>
+    <testcase name="customer ticket response contract" time="0.014" classname="03WorkflowPrivacyReviewEscalationAndClosedPm064CustomerResumeFromWaiting200"/>
+    <testcase name="Ticket state IN_PROGRESS" time="0.014" classname="03WorkflowPrivacyReviewEscalationAndClosedPm064CustomerResumeFromWaiting200"/>
+  </testsuite>
+  <testsuite name="03 · Workflow, privacy, review escalation and Closed / PM-065 · Confirm outside Resolved → 409 INVALID_TICKET_STATE" id="0545b9c1-e286-4843-b042-001bb56414e8" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.009">
+    <testcase name="PM-065 HTTP 409" time="0.009" classname="03WorkflowPrivacyReviewEscalationAndClosedPm065ConfirmOutsideResolved409InvalidTicketState"/>
+    <testcase name="Handler error envelope and code" time="0.009" classname="03WorkflowPrivacyReviewEscalationAndClosedPm065ConfirmOutsideResolved409InvalidTicketState"/>
+  </testsuite>
+  <testsuite name="03 · Workflow, privacy, review escalation and Closed / PM-066 · Reject outside Resolved before missing reason → 409 INVALID_TICKET_STATE" id="39964805-9503-4737-8f8e-6c79d0146cc8" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.008">
+    <testcase name="PM-066 HTTP 409" time="0.008" classname="03WorkflowPrivacyReviewEscalationAndClosedPm066RejectOutsideResolvedBeforeMissingReason409InvalidTicketState"/>
+    <testcase name="Handler error envelope and code" time="0.008" classname="03WorkflowPrivacyReviewEscalationAndClosedPm066RejectOutsideResolvedBeforeMissingReason409InvalidTicketState"/>
+  </testsuite>
+  <testsuite name="03 · Workflow, privacy, review escalation and Closed / PM-070 · Resolved cycle 1 → 200" id="5ae604f7-11cb-4544-8abf-69ebbce34a95" timestamp="2026-10-13T00:43:03.438Z" tests="3" failures="0" errors="0" time="0.015">
+    <testcase name="PM-070 HTTP 200" time="0.015" classname="03WorkflowPrivacyReviewEscalationAndClosedPm070ResolvedCycle1200"/>
+    <testcase name="internal ticket response contract" time="0.015" classname="03WorkflowPrivacyReviewEscalationAndClosedPm070ResolvedCycle1200"/>
+    <testcase name="Ticket state RESOLVED" time="0.015" classname="03WorkflowPrivacyReviewEscalationAndClosedPm070ResolvedCycle1200"/>
+  </testsuite>
+  <testsuite name="03 · Workflow, privacy, review escalation and Closed / PM-071 · Resolved Customer message state before content → 409 INVALID_TICKET_STATE" id="7916f23e-7646-44a9-a7af-b5eca4661a69" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.009">
+    <testcase name="PM-071 HTTP 409" time="0.009" classname="03WorkflowPrivacyReviewEscalationAndClosedPm071ResolvedCustomerMessageStateBeforeContent409InvalidTicketState"/>
+    <testcase name="Handler error envelope and code" time="0.009" classname="03WorkflowPrivacyReviewEscalationAndClosedPm071ResolvedCustomerMessageStateBeforeContent409InvalidTicketState"/>
+  </testsuite>
+  <testsuite name="03 · Workflow, privacy, review escalation and Closed / PM-072 · Resolved Agent note state before content → 409 INVALID_TICKET_STATE" id="b30b3e41-5cf3-488c-8dbd-b57882aa5792" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.008">
+    <testcase name="PM-072 HTTP 409" time="0.008" classname="03WorkflowPrivacyReviewEscalationAndClosedPm072ResolvedAgentNoteStateBeforeContent409InvalidTicketState"/>
+    <testcase name="Handler error envelope and code" time="0.008" classname="03WorkflowPrivacyReviewEscalationAndClosedPm072ResolvedAgentNoteStateBeforeContent409InvalidTicketState"/>
+  </testsuite>
+  <testsuite name="03 · Workflow, privacy, review escalation and Closed / PM-073 · Reject missing reason in valid state → 422" id="14558bc2-6e58-452f-a5f9-50aa0fc3cecf" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.008">
+    <testcase name="PM-073 HTTP 422" time="0.008" classname="03WorkflowPrivacyReviewEscalationAndClosedPm073RejectMissingReasonInValidState422"/>
+    <testcase name="Handler error envelope and code" time="0.008" classname="03WorkflowPrivacyReviewEscalationAndClosedPm073RejectMissingReasonInValidState422"/>
+  </testsuite>
+  <testsuite name="03 · Workflow, privacy, review escalation and Closed / PM-074 · Reject blank reason in valid state → 422" id="2b241e26-0d6f-441c-b779-6179c4040f71" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.008">
+    <testcase name="PM-074 HTTP 422" time="0.008" classname="03WorkflowPrivacyReviewEscalationAndClosedPm074RejectBlankReasonInValidState422"/>
+    <testcase name="Handler error envelope and code" time="0.008" classname="03WorkflowPrivacyReviewEscalationAndClosedPm074RejectBlankReasonInValidState422"/>
+  </testsuite>
+  <testsuite name="03 · Workflow, privacy, review escalation and Closed / PM-075 · Customer rejection 1 → 200" id="3c23d511-583c-488a-89d6-5ec2aafa753e" timestamp="2026-10-13T00:43:03.438Z" tests="3" failures="0" errors="0" time="0.013">
+    <testcase name="PM-075 HTTP 200" time="0.013" classname="03WorkflowPrivacyReviewEscalationAndClosedPm075CustomerRejection1200"/>
+    <testcase name="customer ticket response contract" time="0.013" classname="03WorkflowPrivacyReviewEscalationAndClosedPm075CustomerRejection1200"/>
+    <testcase name="Ticket state IN_PROGRESS" time="0.013" classname="03WorkflowPrivacyReviewEscalationAndClosedPm075CustomerRejection1200"/>
+  </testsuite>
+  <testsuite name="03 · Workflow, privacy, review escalation and Closed / PM-076 · Inspect review threshold after rejection 1 → 200" id="6a56af9b-ddab-4762-9d30-41103e55e686" timestamp="2026-10-13T00:43:03.438Z" tests="5" failures="0" errors="0" time="0.009">
+    <testcase name="PM-076 HTTP 200" time="0.009" classname="03WorkflowPrivacyReviewEscalationAndClosedPm076InspectReviewThresholdAfterRejection1200"/>
+    <testcase name="internal ticket response contract" time="0.009" classname="03WorkflowPrivacyReviewEscalationAndClosedPm076InspectReviewThresholdAfterRejection1200"/>
+    <testcase name="Rejection count" time="0.009" classname="03WorkflowPrivacyReviewEscalationAndClosedPm076InspectReviewThresholdAfterRejection1200"/>
+    <testcase name="Review threshold" time="0.009" classname="03WorkflowPrivacyReviewEscalationAndClosedPm076InspectReviewThresholdAfterRejection1200"/>
+    <testcase name="Review count" time="0.009" classname="03WorkflowPrivacyReviewEscalationAndClosedPm076InspectReviewThresholdAfterRejection1200"/>
+  </testsuite>
+  <testsuite name="03 · Workflow, privacy, review escalation and Closed / PM-080 · Resolved cycle 2 → 200" id="06036a63-1320-44aa-9d98-1e0bc2cca7e8" timestamp="2026-10-13T00:43:03.438Z" tests="3" failures="0" errors="0" time="0.012">
+    <testcase name="PM-080 HTTP 200" time="0.012" classname="03WorkflowPrivacyReviewEscalationAndClosedPm080ResolvedCycle2200"/>
+    <testcase name="internal ticket response contract" time="0.012" classname="03WorkflowPrivacyReviewEscalationAndClosedPm080ResolvedCycle2200"/>
+    <testcase name="Ticket state RESOLVED" time="0.012" classname="03WorkflowPrivacyReviewEscalationAndClosedPm080ResolvedCycle2200"/>
+  </testsuite>
+  <testsuite name="03 · Workflow, privacy, review escalation and Closed / PM-085 · Customer rejection 2 → 200" id="996b919c-9ffd-4579-9d76-7965e2ff8e59" timestamp="2026-10-13T00:43:03.438Z" tests="3" failures="0" errors="0" time="0.014">
+    <testcase name="PM-085 HTTP 200" time="0.014" classname="03WorkflowPrivacyReviewEscalationAndClosedPm085CustomerRejection2200"/>
+    <testcase name="customer ticket response contract" time="0.014" classname="03WorkflowPrivacyReviewEscalationAndClosedPm085CustomerRejection2200"/>
+    <testcase name="Ticket state IN_PROGRESS" time="0.014" classname="03WorkflowPrivacyReviewEscalationAndClosedPm085CustomerRejection2200"/>
+  </testsuite>
+  <testsuite name="03 · Workflow, privacy, review escalation and Closed / PM-086 · Inspect review threshold after rejection 2 → 200" id="676af98d-d4b4-4802-92cb-ec9c16a2c17c" timestamp="2026-10-13T00:43:03.438Z" tests="5" failures="0" errors="0" time="0.008">
+    <testcase name="PM-086 HTTP 200" time="0.008" classname="03WorkflowPrivacyReviewEscalationAndClosedPm086InspectReviewThresholdAfterRejection2200"/>
+    <testcase name="internal ticket response contract" time="0.008" classname="03WorkflowPrivacyReviewEscalationAndClosedPm086InspectReviewThresholdAfterRejection2200"/>
+    <testcase name="Rejection count" time="0.008" classname="03WorkflowPrivacyReviewEscalationAndClosedPm086InspectReviewThresholdAfterRejection2200"/>
+    <testcase name="Review threshold" time="0.008" classname="03WorkflowPrivacyReviewEscalationAndClosedPm086InspectReviewThresholdAfterRejection2200"/>
+    <testcase name="Review count" time="0.008" classname="03WorkflowPrivacyReviewEscalationAndClosedPm086InspectReviewThresholdAfterRejection2200"/>
+  </testsuite>
+  <testsuite name="03 · Workflow, privacy, review escalation and Closed / PM-090 · Resolved cycle 3 → 200" id="afe37b36-36be-4f16-8e54-c30e7bee8112" timestamp="2026-10-13T00:43:03.438Z" tests="3" failures="0" errors="0" time="0.013">
+    <testcase name="PM-090 HTTP 200" time="0.013" classname="03WorkflowPrivacyReviewEscalationAndClosedPm090ResolvedCycle3200"/>
+    <testcase name="internal ticket response contract" time="0.013" classname="03WorkflowPrivacyReviewEscalationAndClosedPm090ResolvedCycle3200"/>
+    <testcase name="Ticket state RESOLVED" time="0.013" classname="03WorkflowPrivacyReviewEscalationAndClosedPm090ResolvedCycle3200"/>
+  </testsuite>
+  <testsuite name="03 · Workflow, privacy, review escalation and Closed / PM-095 · Customer rejection 3 → 200" id="babda4f2-c18b-4049-9dc6-a1497900e32f" timestamp="2026-10-13T00:43:03.438Z" tests="3" failures="0" errors="0" time="0.014">
+    <testcase name="PM-095 HTTP 200" time="0.014" classname="03WorkflowPrivacyReviewEscalationAndClosedPm095CustomerRejection3200"/>
+    <testcase name="customer ticket response contract" time="0.014" classname="03WorkflowPrivacyReviewEscalationAndClosedPm095CustomerRejection3200"/>
+    <testcase name="Ticket state IN_PROGRESS" time="0.014" classname="03WorkflowPrivacyReviewEscalationAndClosedPm095CustomerRejection3200"/>
+  </testsuite>
+  <testsuite name="03 · Workflow, privacy, review escalation and Closed / PM-096 · Inspect review threshold after rejection 3 → 200" id="71a0e83b-586f-4684-a7dd-7f439954218c" timestamp="2026-10-13T00:43:03.438Z" tests="5" failures="0" errors="0" time="0.009">
+    <testcase name="PM-096 HTTP 200" time="0.009" classname="03WorkflowPrivacyReviewEscalationAndClosedPm096InspectReviewThresholdAfterRejection3200"/>
+    <testcase name="internal ticket response contract" time="0.009" classname="03WorkflowPrivacyReviewEscalationAndClosedPm096InspectReviewThresholdAfterRejection3200"/>
+    <testcase name="Rejection count" time="0.009" classname="03WorkflowPrivacyReviewEscalationAndClosedPm096InspectReviewThresholdAfterRejection3200"/>
+    <testcase name="Review threshold" time="0.009" classname="03WorkflowPrivacyReviewEscalationAndClosedPm096InspectReviewThresholdAfterRejection3200"/>
+    <testcase name="Review count" time="0.009" classname="03WorkflowPrivacyReviewEscalationAndClosedPm096InspectReviewThresholdAfterRejection3200"/>
+  </testsuite>
+  <testsuite name="03 · Workflow, privacy, review escalation and Closed / PM-097 · Review open blocks Resolved before missing content → 409 REVIEW_REQUIRED" id="ad60f416-2a9f-4cb4-8055-dfca0e3cce1f" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.009">
+    <testcase name="PM-097 HTTP 409" time="0.009" classname="03WorkflowPrivacyReviewEscalationAndClosedPm097ReviewOpenBlocksResolvedBeforeMissingContent409ReviewRequired"/>
+    <testcase name="Handler error envelope and code" time="0.009" classname="03WorkflowPrivacyReviewEscalationAndClosedPm097ReviewOpenBlocksResolvedBeforeMissingContent409ReviewRequired"/>
+  </testsuite>
+  <testsuite name="03 · Workflow, privacy, review escalation and Closed / PM-098 · Review resource restricted → 404" id="f818fbbf-3103-4579-90e4-774effe58c84" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.004">
+    <testcase name="PM-098 HTTP 404" time="0.004" classname="03WorkflowPrivacyReviewEscalationAndClosedPm098ReviewResourceRestricted404"/>
+    <testcase name="Handler error envelope and code" time="0.004" classname="03WorkflowPrivacyReviewEscalationAndClosedPm098ReviewResourceRestricted404"/>
+  </testsuite>
+  <testsuite name="03 · Workflow, privacy, review escalation and Closed / PM-099 · Review resource restricted → 403" id="0cbbefb6-1495-4a56-a6dd-61591cf15bec" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.005">
+    <testcase name="PM-099 HTTP 403" time="0.005" classname="03WorkflowPrivacyReviewEscalationAndClosedPm099ReviewResourceRestricted403"/>
+    <testcase name="Handler error envelope and code" time="0.005" classname="03WorkflowPrivacyReviewEscalationAndClosedPm099ReviewResourceRestricted403"/>
+  </testsuite>
+  <testsuite name="03 · Workflow, privacy, review escalation and Closed / PM-100 · Customer missing review resource still 404 → 404" id="b8e9ae30-bc12-4a32-8917-13bd1a2b4120" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.005">
+    <testcase name="PM-100 HTTP 404" time="0.005" classname="03WorkflowPrivacyReviewEscalationAndClosedPm100CustomerMissingReviewResourceStill404404"/>
+    <testcase name="Handler error envelope and code" time="0.005" classname="03WorkflowPrivacyReviewEscalationAndClosedPm100CustomerMissingReviewResourceStill404404"/>
+  </testsuite>
+  <testsuite name="03 · Workflow, privacy, review escalation and Closed / PM-101 · Manager reads open review → 200" id="8abdd358-2389-4bff-89db-0d28f64d55a5" timestamp="2026-10-13T00:43:03.438Z" tests="3" failures="0" errors="0" time="0.008">
+    <testcase name="PM-101 HTTP 200" time="0.008" classname="03WorkflowPrivacyReviewEscalationAndClosedPm101ManagerReadsOpenReview200"/>
+    <testcase name="Open review key" time="0.008" classname="03WorkflowPrivacyReviewEscalationAndClosedPm101ManagerReadsOpenReview200"/>
+    <testcase name="Review incomplete" time="0.008" classname="03WorkflowPrivacyReviewEscalationAndClosedPm101ManagerReadsOpenReview200"/>
+  </testsuite>
+  <testsuite name="03 · Workflow, privacy, review escalation and Closed / PM-102 · Customer cannot write review → 404" id="0bfbb7a6-91b2-4db0-968a-ad7306ecaf94" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.005">
+    <testcase name="PM-102 HTTP 404" time="0.005" classname="03WorkflowPrivacyReviewEscalationAndClosedPm102CustomerCannotWriteReview404"/>
+    <testcase name="Handler error envelope and code" time="0.005" classname="03WorkflowPrivacyReviewEscalationAndClosedPm102CustomerCannotWriteReview404"/>
+  </testsuite>
+  <testsuite name="03 · Workflow, privacy, review escalation and Closed / PM-103 · Agent cannot write review → 403" id="433df343-10eb-488e-999f-a0e1b6998f93" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.005">
+    <testcase name="PM-103 HTTP 403" time="0.005" classname="03WorkflowPrivacyReviewEscalationAndClosedPm103AgentCannotWriteReview403"/>
+    <testcase name="Handler error envelope and code" time="0.005" classname="03WorkflowPrivacyReviewEscalationAndClosedPm103AgentCannotWriteReview403"/>
+  </testsuite>
+  <testsuite name="03 · Workflow, privacy, review escalation and Closed / PM-104 · Review missing/blank mandatory plan → 422" id="e3a767e4-37d6-4b7f-b6db-e0fe8bddb7d2" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.008">
+    <testcase name="PM-104 HTTP 422" time="0.008" classname="03WorkflowPrivacyReviewEscalationAndClosedPm104ReviewMissingBlankMandatoryPlan422"/>
+    <testcase name="Handler error envelope and code" time="0.008" classname="03WorkflowPrivacyReviewEscalationAndClosedPm104ReviewMissingBlankMandatoryPlan422"/>
+  </testsuite>
+  <testsuite name="03 · Workflow, privacy, review escalation and Closed / PM-105 · Review missing/blank mandatory plan → 422" id="c02612f9-3bc1-4f39-a66a-f8c41fa70247" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.008">
+    <testcase name="PM-105 HTTP 422" time="0.008" classname="03WorkflowPrivacyReviewEscalationAndClosedPm105ReviewMissingBlankMandatoryPlan422"/>
+    <testcase name="Handler error envelope and code" time="0.008" classname="03WorkflowPrivacyReviewEscalationAndClosedPm105ReviewMissingBlankMandatoryPlan422"/>
+  </testsuite>
+  <testsuite name="03 · Workflow, privacy, review escalation and Closed / PM-106 · Review missing/blank mandatory plan → 422" id="fabe1167-3c84-4c4e-8110-f9b19b25614c" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.009">
+    <testcase name="PM-106 HTTP 422" time="0.009" classname="03WorkflowPrivacyReviewEscalationAndClosedPm106ReviewMissingBlankMandatoryPlan422"/>
+    <testcase name="Handler error envelope and code" time="0.009" classname="03WorkflowPrivacyReviewEscalationAndClosedPm106ReviewMissingBlankMandatoryPlan422"/>
+  </testsuite>
+  <testsuite name="03 · Workflow, privacy, review escalation and Closed / PM-107 · Review missing/blank mandatory plan → 422" id="8b844c3a-33d4-40f2-863c-e046a7b08351" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.008">
+    <testcase name="PM-107 HTTP 422" time="0.008" classname="03WorkflowPrivacyReviewEscalationAndClosedPm107ReviewMissingBlankMandatoryPlan422"/>
+    <testcase name="Handler error envelope and code" time="0.008" classname="03WorkflowPrivacyReviewEscalationAndClosedPm107ReviewMissingBlankMandatoryPlan422"/>
+  </testsuite>
+  <testsuite name="03 · Workflow, privacy, review escalation and Closed / PM-108 · Review missing/blank mandatory plan → 422" id="76c6b11e-6cff-48f5-a017-303e2aaf325d" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.008">
+    <testcase name="PM-108 HTTP 422" time="0.008" classname="03WorkflowPrivacyReviewEscalationAndClosedPm108ReviewMissingBlankMandatoryPlan422"/>
+    <testcase name="Handler error envelope and code" time="0.008" classname="03WorkflowPrivacyReviewEscalationAndClosedPm108ReviewMissingBlankMandatoryPlan422"/>
+  </testsuite>
+  <testsuite name="03 · Workflow, privacy, review escalation and Closed / PM-109 · Review boolean must be strict boolean → 422" id="159cac25-8883-471c-bad2-e6956a88dee2" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.005">
+    <testcase name="PM-109 HTTP 422" time="0.005" classname="03WorkflowPrivacyReviewEscalationAndClosedPm109ReviewBooleanMustBeStrictBoolean422"/>
+    <testcase name="FastAPI structural 422 before handler is allowed by BR-33" time="0.005" classname="03WorkflowPrivacyReviewEscalationAndClosedPm109ReviewBooleanMustBeStrictBoolean422"/>
+  </testsuite>
+  <testsuite name="03 · Workflow, privacy, review escalation and Closed / PM-110 · Agent can Waiting with open review → 200" id="25976724-4b58-4802-aa46-b074eac953f7" timestamp="2026-10-13T00:43:03.438Z" tests="4" failures="0" errors="0" time="0.013">
+    <testcase name="PM-110 HTTP 200" time="0.013" classname="03WorkflowPrivacyReviewEscalationAndClosedPm110AgentCanWaitingWithOpenReview200"/>
+    <testcase name="internal ticket response contract" time="0.013" classname="03WorkflowPrivacyReviewEscalationAndClosedPm110AgentCanWaitingWithOpenReview200"/>
+    <testcase name="Ticket state WAITING_FOR_CUSTOMER" time="0.013" classname="03WorkflowPrivacyReviewEscalationAndClosedPm110AgentCanWaitingWithOpenReview200"/>
+    <testcase name="Review still open" time="0.013" classname="03WorkflowPrivacyReviewEscalationAndClosedPm110AgentCanWaitingWithOpenReview200"/>
+  </testsuite>
+  <testsuite name="03 · Workflow, privacy, review escalation and Closed / PM-110a · Customer resumes while review remains open → 200" id="269e8767-4ab0-4ced-bda6-df0049d5bd8c" timestamp="2026-10-13T00:43:03.438Z" tests="3" failures="0" errors="0" time="0.016">
+    <testcase name="PM-110a HTTP 200" time="0.016" classname="03WorkflowPrivacyReviewEscalationAndClosedPm110ACustomerResumesWhileReviewRemainsOpen200"/>
+    <testcase name="customer ticket response contract" time="0.016" classname="03WorkflowPrivacyReviewEscalationAndClosedPm110ACustomerResumesWhileReviewRemainsOpen200"/>
+    <testcase name="Ticket state IN_PROGRESS" time="0.016" classname="03WorkflowPrivacyReviewEscalationAndClosedPm110ACustomerResumesWhileReviewRemainsOpen200"/>
+  </testsuite>
+  <testsuite name="03 · Workflow, privacy, review escalation and Closed / PM-110b · Assigned Agent sees open review after resume → 200" id="a535d09a-1461-4a8d-9ad2-7dbd8d4a55be" timestamp="2026-10-13T00:43:03.438Z" tests="6" failures="0" errors="0" time="0.010">
+    <testcase name="PM-110b HTTP 200" time="0.010" classname="03WorkflowPrivacyReviewEscalationAndClosedPm110BAssignedAgentSeesOpenReviewAfterResume200"/>
+    <testcase name="internal ticket response contract" time="0.010" classname="03WorkflowPrivacyReviewEscalationAndClosedPm110BAssignedAgentSeesOpenReviewAfterResume200"/>
+    <testcase name="Ticket state IN_PROGRESS" time="0.010" classname="03WorkflowPrivacyReviewEscalationAndClosedPm110BAssignedAgentSeesOpenReviewAfterResume200"/>
+    <testcase name="Review survived Customer resume" time="0.010" classname="03WorkflowPrivacyReviewEscalationAndClosedPm110BAssignedAgentSeesOpenReviewAfterResume200"/>
+    <testcase name="Same review still open" time="0.010" classname="03WorkflowPrivacyReviewEscalationAndClosedPm110BAssignedAgentSeesOpenReviewAfterResume200"/>
+    <testcase name="Review still incomplete" time="0.010" classname="03WorkflowPrivacyReviewEscalationAndClosedPm110BAssignedAgentSeesOpenReviewAfterResume200"/>
+  </testsuite>
+  <testsuite name="03 · Workflow, privacy, review escalation and Closed / PM-110c · Review still blocks well-formed Resolved after resume → 409 REVIEW_REQUIRED" id="95a4692e-ee1b-4bed-b8f5-6b8d07fbf29e" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.008">
+    <testcase name="PM-110c HTTP 409" time="0.008" classname="03WorkflowPrivacyReviewEscalationAndClosedPm110CReviewStillBlocksWellFormedResolvedAfterResume409ReviewRequired"/>
+    <testcase name="Handler error envelope and code" time="0.008" classname="03WorkflowPrivacyReviewEscalationAndClosedPm110CReviewStillBlocksWellFormedResolvedAfterResume409ReviewRequired"/>
+  </testsuite>
+  <testsuite name="03 · Workflow, privacy, review escalation and Closed / PM-110d · Return to Waiting before Manager completes plan → 200" id="941045d8-c243-471b-ba9c-1dfa4749f2dd" timestamp="2026-10-13T00:43:03.438Z" tests="4" failures="0" errors="0" time="0.016">
+    <testcase name="PM-110d HTTP 200" time="0.016" classname="03WorkflowPrivacyReviewEscalationAndClosedPm110DReturnToWaitingBeforeManagerCompletesPlan200"/>
+    <testcase name="internal ticket response contract" time="0.016" classname="03WorkflowPrivacyReviewEscalationAndClosedPm110DReturnToWaitingBeforeManagerCompletesPlan200"/>
+    <testcase name="Ticket state WAITING_FOR_CUSTOMER" time="0.016" classname="03WorkflowPrivacyReviewEscalationAndClosedPm110DReturnToWaitingBeforeManagerCompletesPlan200"/>
+    <testcase name="Review stays open" time="0.016" classname="03WorkflowPrivacyReviewEscalationAndClosedPm110DReturnToWaitingBeforeManagerCompletesPlan200"/>
+  </testsuite>
+  <testsuite name="03 · Workflow, privacy, review escalation and Closed / PM-111 · M-07 → 200" id="2fe3d53e-cc5f-48da-8f1f-01989f69f57a" timestamp="2026-10-13T00:43:03.438Z" tests="4" failures="0" errors="0" time="0.009">
+    <testcase name="PM-111 HTTP 200" time="0.009" classname="03WorkflowPrivacyReviewEscalationAndClosedPm111M07200"/>
+    <testcase name="M-07 report contract" time="0.009" classname="03WorkflowPrivacyReviewEscalationAndClosedPm111M07200"/>
+    <testcase name="Open review appears" time="0.009" classname="03WorkflowPrivacyReviewEscalationAndClosedPm111M07200"/>
+    <testcase name="No completion yet" time="0.009" classname="03WorkflowPrivacyReviewEscalationAndClosedPm111M07200"/>
+  </testsuite>
+  <testsuite name="03 · Workflow, privacy, review escalation and Closed / PM-112 · Manager completes review during Waiting → 200" id="67fbdd17-a5c3-4993-88e9-cfefdea2da79" timestamp="2026-10-13T00:43:03.438Z" tests="8" failures="0" errors="0" time="0.014">
+    <testcase name="PM-112 HTTP 200" time="0.014" classname="03WorkflowPrivacyReviewEscalationAndClosedPm112ManagerCompletesReviewDuringWaiting200"/>
+    <testcase name="internal ticket response contract" time="0.014" classname="03WorkflowPrivacyReviewEscalationAndClosedPm112ManagerCompletesReviewDuringWaiting200"/>
+    <testcase name="Ticket state WAITING_FOR_CUSTOMER" time="0.014" classname="03WorkflowPrivacyReviewEscalationAndClosedPm112ManagerCompletesReviewDuringWaiting200"/>
+    <testcase name="Review cleared" time="0.014" classname="03WorkflowPrivacyReviewEscalationAndClosedPm112ManagerCompletesReviewDuringWaiting200"/>
+    <testcase name="Clock remains paused" time="0.014" classname="03WorkflowPrivacyReviewEscalationAndClosedPm112ManagerCompletesReviewDuringWaiting200"/>
+    <testcase name="No resolution time accrued during Waiting" time="0.014" classname="03WorkflowPrivacyReviewEscalationAndClosedPm112ManagerCompletesReviewDuringWaiting200"/>
+    <testcase name="Completed correct review" time="0.014" classname="03WorkflowPrivacyReviewEscalationAndClosedPm112ManagerCompletesReviewDuringWaiting200"/>
+    <testcase name="Completion server time" time="0.014" classname="03WorkflowPrivacyReviewEscalationAndClosedPm112ManagerCompletesReviewDuringWaiting200"/>
+  </testsuite>
+  <testsuite name="03 · Workflow, privacy, review escalation and Closed / PM-113 · Assigned Agent reads plan on ticket → 200" id="9fd8b9b9-8381-427e-9e8a-af53121d653e" timestamp="2026-10-13T00:43:03.438Z" tests="3" failures="0" errors="0" time="0.010">
+    <testcase name="PM-113 HTTP 200" time="0.010" classname="03WorkflowPrivacyReviewEscalationAndClosedPm113AssignedAgentReadsPlanOnTicket200"/>
+    <testcase name="internal ticket response contract" time="0.010" classname="03WorkflowPrivacyReviewEscalationAndClosedPm113AssignedAgentReadsPlanOnTicket200"/>
+    <testcase name="Agent reads Manager plan" time="0.010" classname="03WorkflowPrivacyReviewEscalationAndClosedPm113AssignedAgentReadsPlanOnTicket200"/>
+  </testsuite>
+  <testsuite name="03 · Workflow, privacy, review escalation and Closed / PM-114 · Customer cannot read completed plan/note/SLA → 200" id="fc2b2f89-7555-48fe-80b2-11e577bbfa5e" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.008">
+    <testcase name="PM-114 HTTP 200" time="0.008" classname="03WorkflowPrivacyReviewEscalationAndClosedPm114CustomerCannotReadCompletedPlanNoteSla200"/>
+    <testcase name="customer ticket response contract" time="0.008" classname="03WorkflowPrivacyReviewEscalationAndClosedPm114CustomerCannotReadCompletedPlanNoteSla200"/>
+  </testsuite>
+  <testsuite name="03 · Workflow, privacy, review escalation and Closed / PM-115 · A1 completed review cannot complete again → 409 INVALID_TICKET_STATE" id="3bea0a08-8ad6-45c6-9bfa-a0d8ee12c8b7" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.008">
+    <testcase name="PM-115 HTTP 409" time="0.008" classname="03WorkflowPrivacyReviewEscalationAndClosedPm115A1CompletedReviewCannotCompleteAgain409InvalidTicketState"/>
+    <testcase name="Handler error envelope and code" time="0.008" classname="03WorkflowPrivacyReviewEscalationAndClosedPm115A1CompletedReviewCannotCompleteAgain409InvalidTicketState"/>
+  </testsuite>
+  <testsuite name="03 · Workflow, privacy, review escalation and Closed / PM-116 · Customer resumes after plan → 200" id="64d3587d-eda4-45f5-aadc-2fe28f5b15c7" timestamp="2026-10-13T00:43:03.438Z" tests="3" failures="0" errors="0" time="0.018">
+    <testcase name="PM-116 HTTP 200" time="0.018" classname="03WorkflowPrivacyReviewEscalationAndClosedPm116CustomerResumesAfterPlan200"/>
+    <testcase name="customer ticket response contract" time="0.018" classname="03WorkflowPrivacyReviewEscalationAndClosedPm116CustomerResumesAfterPlan200"/>
+    <testcase name="Ticket state IN_PROGRESS" time="0.018" classname="03WorkflowPrivacyReviewEscalationAndClosedPm116CustomerResumesAfterPlan200"/>
+  </testsuite>
+  <testsuite name="03 · Workflow, privacy, review escalation and Closed / PM-117 · Resolved after completed review → 200" id="a1f58716-ec40-41e0-83b3-729d67a3002f" timestamp="2026-10-13T00:43:03.438Z" tests="3" failures="0" errors="0" time="0.016">
+    <testcase name="PM-117 HTTP 200" time="0.016" classname="03WorkflowPrivacyReviewEscalationAndClosedPm117ResolvedAfterCompletedReview200"/>
+    <testcase name="internal ticket response contract" time="0.016" classname="03WorkflowPrivacyReviewEscalationAndClosedPm117ResolvedAfterCompletedReview200"/>
+    <testcase name="Ticket state RESOLVED" time="0.016" classname="03WorkflowPrivacyReviewEscalationAndClosedPm117ResolvedAfterCompletedReview200"/>
+  </testsuite>
+  <testsuite name="03 · Workflow, privacy, review escalation and Closed / PM-118 · Customer confirms Closed → 200" id="8bfa3d4d-b43f-428c-96bc-3c5d0a33600f" timestamp="2026-10-13T00:43:03.438Z" tests="3" failures="0" errors="0" time="0.013">
+    <testcase name="PM-118 HTTP 200" time="0.013" classname="03WorkflowPrivacyReviewEscalationAndClosedPm118CustomerConfirmsClosed200"/>
+    <testcase name="customer ticket response contract" time="0.013" classname="03WorkflowPrivacyReviewEscalationAndClosedPm118CustomerConfirmsClosed200"/>
+    <testcase name="Ticket state CLOSED" time="0.013" classname="03WorkflowPrivacyReviewEscalationAndClosedPm118CustomerConfirmsClosed200"/>
+  </testsuite>
+  <testsuite name="03 · Workflow, privacy, review escalation and Closed / PM-119 · A2 Closed before missing plan → 409 TICKET_CLOSED" id="6ec7f4a5-fa37-40ee-a65a-62e227f21268" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.011">
+    <testcase name="PM-119 HTTP 409" time="0.011" classname="03WorkflowPrivacyReviewEscalationAndClosedPm119A2ClosedBeforeMissingPlan409TicketClosed"/>
+    <testcase name="Handler error envelope and code" time="0.011" classname="03WorkflowPrivacyReviewEscalationAndClosedPm119A2ClosedBeforeMissingPlan409TicketClosed"/>
+  </testsuite>
+  <testsuite name="03 · Workflow, privacy, review escalation and Closed / PM-120 · Closed cannot reject before missing content → 409 TICKET_CLOSED" id="f8f290fa-f4a9-470d-9945-cf5a52a100c3" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.009">
+    <testcase name="PM-120 HTTP 409" time="0.009" classname="03WorkflowPrivacyReviewEscalationAndClosedPm120ClosedCannotRejectBeforeMissingContent409TicketClosed"/>
+    <testcase name="Handler error envelope and code" time="0.009" classname="03WorkflowPrivacyReviewEscalationAndClosedPm120ClosedCannotRejectBeforeMissingContent409TicketClosed"/>
+  </testsuite>
+  <testsuite name="03 · Workflow, privacy, review escalation and Closed / PM-121 · Closed cannot messages before missing content → 409 TICKET_CLOSED" id="0a82c655-8b56-4fe0-a257-f0306ceb8e57" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.007">
+    <testcase name="PM-121 HTTP 409" time="0.007" classname="03WorkflowPrivacyReviewEscalationAndClosedPm121ClosedCannotMessagesBeforeMissingContent409TicketClosed"/>
+    <testcase name="Handler error envelope and code" time="0.007" classname="03WorkflowPrivacyReviewEscalationAndClosedPm121ClosedCannotMessagesBeforeMissingContent409TicketClosed"/>
+  </testsuite>
+  <testsuite name="03 · Workflow, privacy, review escalation and Closed / PM-122 · Closed cannot notes before missing content → 409 TICKET_CLOSED" id="f04eefe2-d1e0-46b1-918d-d38c62383431" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.008">
+    <testcase name="PM-122 HTTP 409" time="0.008" classname="03WorkflowPrivacyReviewEscalationAndClosedPm122ClosedCannotNotesBeforeMissingContent409TicketClosed"/>
+    <testcase name="Handler error envelope and code" time="0.008" classname="03WorkflowPrivacyReviewEscalationAndClosedPm122ClosedCannotNotesBeforeMissingContent409TicketClosed"/>
+  </testsuite>
+  <testsuite name="03 · Workflow, privacy, review escalation and Closed / PM-123 · Closed cannot resolve before missing content → 409 TICKET_CLOSED" id="58b5be3b-5754-4b39-b24c-611e8d9d028a" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.007">
+    <testcase name="PM-123 HTTP 409" time="0.007" classname="03WorkflowPrivacyReviewEscalationAndClosedPm123ClosedCannotResolveBeforeMissingContent409TicketClosed"/>
+    <testcase name="Handler error envelope and code" time="0.007" classname="03WorkflowPrivacyReviewEscalationAndClosedPm123ClosedCannotResolveBeforeMissingContent409TicketClosed"/>
+  </testsuite>
+  <testsuite name="03 · Workflow, privacy, review escalation and Closed / PM-124 · Closed cannot claim before missing content → 409 TICKET_CLOSED" id="e594c15e-3c5d-43ef-9d6c-5fa5496cdcae" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.008">
+    <testcase name="PM-124 HTTP 409" time="0.008" classname="03WorkflowPrivacyReviewEscalationAndClosedPm124ClosedCannotClaimBeforeMissingContent409TicketClosed"/>
+    <testcase name="Handler error envelope and code" time="0.008" classname="03WorkflowPrivacyReviewEscalationAndClosedPm124ClosedCannotClaimBeforeMissingContent409TicketClosed"/>
+  </testsuite>
+  <testsuite name="03 · Workflow, privacy, review escalation and Closed / PM-125 · Closed cannot confirm before missing content → 409 TICKET_CLOSED" id="2a611420-ffba-43d5-a420-a3566e239dfd" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.007">
+    <testcase name="PM-125 HTTP 409" time="0.007" classname="03WorkflowPrivacyReviewEscalationAndClosedPm125ClosedCannotConfirmBeforeMissingContent409TicketClosed"/>
+    <testcase name="Handler error envelope and code" time="0.007" classname="03WorkflowPrivacyReviewEscalationAndClosedPm125ClosedCannotConfirmBeforeMissingContent409TicketClosed"/>
+  </testsuite>
+  <testsuite name="03 · Workflow, privacy, review escalation and Closed / PM-126 · Other Customer access before Closed/content → 404" id="c23e5fbb-6ee8-4632-8c2e-47b709214552" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.009">
+    <testcase name="PM-126 HTTP 404" time="0.009" classname="03WorkflowPrivacyReviewEscalationAndClosedPm126OtherCustomerAccessBeforeClosedContent404"/>
+    <testcase name="Handler error envelope and code" time="0.009" classname="03WorkflowPrivacyReviewEscalationAndClosedPm126OtherCustomerAccessBeforeClosedContent404"/>
+  </testsuite>
+  <testsuite name="03 · Workflow, privacy, review escalation and Closed / PM-127 · Other Agent access before Closed/content → 403" id="dc4e1f98-5da7-4980-8b59-82d9fe460887" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.007">
+    <testcase name="PM-127 HTTP 403" time="0.007" classname="03WorkflowPrivacyReviewEscalationAndClosedPm127OtherAgentAccessBeforeClosedContent403"/>
+    <testcase name="Handler error envelope and code" time="0.007" classname="03WorkflowPrivacyReviewEscalationAndClosedPm127OtherAgentAccessBeforeClosedContent403"/>
+  </testsuite>
+  <testsuite name="03 · Workflow, privacy, review escalation and Closed / PM-128 · Closed state remains after rejected actions → 200" id="46652859-b8a5-4e83-a896-fc1061cc0bf4" timestamp="2026-10-13T00:43:03.438Z" tests="5" failures="0" errors="0" time="0.009">
+    <testcase name="PM-128 HTTP 200" time="0.009" classname="03WorkflowPrivacyReviewEscalationAndClosedPm128ClosedStateRemainsAfterRejectedActions200"/>
+    <testcase name="internal ticket response contract" time="0.009" classname="03WorkflowPrivacyReviewEscalationAndClosedPm128ClosedStateRemainsAfterRejectedActions200"/>
+    <testcase name="Ticket state CLOSED" time="0.009" classname="03WorkflowPrivacyReviewEscalationAndClosedPm128ClosedStateRemainsAfterRejectedActions200"/>
+    <testcase name="Rejections unchanged" time="0.009" classname="03WorkflowPrivacyReviewEscalationAndClosedPm128ClosedStateRemainsAfterRejectedActions200"/>
+    <testcase name="Exactly one completed review" time="0.009" classname="03WorkflowPrivacyReviewEscalationAndClosedPm128ClosedStateRemainsAfterRejectedActions200"/>
+  </testsuite>
+  <testsuite name="04 · Capacity 3, return overload and claim priority / PM-130 · Create capacity_return_id → 201" id="10584120-816d-4663-a3d6-a852a15fb549" timestamp="2026-10-13T00:43:03.438Z" tests="4" failures="0" errors="0" time="0.013">
+    <testcase name="PM-130 HTTP 201" time="0.013" classname="04Capacity3ReturnOverloadAndClaimPriorityPm130CreateCapacityReturnId201"/>
+    <testcase name="customer ticket response contract" time="0.013" classname="04Capacity3ReturnOverloadAndClaimPriorityPm130CreateCapacityReturnId201"/>
+    <testcase name="Ticket state NEW" time="0.013" classname="04Capacity3ReturnOverloadAndClaimPriorityPm130CreateCapacityReturnId201"/>
+    <testcase name="No assignee on create" time="0.013" classname="04Capacity3ReturnOverloadAndClaimPriorityPm130CreateCapacityReturnId201"/>
+  </testsuite>
+  <testsuite name="04 · Capacity 3, return overload and claim priority / PM-131 · Claim return candidate → 200" id="11b37deb-e047-482b-a61b-90ce89b11127" timestamp="2026-10-13T00:43:03.438Z" tests="3" failures="0" errors="0" time="0.014">
+    <testcase name="PM-131 HTTP 200" time="0.014" classname="04Capacity3ReturnOverloadAndClaimPriorityPm131ClaimReturnCandidate200"/>
+    <testcase name="internal ticket response contract" time="0.014" classname="04Capacity3ReturnOverloadAndClaimPriorityPm131ClaimReturnCandidate200"/>
+    <testcase name="Ticket state IN_PROGRESS" time="0.014" classname="04Capacity3ReturnOverloadAndClaimPriorityPm131ClaimReturnCandidate200"/>
+  </testsuite>
+  <testsuite name="04 · Capacity 3, return overload and claim priority / PM-132 · Resolve without prior reply releases slot → 200" id="e83d5380-8ab0-4faf-8e25-7e72d919d1bb" timestamp="2026-10-13T00:43:03.438Z" tests="4" failures="0" errors="0" time="0.014">
+    <testcase name="PM-132 HTTP 200" time="0.014" classname="04Capacity3ReturnOverloadAndClaimPriorityPm132ResolveWithoutPriorReplyReleasesSlot200"/>
+    <testcase name="internal ticket response contract" time="0.014" classname="04Capacity3ReturnOverloadAndClaimPriorityPm132ResolveWithoutPriorReplyReleasesSlot200"/>
+    <testcase name="Ticket state RESOLVED" time="0.014" classname="04Capacity3ReturnOverloadAndClaimPriorityPm132ResolveWithoutPriorReplyReleasesSlot200"/>
+    <testcase name="Resolved also completes first response" time="0.014" classname="04Capacity3ReturnOverloadAndClaimPriorityPm132ResolveWithoutPriorReplyReleasesSlot200"/>
+  </testsuite>
+  <testsuite name="04 · Capacity 3, return overload and claim priority / PM-133 · Create capacity_one_id → 201" id="bd4220ce-54ae-4e05-b38e-9a1f54cde914" timestamp="2026-10-13T00:43:03.438Z" tests="4" failures="0" errors="0" time="0.013">
+    <testcase name="PM-133 HTTP 201" time="0.013" classname="04Capacity3ReturnOverloadAndClaimPriorityPm133CreateCapacityOneId201"/>
+    <testcase name="customer ticket response contract" time="0.013" classname="04Capacity3ReturnOverloadAndClaimPriorityPm133CreateCapacityOneId201"/>
+    <testcase name="Ticket state NEW" time="0.013" classname="04Capacity3ReturnOverloadAndClaimPriorityPm133CreateCapacityOneId201"/>
+    <testcase name="No assignee on create" time="0.013" classname="04Capacity3ReturnOverloadAndClaimPriorityPm133CreateCapacityOneId201"/>
+  </testsuite>
+  <testsuite name="04 · Capacity 3, return overload and claim priority / PM-134 · Fill capacity slot 1 → 200" id="80379d91-18bf-4a59-ba35-3b6ffa904c9b" timestamp="2026-10-13T00:43:03.438Z" tests="3" failures="0" errors="0" time="0.013">
+    <testcase name="PM-134 HTTP 200" time="0.013" classname="04Capacity3ReturnOverloadAndClaimPriorityPm134FillCapacitySlot1200"/>
+    <testcase name="internal ticket response contract" time="0.013" classname="04Capacity3ReturnOverloadAndClaimPriorityPm134FillCapacitySlot1200"/>
+    <testcase name="Ticket state IN_PROGRESS" time="0.013" classname="04Capacity3ReturnOverloadAndClaimPriorityPm134FillCapacitySlot1200"/>
+  </testsuite>
+  <testsuite name="04 · Capacity 3, return overload and claim priority / PM-135 · Create capacity_two_id → 201" id="b7004e24-867b-4fe4-9ddc-2f336a2c9421" timestamp="2026-10-13T00:43:03.438Z" tests="4" failures="0" errors="0" time="0.012">
+    <testcase name="PM-135 HTTP 201" time="0.012" classname="04Capacity3ReturnOverloadAndClaimPriorityPm135CreateCapacityTwoId201"/>
+    <testcase name="customer ticket response contract" time="0.012" classname="04Capacity3ReturnOverloadAndClaimPriorityPm135CreateCapacityTwoId201"/>
+    <testcase name="Ticket state NEW" time="0.012" classname="04Capacity3ReturnOverloadAndClaimPriorityPm135CreateCapacityTwoId201"/>
+    <testcase name="No assignee on create" time="0.012" classname="04Capacity3ReturnOverloadAndClaimPriorityPm135CreateCapacityTwoId201"/>
+  </testsuite>
+  <testsuite name="04 · Capacity 3, return overload and claim priority / PM-136 · Fill capacity slot 2 → 200" id="d7ae88b5-a794-4698-aab5-e96045370ffb" timestamp="2026-10-13T00:43:03.438Z" tests="3" failures="0" errors="0" time="0.015">
+    <testcase name="PM-136 HTTP 200" time="0.015" classname="04Capacity3ReturnOverloadAndClaimPriorityPm136FillCapacitySlot2200"/>
+    <testcase name="internal ticket response contract" time="0.015" classname="04Capacity3ReturnOverloadAndClaimPriorityPm136FillCapacitySlot2200"/>
+    <testcase name="Ticket state IN_PROGRESS" time="0.015" classname="04Capacity3ReturnOverloadAndClaimPriorityPm136FillCapacitySlot2200"/>
+  </testsuite>
+  <testsuite name="04 · Capacity 3, return overload and claim priority / PM-137 · Create capacity_three_id → 201" id="416cee9b-21a5-4c74-8d81-4dd55242ad26" timestamp="2026-10-13T00:43:03.438Z" tests="4" failures="0" errors="0" time="0.013">
+    <testcase name="PM-137 HTTP 201" time="0.013" classname="04Capacity3ReturnOverloadAndClaimPriorityPm137CreateCapacityThreeId201"/>
+    <testcase name="customer ticket response contract" time="0.013" classname="04Capacity3ReturnOverloadAndClaimPriorityPm137CreateCapacityThreeId201"/>
+    <testcase name="Ticket state NEW" time="0.013" classname="04Capacity3ReturnOverloadAndClaimPriorityPm137CreateCapacityThreeId201"/>
+    <testcase name="No assignee on create" time="0.013" classname="04Capacity3ReturnOverloadAndClaimPriorityPm137CreateCapacityThreeId201"/>
+  </testsuite>
+  <testsuite name="04 · Capacity 3, return overload and claim priority / PM-138 · Fill capacity slot 3 → 200" id="7669dbe5-c6c4-4a27-8275-0bac1a595a39" timestamp="2026-10-13T00:43:03.438Z" tests="3" failures="0" errors="0" time="0.016">
+    <testcase name="PM-138 HTTP 200" time="0.016" classname="04Capacity3ReturnOverloadAndClaimPriorityPm138FillCapacitySlot3200"/>
+    <testcase name="internal ticket response contract" time="0.016" classname="04Capacity3ReturnOverloadAndClaimPriorityPm138FillCapacitySlot3200"/>
+    <testcase name="Ticket state IN_PROGRESS" time="0.016" classname="04Capacity3ReturnOverloadAndClaimPriorityPm138FillCapacitySlot3200"/>
+  </testsuite>
+  <testsuite name="04 · Capacity 3, return overload and claim priority / PM-139 · Create capacity_new_id → 201" id="ccba423c-56c2-4717-bc47-9bb9352d2a4a" timestamp="2026-10-13T00:43:03.438Z" tests="4" failures="0" errors="0" time="0.013">
+    <testcase name="PM-139 HTTP 201" time="0.013" classname="04Capacity3ReturnOverloadAndClaimPriorityPm139CreateCapacityNewId201"/>
+    <testcase name="customer ticket response contract" time="0.013" classname="04Capacity3ReturnOverloadAndClaimPriorityPm139CreateCapacityNewId201"/>
+    <testcase name="Ticket state NEW" time="0.013" classname="04Capacity3ReturnOverloadAndClaimPriorityPm139CreateCapacityNewId201"/>
+    <testcase name="No assignee on create" time="0.013" classname="04Capacity3ReturnOverloadAndClaimPriorityPm139CreateCapacityNewId201"/>
+  </testsuite>
+  <testsuite name="04 · Capacity 3, return overload and claim priority / PM-140 · M-06 ?agent_id={{agent_4}} → 200" id="dfda0d10-7849-49ed-84ab-2f800bf48bfb" timestamp="2026-10-13T00:43:03.438Z" tests="4" failures="0" errors="0" time="0.010">
+    <testcase name="PM-140 HTTP 200" time="0.010" classname="04Capacity3ReturnOverloadAndClaimPriorityPm140M06AgentIdAgent4200"/>
+    <testcase name="M-06 report contract" time="0.010" classname="04Capacity3ReturnOverloadAndClaimPriorityPm140M06AgentIdAgent4200"/>
+    <testcase name="Exactly 3 In Progress" time="0.010" classname="04Capacity3ReturnOverloadAndClaimPriorityPm140M06AgentIdAgent4200"/>
+    <testcase name="At limit" time="0.010" classname="04Capacity3ReturnOverloadAndClaimPriorityPm140M06AgentIdAgent4200"/>
+  </testsuite>
+  <testsuite name="04 · Capacity 3, return overload and claim priority / PM-141 · Load 3 blocks new claim → 409 AGENT_CAPACITY_REACHED" id="ae65eec8-52d2-43c4-b6b3-4ce8ab6d1410" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.007">
+    <testcase name="PM-141 HTTP 409" time="0.007" classname="04Capacity3ReturnOverloadAndClaimPriorityPm141Load3BlocksNewClaim409AgentCapacityReached"/>
+    <testcase name="Handler error envelope and code" time="0.007" classname="04Capacity3ReturnOverloadAndClaimPriorityPm141Load3BlocksNewClaim409AgentCapacityReached"/>
+  </testsuite>
+  <testsuite name="04 · Capacity 3, return overload and claim priority / PM-142 · Customer return allowed despite load 3 → 200" id="a3d5afb2-4cd2-46f1-9678-6ce7f59fa181" timestamp="2026-10-13T00:43:03.438Z" tests="3" failures="0" errors="0" time="0.014">
+    <testcase name="PM-142 HTTP 200" time="0.014" classname="04Capacity3ReturnOverloadAndClaimPriorityPm142CustomerReturnAllowedDespiteLoad3200"/>
+    <testcase name="customer ticket response contract" time="0.014" classname="04Capacity3ReturnOverloadAndClaimPriorityPm142CustomerReturnAllowedDespiteLoad3200"/>
+    <testcase name="Ticket state IN_PROGRESS" time="0.014" classname="04Capacity3ReturnOverloadAndClaimPriorityPm142CustomerReturnAllowedDespiteLoad3200"/>
+  </testsuite>
+  <testsuite name="04 · Capacity 3, return overload and claim priority / PM-143 · M-06 ?agent_id={{agent_4}} → 200" id="7673f491-8a22-41dc-b552-6f99aa07a98e" timestamp="2026-10-13T00:43:03.438Z" tests="4" failures="0" errors="0" time="0.010">
+    <testcase name="PM-143 HTTP 200" time="0.010" classname="04Capacity3ReturnOverloadAndClaimPriorityPm143M06AgentIdAgent4200"/>
+    <testcase name="M-06 report contract" time="0.010" classname="04Capacity3ReturnOverloadAndClaimPriorityPm143M06AgentIdAgent4200"/>
+    <testcase name="Customer return overload 4" time="0.010" classname="04Capacity3ReturnOverloadAndClaimPriorityPm143M06AgentIdAgent4200"/>
+    <testcase name="Overloaded" time="0.010" classname="04Capacity3ReturnOverloadAndClaimPriorityPm143M06AgentIdAgent4200"/>
+  </testsuite>
+  <testsuite name="04 · Capacity 3, return overload and claim priority / PM-144 · Load 4 blocks new claim → 409 AGENT_CAPACITY_REACHED" id="035f1dc1-0225-4a65-80c6-c2cc34492df7" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.008">
+    <testcase name="PM-144 HTTP 409" time="0.008" classname="04Capacity3ReturnOverloadAndClaimPriorityPm144Load4BlocksNewClaim409AgentCapacityReached"/>
+    <testcase name="Handler error envelope and code" time="0.008" classname="04Capacity3ReturnOverloadAndClaimPriorityPm144Load4BlocksNewClaim409AgentCapacityReached"/>
+  </testsuite>
+  <testsuite name="04 · Capacity 3, return overload and claim priority / PM-145 · Closed beats assigned and capacity → 409 TICKET_CLOSED" id="3369592c-a1d3-4034-9111-cb60af0c927f" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.008">
+    <testcase name="PM-145 HTTP 409" time="0.008" classname="04Capacity3ReturnOverloadAndClaimPriorityPm145ClosedBeatsAssignedAndCapacity409TicketClosed"/>
+    <testcase name="Handler error envelope and code" time="0.008" classname="04Capacity3ReturnOverloadAndClaimPriorityPm145ClosedBeatsAssignedAndCapacity409TicketClosed"/>
+  </testsuite>
+  <testsuite name="04 · Capacity 3, return overload and claim priority / PM-146 · Assigned beats capacity → 409 TICKET_ALREADY_ASSIGNED" id="bfaf27a1-1677-47fd-bc89-ba9d75aec3eb" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.009">
+    <testcase name="PM-146 HTTP 409" time="0.009" classname="04Capacity3ReturnOverloadAndClaimPriorityPm146AssignedBeatsCapacity409TicketAlreadyAssigned"/>
+    <testcase name="Handler error envelope and code" time="0.009" classname="04Capacity3ReturnOverloadAndClaimPriorityPm146AssignedBeatsCapacity409TicketAlreadyAssigned"/>
+  </testsuite>
+  <testsuite name="04 · Capacity 3, return overload and claim priority / PM-147 · Other Agent claim also gets already assigned → 409 TICKET_ALREADY_ASSIGNED" id="7dbd43a4-4197-4280-be82-f9eabe2b5c5c" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.009">
+    <testcase name="PM-147 HTTP 409" time="0.009" classname="04Capacity3ReturnOverloadAndClaimPriorityPm147OtherAgentClaimAlsoGetsAlreadyAssigned409TicketAlreadyAssigned"/>
+    <testcase name="Handler error envelope and code" time="0.009" classname="04Capacity3ReturnOverloadAndClaimPriorityPm147OtherAgentClaimAlsoGetsAlreadyAssigned409TicketAlreadyAssigned"/>
+  </testsuite>
+  <testsuite name="04 · Capacity 3, return overload and claim priority / PM-148 · Capacity ticket one first reply → 200" id="8c3a8b1c-bac8-4062-aa46-19ad1b17d4c3" timestamp="2026-10-13T00:43:03.438Z" tests="3" failures="0" errors="0" time="0.014">
+    <testcase name="PM-148 HTTP 200" time="0.014" classname="04Capacity3ReturnOverloadAndClaimPriorityPm148CapacityTicketOneFirstReply200"/>
+    <testcase name="internal ticket response contract" time="0.014" classname="04Capacity3ReturnOverloadAndClaimPriorityPm148CapacityTicketOneFirstReply200"/>
+    <testcase name="Ticket state IN_PROGRESS" time="0.014" classname="04Capacity3ReturnOverloadAndClaimPriorityPm148CapacityTicketOneFirstReply200"/>
+  </testsuite>
+  <testsuite name="04 · Capacity 3, return overload and claim priority / PM-149 · Waiting lowers load 4 to 3 → 200" id="52f87f32-e6e3-44fc-aa06-d3d1c5d3aad3" timestamp="2026-10-13T00:43:03.438Z" tests="3" failures="0" errors="0" time="0.013">
+    <testcase name="PM-149 HTTP 200" time="0.013" classname="04Capacity3ReturnOverloadAndClaimPriorityPm149WaitingLowersLoad4To3200"/>
+    <testcase name="internal ticket response contract" time="0.013" classname="04Capacity3ReturnOverloadAndClaimPriorityPm149WaitingLowersLoad4To3200"/>
+    <testcase name="Ticket state WAITING_FOR_CUSTOMER" time="0.013" classname="04Capacity3ReturnOverloadAndClaimPriorityPm149WaitingLowersLoad4To3200"/>
+  </testsuite>
+  <testsuite name="04 · Capacity 3, return overload and claim priority / PM-150 · Still load 3 blocks new claim → 409 AGENT_CAPACITY_REACHED" id="9517d489-a8b3-40df-822c-0f303b792771" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.009">
+    <testcase name="PM-150 HTTP 409" time="0.009" classname="04Capacity3ReturnOverloadAndClaimPriorityPm150StillLoad3BlocksNewClaim409AgentCapacityReached"/>
+    <testcase name="Handler error envelope and code" time="0.009" classname="04Capacity3ReturnOverloadAndClaimPriorityPm150StillLoad3BlocksNewClaim409AgentCapacityReached"/>
+  </testsuite>
+  <testsuite name="04 · Capacity 3, return overload and claim priority / PM-151 · Capacity ticket two first reply → 200" id="3da84a58-8a51-46a6-9364-24a0eb0e5b24" timestamp="2026-10-13T00:43:03.438Z" tests="3" failures="0" errors="0" time="0.015">
+    <testcase name="PM-151 HTTP 200" time="0.015" classname="04Capacity3ReturnOverloadAndClaimPriorityPm151CapacityTicketTwoFirstReply200"/>
+    <testcase name="internal ticket response contract" time="0.015" classname="04Capacity3ReturnOverloadAndClaimPriorityPm151CapacityTicketTwoFirstReply200"/>
+    <testcase name="Ticket state IN_PROGRESS" time="0.015" classname="04Capacity3ReturnOverloadAndClaimPriorityPm151CapacityTicketTwoFirstReply200"/>
+  </testsuite>
+  <testsuite name="04 · Capacity 3, return overload and claim priority / PM-152 · Waiting lowers load to 2 → 200" id="4a6a51bd-d3e5-4e9b-ba47-7caff663924d" timestamp="2026-10-13T00:43:03.438Z" tests="3" failures="0" errors="0" time="0.013">
+    <testcase name="PM-152 HTTP 200" time="0.013" classname="04Capacity3ReturnOverloadAndClaimPriorityPm152WaitingLowersLoadTo2200"/>
+    <testcase name="internal ticket response contract" time="0.013" classname="04Capacity3ReturnOverloadAndClaimPriorityPm152WaitingLowersLoadTo2200"/>
+    <testcase name="Ticket state WAITING_FOR_CUSTOMER" time="0.013" classname="04Capacity3ReturnOverloadAndClaimPriorityPm152WaitingLowersLoadTo2200"/>
+  </testsuite>
+  <testsuite name="04 · Capacity 3, return overload and claim priority / PM-153 · Load 2 permits new claim → 200" id="d3b09ff0-a8de-4912-ade9-1a9508133cf1" timestamp="2026-10-13T00:43:03.438Z" tests="3" failures="0" errors="0" time="0.012">
+    <testcase name="PM-153 HTTP 200" time="0.012" classname="04Capacity3ReturnOverloadAndClaimPriorityPm153Load2PermitsNewClaim200"/>
+    <testcase name="internal ticket response contract" time="0.012" classname="04Capacity3ReturnOverloadAndClaimPriorityPm153Load2PermitsNewClaim200"/>
+    <testcase name="Ticket state IN_PROGRESS" time="0.012" classname="04Capacity3ReturnOverloadAndClaimPriorityPm153Load2PermitsNewClaim200"/>
+  </testsuite>
+  <testsuite name="04 · Capacity 3, return overload and claim priority / PM-154 · Create customer_two_ticket_id → 201" id="b64e331c-55f3-4543-8bfe-9571e6c9ff17" timestamp="2026-10-13T00:43:03.438Z" tests="4" failures="0" errors="0" time="0.011">
+    <testcase name="PM-154 HTTP 201" time="0.011" classname="04Capacity3ReturnOverloadAndClaimPriorityPm154CreateCustomerTwoTicketId201"/>
+    <testcase name="customer ticket response contract" time="0.011" classname="04Capacity3ReturnOverloadAndClaimPriorityPm154CreateCustomerTwoTicketId201"/>
+    <testcase name="Ticket state NEW" time="0.011" classname="04Capacity3ReturnOverloadAndClaimPriorityPm154CreateCustomerTwoTicketId201"/>
+    <testcase name="No assignee on create" time="0.011" classname="04Capacity3ReturnOverloadAndClaimPriorityPm154CreateCustomerTwoTicketId201"/>
+  </testsuite>
+  <testsuite name="04 · Capacity 3, return overload and claim priority / PM-155 · Customer 2 list contains only own ticket → 200" id="666414cd-6fe7-41a5-9b5b-aa1115076891" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.007">
+    <testcase name="PM-155 HTTP 200" time="0.007" classname="04Capacity3ReturnOverloadAndClaimPriorityPm155Customer2ListContainsOnlyOwnTicket200"/>
+    <testcase name="Customer list privacy/ownership" time="0.007" classname="04Capacity3ReturnOverloadAndClaimPriorityPm155Customer2ListContainsOnlyOwnTicket200"/>
+  </testsuite>
+  <testsuite name="04 · Capacity 3, return overload and claim priority / PM-156 · Agent 4 list has only assigned and minute summaries → 200" id="27160410-c3ce-4ace-bd45-479f58b027e3" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.009">
+    <testcase name="PM-156 HTTP 200" time="0.009" classname="04Capacity3ReturnOverloadAndClaimPriorityPm156Agent4ListHasOnlyAssignedAndMinuteSummaries200"/>
+    <testcase name="Internal list contract" time="0.009" classname="04Capacity3ReturnOverloadAndClaimPriorityPm156Agent4ListHasOnlyAssignedAndMinuteSummaries200"/>
+  </testsuite>
+  <testsuite name="04 · Capacity 3, return overload and claim priority / PM-157 · Create resolved_ticket_id → 201" id="fee35c7a-8f4e-45c3-9f97-618d9a3303df" timestamp="2026-10-13T00:43:03.438Z" tests="4" failures="0" errors="0" time="0.013">
+    <testcase name="PM-157 HTTP 201" time="0.013" classname="04Capacity3ReturnOverloadAndClaimPriorityPm157CreateResolvedTicketId201"/>
+    <testcase name="customer ticket response contract" time="0.013" classname="04Capacity3ReturnOverloadAndClaimPriorityPm157CreateResolvedTicketId201"/>
+    <testcase name="Ticket state NEW" time="0.013" classname="04Capacity3ReturnOverloadAndClaimPriorityPm157CreateResolvedTicketId201"/>
+    <testcase name="No assignee on create" time="0.013" classname="04Capacity3ReturnOverloadAndClaimPriorityPm157CreateResolvedTicketId201"/>
+  </testsuite>
+  <testsuite name="04 · Capacity 3, return overload and claim priority / PM-158 · Agent 5 claims separate M05 candidate → 200" id="17cc2b91-2ed0-4728-87f6-c1c023a08713" timestamp="2026-10-13T00:43:03.438Z" tests="3" failures="0" errors="0" time="0.014">
+    <testcase name="PM-158 HTTP 200" time="0.014" classname="04Capacity3ReturnOverloadAndClaimPriorityPm158Agent5ClaimsSeparateM05Candidate200"/>
+    <testcase name="internal ticket response contract" time="0.014" classname="04Capacity3ReturnOverloadAndClaimPriorityPm158Agent5ClaimsSeparateM05Candidate200"/>
+    <testcase name="Ticket state IN_PROGRESS" time="0.014" classname="04Capacity3ReturnOverloadAndClaimPriorityPm158Agent5ClaimsSeparateM05Candidate200"/>
+  </testsuite>
+  <testsuite name="04 · Capacity 3, return overload and claim priority / PM-159 · Leave M05 candidate Resolved → 200" id="a66e1ad5-e930-4672-b427-46286897fc98" timestamp="2026-10-13T00:43:03.438Z" tests="3" failures="0" errors="0" time="0.014">
+    <testcase name="PM-159 HTTP 200" time="0.014" classname="04Capacity3ReturnOverloadAndClaimPriorityPm159LeaveM05CandidateResolved200"/>
+    <testcase name="internal ticket response contract" time="0.014" classname="04Capacity3ReturnOverloadAndClaimPriorityPm159LeaveM05CandidateResolved200"/>
+    <testcase name="Ticket state RESOLVED" time="0.014" classname="04Capacity3ReturnOverloadAndClaimPriorityPm159LeaveM05CandidateResolved200"/>
+  </testsuite>
+  <testsuite name="05 · M-01…M-07 contracts, periods, filters and access / PM-161 · M-01 ?from={{period_from}}&amp;to={{period_to}} → 200" id="b12a7da3-64dd-41ed-9bad-0cefea836c4f" timestamp="2026-10-13T00:43:03.438Z" tests="4" failures="0" errors="0" time="0.010">
+    <testcase name="PM-161 HTTP 200" time="0.010" classname="05M01M07ContractsPeriodsFiltersAndAccessPm161M01FromPeriodFromAmpToPeriodTo200"/>
+    <testcase name="M-01 report contract" time="0.010" classname="05M01M07ContractsPeriodsFiltersAndAccessPm161M01FromPeriodFromAmpToPeriodTo200"/>
+    <testcase name="Five first response results" time="0.010" classname="05M01M07ContractsPeriodsFiltersAndAccessPm161M01FromPeriodFromAmpToPeriodTo200"/>
+    <testcase name="Three pending first responses" time="0.010" classname="05M01M07ContractsPeriodsFiltersAndAccessPm161M01FromPeriodFromAmpToPeriodTo200"/>
+  </testsuite>
+  <testsuite name="05 · M-01…M-07 contracts, periods, filters and access / PM-171 · M-01 ?from={{period_from}}&amp;to={{period_to}} → 403" id="7bdc39ac-cab0-4dae-a7d2-b9879b58f51c" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.008">
+    <testcase name="PM-171 HTTP 403" time="0.008" classname="05M01M07ContractsPeriodsFiltersAndAccessPm171M01FromPeriodFromAmpToPeriodTo403"/>
+    <testcase name="Handler error envelope and code" time="0.008" classname="05M01M07ContractsPeriodsFiltersAndAccessPm171M01FromPeriodFromAmpToPeriodTo403"/>
+  </testsuite>
+  <testsuite name="05 · M-01…M-07 contracts, periods, filters and access / PM-181 · M-01 ?from={{period_from}}&amp;to={{period_to}} → 403" id="8c6ace6e-2117-40b9-9735-3d5675b2ae6a" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.005">
+    <testcase name="PM-181 HTTP 403" time="0.005" classname="05M01M07ContractsPeriodsFiltersAndAccessPm181M01FromPeriodFromAmpToPeriodTo403"/>
+    <testcase name="Handler error envelope and code" time="0.005" classname="05M01M07ContractsPeriodsFiltersAndAccessPm181M01FromPeriodFromAmpToPeriodTo403"/>
+  </testsuite>
+  <testsuite name="05 · M-01…M-07 contracts, periods, filters and access / PM-162 · M-02 ?from={{period_from}}&amp;to={{period_to}} → 200" id="32758788-538a-4583-938a-ef10357d84aa" timestamp="2026-10-13T00:43:03.438Z" tests="4" failures="0" errors="0" time="0.009">
+    <testcase name="PM-162 HTTP 200" time="0.009" classname="05M01M07ContractsPeriodsFiltersAndAccessPm162M02FromPeriodFromAmpToPeriodTo200"/>
+    <testcase name="M-02 report contract" time="0.009" classname="05M01M07ContractsPeriodsFiltersAndAccessPm162M02FromPeriodFromAmpToPeriodTo200"/>
+    <testcase name="One Closed ticket" time="0.009" classname="05M01M07ContractsPeriodsFiltersAndAccessPm162M02FromPeriodFromAmpToPeriodTo200"/>
+    <testcase name="Seven unclosed" time="0.009" classname="05M01M07ContractsPeriodsFiltersAndAccessPm162M02FromPeriodFromAmpToPeriodTo200"/>
+  </testsuite>
+  <testsuite name="05 · M-01…M-07 contracts, periods, filters and access / PM-172 · M-02 ?from={{period_from}}&amp;to={{period_to}} → 403" id="6951de08-658b-4da9-bc98-2b6310f96b05" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.006">
+    <testcase name="PM-172 HTTP 403" time="0.006" classname="05M01M07ContractsPeriodsFiltersAndAccessPm172M02FromPeriodFromAmpToPeriodTo403"/>
+    <testcase name="Handler error envelope and code" time="0.006" classname="05M01M07ContractsPeriodsFiltersAndAccessPm172M02FromPeriodFromAmpToPeriodTo403"/>
+  </testsuite>
+  <testsuite name="05 · M-01…M-07 contracts, periods, filters and access / PM-182 · M-02 ?from={{period_from}}&amp;to={{period_to}} → 403" id="0bc6c646-5934-4a86-a851-2bd78f8bf687" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.005">
+    <testcase name="PM-182 HTTP 403" time="0.005" classname="05M01M07ContractsPeriodsFiltersAndAccessPm182M02FromPeriodFromAmpToPeriodTo403"/>
+    <testcase name="Handler error envelope and code" time="0.005" classname="05M01M07ContractsPeriodsFiltersAndAccessPm182M02FromPeriodFromAmpToPeriodTo403"/>
+  </testsuite>
+  <testsuite name="05 · M-01…M-07 contracts, periods, filters and access / PM-163 · M-03 ?from={{period_from}}&amp;to={{period_to}} → 200" id="45967318-5779-44c5-bbe1-b459adae65cb" timestamp="2026-10-13T00:43:03.438Z" tests="5" failures="0" errors="0" time="0.011">
+    <testcase name="PM-163 HTTP 200" time="0.011" classname="05M01M07ContractsPeriodsFiltersAndAccessPm163M03FromPeriodFromAmpToPeriodTo200"/>
+    <testcase name="M-03 report contract" time="0.011" classname="05M01M07ContractsPeriodsFiltersAndAccessPm163M03FromPeriodFromAmpToPeriodTo200"/>
+    <testcase name="One Closed ticket" time="0.011" classname="05M01M07ContractsPeriodsFiltersAndAccessPm163M03FromPeriodFromAmpToPeriodTo200"/>
+    <testcase name="Closed ticket was rejected" time="0.011" classname="05M01M07ContractsPeriodsFiltersAndAccessPm163M03FromPeriodFromAmpToPeriodTo200"/>
+    <testcase name="Seven unclosed" time="0.011" classname="05M01M07ContractsPeriodsFiltersAndAccessPm163M03FromPeriodFromAmpToPeriodTo200"/>
+  </testsuite>
+  <testsuite name="05 · M-01…M-07 contracts, periods, filters and access / PM-173 · M-03 ?from={{period_from}}&amp;to={{period_to}} → 403" id="15246aab-d631-4389-9c33-182e987e61a2" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.005">
+    <testcase name="PM-173 HTTP 403" time="0.005" classname="05M01M07ContractsPeriodsFiltersAndAccessPm173M03FromPeriodFromAmpToPeriodTo403"/>
+    <testcase name="Handler error envelope and code" time="0.005" classname="05M01M07ContractsPeriodsFiltersAndAccessPm173M03FromPeriodFromAmpToPeriodTo403"/>
+  </testsuite>
+  <testsuite name="05 · M-01…M-07 contracts, periods, filters and access / PM-183 · M-03 ?from={{period_from}}&amp;to={{period_to}} → 403" id="464bf9fc-d7a0-4e9b-ab2a-1bd87f0ddb21" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.005">
+    <testcase name="PM-183 HTTP 403" time="0.005" classname="05M01M07ContractsPeriodsFiltersAndAccessPm183M03FromPeriodFromAmpToPeriodTo403"/>
+    <testcase name="Handler error envelope and code" time="0.005" classname="05M01M07ContractsPeriodsFiltersAndAccessPm183M03FromPeriodFromAmpToPeriodTo403"/>
+  </testsuite>
+  <testsuite name="05 · M-01…M-07 contracts, periods, filters and access / PM-164 · M-04 → 200" id="01f14fb7-4d63-46eb-a82f-b3e5c70d8d66" timestamp="2026-10-13T00:43:03.438Z" tests="3" failures="0" errors="0" time="0.009">
+    <testcase name="PM-164 HTTP 200" time="0.009" classname="05M01M07ContractsPeriodsFiltersAndAccessPm164M04200"/>
+    <testcase name="M-04 report contract" time="0.009" classname="05M01M07ContractsPeriodsFiltersAndAccessPm164M04200"/>
+    <testcase name="M04 does not contain Closed main" time="0.009" classname="05M01M07ContractsPeriodsFiltersAndAccessPm164M04200"/>
+  </testsuite>
+  <testsuite name="05 · M-01…M-07 contracts, periods, filters and access / PM-174 · M-04 → 403" id="d3f79afe-5a02-4c56-9868-92a7e8e53d78" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.005">
+    <testcase name="PM-174 HTTP 403" time="0.005" classname="05M01M07ContractsPeriodsFiltersAndAccessPm174M04403"/>
+    <testcase name="Handler error envelope and code" time="0.005" classname="05M01M07ContractsPeriodsFiltersAndAccessPm174M04403"/>
+  </testsuite>
+  <testsuite name="05 · M-01…M-07 contracts, periods, filters and access / PM-184 · M-04 → 403" id="d3054178-90ab-4e05-9b7f-ea5b7c2855e9" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.005">
+    <testcase name="PM-184 HTTP 403" time="0.005" classname="05M01M07ContractsPeriodsFiltersAndAccessPm184M04403"/>
+    <testcase name="Handler error envelope and code" time="0.005" classname="05M01M07ContractsPeriodsFiltersAndAccessPm184M04403"/>
+  </testsuite>
+  <testsuite name="05 · M-01…M-07 contracts, periods, filters and access / PM-165 · M-05 → 200" id="4f4cac42-812d-48b4-b607-877c2da2cfcd" timestamp="2026-10-13T00:43:03.438Z" tests="3" failures="0" errors="0" time="0.009">
+    <testcase name="PM-165 HTTP 200" time="0.009" classname="05M01M07ContractsPeriodsFiltersAndAccessPm165M05200"/>
+    <testcase name="M-05 report contract" time="0.009" classname="05M01M07ContractsPeriodsFiltersAndAccessPm165M05200"/>
+    <testcase name="One Resolved awaiting confirmation" time="0.009" classname="05M01M07ContractsPeriodsFiltersAndAccessPm165M05200"/>
+  </testsuite>
+  <testsuite name="05 · M-01…M-07 contracts, periods, filters and access / PM-175 · M-05 → 403" id="547c9188-65b4-46e2-9fc9-017ed37984a7" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.006">
+    <testcase name="PM-175 HTTP 403" time="0.006" classname="05M01M07ContractsPeriodsFiltersAndAccessPm175M05403"/>
+    <testcase name="Handler error envelope and code" time="0.006" classname="05M01M07ContractsPeriodsFiltersAndAccessPm175M05403"/>
+  </testsuite>
+  <testsuite name="05 · M-01…M-07 contracts, periods, filters and access / PM-185 · M-05 → 403" id="b19aa511-78d1-49d8-8788-61cf47c8e820" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.005">
+    <testcase name="PM-185 HTTP 403" time="0.005" classname="05M01M07ContractsPeriodsFiltersAndAccessPm185M05403"/>
+    <testcase name="Handler error envelope and code" time="0.005" classname="05M01M07ContractsPeriodsFiltersAndAccessPm185M05403"/>
+  </testsuite>
+  <testsuite name="05 · M-01…M-07 contracts, periods, filters and access / PM-166 · M-06 → 200" id="e038761d-f3e5-49a1-8d2f-1a2615c3a1da" timestamp="2026-10-13T00:43:03.438Z" tests="3" failures="0" errors="0" time="0.011">
+    <testcase name="PM-166 HTTP 200" time="0.011" classname="05M01M07ContractsPeriodsFiltersAndAccessPm166M06200"/>
+    <testcase name="M-06 report contract" time="0.011" classname="05M01M07ContractsPeriodsFiltersAndAccessPm166M06200"/>
+    <testcase name="Actual Agent loads" time="0.011" classname="05M01M07ContractsPeriodsFiltersAndAccessPm166M06200"/>
+  </testsuite>
+  <testsuite name="05 · M-01…M-07 contracts, periods, filters and access / PM-176 · M-06 → 403" id="60df77ea-a709-4fc3-916d-b672196a2885" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.004">
+    <testcase name="PM-176 HTTP 403" time="0.004" classname="05M01M07ContractsPeriodsFiltersAndAccessPm176M06403"/>
+    <testcase name="Handler error envelope and code" time="0.004" classname="05M01M07ContractsPeriodsFiltersAndAccessPm176M06403"/>
+  </testsuite>
+  <testsuite name="05 · M-01…M-07 contracts, periods, filters and access / PM-186 · M-06 → 403" id="4a256394-e9d0-472c-99b0-2d818734e6f3" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.005">
+    <testcase name="PM-186 HTTP 403" time="0.005" classname="05M01M07ContractsPeriodsFiltersAndAccessPm186M06403"/>
+    <testcase name="Handler error envelope and code" time="0.005" classname="05M01M07ContractsPeriodsFiltersAndAccessPm186M06403"/>
+  </testsuite>
+  <testsuite name="05 · M-01…M-07 contracts, periods, filters and access / PM-167 · M-07 → 200" id="4180fcd5-c76c-4d83-8bd8-fca4198f760c" timestamp="2026-10-13T00:43:03.438Z" tests="4" failures="0" errors="0" time="0.010">
+    <testcase name="PM-167 HTTP 200" time="0.010" classname="05M01M07ContractsPeriodsFiltersAndAccessPm167M07200"/>
+    <testcase name="M-07 report contract" time="0.010" classname="05M01M07ContractsPeriodsFiltersAndAccessPm167M07200"/>
+    <testcase name="Completed review from main ticket" time="0.010" classname="05M01M07ContractsPeriodsFiltersAndAccessPm167M07200"/>
+    <testcase name="Review completion retained" time="0.010" classname="05M01M07ContractsPeriodsFiltersAndAccessPm167M07200"/>
+  </testsuite>
+  <testsuite name="05 · M-01…M-07 contracts, periods, filters and access / PM-177 · M-07 → 403" id="34a757d8-2968-4fa4-b7d1-c1c3f6b76354" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.005">
+    <testcase name="PM-177 HTTP 403" time="0.005" classname="05M01M07ContractsPeriodsFiltersAndAccessPm177M07403"/>
+    <testcase name="Handler error envelope and code" time="0.005" classname="05M01M07ContractsPeriodsFiltersAndAccessPm177M07403"/>
+  </testsuite>
+  <testsuite name="05 · M-01…M-07 contracts, periods, filters and access / PM-187 · M-07 → 403" id="4f50db5f-0d1d-499e-9d1a-98ebd34a3297" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.005">
+    <testcase name="PM-187 HTTP 403" time="0.005" classname="05M01M07ContractsPeriodsFiltersAndAccessPm187M07403"/>
+    <testcase name="Handler error envelope and code" time="0.005" classname="05M01M07ContractsPeriodsFiltersAndAccessPm187M07403"/>
+  </testsuite>
+  <testsuite name="05 · M-01…M-07 contracts, periods, filters and access / PM-191 · M-01 ?from={{period_from}}&amp;to={{period_to}}&amp;agent_id={{agent_3}}&amp;priority=NORMAL → 200" id="442d1118-db27-485e-a336-cba3d8e7d0c5" timestamp="2026-10-13T00:43:03.438Z" tests="5" failures="0" errors="0" time="0.011">
+    <testcase name="PM-191 HTTP 200" time="0.011" classname="05M01M07ContractsPeriodsFiltersAndAccessPm191M01FromPeriodFromAmpToPeriodToAmpAgentIdAgent3AmpPriorityNormal200"/>
+    <testcase name="M-01 report contract" time="0.011" classname="05M01M07ContractsPeriodsFiltersAndAccessPm191M01FromPeriodFromAmpToPeriodToAmpAgentIdAgent3AmpPriorityNormal200"/>
+    <testcase name="Filtered empty denominator" time="0.011" classname="05M01M07ContractsPeriodsFiltersAndAccessPm191M01FromPeriodFromAmpToPeriodToAmpAgentIdAgent3AmpPriorityNormal200"/>
+    <testcase name="Filtered empty numerator" time="0.011" classname="05M01M07ContractsPeriodsFiltersAndAccessPm191M01FromPeriodFromAmpToPeriodToAmpAgentIdAgent3AmpPriorityNormal200"/>
+    <testcase name="Empty result marker" time="0.011" classname="05M01M07ContractsPeriodsFiltersAndAccessPm191M01FromPeriodFromAmpToPeriodToAmpAgentIdAgent3AmpPriorityNormal200"/>
+  </testsuite>
+  <testsuite name="05 · M-01…M-07 contracts, periods, filters and access / PM-192 · M-02 ?from={{period_from}}&amp;to={{period_to}}&amp;agent_id={{agent_3}}&amp;priority=NORMAL → 200" id="70bd3c3e-3cb7-42ca-a48f-7db1bb159ec9" timestamp="2026-10-13T00:43:03.438Z" tests="5" failures="0" errors="0" time="0.011">
+    <testcase name="PM-192 HTTP 200" time="0.011" classname="05M01M07ContractsPeriodsFiltersAndAccessPm192M02FromPeriodFromAmpToPeriodToAmpAgentIdAgent3AmpPriorityNormal200"/>
+    <testcase name="M-02 report contract" time="0.011" classname="05M01M07ContractsPeriodsFiltersAndAccessPm192M02FromPeriodFromAmpToPeriodToAmpAgentIdAgent3AmpPriorityNormal200"/>
+    <testcase name="Filtered empty denominator" time="0.011" classname="05M01M07ContractsPeriodsFiltersAndAccessPm192M02FromPeriodFromAmpToPeriodToAmpAgentIdAgent3AmpPriorityNormal200"/>
+    <testcase name="Filtered empty numerator" time="0.011" classname="05M01M07ContractsPeriodsFiltersAndAccessPm192M02FromPeriodFromAmpToPeriodToAmpAgentIdAgent3AmpPriorityNormal200"/>
+    <testcase name="Empty result marker" time="0.011" classname="05M01M07ContractsPeriodsFiltersAndAccessPm192M02FromPeriodFromAmpToPeriodToAmpAgentIdAgent3AmpPriorityNormal200"/>
+  </testsuite>
+  <testsuite name="05 · M-01…M-07 contracts, periods, filters and access / PM-193 · M-03 ?from={{period_from}}&amp;to={{period_to}}&amp;agent_id={{agent_3}}&amp;priority=NORMAL → 200" id="455a82a9-20e9-4f51-b393-c92e43ff0a73" timestamp="2026-10-13T00:43:03.438Z" tests="5" failures="0" errors="0" time="0.009">
+    <testcase name="PM-193 HTTP 200" time="0.009" classname="05M01M07ContractsPeriodsFiltersAndAccessPm193M03FromPeriodFromAmpToPeriodToAmpAgentIdAgent3AmpPriorityNormal200"/>
+    <testcase name="M-03 report contract" time="0.009" classname="05M01M07ContractsPeriodsFiltersAndAccessPm193M03FromPeriodFromAmpToPeriodToAmpAgentIdAgent3AmpPriorityNormal200"/>
+    <testcase name="Filtered empty denominator" time="0.009" classname="05M01M07ContractsPeriodsFiltersAndAccessPm193M03FromPeriodFromAmpToPeriodToAmpAgentIdAgent3AmpPriorityNormal200"/>
+    <testcase name="Filtered empty numerator" time="0.009" classname="05M01M07ContractsPeriodsFiltersAndAccessPm193M03FromPeriodFromAmpToPeriodToAmpAgentIdAgent3AmpPriorityNormal200"/>
+    <testcase name="Empty result marker" time="0.009" classname="05M01M07ContractsPeriodsFiltersAndAccessPm193M03FromPeriodFromAmpToPeriodToAmpAgentIdAgent3AmpPriorityNormal200"/>
+  </testsuite>
+  <testsuite name="05 · M-01…M-07 contracts, periods, filters and access / PM-194 · M-01 ?from={{period_from}}&amp;to={{period_to}}&amp;agent_id={{agent_3}}&amp;priority=HIGH → 200" id="7e1a20d5-2408-43d3-9473-81a55ff7ac93" timestamp="2026-10-13T00:43:03.438Z" tests="7" failures="0" errors="0" time="0.010">
+    <testcase name="PM-194 HTTP 200" time="0.010" classname="05M01M07ContractsPeriodsFiltersAndAccessPm194M01FromPeriodFromAmpToPeriodToAmpAgentIdAgent3AmpPriorityHigh200"/>
+    <testcase name="M-01 report contract" time="0.010" classname="05M01M07ContractsPeriodsFiltersAndAccessPm194M01FromPeriodFromAmpToPeriodToAmpAgentIdAgent3AmpPriorityHigh200"/>
+    <testcase name="High/Agent3 result count" time="0.010" classname="05M01M07ContractsPeriodsFiltersAndAccessPm194M01FromPeriodFromAmpToPeriodToAmpAgentIdAgent3AmpPriorityHigh200"/>
+    <testcase name="No pending in filter" time="0.010" classname="05M01M07ContractsPeriodsFiltersAndAccessPm194M01FromPeriodFromAmpToPeriodToAmpAgentIdAgent3AmpPriorityHigh200"/>
+    <testcase name="Period from" time="0.010" classname="05M01M07ContractsPeriodsFiltersAndAccessPm194M01FromPeriodFromAmpToPeriodToAmpAgentIdAgent3AmpPriorityHigh200"/>
+    <testcase name="Period to" time="0.010" classname="05M01M07ContractsPeriodsFiltersAndAccessPm194M01FromPeriodFromAmpToPeriodToAmpAgentIdAgent3AmpPriorityHigh200"/>
+    <testcase name="Filters echoed" time="0.010" classname="05M01M07ContractsPeriodsFiltersAndAccessPm194M01FromPeriodFromAmpToPeriodToAmpAgentIdAgent3AmpPriorityHigh200"/>
+  </testsuite>
+  <testsuite name="05 · M-01…M-07 contracts, periods, filters and access / PM-195 · M-02 ?from={{period_from}}&amp;to={{period_to}}&amp;agent_id={{agent_4}}&amp;priority=NORMAL → 200" id="7fcd4ed9-4ae0-4c07-8302-71fc6d76ca68" timestamp="2026-10-13T00:43:03.438Z" tests="4" failures="0" errors="0" time="0.010">
+    <testcase name="PM-195 HTTP 200" time="0.010" classname="05M01M07ContractsPeriodsFiltersAndAccessPm195M02FromPeriodFromAmpToPeriodToAmpAgentIdAgent4AmpPriorityNormal200"/>
+    <testcase name="M-02 report contract" time="0.010" classname="05M01M07ContractsPeriodsFiltersAndAccessPm195M02FromPeriodFromAmpToPeriodToAmpAgentIdAgent4AmpPriorityNormal200"/>
+    <testcase name="No Closed in normal/Agent4" time="0.010" classname="05M01M07ContractsPeriodsFiltersAndAccessPm195M02FromPeriodFromAmpToPeriodToAmpAgentIdAgent4AmpPriorityNormal200"/>
+    <testcase name="Two normal unclosed for Agent4" time="0.010" classname="05M01M07ContractsPeriodsFiltersAndAccessPm195M02FromPeriodFromAmpToPeriodToAmpAgentIdAgent4AmpPriorityNormal200"/>
+  </testsuite>
+  <testsuite name="05 · M-01…M-07 contracts, periods, filters and access / PM-196 · M-05 ?agent_id={{agent_3}} → 200" id="671d2fdd-efdb-42f9-86ed-e42c6c4536c2" timestamp="2026-10-13T00:43:03.438Z" tests="3" failures="0" errors="0" time="0.008">
+    <testcase name="PM-196 HTTP 200" time="0.008" classname="05M01M07ContractsPeriodsFiltersAndAccessPm196M05AgentIdAgent3200"/>
+    <testcase name="M-05 report contract" time="0.008" classname="05M01M07ContractsPeriodsFiltersAndAccessPm196M05AgentIdAgent3200"/>
+    <testcase name="Agent filter excludes other Resolved" time="0.008" classname="05M01M07ContractsPeriodsFiltersAndAccessPm196M05AgentIdAgent3200"/>
+  </testsuite>
+  <testsuite name="05 · M-01…M-07 contracts, periods, filters and access / PM-197 · M-07 ?priority=NORMAL → 200" id="4f5a0022-d231-416a-a9f4-295222a86207" timestamp="2026-10-13T00:43:03.438Z" tests="3" failures="0" errors="0" time="0.009">
+    <testcase name="PM-197 HTTP 200" time="0.009" classname="05M01M07ContractsPeriodsFiltersAndAccessPm197M07PriorityNormal200"/>
+    <testcase name="M-07 report contract" time="0.009" classname="05M01M07ContractsPeriodsFiltersAndAccessPm197M07PriorityNormal200"/>
+    <testcase name="Priority filter excludes high review" time="0.009" classname="05M01M07ContractsPeriodsFiltersAndAccessPm197M07PriorityNormal200"/>
+  </testsuite>
+  <testsuite name="05 · M-01…M-07 contracts, periods, filters and access / PM-198 · M-06 ?agent_id={{agent_4}} → 200" id="16002da2-0802-4ffd-8bd8-0f13f285752c" timestamp="2026-10-13T00:43:03.438Z" tests="4" failures="0" errors="0" time="0.010">
+    <testcase name="PM-198 HTTP 200" time="0.010" classname="05M01M07ContractsPeriodsFiltersAndAccessPm198M06AgentIdAgent4200"/>
+    <testcase name="M-06 report contract" time="0.010" classname="05M01M07ContractsPeriodsFiltersAndAccessPm198M06AgentIdAgent4200"/>
+    <testcase name="M06 filter keeps one Agent" time="0.010" classname="05M01M07ContractsPeriodsFiltersAndAccessPm198M06AgentIdAgent4200"/>
+    <testcase name="All priorities remain in load" time="0.010" classname="05M01M07ContractsPeriodsFiltersAndAccessPm198M06AgentIdAgent4200"/>
+  </testsuite>
+  <testsuite name="05 · M-01…M-07 contracts, periods, filters and access / PM-200 · Reject invalid report period/filter → 422" id="df901571-997d-494b-97f8-53d1f8ebfaf2" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.005">
+    <testcase name="PM-200 HTTP 422" time="0.005" classname="05M01M07ContractsPeriodsFiltersAndAccessPm200RejectInvalidReportPeriodFilter422"/>
+    <testcase name="Handler error envelope and code" time="0.005" classname="05M01M07ContractsPeriodsFiltersAndAccessPm200RejectInvalidReportPeriodFilter422"/>
+  </testsuite>
+  <testsuite name="05 · M-01…M-07 contracts, periods, filters and access / PM-201 · Reject invalid report period/filter → 422" id="9151b3f9-a669-4ada-b743-10e9c6fecd28" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.006">
+    <testcase name="PM-201 HTTP 422" time="0.006" classname="05M01M07ContractsPeriodsFiltersAndAccessPm201RejectInvalidReportPeriodFilter422"/>
+    <testcase name="Handler error envelope and code" time="0.006" classname="05M01M07ContractsPeriodsFiltersAndAccessPm201RejectInvalidReportPeriodFilter422"/>
+  </testsuite>
+  <testsuite name="05 · M-01…M-07 contracts, periods, filters and access / PM-202 · Reject invalid report period/filter → 422" id="5a9183a1-d238-46e8-82f8-6f54f9768edc" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.005">
+    <testcase name="PM-202 HTTP 422" time="0.005" classname="05M01M07ContractsPeriodsFiltersAndAccessPm202RejectInvalidReportPeriodFilter422"/>
+    <testcase name="Handler error envelope and code" time="0.005" classname="05M01M07ContractsPeriodsFiltersAndAccessPm202RejectInvalidReportPeriodFilter422"/>
+  </testsuite>
+  <testsuite name="05 · M-01…M-07 contracts, periods, filters and access / PM-203 · Reject invalid report period/filter → 422" id="08b04a34-fb70-4116-a5d7-419eea117b10" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.005">
+    <testcase name="PM-203 HTTP 422" time="0.005" classname="05M01M07ContractsPeriodsFiltersAndAccessPm203RejectInvalidReportPeriodFilter422"/>
+    <testcase name="Handler error envelope and code" time="0.005" classname="05M01M07ContractsPeriodsFiltersAndAccessPm203RejectInvalidReportPeriodFilter422"/>
+  </testsuite>
+  <testsuite name="05 · M-01…M-07 contracts, periods, filters and access / PM-204 · Reject invalid report period/filter → 422" id="067777b6-0153-46b2-a616-b562303ef277" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.005">
+    <testcase name="PM-204 HTTP 422" time="0.005" classname="05M01M07ContractsPeriodsFiltersAndAccessPm204RejectInvalidReportPeriodFilter422"/>
+    <testcase name="Handler error envelope and code" time="0.005" classname="05M01M07ContractsPeriodsFiltersAndAccessPm204RejectInvalidReportPeriodFilter422"/>
+  </testsuite>
+  <testsuite name="05 · M-01…M-07 contracts, periods, filters and access / PM-205 · Reject invalid report period/filter → 422" id="d8da16c1-e928-4a1b-a6b4-16abcf49cefd" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.005">
+    <testcase name="PM-205 HTTP 422" time="0.005" classname="05M01M07ContractsPeriodsFiltersAndAccessPm205RejectInvalidReportPeriodFilter422"/>
+    <testcase name="Handler error envelope and code" time="0.005" classname="05M01M07ContractsPeriodsFiltersAndAccessPm205RejectInvalidReportPeriodFilter422"/>
+  </testsuite>
+  <testsuite name="05 · M-01…M-07 contracts, periods, filters and access / PM-206 · Reject invalid report period/filter → 422" id="5b1e3aa9-c700-42dd-8641-1a5e9dd8ad17" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.007">
+    <testcase name="PM-206 HTTP 422" time="0.007" classname="05M01M07ContractsPeriodsFiltersAndAccessPm206RejectInvalidReportPeriodFilter422"/>
+    <testcase name="Handler error envelope and code" time="0.007" classname="05M01M07ContractsPeriodsFiltersAndAccessPm206RejectInvalidReportPeriodFilter422"/>
+  </testsuite>
+  <testsuite name="05 · M-01…M-07 contracts, periods, filters and access / PM-207 · Reject invalid report period/filter → 422" id="d5722ec9-073d-45ce-bf13-2e1cca033bd3" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.007">
+    <testcase name="PM-207 HTTP 422" time="0.007" classname="05M01M07ContractsPeriodsFiltersAndAccessPm207RejectInvalidReportPeriodFilter422"/>
+    <testcase name="Handler error envelope and code" time="0.007" classname="05M01M07ContractsPeriodsFiltersAndAccessPm207RejectInvalidReportPeriodFilter422"/>
+  </testsuite>
+  <testsuite name="05 · M-01…M-07 contracts, periods, filters and access / PM-208 · Agent filter wrong type structural exception → 422" id="2de5bc38-0b6c-4adb-b615-c785099a7639" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.005">
+    <testcase name="PM-208 HTTP 422" time="0.005" classname="05M01M07ContractsPeriodsFiltersAndAccessPm208AgentFilterWrongTypeStructuralException422"/>
+    <testcase name="FastAPI structural 422 before handler is allowed by BR-33" time="0.005" classname="05M01M07ContractsPeriodsFiltersAndAccessPm208AgentFilterWrongTypeStructuralException422"/>
+  </testsuite>
+  <testsuite name="05 · M-01…M-07 contracts, periods, filters and access / PM-209 · Unknown metric → 404" id="e2f53391-371b-4835-a39d-5ef199ef2525" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.005">
+    <testcase name="PM-209 HTTP 404" time="0.005" classname="05M01M07ContractsPeriodsFiltersAndAccessPm209UnknownMetric404"/>
+    <testcase name="Handler error envelope and code" time="0.005" classname="05M01M07ContractsPeriodsFiltersAndAccessPm209UnknownMetric404"/>
+  </testsuite>
+  <testsuite name="05 · M-01…M-07 contracts, periods, filters and access / PM-210 · M-07 ?as_of={{observed_created_at}} → 200" id="e05f43e2-32da-4987-88fa-83bdfb678676" timestamp="2026-10-13T00:43:03.438Z" tests="3" failures="0" errors="0" time="0.009">
+    <testcase name="PM-210 HTTP 200" time="0.009" classname="05M01M07ContractsPeriodsFiltersAndAccessPm210M07AsOfObservedCreatedAt200"/>
+    <testcase name="M-07 report contract" time="0.009" classname="05M01M07ContractsPeriodsFiltersAndAccessPm210M07AsOfObservedCreatedAt200"/>
+    <testcase name="Read historical as_of" time="0.009" classname="05M01M07ContractsPeriodsFiltersAndAccessPm210M07AsOfObservedCreatedAt200"/>
+  </testsuite>
+  <testsuite name="06 · BR-33 structural exceptions and final state checks / PM-220 · Wrong type on Closed bypasses handler state → 422" id="8b422beb-22e2-40bd-94b0-2e3680c277c7" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.005">
+    <testcase name="PM-220 HTTP 422" time="0.005" classname="06Br33StructuralExceptionsAndFinalStateChecksPm220WrongTypeOnClosedBypassesHandlerState422"/>
+    <testcase name="FastAPI structural 422 before handler is allowed by BR-33" time="0.005" classname="06Br33StructuralExceptionsAndFinalStateChecksPm220WrongTypeOnClosedBypassesHandlerState422"/>
+  </testsuite>
+  <testsuite name="06 · BR-33 structural exceptions and final state checks / PM-221 · Wrong type on inaccessible ticket returns structural 422 → 422" id="60c359e8-eeb0-40b8-9842-1c3d0118328f" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.005">
+    <testcase name="PM-221 HTTP 422" time="0.005" classname="06Br33StructuralExceptionsAndFinalStateChecksPm221WrongTypeOnInaccessibleTicketReturnsStructural422422"/>
+    <testcase name="FastAPI structural 422 before handler is allowed by BR-33" time="0.005" classname="06Br33StructuralExceptionsAndFinalStateChecksPm221WrongTypeOnInaccessibleTicketReturnsStructural422422"/>
+  </testsuite>
+  <testsuite name="06 · BR-33 structural exceptions and final state checks / PM-222 · Wrong type on nonexistent ticket structural 422 → 422" id="532672f0-a0fe-4553-b822-3bd870dd2e15" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.005">
+    <testcase name="PM-222 HTTP 422" time="0.005" classname="06Br33StructuralExceptionsAndFinalStateChecksPm222WrongTypeOnNonexistentTicketStructural422422"/>
+    <testcase name="FastAPI structural 422 before handler is allowed by BR-33" time="0.005" classname="06Br33StructuralExceptionsAndFinalStateChecksPm222WrongTypeOnNonexistentTicketStructural422422"/>
+  </testsuite>
+  <testsuite name="06 · BR-33 structural exceptions and final state checks / PM-223 · Extra ordinary field rejected even on Closed → 422" id="2bae3588-ffef-45b1-a889-fc4cface02d3" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.005">
+    <testcase name="PM-223 HTTP 422" time="0.005" classname="06Br33StructuralExceptionsAndFinalStateChecksPm223ExtraOrdinaryFieldRejectedEvenOnClosed422"/>
+    <testcase name="FastAPI structural 422 before handler is allowed by BR-33" time="0.005" classname="06Br33StructuralExceptionsAndFinalStateChecksPm223ExtraOrdinaryFieldRejectedEvenOnClosed422"/>
+  </testsuite>
+  <testsuite name="06 · BR-33 structural exceptions and final state checks / PM-224 · Malformed JSON before handler → 422" id="cc11ac78-4f4e-4dc9-87d1-488ecff67fdd" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.002">
+    <testcase name="PM-224 HTTP 422" time="0.002" classname="06Br33StructuralExceptionsAndFinalStateChecksPm224MalformedJsonBeforeHandler422"/>
+    <testcase name="FastAPI structural 422 before handler is allowed by BR-33" time="0.002" classname="06Br33StructuralExceptionsAndFinalStateChecksPm224MalformedJsonBeforeHandler422"/>
+  </testsuite>
+  <testsuite name="06 · BR-33 structural exceptions and final state checks / PM-225 · Invalid path type structural 422 → 422" id="3b081daf-4969-414a-bd81-baf4075f2f3a" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.005">
+    <testcase name="PM-225 HTTP 422" time="0.005" classname="06Br33StructuralExceptionsAndFinalStateChecksPm225InvalidPathTypeStructural422422"/>
+    <testcase name="FastAPI structural 422 before handler is allowed by BR-33" time="0.005" classname="06Br33StructuralExceptionsAndFinalStateChecksPm225InvalidPathTypeStructural422422"/>
+  </testsuite>
+  <testsuite name="06 · BR-33 structural exceptions and final state checks / PM-226 · Well-typed nonexistent before content → 404" id="5b7e0732-4d8c-40d3-8736-2dd98e48e46d" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.007">
+    <testcase name="PM-226 HTTP 404" time="0.007" classname="06Br33StructuralExceptionsAndFinalStateChecksPm226WellTypedNonexistentBeforeContent404"/>
+    <testcase name="Handler error envelope and code" time="0.007" classname="06Br33StructuralExceptionsAndFinalStateChecksPm226WellTypedNonexistentBeforeContent404"/>
+  </testsuite>
+  <testsuite name="06 · BR-33 structural exceptions and final state checks / PM-227 · Missing identity before role/content → 401" id="d08f2d30-9283-4f9d-9a81-266509a10b2d" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.003">
+    <testcase name="PM-227 HTTP 401" time="0.003" classname="06Br33StructuralExceptionsAndFinalStateChecksPm227MissingIdentityBeforeRoleContent401"/>
+    <testcase name="Handler error envelope and code" time="0.003" classname="06Br33StructuralExceptionsAndFinalStateChecksPm227MissingIdentityBeforeRoleContent401"/>
+  </testsuite>
+  <testsuite name="06 · BR-33 structural exceptions and final state checks / PM-228 · Manager wrong role before Closed/content → 403" id="cb34f092-e0ee-4797-b9bc-9b15538252ea" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.005">
+    <testcase name="PM-228 HTTP 403" time="0.005" classname="06Br33StructuralExceptionsAndFinalStateChecksPm228ManagerWrongRoleBeforeClosedContent403"/>
+    <testcase name="Handler error envelope and code" time="0.005" classname="06Br33StructuralExceptionsAndFinalStateChecksPm228ManagerWrongRoleBeforeClosedContent403"/>
+  </testsuite>
+  <testsuite name="06 · BR-33 structural exceptions and final state checks / PM-229 · Owner Closed unchanged and private → 200" id="541abd12-af28-4106-96d3-9574d5bdf84f" timestamp="2026-10-13T00:43:03.438Z" tests="3" failures="0" errors="0" time="0.009">
+    <testcase name="PM-229 HTTP 200" time="0.009" classname="06Br33StructuralExceptionsAndFinalStateChecksPm229OwnerClosedUnchangedAndPrivate200"/>
+    <testcase name="customer ticket response contract" time="0.009" classname="06Br33StructuralExceptionsAndFinalStateChecksPm229OwnerClosedUnchangedAndPrivate200"/>
+    <testcase name="Ticket state CLOSED" time="0.009" classname="06Br33StructuralExceptionsAndFinalStateChecksPm229OwnerClosedUnchangedAndPrivate200"/>
+  </testsuite>
+  <testsuite name="06 · BR-33 structural exceptions and final state checks / PM-230 · Create missing body structural 422 → 422" id="5d863457-ef05-4f8f-b561-ba693dab0eb7" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.005">
+    <testcase name="PM-230 HTTP 422" time="0.005" classname="06Br33StructuralExceptionsAndFinalStateChecksPm230CreateMissingBodyStructural422422"/>
+    <testcase name="FastAPI structural 422 before handler is allowed by BR-33" time="0.005" classname="06Br33StructuralExceptionsAndFinalStateChecksPm230CreateMissingBodyStructural422422"/>
+  </testsuite>
+  <testsuite name="06 · BR-33 structural exceptions and final state checks / PM-231 · Create root array instead of object → 422" id="f19b6483-de66-4962-b8bf-513803bb8f6a" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.005">
+    <testcase name="PM-231 HTTP 422" time="0.005" classname="06Br33StructuralExceptionsAndFinalStateChecksPm231CreateRootArrayInsteadOfObject422"/>
+    <testcase name="FastAPI structural 422 before handler is allowed by BR-33" time="0.005" classname="06Br33StructuralExceptionsAndFinalStateChecksPm231CreateRootArrayInsteadOfObject422"/>
+  </testsuite>
+  <testsuite name="06 · BR-33 structural exceptions and final state checks / PM-232 · Resolve summary wrong type on Closed → 422" id="8c250adb-053f-4368-8cac-547e1ed50449" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.005">
+    <testcase name="PM-232 HTTP 422" time="0.005" classname="06Br33StructuralExceptionsAndFinalStateChecksPm232ResolveSummaryWrongTypeOnClosed422"/>
+    <testcase name="FastAPI structural 422 before handler is allowed by BR-33" time="0.005" classname="06Br33StructuralExceptionsAndFinalStateChecksPm232ResolveSummaryWrongTypeOnClosed422"/>
+  </testsuite>
+  <testsuite name="06 · BR-33 structural exceptions and final state checks / PM-233 · Reject reason wrong type on Closed → 422" id="a43f1219-a915-4424-b344-ea4961e1daec" timestamp="2026-10-13T00:43:03.438Z" tests="2" failures="0" errors="0" time="0.005">
+    <testcase name="PM-233 HTTP 422" time="0.005" classname="06Br33StructuralExceptionsAndFinalStateChecksPm233RejectReasonWrongTypeOnClosed422"/>
+    <testcase name="FastAPI structural 422 before handler is allowed by BR-33" time="0.005" classname="06Br33StructuralExceptionsAndFinalStateChecksPm233RejectReasonWrongTypeOnClosed422"/>
+  </testsuite>
+</testsuites>

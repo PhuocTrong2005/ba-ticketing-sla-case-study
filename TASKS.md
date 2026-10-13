@@ -1,5 +1,7 @@
 # Backlog v1.0
 
+Hiện hành D-48, 13/10/2026: Postman được chủ dự án chấp nhận và cho phép commit/push cùng tài liệu portfolio. [README](README.md), [AC-01…34](docs/ac-traceability.md), [release checklist](docs/release-checklist.md), [audit xuất bản](tests/evidence/portfolio-publication-report-20261013.md). Video Chưa có; portfolio v1.0 chưa hoàn tất/chưa tag. Các ghi chú chưa commit/Postman/README trong mốc trước giữ như lịch sử.
+
 ## Tiêu chí hoàn thành v1.0
 
 - Luồng chính chạy được trên prototype và API tương ứng.
@@ -15,7 +17,7 @@
 
 | Mã | Hạng mục | Phụ thuộc | Trạng thái |
 |---|---|---|---|
-| DOC-01 | Hoàn thiện yêu cầu, traceability và decision log. | Quyết định chủ dự án | Đã duyệt và sửa theo xác nhận 12/10/2026; traceability có test planned và evidence riêng |
+| DOC-01 | Hoàn thiện yêu cầu, traceability và decision log. | Quyết định chủ dự án, D-48 | Đã duyệt; README portfolio, ma trận từng AC và release checklist hiện hành. Planned cũ giữ như lịch sử, không blanket PASS. |
 | DOC-02 | Tài liệu [As-Is](docs/02-process/as-is.md), [To-Be](docs/02-process/to-be.md), [vòng đời ticket](docs/02-process/ticket-states.md); [nguồn BPMN hai trang](docs/02-process/support-processes.drawio) và ảnh xuất tương ứng. | Nội dung và sơ đồ chủ dự án cung cấp | Hoàn thành theo xác nhận chủ dự án ngày 12/10/2026; chỉ phần tài liệu quy trình và sơ đồ |
 | SLA-01 | 83 fixture verified; giữ nguyên 81 ca cũ. Checker 83 PASS / 0 FAIL, 1.496 so sánh; thêm 5 phép biên SLA-83 tại 08:00:00 đạt. Mốc 69/81 lần lượt 1.243/1.460 phép, đều PASS. [Báo cáo hiện hành](tests/evidence/sla-verification-83.md). | `docs/spec/scenario-coverage.md`, D-33/D-39/D-40 | Gate mở; đã triển khai và đối chiếu 83 fixture trên backend; checker cũ giữ nguyên bằng chứng |
 | DATA-01 | Thiết kế schema và dựng lại dữ liệu dẫn xuất từ sự kiện; lưu số giây còn lại tại mỗi lần Resolved để kiểm chứng quy tắc không quy lỗi Agent khi Customer từ chối lúc hết ngân sách. | SLA-01 | Đã có schema/replay và snapshot mỗi Resolved; xem backend test report |
@@ -23,10 +25,11 @@
 | API-01 | Xác định hợp đồng API và kiểm tra phân quyền backend. | DOC-01, SLA-01 | Đã có contract/OpenAPI và kiểm thử HTTP; xem evidence implementation |
 | API-02 | Kiểm tra `REVIEW_REQUIRED`; Agent chuyển Waiting khi review mở; Manager ghi phương án ở Waiting; Manager/Agent/Customer ghi phương án (Customer 404, Agent 403); `INVALID_TICKET_STATE`/`TICKET_CLOSED` khi không có review mở; tính nguyên tử từ chối và tạo review. | DOC-01, SLA-01 | Đã thực thi A1/A2, REVIEW_REQUIRED, quyền/nội dung và rollback; xem evidence |
 | PROTO-01 | Xây prototype tĩnh cho luồng chính. | DOC-01, D-44…46 | UX đã được chấp nhận; local 110 PASS / 0 FAIL, Pages đã deploy, public smoke 74 kiểm tra PASS. Sáu nhóm trên Pages chỉ smoke; [báo cáo](tests/evidence/pages-report-20261013.md). |
+| POSTMAN-01 | Collection v2.1/environment, request xác định và runner thật trên database riêng. | API-01/API-02, D-47/48 | Newman 191 request/514 assertion/0 lỗi/exit 0; chủ dự án chấp nhận và cho phép xuất bản. [Hướng dẫn](api/README.md), [audit xuất bản](tests/evidence/portfolio-publication-report-20261013.md). Không chạy lại nếu hash khớp. |
 | CON-01 | Chứng minh hai ca nhận đồng thời. | DATA-01, API-01 | Đã kiểm thử hai tình huống bằng threads/kết nối riêng, SQLite file và barrier |
 | RPT-01 | Báo cáo SQL khớp dữ liệu mẫu. | DATA-01 | Đã triển khai SQL trên snapshot as_of và kiểm thử dữ liệu xác định |
 | RPT-02 | Báo cáo M-07 về chờ Manager review. | DATA-02 | Đã triển khai và kiểm thử M-07; không phải SQL thuần cho phép giao khoảng |
-| EVD-01 | Thu thập bằng chứng kiểm thử hợp lệ và hoàn chỉnh ma trận truy vết. | Các hạng mục liên quan | Đã có backend và JS/DOM/ảnh prototype; Postman/video chưa làm; chưa hoàn thành v1.0 |
+| EVD-01 | Thu thập bằng chứng kiểm thử hợp lệ và hoàn chỉnh ma trận truy vết. | Các hạng mục liên quan | Đã có backend, JS/DOM/ảnh prototype, Pages smoke và Newman JSON/JUnit/run record; video chưa làm; chưa hoàn thành v1.0 |
 
 ## Bổ sung sau nhập S1–S12 — 08/10/2026 (lịch sử lúc còn draft)
 
@@ -67,3 +70,9 @@ Hoàn tất phần môi trường: Python 3.12.10 chính thức cài theo ngư�
 Chủ dự án đã phê duyệt yêu cầu/kịch bản, UX và chấp nhận kết quả/ảnh kiểm thử tự động; cho phép commit/push main thường và deploy Pages. Không yêu cầu thao tác lại tất cả kịch bản; không ghi chủ dự án tự chạy công cụ. UX đã đủ phạm vi D-45. Kiểm thử mới sau sửa footer nguồn: 110 PASS / 0 FAIL; 83 fixture/backend/dependencies giữ nguyên, backend không chạy lại. Workflow chỉ đóng gói runtime `prototype/` tại project subpath; trạng thái triển khai/public smoke và bằng chứng thực tại [báo cáo Pages](tests/evidence/pages-report-20261013.md). Các trạng thái chờ review/chưa deploy phía trên là lịch sử. Postman/video và README tổng thể để bước sau; toàn bộ v1.0 chưa hoàn thành.
 
 Pages thực đã kiểm tra: [demo](https://phuoctrong2005.github.io/ba-ticketing-sla-case-study/), [workflow thành công](https://github.com/PhuocTrong2005/ba-ticketing-sla-case-study/actions/runs/38327310064), commit runtime `4bf3599`. Public smoke 74/74 PASS, 10 ảnh mới; đủ bốn view/đổi danh tính/kịch bản/reset/clock/luồng DEMO-01/quyền Customer/localStorage/network. Sáu nhóm trên Pages chỉ smoke ban đầu, sáu nhóm local chạy đầy đủ. Không có lỗi JavaScript chặn, không Fetch/XHR/API; asset runtime khớp hash source. Chỉ cập nhật README tối thiểu.
+
+### Postman — D-47, 13/10/2026
+
+Đã tạo collection v2.1/environment trong `api/`, sáu nhóm request tuần tự xác định, ID lấy từ response. Source/contract hiện hành đã đọc, OpenAPI live khớp tracked. Tooling portable Node/Newman nằm riêng, không đổi backend/Python dependencies. Run cuối [004259-750031](tests/evidence/newman-20261013-004259-750031-run.json) **191 request / 514 assertion đạt, 0 lỗi, exit 0**, trên database mới chưa tồn tại; server nhiệm vụ đã dừng. Run đầu 183/491 vẫn giữ như lịch sử trước mở rộng coverage, không cộng dồn hai lần.
+
+PM-031…128 và PM-110a…d bao phủ luồng/riêng tư/review/A1/A2; PM-130…159 tải 3/return tải 4/thứ tự lỗi claim; PM-011…017,161…210 M-01…07 empty/contract/quyền/kỳ/filter; PM-020…030,220…233 validation và ngoại lệ BR-33. Chi tiết request và giới hạn tại [báo cáo](tests/evidence/postman-report-20261013.md), truy vết tại [traceability](docs/traceability.md). Không phát hiện bug implementation trong phạm vi đã chạy; chưa tự gán PASS toàn bộ AC. 83 fixture/backend/prototype/evidence cũ/database demo và `Run Project.txt` giữ nguyên; không chạy lại 181 pytest. Race/SLA biên/calendar vẫn dùng bằng chứng pytest riêng; không cộng Newman assertions với pytest thành tình huống độc lập. Chưa commit/push/video/viết lại README tổng thể. Các dòng “Postman chưa làm” trong mốc lịch sử trước đây được thay bằng trạng thái hiện hành này.

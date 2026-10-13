@@ -1,0 +1,1069 @@
+newman
+
+BA Ticketing SLA · Deterministic API checks
+
+□ 01 · Fresh database, identity and empty reports
+└ PM-001 · Fresh database precondition → 200
+  GET http://127.0.0.1:59334/tickets [200 OK, 126B, 66ms]
+  √  PM-001 HTTP 200
+  √  Fresh DB has no tickets
+  √  Server Date is available
+
+└ PM-002 · Missing/invalid demo identity → 401
+  GET http://127.0.0.1:59334/tickets [401 Unauthorized, 210B, 4ms]
+  √  PM-002 HTTP 401
+  √  Handler error envelope and code
+
+└ PM-003 · Missing/invalid demo identity → 401
+  GET http://127.0.0.1:59334/tickets [401 Unauthorized, 210B, 6ms]
+  √  PM-003 HTTP 401
+  √  Handler error envelope and code
+
+└ PM-004 · Missing/invalid demo identity → 401
+  GET http://127.0.0.1:59334/tickets [401 Unauthorized, 210B, 5ms]
+  √  PM-004 HTTP 401
+  √  Handler error envelope and code
+
+└ PM-011 · M-01 ?from={{period_from}}&to={{period_to}} → 200
+  GET http://127.0.0.1:59334/reports/M-01?from=2026-10-06T00%3A00%3A00%2B07%3A00&to=2026-10-20T00%3A00%3A00%2B07%3A00 [200 OK, 456B, 9ms]
+  √  PM-011 HTTP 200
+  √  M-01 report contract
+  √  Empty numerator/denominator
+
+└ PM-012 · M-02 ?from={{period_from}}&to={{period_to}} → 200
+  GET http://127.0.0.1:59334/reports/M-02?from=2026-10-06T00%3A00%3A00%2B07%3A00&to=2026-10-20T00%3A00%3A00%2B07%3A00 [200 OK, 586B, 10ms]
+  √  PM-012 HTTP 200
+  √  M-02 report contract
+  √  Empty numerator/denominator
+
+└ PM-013 · M-03 ?from={{period_from}}&to={{period_to}} → 200
+  GET http://127.0.0.1:59334/reports/M-03?from=2026-10-06T00%3A00%3A00%2B07%3A00&to=2026-10-20T00%3A00%3A00%2B07%3A00 [200 OK, 586B, 9ms]
+  √  PM-013 HTTP 200
+  √  M-03 report contract
+  √  Empty numerator/denominator
+
+└ PM-014 · M-04 → 200
+  GET http://127.0.0.1:59334/reports/M-04 [200 OK, 361B, 9ms]
+  √  PM-014 HTTP 200
+  √  M-04 report contract
+  √  Empty snapshot
+
+└ PM-015 · M-05 → 200
+  GET http://127.0.0.1:59334/reports/M-05 [200 OK, 361B, 9ms]
+  √  PM-015 HTTP 200
+  √  M-05 report contract
+  √  Empty snapshot
+
+└ PM-016 · M-06 → 200
+  GET http://127.0.0.1:59334/reports/M-06 [200 OK, 915B, 10ms]
+  √  PM-016 HTTP 200
+  √  M-06 report contract
+  √  Three demo Agents
+  √  All loads zero
+
+└ PM-017 · M-07 → 200
+  GET http://127.0.0.1:59334/reports/M-07 [200 OK, 361B, 8ms]
+  √  PM-017 HTTP 200
+  √  M-07 report contract
+  √  Empty snapshot
+
+□ 02 · Create validation and New ticket permissions
+└ PM-020 · Create: missing title → 422
+  POST http://127.0.0.1:59334/tickets [422 Unprocessable Entity, 208B, 7ms]
+  √  PM-020 HTTP 422
+  √  Handler error envelope and code
+
+└ PM-021 · Create: blank title → 422
+  POST http://127.0.0.1:59334/tickets [422 Unprocessable Entity, 208B, 6ms]
+  √  PM-021 HTTP 422
+  √  Handler error envelope and code
+
+└ PM-022 · Create: numeric title → 422
+  POST http://127.0.0.1:59334/tickets [422 Unprocessable Entity, 252B, 7ms]
+  √  PM-022 HTTP 422
+  √  FastAPI structural 422 before handler is allowed by BR-33
+
+└ PM-023 · Create: missing description → 422
+  POST http://127.0.0.1:59334/tickets [422 Unprocessable Entity, 214B, 5ms]
+  √  PM-023 HTTP 422
+  √  Handler error envelope and code
+
+└ PM-024 · Create: blank description → 422
+  POST http://127.0.0.1:59334/tickets [422 Unprocessable Entity, 214B, 5ms]
+  √  PM-024 HTTP 422
+  √  Handler error envelope and code
+
+└ PM-025 · Create: object description → 422
+  POST http://127.0.0.1:59334/tickets [422 Unprocessable Entity, 258B, 5ms]
+  √  PM-025 HTTP 422
+  √  FastAPI structural 422 before handler is allowed by BR-33
+
+└ PM-026 · Create: missing priority → 422
+  POST http://127.0.0.1:59334/tickets [422 Unprocessable Entity, 217B, 5ms]
+  √  PM-026 HTTP 422
+  √  Handler error envelope and code
+
+└ PM-027 · Create: unsupported priority → 422
+  POST http://127.0.0.1:59334/tickets [422 Unprocessable Entity, 304B, 5ms]
+  √  PM-027 HTTP 422
+  √  FastAPI structural 422 before handler is allowed by BR-33
+
+└ PM-028 · Create: priority wrong type → 422
+  POST http://127.0.0.1:59334/tickets [422 Unprocessable Entity, 301B, 5ms]
+  √  PM-028 HTTP 422
+  √  FastAPI structural 422 before handler is allowed by BR-33
+
+└ PM-029 · Create: unknown field → 422
+  POST http://127.0.0.1:59334/tickets [422 Unprocessable Entity, 269B, 5ms]
+  √  PM-029 HTTP 422
+  √  FastAPI structural 422 before handler is allowed by BR-33
+
+└ PM-030 · Agent create role before missing text → 403
+  POST http://127.0.0.1:59334/tickets [403 Forbidden, 193B, 6ms]
+  √  PM-030 HTTP 403
+  √  Handler error envelope and code
+
+└ PM-031 · Create ticket_id → 201
+  POST http://127.0.0.1:59334/tickets [201 Created, 390B, 13ms]
+  √  PM-031 HTTP 201
+  √  customer ticket response contract
+  √  Ticket state NEW
+  √  No assignee on create
+
+└ PM-032 · Owner sees New ticket → 200
+  GET http://127.0.0.1:59334/tickets/1 [200 OK, 385B, 8ms]
+  √  PM-032 HTTP 200
+  √  customer ticket response contract
+  √  Ticket state NEW
+
+└ PM-033 · Other Customer gets 404 → 404
+  GET http://127.0.0.1:59334/tickets/1 [404 Not Found, 184B, 7ms]
+  √  PM-033 HTTP 404
+  √  Handler error envelope and code
+
+└ PM-034 · Missing ticket derived from response ID → 404
+  GET http://127.0.0.1:59334/tickets/1000001 [404 Not Found, 184B, 8ms]
+  √  PM-034 HTTP 404
+  √  Handler error envelope and code
+
+└ PM-035 · Agent cannot view unclaimed New → 403
+  GET http://127.0.0.1:59334/tickets/1 [403 Forbidden, 201B, 7ms]
+  √  PM-035 HTTP 403
+  √  Handler error envelope and code
+
+└ PM-036 · Agent cannot reply to unclaimed New → 403
+  POST http://127.0.0.1:59334/tickets/1/messages [403 Forbidden, 201B, 8ms]
+  √  PM-036 HTTP 403
+  √  Handler error envelope and code
+
+└ PM-037 · Customer cannot claim → 403
+  POST http://127.0.0.1:59334/tickets/1/claim [403 Forbidden, 193B, 5ms]
+  √  PM-037 HTTP 403
+  √  Handler error envelope and code
+
+└ PM-038 · Manager cannot claim → 403
+  POST http://127.0.0.1:59334/tickets/1/claim [403 Forbidden, 193B, 5ms]
+  √  PM-038 HTTP 403
+  √  Handler error envelope and code
+
+└ PM-039 · Agent queue exact allowed fields → 200
+  GET http://127.0.0.1:59334/tickets/queue [200 OK, 274B, 9ms]
+  √  PM-039 HTTP 200
+  √  Queue has workflow ticket
+  √  Queue contract
+
+└ PM-040 · Customer cannot read Agent queue → 403
+  GET http://127.0.0.1:59334/tickets/queue [403 Forbidden, 193B, 6ms]
+  √  PM-040 HTTP 403
+  √  Handler error envelope and code
+
+□ 03 · Workflow, privacy, review escalation and Closed
+└ PM-041 · Customer public message at New → 200
+  POST http://127.0.0.1:59334/tickets/1/messages [200 OK, 510B, 13ms]
+  √  PM-041 HTTP 200
+  √  customer ticket response contract
+  √  Ticket state NEW
+
+└ PM-042 · A1 Manager without open review before content → 409 INVALID_TICKET_STATE
+  POST http://127.0.0.1:59334/tickets/1/reviews/complete [409 Conflict, 206B, 10ms]
+  √  PM-042 HTTP 409
+  √  Handler error envelope and code
+
+└ PM-043 · Claim and assignment snapshot → 200
+  POST http://127.0.0.1:59334/tickets/1/claim [200 OK, 1.11kB, 14ms]
+  √  PM-043 HTTP 200
+  √  internal ticket response contract
+  √  Ticket state IN_PROGRESS
+  √  Snapshot captures assignment
+
+└ PM-044 · Waiting before first public reply blocked → 409 INVALID_TICKET_STATE
+  POST http://127.0.0.1:59334/tickets/1/waiting [409 Conflict, 227B, 8ms]
+  √  PM-044 HTTP 409
+  √  Handler error envelope and code
+
+└ PM-045 · messages missing/invalid content → 422
+  POST http://127.0.0.1:59334/tickets/1/messages [422 Unprocessable Entity, 210B, 7ms]
+  √  PM-045 HTTP 422
+  √  Handler error envelope and code
+
+└ PM-046 · messages missing/invalid content → 422
+  POST http://127.0.0.1:59334/tickets/1/messages [422 Unprocessable Entity, 210B, 11ms]
+  √  PM-046 HTTP 422
+  √  Handler error envelope and code
+
+└ PM-047 · notes missing/invalid content → 422
+  POST http://127.0.0.1:59334/tickets/1/notes [422 Unprocessable Entity, 210B, 8ms]
+  √  PM-047 HTTP 422
+  √  Handler error envelope and code
+
+└ PM-048 · resolve missing/invalid content → 422
+  POST http://127.0.0.1:59334/tickets/1/resolve [422 Unprocessable Entity, 221B, 8ms]
+  √  PM-048 HTTP 422
+  √  Handler error envelope and code
+
+└ PM-049 · messages missing/invalid content → 422
+  POST http://127.0.0.1:59334/tickets/1/messages [422 Unprocessable Entity, 254B, 5ms]
+  √  PM-049 HTTP 422
+  √  FastAPI structural 422 before handler is allowed by BR-33
+
+└ PM-050 · Other Agent denied before business content → 403
+  POST http://127.0.0.1:59334/tickets/1/messages [403 Forbidden, 201B, 8ms]
+  √  PM-050 HTTP 403
+  √  Handler error envelope and code
+
+└ PM-051 · Other Agent denied before business content → 403
+  POST http://127.0.0.1:59334/tickets/1/notes [403 Forbidden, 201B, 8ms]
+  √  PM-051 HTTP 403
+  √  Handler error envelope and code
+
+└ PM-052 · Other Agent denied before business content → 403
+  POST http://127.0.0.1:59334/tickets/1/resolve [403 Forbidden, 201B, 8ms]
+  √  PM-052 HTTP 403
+  √  Handler error envelope and code
+
+└ PM-053 · Other Agent detail denied → 403
+  GET http://127.0.0.1:59334/tickets/1 [403 Forbidden, 201B, 8ms]
+  √  PM-053 HTTP 403
+  √  Handler error envelope and code
+
+└ PM-054 · Manager cannot public message → 403
+  POST http://127.0.0.1:59334/tickets/1/messages [403 Forbidden, 193B, 6ms]
+  √  PM-054 HTTP 403
+  √  Handler error envelope and code
+
+└ PM-055 · Manager cannot Resolved → 403
+  POST http://127.0.0.1:59334/tickets/1/resolve [403 Forbidden, 193B, 5ms]
+  √  PM-055 HTTP 403
+  √  Handler error envelope and code
+
+└ PM-056 · Customer cannot internal note → 403
+  POST http://127.0.0.1:59334/tickets/1/notes [403 Forbidden, 193B, 5ms]
+  √  PM-056 HTTP 403
+  √  Handler error envelope and code
+
+└ PM-057 · Internal note does not end first response → 200
+  POST http://127.0.0.1:59334/tickets/1/notes [200 OK, 1.24kB, 12ms]
+  √  PM-057 HTTP 200
+  √  internal ticket response contract
+  √  Ticket state IN_PROGRESS
+  √  First response still running
+
+└ PM-058 · Manager sees Agent note → 200
+  GET http://127.0.0.1:59334/tickets/1 [200 OK, 1.24kB, 8ms]
+  √  PM-058 HTTP 200
+  √  internal ticket response contract
+  √  Manager sees internal note
+
+└ PM-059 · Customer detail excludes internal data → 200
+  GET http://127.0.0.1:59334/tickets/1 [200 OK, 538B, 8ms]
+  √  PM-059 HTTP 200
+  √  customer ticket response contract
+
+└ PM-060 · Agent public reply ends first response → 200
+  POST http://127.0.0.1:59334/tickets/1/messages [200 OK, 1.37kB, 13ms]
+  √  PM-060 HTTP 200
+  √  internal ticket response contract
+  √  Ticket state IN_PROGRESS
+  √  First response ended
+
+└ PM-061 · Waiting after reply → 200
+  POST http://127.0.0.1:59334/tickets/1/waiting [200 OK, 1.35kB, 13ms]
+  √  PM-061 HTTP 200
+  √  internal ticket response contract
+  √  Ticket state WAITING_FOR_CUSTOMER
+  √  Resolution paused
+
+└ PM-062 · Agent public message keeps Waiting → 200
+  POST http://127.0.0.1:59334/tickets/1/messages [200 OK, 1.48kB, 12ms]
+  √  PM-062 HTTP 200
+  √  internal ticket response contract
+  √  Ticket state WAITING_FOR_CUSTOMER
+
+└ PM-063 · Agent note keeps Waiting → 200
+  POST http://127.0.0.1:59334/tickets/1/notes [200 OK, 1.62kB, 12ms]
+  √  PM-063 HTTP 200
+  √  internal ticket response contract
+  √  Ticket state WAITING_FOR_CUSTOMER
+
+└ PM-064 · Customer resume from Waiting → 200
+  POST http://127.0.0.1:59334/tickets/1/messages [200 OK, 919B, 15ms]
+  √  PM-064 HTTP 200
+  √  customer ticket response contract
+  √  Ticket state IN_PROGRESS
+
+└ PM-065 · Confirm outside Resolved → 409 INVALID_TICKET_STATE
+  POST http://127.0.0.1:59334/tickets/1/confirm [409 Conflict, 205B, 8ms]
+  √  PM-065 HTTP 409
+  √  Handler error envelope and code
+
+└ PM-066 · Reject outside Resolved before missing reason → 409 INVALID_TICKET_STATE
+  POST http://127.0.0.1:59334/tickets/1/reject [409 Conflict, 205B, 8ms]
+  √  PM-066 HTTP 409
+  √  Handler error envelope and code
+
+└ PM-070 · Resolved cycle 1 → 200
+  POST http://127.0.0.1:59334/tickets/1/resolve [200 OK, 1.88kB, 13ms]
+  √  PM-070 HTTP 200
+  √  internal ticket response contract
+  √  Ticket state RESOLVED
+
+└ PM-071 · Resolved Customer message state before content → 409 INVALID_TICKET_STATE
+  POST http://127.0.0.1:59334/tickets/1/messages [409 Conflict, 205B, 9ms]
+  √  PM-071 HTTP 409
+  √  Handler error envelope and code
+
+└ PM-072 · Resolved Agent note state before content → 409 INVALID_TICKET_STATE
+  POST http://127.0.0.1:59334/tickets/1/notes [409 Conflict, 205B, 9ms]
+  √  PM-072 HTTP 409
+  √  Handler error envelope and code
+
+└ PM-073 · Reject missing reason in valid state → 422
+  POST http://127.0.0.1:59334/tickets/1/reject [422 Unprocessable Entity, 209B, 7ms]
+  √  PM-073 HTTP 422
+  √  Handler error envelope and code
+
+└ PM-074 · Reject blank reason in valid state → 422
+  POST http://127.0.0.1:59334/tickets/1/reject [422 Unprocessable Entity, 209B, 7ms]
+  √  PM-074 HTTP 422
+  √  Handler error envelope and code
+
+└ PM-075 · Customer rejection 1 → 200
+  POST http://127.0.0.1:59334/tickets/1/reject [200 OK, 1.18kB, 13ms]
+  √  PM-075 HTTP 200
+  √  customer ticket response contract
+  √  Ticket state IN_PROGRESS
+
+└ PM-076 · Inspect review threshold after rejection 1 → 200
+  GET http://127.0.0.1:59334/tickets/1 [200 OK, 2.02kB, 9ms]
+  √  PM-076 HTTP 200
+  √  internal ticket response contract
+  √  Rejection count
+  √  Review threshold
+  √  Review count
+
+└ PM-080 · Resolved cycle 2 → 200
+  POST http://127.0.0.1:59334/tickets/1/resolve [200 OK, 2.15kB, 12ms]
+  √  PM-080 HTTP 200
+  √  internal ticket response contract
+  √  Ticket state RESOLVED
+
+└ PM-085 · Customer rejection 2 → 200
+  POST http://127.0.0.1:59334/tickets/1/reject [200 OK, 1.45kB, 17ms]
+  √  PM-085 HTTP 200
+  √  customer ticket response contract
+  √  Ticket state IN_PROGRESS
+
+└ PM-086 · Inspect review threshold after rejection 2 → 200
+  GET http://127.0.0.1:59334/tickets/1 [200 OK, 2.28kB, 8ms]
+  √  PM-086 HTTP 200
+  √  internal ticket response contract
+  √  Rejection count
+  √  Review threshold
+  √  Review count
+
+└ PM-090 · Resolved cycle 3 → 200
+  POST http://127.0.0.1:59334/tickets/1/resolve [200 OK, 2.41kB, 14ms]
+  √  PM-090 HTTP 200
+  √  internal ticket response contract
+  √  Ticket state RESOLVED
+
+└ PM-095 · Customer rejection 3 → 200
+  POST http://127.0.0.1:59334/tickets/1/reject [200 OK, 1.71kB, 15ms]
+  √  PM-095 HTTP 200
+  √  customer ticket response contract
+  √  Ticket state IN_PROGRESS
+
+└ PM-096 · Inspect review threshold after rejection 3 → 200
+  GET http://127.0.0.1:59334/tickets/1 [200 OK, 2.82kB, 9ms]
+  √  PM-096 HTTP 200
+  √  internal ticket response contract
+  √  Rejection count
+  √  Review threshold
+  √  Review count
+
+└ PM-097 · Review open blocks Resolved before missing content → 409 REVIEW_REQUIRED
+  POST http://127.0.0.1:59334/tickets/1/resolve [409 Conflict, 210B, 8ms]
+  √  PM-097 HTTP 409
+  √  Handler error envelope and code
+
+└ PM-098 · Review resource restricted → 404
+  GET http://127.0.0.1:59334/tickets/1/reviews [404 Not Found, 184B, 5ms]
+  √  PM-098 HTTP 404
+  √  Handler error envelope and code
+
+└ PM-099 · Review resource restricted → 403
+  GET http://127.0.0.1:59334/tickets/1/reviews [403 Forbidden, 193B, 5ms]
+  √  PM-099 HTTP 403
+  √  Handler error envelope and code
+
+└ PM-100 · Customer missing review resource still 404 → 404
+  GET http://127.0.0.1:59334/tickets/1000001/reviews [404 Not Found, 184B, 6ms]
+  √  PM-100 HTTP 404
+  √  Handler error envelope and code
+
+└ PM-101 · Manager reads open review → 200
+  GET http://127.0.0.1:59334/tickets/1/reviews [200 OK, 400B, 8ms]
+  √  PM-101 HTTP 200
+  √  Open review key
+  √  Review incomplete
+
+└ PM-102 · Customer cannot write review → 404
+  POST http://127.0.0.1:59334/tickets/1/reviews/complete [404 Not Found, 184B, 5ms]
+  √  PM-102 HTTP 404
+  √  Handler error envelope and code
+
+└ PM-103 · Agent cannot write review → 403
+  POST http://127.0.0.1:59334/tickets/1/reviews/complete [403 Forbidden, 193B, 6ms]
+  √  PM-103 HTTP 403
+  √  Handler error envelope and code
+
+└ PM-104 · Review missing/blank mandatory plan → 422
+  POST http://127.0.0.1:59334/tickets/1/reviews/complete [422 Unprocessable Entity, 220B, 9ms]
+  √  PM-104 HTTP 422
+  √  Handler error envelope and code
+
+└ PM-105 · Review missing/blank mandatory plan → 422
+  POST http://127.0.0.1:59334/tickets/1/reviews/complete [422 Unprocessable Entity, 220B, 10ms]
+  √  PM-105 HTTP 422
+  √  Handler error envelope and code
+
+└ PM-106 · Review missing/blank mandatory plan → 422
+  POST http://127.0.0.1:59334/tickets/1/reviews/complete [422 Unprocessable Entity, 214B, 9ms]
+  √  PM-106 HTTP 422
+  √  Handler error envelope and code
+
+└ PM-107 · Review missing/blank mandatory plan → 422
+  POST http://127.0.0.1:59334/tickets/1/reviews/complete [422 Unprocessable Entity, 220B, 8ms]
+  √  PM-107 HTTP 422
+  √  Handler error envelope and code
+
+└ PM-108 · Review missing/blank mandatory plan → 422
+  POST http://127.0.0.1:59334/tickets/1/reviews/complete [422 Unprocessable Entity, 220B, 13ms]
+  √  PM-108 HTTP 422
+  √  Handler error envelope and code
+
+└ PM-109 · Review boolean must be strict boolean → 422
+  POST http://127.0.0.1:59334/tickets/1/reviews/complete [422 Unprocessable Entity, 283B, 9ms]
+  √  PM-109 HTTP 422
+  √  FastAPI structural 422 before handler is allowed by BR-33
+
+└ PM-110 · Agent can Waiting with open review → 200
+  POST http://127.0.0.1:59334/tickets/1/waiting [200 OK, 2.81kB, 16ms]
+  √  PM-110 HTTP 200
+  √  internal ticket response contract
+  √  Ticket state WAITING_FOR_CUSTOMER
+  √  Review still open
+
+└ PM-111 · M-07 → 200
+  GET http://127.0.0.1:59334/reports/M-07 [200 OK, 647B, 36ms]
+  √  PM-111 HTTP 200
+  √  M-07 report contract
+  √  Open review appears
+  √  No completion yet
+
+└ PM-112 · Manager completes review during Waiting → 200
+  POST http://127.0.0.1:59334/tickets/1/reviews/complete [200 OK, 3kB, 27ms]
+  √  PM-112 HTTP 200
+  √  internal ticket response contract
+  √  Ticket state WAITING_FOR_CUSTOMER
+  √  Review cleared
+  √  Clock remains paused
+  √  No resolution time accrued during Waiting
+  √  Completed correct review
+  √  Completion server time
+
+└ PM-113 · Assigned Agent reads plan on ticket → 200
+  GET http://127.0.0.1:59334/tickets/1 [200 OK, 3kB, 15ms]
+  √  PM-113 HTTP 200
+  √  internal ticket response contract
+  √  Agent reads Manager plan
+
+└ PM-114 · Customer cannot read completed plan/note/SLA → 200
+  GET http://127.0.0.1:59334/tickets/1 [200 OK, 1.72kB, 18ms]
+  √  PM-114 HTTP 200
+  √  customer ticket response contract
+
+└ PM-115 · A1 completed review cannot complete again → 409 INVALID_TICKET_STATE
+  POST http://127.0.0.1:59334/tickets/1/reviews/complete [409 Conflict, 206B, 19ms]
+  √  PM-115 HTTP 409
+  √  Handler error envelope and code
+
+└ PM-116 · Customer resumes after plan → 200
+  POST http://127.0.0.1:59334/tickets/1/messages [200 OK, 1.84kB, 25ms]
+  √  PM-116 HTTP 200
+  √  customer ticket response contract
+  √  Ticket state IN_PROGRESS
+
+└ PM-117 · Resolved after completed review → 200
+  POST http://127.0.0.1:59334/tickets/1/resolve [200 OK, 3.27kB, 24ms]
+  √  PM-117 HTTP 200
+  √  internal ticket response contract
+  √  Ticket state RESOLVED
+
+└ PM-118 · Customer confirms Closed → 200
+  POST http://127.0.0.1:59334/tickets/1/confirm [200 OK, 2kB, 35ms]
+  √  PM-118 HTTP 200
+  √  customer ticket response contract
+  √  Ticket state CLOSED
+
+└ PM-119 · A2 Closed before missing plan → 409 TICKET_CLOSED
+  POST http://127.0.0.1:59334/tickets/1/reviews/complete [409 Conflict, 198B, 19ms]
+  √  PM-119 HTTP 409
+  √  Handler error envelope and code
+
+└ PM-120 · Closed cannot reject before missing content → 409 TICKET_CLOSED
+  POST http://127.0.0.1:59334/tickets/1/reject [409 Conflict, 198B, 13ms]
+  √  PM-120 HTTP 409
+  √  Handler error envelope and code
+
+└ PM-121 · Closed cannot messages before missing content → 409 TICKET_CLOSED
+  POST http://127.0.0.1:59334/tickets/1/messages [409 Conflict, 198B, 7ms]
+  √  PM-121 HTTP 409
+  √  Handler error envelope and code
+
+└ PM-122 · Closed cannot notes before missing content → 409 TICKET_CLOSED
+  POST http://127.0.0.1:59334/tickets/1/notes [409 Conflict, 198B, 9ms]
+  √  PM-122 HTTP 409
+  √  Handler error envelope and code
+
+└ PM-123 · Closed cannot resolve before missing content → 409 TICKET_CLOSED
+  POST http://127.0.0.1:59334/tickets/1/resolve [409 Conflict, 198B, 7ms]
+  √  PM-123 HTTP 409
+  √  Handler error envelope and code
+
+└ PM-124 · Closed cannot claim before missing content → 409 TICKET_CLOSED
+  POST http://127.0.0.1:59334/tickets/1/claim [409 Conflict, 198B, 8ms]
+  √  PM-124 HTTP 409
+  √  Handler error envelope and code
+
+└ PM-125 · Closed cannot confirm before missing content → 409 TICKET_CLOSED
+  POST http://127.0.0.1:59334/tickets/1/confirm [409 Conflict, 198B, 7ms]
+  √  PM-125 HTTP 409
+  √  Handler error envelope and code
+
+└ PM-126 · Other Customer access before Closed/content → 404
+  POST http://127.0.0.1:59334/tickets/1/reject [404 Not Found, 184B, 7ms]
+  √  PM-126 HTTP 404
+  √  Handler error envelope and code
+
+└ PM-127 · Other Agent access before Closed/content → 403
+  POST http://127.0.0.1:59334/tickets/1/notes [403 Forbidden, 201B, 8ms]
+  √  PM-127 HTTP 403
+  √  Handler error envelope and code
+
+└ PM-128 · Closed state remains after rejected actions → 200
+  GET http://127.0.0.1:59334/tickets/1 [200 OK, 3.29kB, 9ms]
+  √  PM-128 HTTP 200
+  √  internal ticket response contract
+  √  Ticket state CLOSED
+  √  Rejections unchanged
+  √  Exactly one completed review
+
+□ 04 · Capacity 3, return overload and claim priority
+└ PM-130 · Create capacity_return_id → 201
+  POST http://127.0.0.1:59334/tickets [201 Created, 403B, 14ms]
+  √  PM-130 HTTP 201
+  √  customer ticket response contract
+  √  Ticket state NEW
+  √  No assignee on create
+
+└ PM-131 · Claim return candidate → 200
+  POST http://127.0.0.1:59334/tickets/2/claim [200 OK, 1kB, 14ms]
+  √  PM-131 HTTP 200
+  √  internal ticket response contract
+  √  Ticket state IN_PROGRESS
+
+└ PM-132 · Resolve without prior reply releases slot → 200
+  POST http://127.0.0.1:59334/tickets/2/resolve [200 OK, 1.14kB, 12ms]
+  √  PM-132 HTTP 200
+  √  internal ticket response contract
+  √  Ticket state RESOLVED
+  √  Resolved also completes first response
+
+└ PM-133 · Create capacity_one_id → 201
+  POST http://127.0.0.1:59334/tickets [201 Created, 396B, 12ms]
+  √  PM-133 HTTP 201
+  √  customer ticket response contract
+  √  Ticket state NEW
+  √  No assignee on create
+
+└ PM-134 · Fill capacity slot 1 → 200
+  POST http://127.0.0.1:59334/tickets/3/claim [200 OK, 995B, 13ms]
+  √  PM-134 HTTP 200
+  √  internal ticket response contract
+  √  Ticket state IN_PROGRESS
+
+└ PM-135 · Create capacity_two_id → 201
+  POST http://127.0.0.1:59334/tickets [201 Created, 396B, 11ms]
+  √  PM-135 HTTP 201
+  √  customer ticket response contract
+  √  Ticket state NEW
+  √  No assignee on create
+
+└ PM-136 · Fill capacity slot 2 → 200
+  POST http://127.0.0.1:59334/tickets/4/claim [200 OK, 995B, 13ms]
+  √  PM-136 HTTP 200
+  √  internal ticket response contract
+  √  Ticket state IN_PROGRESS
+
+└ PM-137 · Create capacity_three_id → 201
+  POST http://127.0.0.1:59334/tickets [201 Created, 402B, 14ms]
+  √  PM-137 HTTP 201
+  √  customer ticket response contract
+  √  Ticket state NEW
+  √  No assignee on create
+
+└ PM-138 · Fill capacity slot 3 → 200
+  POST http://127.0.0.1:59334/tickets/5/claim [200 OK, 1kB, 14ms]
+  √  PM-138 HTTP 200
+  √  internal ticket response contract
+  √  Ticket state IN_PROGRESS
+
+└ PM-139 · Create capacity_new_id → 201
+  POST http://127.0.0.1:59334/tickets [201 Created, 396B, 12ms]
+  √  PM-139 HTTP 201
+  √  customer ticket response contract
+  √  Ticket state NEW
+  √  No assignee on create
+
+└ PM-140 · M-06 ?agent_id={{agent_4}} → 200
+  GET http://127.0.0.1:59334/reports/M-06?agent_id=4 [200 OK, 541B, 11ms]
+  √  PM-140 HTTP 200
+  √  M-06 report contract
+  √  Exactly 3 In Progress
+  √  At limit
+
+└ PM-141 · Load 3 blocks new claim → 409 AGENT_CAPACITY_REACHED
+  POST http://127.0.0.1:59334/tickets/6/claim [409 Conflict, 216B, 8ms]
+  √  PM-141 HTTP 409
+  √  Handler error envelope and code
+
+└ PM-142 · Customer return allowed despite load 3 → 200
+  POST http://127.0.0.1:59334/tickets/2/reject [200 OK, 714B, 15ms]
+  √  PM-142 HTTP 200
+  √  customer ticket response contract
+  √  Ticket state IN_PROGRESS
+
+└ PM-143 · M-06 ?agent_id={{agent_4}} → 200
+  GET http://127.0.0.1:59334/reports/M-06?agent_id=4 [200 OK, 543B, 11ms]
+  √  PM-143 HTTP 200
+  √  M-06 report contract
+  √  Customer return overload 4
+  √  Overloaded
+
+└ PM-144 · Load 4 blocks new claim → 409 AGENT_CAPACITY_REACHED
+  POST http://127.0.0.1:59334/tickets/6/claim [409 Conflict, 216B, 8ms]
+  √  PM-144 HTTP 409
+  √  Handler error envelope and code
+
+└ PM-145 · Closed beats assigned and capacity → 409 TICKET_CLOSED
+  POST http://127.0.0.1:59334/tickets/1/claim [409 Conflict, 198B, 8ms]
+  √  PM-145 HTTP 409
+  √  Handler error envelope and code
+
+└ PM-146 · Assigned beats capacity → 409 TICKET_ALREADY_ASSIGNED
+  POST http://127.0.0.1:59334/tickets/3/claim [409 Conflict, 211B, 8ms]
+  √  PM-146 HTTP 409
+  √  Handler error envelope and code
+
+└ PM-147 · Other Agent claim also gets already assigned → 409 TICKET_ALREADY_ASSIGNED
+  POST http://127.0.0.1:59334/tickets/3/claim [409 Conflict, 211B, 8ms]
+  √  PM-147 HTTP 409
+  √  Handler error envelope and code
+
+└ PM-148 · Capacity ticket one first reply → 200
+  POST http://127.0.0.1:59334/tickets/3/messages [200 OK, 1.13kB, 12ms]
+  √  PM-148 HTTP 200
+  √  internal ticket response contract
+  √  Ticket state IN_PROGRESS
+
+└ PM-149 · Waiting lowers load 4 to 3 → 200
+  POST http://127.0.0.1:59334/tickets/3/waiting [200 OK, 1.11kB, 15ms]
+  √  PM-149 HTTP 200
+  √  internal ticket response contract
+  √  Ticket state WAITING_FOR_CUSTOMER
+
+└ PM-150 · Still load 3 blocks new claim → 409 AGENT_CAPACITY_REACHED
+  POST http://127.0.0.1:59334/tickets/6/claim [409 Conflict, 216B, 8ms]
+  √  PM-150 HTTP 409
+  √  Handler error envelope and code
+
+└ PM-151 · Capacity ticket two first reply → 200
+  POST http://127.0.0.1:59334/tickets/4/messages [200 OK, 1.13kB, 13ms]
+  √  PM-151 HTTP 200
+  √  internal ticket response contract
+  √  Ticket state IN_PROGRESS
+
+└ PM-152 · Waiting lowers load to 2 → 200
+  POST http://127.0.0.1:59334/tickets/4/waiting [200 OK, 1.11kB, 14ms]
+  √  PM-152 HTTP 200
+  √  internal ticket response contract
+  √  Ticket state WAITING_FOR_CUSTOMER
+
+└ PM-153 · Load 2 permits new claim → 200
+  POST http://127.0.0.1:59334/tickets/6/claim [200 OK, 995B, 13ms]
+  √  PM-153 HTTP 200
+  √  internal ticket response contract
+  √  Ticket state IN_PROGRESS
+
+└ PM-154 · Create customer_two_ticket_id → 201
+  POST http://127.0.0.1:59334/tickets [201 Created, 407B, 14ms]
+  √  PM-154 HTTP 201
+  √  customer ticket response contract
+  √  Ticket state NEW
+  √  No assignee on create
+
+└ PM-155 · Customer 2 list contains only own ticket → 200
+  GET http://127.0.0.1:59334/tickets [200 OK, 404B, 8ms]
+  √  PM-155 HTTP 200
+  √  Customer list privacy/ownership
+
+└ PM-156 · Agent 4 list has only assigned and minute summaries → 200
+  GET http://127.0.0.1:59334/tickets [200 OK, 4.15kB, 8ms]
+  √  PM-156 HTTP 200
+  √  Internal list contract
+
+└ PM-157 · Create resolved_ticket_id → 201
+  POST http://127.0.0.1:59334/tickets [201 Created, 403B, 15ms]
+  √  PM-157 HTTP 201
+  √  customer ticket response contract
+  √  Ticket state NEW
+  √  No assignee on create
+
+└ PM-158 · Agent 5 claims separate M05 candidate → 200
+  POST http://127.0.0.1:59334/tickets/8/claim [200 OK, 1kB, 13ms]
+  √  PM-158 HTTP 200
+  √  internal ticket response contract
+  √  Ticket state IN_PROGRESS
+
+└ PM-159 · Leave M05 candidate Resolved → 200
+  POST http://127.0.0.1:59334/tickets/8/resolve [200 OK, 1.14kB, 14ms]
+  √  PM-159 HTTP 200
+  √  internal ticket response contract
+  √  Ticket state RESOLVED
+
+□ 05 · M-01…M-07 contracts, periods, filters and access
+└ PM-161 · M-01 ?from={{period_from}}&to={{period_to}} → 200
+  GET http://127.0.0.1:59334/reports/M-01?from=2026-10-06T00%3A00%3A00%2B07%3A00&to=2026-10-20T00%3A00%3A00%2B07%3A00 [200 OK, 436B, 10ms]
+  √  PM-161 HTTP 200
+  √  M-01 report contract
+  √  Five first response results
+  √  Three pending first responses
+
+└ PM-171 · M-01 ?from={{period_from}}&to={{period_to}} → 403
+  GET http://127.0.0.1:59334/reports/M-01?from=2026-10-06T00%3A00%3A00%2B07%3A00&to=2026-10-20T00%3A00%3A00%2B07%3A00 [403 Forbidden, 193B, 5ms]
+  √  PM-171 HTTP 403
+  √  Handler error envelope and code
+
+└ PM-181 · M-01 ?from={{period_from}}&to={{period_to}} → 403
+  GET http://127.0.0.1:59334/reports/M-01?from=2026-10-06T00%3A00%3A00%2B07%3A00&to=2026-10-20T00%3A00%3A00%2B07%3A00 [403 Forbidden, 193B, 5ms]
+  √  PM-181 HTTP 403
+  √  Handler error envelope and code
+
+└ PM-162 · M-02 ?from={{period_from}}&to={{period_to}} → 200
+  GET http://127.0.0.1:59334/reports/M-02?from=2026-10-06T00%3A00%3A00%2B07%3A00&to=2026-10-20T00%3A00%3A00%2B07%3A00 [200 OK, 566B, 9ms]
+  √  PM-162 HTTP 200
+  √  M-02 report contract
+  √  One Closed ticket
+  √  Seven unclosed
+
+└ PM-172 · M-02 ?from={{period_from}}&to={{period_to}} → 403
+  GET http://127.0.0.1:59334/reports/M-02?from=2026-10-06T00%3A00%3A00%2B07%3A00&to=2026-10-20T00%3A00%3A00%2B07%3A00 [403 Forbidden, 193B, 5ms]
+  √  PM-172 HTTP 403
+  √  Handler error envelope and code
+
+└ PM-182 · M-02 ?from={{period_from}}&to={{period_to}} → 403
+  GET http://127.0.0.1:59334/reports/M-02?from=2026-10-06T00%3A00%3A00%2B07%3A00&to=2026-10-20T00%3A00%3A00%2B07%3A00 [403 Forbidden, 193B, 5ms]
+  √  PM-182 HTTP 403
+  √  Handler error envelope and code
+
+└ PM-163 · M-03 ?from={{period_from}}&to={{period_to}} → 200
+  GET http://127.0.0.1:59334/reports/M-03?from=2026-10-06T00%3A00%3A00%2B07%3A00&to=2026-10-20T00%3A00%3A00%2B07%3A00 [200 OK, 566B, 9ms]
+  √  PM-163 HTTP 200
+  √  M-03 report contract
+  √  One Closed ticket
+  √  Closed ticket was rejected
+  √  Seven unclosed
+
+└ PM-173 · M-03 ?from={{period_from}}&to={{period_to}} → 403
+  GET http://127.0.0.1:59334/reports/M-03?from=2026-10-06T00%3A00%3A00%2B07%3A00&to=2026-10-20T00%3A00%3A00%2B07%3A00 [403 Forbidden, 193B, 6ms]
+  √  PM-173 HTTP 403
+  √  Handler error envelope and code
+
+└ PM-183 · M-03 ?from={{period_from}}&to={{period_to}} → 403
+  GET http://127.0.0.1:59334/reports/M-03?from=2026-10-06T00%3A00%3A00%2B07%3A00&to=2026-10-20T00%3A00%3A00%2B07%3A00 [403 Forbidden, 193B, 6ms]
+  √  PM-183 HTTP 403
+  √  Handler error envelope and code
+
+└ PM-164 · M-04 → 200
+  GET http://127.0.0.1:59334/reports/M-04 [200 OK, 361B, 9ms]
+  √  PM-164 HTTP 200
+  √  M-04 report contract
+  √  M04 does not contain Closed main
+
+└ PM-174 · M-04 → 403
+  GET http://127.0.0.1:59334/reports/M-04 [403 Forbidden, 193B, 5ms]
+  √  PM-174 HTTP 403
+  √  Handler error envelope and code
+
+└ PM-184 · M-04 → 403
+  GET http://127.0.0.1:59334/reports/M-04 [403 Forbidden, 193B, 6ms]
+  √  PM-184 HTTP 403
+  √  Handler error envelope and code
+
+└ PM-165 · M-05 → 200
+  GET http://127.0.0.1:59334/reports/M-05 [200 OK, 437B, 12ms]
+  √  PM-165 HTTP 200
+  √  M-05 report contract
+  √  One Resolved awaiting confirmation
+
+└ PM-175 · M-05 → 403
+  GET http://127.0.0.1:59334/reports/M-05 [403 Forbidden, 193B, 6ms]
+  √  PM-175 HTTP 403
+  √  Handler error envelope and code
+
+└ PM-185 · M-05 → 403
+  GET http://127.0.0.1:59334/reports/M-05 [403 Forbidden, 193B, 5ms]
+  √  PM-185 HTTP 403
+  √  Handler error envelope and code
+
+└ PM-166 · M-06 → 200
+  GET http://127.0.0.1:59334/reports/M-06 [200 OK, 914B, 9ms]
+  √  PM-166 HTTP 200
+  √  M-06 report contract
+  √  Actual Agent loads
+
+└ PM-176 · M-06 → 403
+  GET http://127.0.0.1:59334/reports/M-06 [403 Forbidden, 193B, 6ms]
+  √  PM-176 HTTP 403
+  √  Handler error envelope and code
+
+└ PM-186 · M-06 → 403
+  GET http://127.0.0.1:59334/reports/M-06 [403 Forbidden, 193B, 8ms]
+  √  PM-186 HTTP 403
+  √  Handler error envelope and code
+
+└ PM-167 · M-07 → 200
+  GET http://127.0.0.1:59334/reports/M-07 [200 OK, 839B, 10ms]
+  √  PM-167 HTTP 200
+  √  M-07 report contract
+  √  Completed review from main ticket
+  √  Review completion retained
+
+└ PM-177 · M-07 → 403
+  GET http://127.0.0.1:59334/reports/M-07 [403 Forbidden, 193B, 4ms]
+  √  PM-177 HTTP 403
+  √  Handler error envelope and code
+
+└ PM-187 · M-07 → 403
+  GET http://127.0.0.1:59334/reports/M-07 [403 Forbidden, 193B, 6ms]
+  √  PM-187 HTTP 403
+  √  Handler error envelope and code
+
+└ PM-191 · M-01 ?from={{period_from}}&to={{period_to}}&agent_id={{agent_3}}&priority=NORMAL → 200
+  GET http://127.0.0.1:59334/reports/M-01?from=2026-10-06T00%3A00%3A00%2B07%3A00&to=2026-10-20T00%3A00%3A00%2B07%3A00&agent_id=3&priority=NORMAL [200 OK, 457B, 10ms]
+  √  PM-191 HTTP 200
+  √  M-01 report contract
+  √  Filtered empty denominator
+  √  Filtered empty numerator
+  √  Empty result marker
+
+└ PM-192 · M-02 ?from={{period_from}}&to={{period_to}}&agent_id={{agent_3}}&priority=NORMAL → 200
+  GET http://127.0.0.1:59334/reports/M-02?from=2026-10-06T00%3A00%3A00%2B07%3A00&to=2026-10-20T00%3A00%3A00%2B07%3A00&agent_id=3&priority=NORMAL [200 OK, 587B, 10ms]
+  √  PM-192 HTTP 200
+  √  M-02 report contract
+  √  Filtered empty denominator
+  √  Filtered empty numerator
+  √  Empty result marker
+
+└ PM-193 · M-03 ?from={{period_from}}&to={{period_to}}&agent_id={{agent_3}}&priority=NORMAL → 200
+  GET http://127.0.0.1:59334/reports/M-03?from=2026-10-06T00%3A00%3A00%2B07%3A00&to=2026-10-20T00%3A00%3A00%2B07%3A00&agent_id=3&priority=NORMAL [200 OK, 587B, 10ms]
+  √  PM-193 HTTP 200
+  √  M-03 report contract
+  √  Filtered empty denominator
+  √  Filtered empty numerator
+  √  Empty result marker
+
+└ PM-194 · M-01 ?from={{period_from}}&to={{period_to}}&agent_id={{agent_3}}&priority=HIGH → 200
+  GET http://127.0.0.1:59334/reports/M-01?from=2026-10-06T00%3A00%3A00%2B07%3A00&to=2026-10-20T00%3A00%3A00%2B07%3A00&agent_id=3&priority=HIGH [200 OK, 435B, 10ms]
+  √  PM-194 HTTP 200
+  √  M-01 report contract
+  √  High/Agent3 result count
+  √  No pending in filter
+  √  Period from
+  √  Period to
+  √  Filters echoed
+
+└ PM-195 · M-02 ?from={{period_from}}&to={{period_to}}&agent_id={{agent_4}}&priority=NORMAL → 200
+  GET http://127.0.0.1:59334/reports/M-02?from=2026-10-06T00%3A00%3A00%2B07%3A00&to=2026-10-20T00%3A00%3A00%2B07%3A00&agent_id=4&priority=NORMAL [200 OK, 587B, 9ms]
+  √  PM-195 HTTP 200
+  √  M-02 report contract
+  √  No Closed in normal/Agent4
+  √  Two normal unclosed for Agent4
+
+└ PM-196 · M-05 ?agent_id={{agent_3}} → 200
+  GET http://127.0.0.1:59334/reports/M-05?agent_id=3 [200 OK, 358B, 9ms]
+  √  PM-196 HTTP 200
+  √  M-05 report contract
+  √  Agent filter excludes other Resolved
+
+└ PM-197 · M-07 ?priority=NORMAL → 200
+  GET http://127.0.0.1:59334/reports/M-07?priority=NORMAL [200 OK, 365B, 10ms]
+  √  PM-197 HTTP 200
+  √  M-07 report contract
+  √  Priority filter excludes high review
+
+└ PM-198 · M-06 ?agent_id={{agent_4}} → 200
+  GET http://127.0.0.1:59334/reports/M-06?agent_id=4 [200 OK, 541B, 9ms]
+  √  PM-198 HTTP 200
+  √  M-06 report contract
+  √  M06 filter keeps one Agent
+  √  All priorities remain in load
+
+└ PM-200 · Reject invalid report period/filter → 422
+  GET http://127.0.0.1:59334/reports/M-02 [422 Unprocessable Entity, 215B, 5ms]
+  √  PM-200 HTTP 422
+  √  Handler error envelope and code
+
+└ PM-201 · Reject invalid report period/filter → 422
+  GET http://127.0.0.1:59334/reports/M-01?from=2026-10-20T00%3A00%3A00%2B07%3A00&to=2026-10-06T00%3A00%3A00%2B07%3A00 [422 Unprocessable Entity, 215B, 5ms]
+  √  PM-201 HTTP 422
+  √  Handler error envelope and code
+
+└ PM-202 · Reject invalid report period/filter → 422
+  GET http://127.0.0.1:59334/reports/M-02?from=not-a-time&to=2026-10-20T00%3A00%3A00%2B07%3A00 [422 Unprocessable Entity, 226B, 5ms]
+  √  PM-202 HTTP 422
+  √  Handler error envelope and code
+
+└ PM-203 · Reject invalid report period/filter → 422
+  GET http://127.0.0.1:59334/reports/M-04?as_of=2027-10-14T00%3A00%3A00%2B07%3A00 [422 Unprocessable Entity, 211B, 5ms]
+  √  PM-203 HTTP 422
+  √  Handler error envelope and code
+
+└ PM-204 · Reject invalid report period/filter → 422
+  GET http://127.0.0.1:59334/reports/M-06?priority=HIGH [422 Unprocessable Entity, 237B, 5ms]
+  √  PM-204 HTTP 422
+  √  Handler error envelope and code
+
+└ PM-205 · Reject invalid report period/filter → 422
+  GET http://127.0.0.1:59334/reports/M-04?priority=LOW [422 Unprocessable Entity, 202B, 5ms]
+  √  PM-205 HTTP 422
+  √  Handler error envelope and code
+
+└ PM-206 · Reject invalid report period/filter → 422
+  GET http://127.0.0.1:59334/reports/M-06?agent_id=999 [422 Unprocessable Entity, 206B, 8ms]
+  √  PM-206 HTTP 422
+  √  Handler error envelope and code
+
+└ PM-207 · Reject invalid report period/filter → 422
+  GET http://127.0.0.1:59334/reports/M-06?agent_id=1 [422 Unprocessable Entity, 206B, 7ms]
+  √  PM-207 HTTP 422
+  √  Handler error envelope and code
+
+└ PM-208 · Agent filter wrong type structural exception → 422
+  GET http://127.0.0.1:59334/reports/M-06?agent_id=not-an-integer [422 Unprocessable Entity, 309B, 5ms]
+  √  PM-208 HTTP 422
+  √  FastAPI structural 422 before handler is allowed by BR-33
+
+└ PM-209 · Unknown metric → 404
+  GET http://127.0.0.1:59334/reports/M-99 [404 Not Found, 189B, 5ms]
+  √  PM-209 HTTP 404
+  √  Handler error envelope and code
+
+└ PM-210 · M-07 ?as_of={{observed_created_at}} → 200
+  GET http://127.0.0.1:59334/reports/M-07?as_of=2026-10-13T07%3A41%3A55%2B07%3A00 [200 OK, 361B, 8ms]
+  √  PM-210 HTTP 200
+  √  M-07 report contract
+  √  Read historical as_of
+
+□ 06 · BR-33 structural exceptions and final state checks
+└ PM-220 · Wrong type on Closed bypasses handler state → 422
+  POST http://127.0.0.1:59334/tickets/1/messages [422 Unprocessable Entity, 254B, 5ms]
+  √  PM-220 HTTP 422
+  √  FastAPI structural 422 before handler is allowed by BR-33
+
+└ PM-221 · Wrong type on inaccessible ticket returns structural 422 → 422
+  POST http://127.0.0.1:59334/tickets/1/messages [422 Unprocessable Entity, 254B, 5ms]
+  √  PM-221 HTTP 422
+  √  FastAPI structural 422 before handler is allowed by BR-33
+
+└ PM-222 · Wrong type on nonexistent ticket structural 422 → 422
+  POST http://127.0.0.1:59334/tickets/1000001/messages [422 Unprocessable Entity, 254B, 5ms]
+  √  PM-222 HTTP 422
+  √  FastAPI structural 422 before handler is allowed by BR-33
+
+└ PM-223 · Extra ordinary field rejected even on Closed → 422
+  POST http://127.0.0.1:59334/tickets/1/claim [422 Unprocessable Entity, 269B, 5ms]
+  √  PM-223 HTTP 422
+  √  FastAPI structural 422 before handler is allowed by BR-33
+
+└ PM-224 · Malformed JSON before handler → 422
+  POST http://127.0.0.1:59334/tickets/1/messages [422 Unprocessable Entity, 269B, 2ms]
+  √  PM-224 HTTP 422
+  √  FastAPI structural 422 before handler is allowed by BR-33
+
+└ PM-225 · Invalid path type structural 422 → 422
+  GET http://127.0.0.1:59334/tickets/not-an-integer [422 Unprocessable Entity, 309B, 5ms]
+  √  PM-225 HTTP 422
+  √  FastAPI structural 422 before handler is allowed by BR-33
+
+└ PM-226 · Well-typed nonexistent before content → 404
+  POST http://127.0.0.1:59334/tickets/1000001/messages [404 Not Found, 184B, 8ms]
+  √  PM-226 HTTP 404
+  √  Handler error envelope and code
+
+└ PM-227 · Missing identity before role/content → 401
+  POST http://127.0.0.1:59334/tickets/1/resolve [401 Unauthorized, 210B, 3ms]
+  √  PM-227 HTTP 401
+  √  Handler error envelope and code
+
+└ PM-228 · Manager wrong role before Closed/content → 403
+  POST http://127.0.0.1:59334/tickets/1/resolve [403 Forbidden, 193B, 5ms]
+  √  PM-228 HTTP 403
+  √  Handler error envelope and code
+
+└ PM-229 · Owner Closed unchanged and private → 200
+  GET http://127.0.0.1:59334/tickets/1 [200 OK, 2kB, 9ms]
+  √  PM-229 HTTP 200
+  √  customer ticket response contract
+  √  Ticket state CLOSED
+
+┌─────────────────────────┬─────────────────┬─────────────────┐
+│                         │        executed │          failed │
+├─────────────────────────┼─────────────────┼─────────────────┤
+│              iterations │               1 │               0 │
+├─────────────────────────┼─────────────────┼─────────────────┤
+│                requests │             183 │               0 │
+├─────────────────────────┼─────────────────┼─────────────────┤
+│            test-scripts │             183 │               0 │
+├─────────────────────────┼─────────────────┼─────────────────┤
+│      prerequest-scripts │             184 │               0 │
+├─────────────────────────┼─────────────────┼─────────────────┤
+│              assertions │             491 │               0 │
+├─────────────────────────┴─────────────────┴─────────────────┤
+│ total run duration: 16.7s                                   │
+├─────────────────────────────────────────────────────────────┤
+│ total data received: 85.83kB (approx)                       │
+├─────────────────────────────────────────────────────────────┤
+│ average response time: 9ms [min: 2ms, max: 66ms, s.d.: 6ms] │
+└─────────────────────────────────────────────────────────────┘

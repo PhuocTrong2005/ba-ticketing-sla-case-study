@@ -1,0 +1,155 @@
+{
+  "started_utc": "2026-10-13T00:42:59.753031+00:00",
+  "base_commit": "41d0ebf5fc2c96b745fa65301f0f9ba7ece08221",
+  "source_sha256": {
+    "backend/app.py": "ba48dae31178ea14d6d67d3c8432f6f3c010db72de5c37374cb5ddd4ff43a97f",
+    "backend/reports.py": "484db9c95b12b0a40b47e29dcd883f09084480852c65dde6d082bdae5f9555c1",
+    "backend/schema.sql": "5c6ea2fad94560e90551133078a71a95d0a698dfc1fa3ef78b71f573ea7792cf",
+    "backend/seed.py": "460780c4d8143c31493f19b90a67b0140e7b7f7088bc805d016850e1f90eb0ab",
+    "backend/sla.py": "8f6712ce4463c30e22c3f3ccfc6a5c8eda08b29ccb1c091fb243bff50e77b681",
+    "backend/store.py": "4eb1c548075b903be4d98d35dff9ee003388e30c0efdcdaa3ebf8bd26c0bd4b6",
+    "backend/__init__.py": "c0d121c0c05b4a634a4994a53fe8933e84d596d43b7de5e69c191b3379e01d09",
+    "backend/app/.gitkeep": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "sql/README.md": "3a3381bf289dcbff9e6861bc47ef888761f89d16937bc38cc36201ed26bb99f8",
+    "sql/queries/m01.sql": "db15174ad8e2fabb691e65c18258d594422dbd09c709468128161ee3bd326a3b",
+    "sql/queries/m02.sql": "a13e7d06e336a2c884a7cca2f617141dce0713fbd93216904076fd92ce30aac7",
+    "sql/queries/m03.sql": "9655d5faed31b74b5f7c8241124ae85691a30a4c04b7bb371000fb67997ba589",
+    "sql/queries/m06.sql": "63ef8240a0b65c0bb7976819aa2aacb0406e442584c1a249468448293bd0d512",
+    "requirements.txt": "cd33e0d0405544ecc2538244991d21c8fc598857ba37d76542de5fb7be19fe05",
+    "api/openapi.json": "c896181300cf60c618e1271b4612842a6afdb725fb78921f0d44bc92b7d37470",
+    "docs/04-data-api/api-contract.md": "7f8f751d5e1d3a28d65eee362baf0a7953926c8abc9fcd75fa7b17e80c02ae0a",
+    "docs/spec/business-rules.md": "bc4491b755bb57abaa54c39bf08dd1de44f2f67c8397340a7241cd0d2eca94b9",
+    "docs/spec/codes.md": "fd524d10b44a3caf52b28a5e196300ac17d0996beda822b5b1fd280563d96d80",
+    "tests/sla/sla-scenarios.json": "6e75371714e5589eb78c45b0df3eb69595f2dfcc9362c9398b8c11989c0756ee",
+    "api/ticketing-sla.postman_collection.json": "aa0fee14b2c60b6745724e9610925a20aea7bbaca8e37581d8b392742319554b",
+    "api/ticketing-sla.postman_environment.json": "ace599ce37760c3415c42573f68dd8bc9d78e5a842d6f0d11af77f0f99ba1316",
+    "tests/postman/build_collection.py": "4c36531c5f1650f95d03db92482c3c6c53e883352505cc1b7b7e08c87424ca42",
+    "tests/postman/run_newman.py": "92339fac8fcabe49145c9c96e10c61bb5847966a1b60e364e83492e307f0ef27"
+  },
+  "database": ".postman-runs/20261013-004259-750031/ticketing.sqlite3",
+  "database_existed_before_start": false,
+  "base_url": "http://127.0.0.1:59347",
+  "python_version": "3.12.10",
+  "node_version": "v22.23.3",
+  "newman_version": "6.2.1",
+  "server_command": [
+    ".venv\\Scripts\\python.exe",
+    "-m",
+    "uvicorn",
+    "backend.app:app",
+    "--host",
+    "127.0.0.1",
+    "--port",
+    "59347"
+  ],
+  "server_environment": {
+    "TICKETING_DB": ".postman-runs/20261013-004259-750031/ticketing.sqlite3"
+  },
+  "limitations": [
+    "Sequential HTTP run does not prove races.",
+    "Real server clock; no injected clock, DB timestamp changes or long waits.",
+    "Calendar/deadline/83-fixture/race evidence remains separate pytest evidence.",
+    "Do not add Newman assertions to pytest test count."
+  ],
+  "newman_command": [
+    ".postman-tools/node-v22.23.3-win-x64/node.exe",
+    ".postman-tools/newman/node_modules/newman/bin/newman.js",
+    "run",
+    "api/ticketing-sla.postman_collection.json",
+    "-e",
+    "api/ticketing-sla.postman_environment.json",
+    "--env-var",
+    "base_url=http://127.0.0.1:59347",
+    "--bail",
+    "failure",
+    "--timeout-request",
+    "10000",
+    "--reporters",
+    "cli,json,junit",
+    "--reporter-json-export",
+    "tests/evidence/newman-20261013-004259-750031.json",
+    "--reporter-junit-export",
+    "tests/evidence/newman-20261013-004259-750031.xml",
+    "--color",
+    "off"
+  ],
+  "runner": "Newman CLI, not Python HTTP assertions",
+  "reports": [
+    "tests/evidence/newman-20261013-004259-750031.json",
+    "tests/evidence/newman-20261013-004259-750031.xml",
+    "tests/evidence/newman-20261013-004259-750031-stdout.txt"
+  ],
+  "owned_server_pid": 16108,
+  "live_openapi_matches_tracked": true,
+  "exit_code": 0,
+  "stats": {
+    "iterations": {
+      "total": 1,
+      "pending": 0,
+      "failed": 0
+    },
+    "items": {
+      "total": 191,
+      "pending": 0,
+      "failed": 0
+    },
+    "scripts": {
+      "total": 383,
+      "pending": 0,
+      "failed": 0
+    },
+    "prerequests": {
+      "total": 191,
+      "pending": 0,
+      "failed": 0
+    },
+    "requests": {
+      "total": 191,
+      "pending": 0,
+      "failed": 0
+    },
+    "tests": {
+      "total": 191,
+      "pending": 0,
+      "failed": 0
+    },
+    "assertions": {
+      "total": 514,
+      "pending": 0,
+      "failed": 0
+    },
+    "testScripts": {
+      "total": 191,
+      "pending": 0,
+      "failed": 0
+    },
+    "prerequestScripts": {
+      "total": 192,
+      "pending": 0,
+      "failed": 0
+    }
+  },
+  "timings": {
+    "responseAverage": 8.874345549738216,
+    "responseMin": 2,
+    "responseMax": 53,
+    "responseSd": 4.544707694361896,
+    "dnsAverage": 0,
+    "dnsMin": 0,
+    "dnsMax": 0,
+    "dnsSd": 0,
+    "firstByteAverage": 0,
+    "firstByteMin": 0,
+    "firstByteMax": 0,
+    "firstByteSd": 0,
+    "started": 1791852183438,
+    "completed": 1791852200833
+  },
+  "failures": [],
+  "owned_server_stopped": true,
+  "server_exit_code": 1,
+  "finished_utc": "2026-10-13T00:43:20.974547+00:00",
+  "database_retained": true,
+  "database_sha256_after_stop": "867ee4491f3dcc1185734978148dd67fd177b70d00705ad0b6022d5f92f756f0",
+  "passed": true
+}

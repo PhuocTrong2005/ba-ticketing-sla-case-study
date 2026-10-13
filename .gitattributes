@@ -17,3 +17,13 @@ tests/prototype/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,c
 tests/evidence/prototype-* -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 tests/evidence/pages-* -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 tests/evidence/ux-baseline-* -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+
+# Preserve new Postman source/report hashes when reviewed and committed later.
+api/ticketing-sla.postman_*.json -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+tests/postman/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+tests/evidence/newman-* -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+tests/evidence/postman-* -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+
+# Publication review evidence and tools retain their recorded bytes.
+tests/evidence/portfolio-* -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+tests/portfolio/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
