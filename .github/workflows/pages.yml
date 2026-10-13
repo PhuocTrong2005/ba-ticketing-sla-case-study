@@ -1,0 +1,42 @@
+name: Deploy prototype to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'prototype/**'
+      - '.github/workflows/pages.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/configure-pages@v5
+      - name: Package runtime only
+        run: |
+          mkdir -p _site
+          cp prototype/index.html prototype/styles.css _site/
+          cp prototype/app.js prototype/domain.js prototype/guidance.js _site/
+          cp prototype/reports.js prototype/seeds.js prototype/sla.js prototype/storage.js _site/
+          touch _site/.nojekyll
+          find _site -type f -print | sort
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - name: Deploy Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

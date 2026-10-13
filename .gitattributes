@@ -10,3 +10,10 @@ tests/sla/reference/source/SLA_69_Draft_Verification.md -whitespace
 tests/evidence/backend-* -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 tests/evidence/step1-windows-* -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 tests/evidence/history/README.md -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+
+# Keep tested runtime and new evidence bytes identical on Windows and Pages/Linux.
+prototype/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+tests/prototype/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+tests/evidence/prototype-* -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+tests/evidence/pages-* -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+tests/evidence/ux-baseline-* -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol

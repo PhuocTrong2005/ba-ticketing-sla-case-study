@@ -1,0 +1,600 @@
+{
+  "command": "./.venv/Scripts/python.exe tests/prototype/run_browser.py",
+  "base_commit": "eb8d483d8e3af914b487c1728b22b4108fa1397f",
+  "fixture_sha256": "6e75371714e5589eb78c45b0df3eb69595f2dfcc9362c9398b8c11989c0756ee",
+  "source_sha256": {
+    "prototype/.gitkeep": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "prototype/app.js": "e5f1d4a23cca439bf957f3d39e02c61ef5e7dd989db3b3a0c73274318f3b9984",
+    "prototype/domain.js": "e26caf489085ca0480857e5b34a74b4376b16179b36ac084e343934d5666d3d7",
+    "prototype/guidance.js": "52ae145a51cef236ee7613959b9435865060451e37449a23d7a737d1c76f8790",
+    "prototype/index.html": "1bc0c731bd844086c4489cdbde96854680d1746f92c82e7c5c0ba5fb204d72cb",
+    "prototype/README.md": "ae0580498caf032a09ce6ca8150915a00373f0949330b0f879970a1f565a7be4",
+    "prototype/reports.js": "b3be3c0bcd8052c87292b51e9868fac0f5899b3e39aa2b4b7a82828c07611fc1",
+    "prototype/seeds.js": "090fa451e3c0bb22f0324406efb0c68aa8cd5d8ff03c609bb84611e265f5f08d",
+    "prototype/sla.js": "3cd31b1e4c45def3498886c3a134792e6f34d4995d369fd22bc63a7c8f22a923",
+    "prototype/storage.js": "634d9258fb125905ca6988c1f2f9ce7ef9232c823b28913d2c2a1b49dc495a3b",
+    "prototype/styles.css": "602d46449d211ebacb738497aea118ebca09cca41799aed2de507773c360e8c7",
+    "tests/prototype/audit.py": "181de6ffad63d9f2207b57d47acaae949e39644f6e4ec17016b45abf00457459",
+    "tests/prototype/audit_pages.py": "61ef1da443932a2389387e6464e5bd91db2486346b3b6deef5650e3b952f7dcb",
+    "tests/prototype/audit_ux.py": "bcf36d4204190c88884814afaac0abde61ad07bb415132e736841d707cbd8cdc",
+    "tests/prototype/github_pages.py": "a25b05bc9aea3e6ccd94ed932272b903dedf2a48994ac60c86871ff4e7559f45",
+    "tests/prototype/index.html": "430dd34c7d13dcd69b443d752badc00ef7841f8a61ce1c9d05e4a9c2ab8d7a21",
+    "tests/prototype/public_smoke.py": "f81c3e45caabb63d315a2811a398ab7167a0ce59e9aba18c74247c69518acd2d",
+    "tests/prototype/run_browser.py": "0f5bce40c280ae66375eb81bf8dde2fdacfbcc4830bbc1641da4dab3644aac96",
+    "tests/prototype/test.js": "d4bdcc9ceb80f93551ccb2a03cd4f2bdedaf76f50bf50acb4d3d192ba6198e94"
+  },
+  "base_url": "http://127.0.0.1:55024/case-study/",
+  "started_utc": "20261013-002503",
+  "harness": {
+    "fixture_count": 83,
+    "fixture_comparisons": 1494,
+    "results": [
+      {
+        "name": "SLA-01",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-02",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-03",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-04",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-05",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-06",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-07",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-08",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-09",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-10",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-11",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-12",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-13",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-14",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-15",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-16",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-17",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-18",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-19",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-20",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-21",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-22",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-23",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-24",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-25",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-26",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-27",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-28",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-29",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-30",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-31",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-32",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-33",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-34",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-35",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-36",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-37",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-38",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-39",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-40",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-41",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-42",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-43",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-44",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-45",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-46",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-47",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-48",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-49",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-50",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-51",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-52",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-53",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-54",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-55",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-56",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-57",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-58",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-59",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-60",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-61",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-62",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-63",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-64",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-65",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-66",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-67",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-68",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-69",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-70",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-71",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-72",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-73",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-74",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-75",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-76",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-77",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-78",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-79",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-80",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-81",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-82",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-83",
+        "status": "PASS"
+      },
+      {
+        "name": "Fixture rejected attempts through JS controller",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-83 due exact + truncation + calendar",
+        "status": "PASS"
+      },
+      {
+        "name": "Warnings 3600/3599/900/899 and sticky Waiting",
+        "status": "PASS"
+      },
+      {
+        "name": "DEMO-01 success",
+        "status": "PASS"
+      },
+      {
+        "name": "DEMO-02 waiting deadline + agent message/note",
+        "status": "PASS"
+      },
+      {
+        "name": "DEMO-03 reject exact and +1 separate datasets",
+        "status": "PASS"
+      },
+      {
+        "name": "DEMO-04 review block, plan Waiting, resume",
+        "status": "PASS"
+      },
+      {
+        "name": "DEMO-05 overload then below limit",
+        "status": "PASS"
+      },
+      {
+        "name": "DEMO-06 exact/late Friday and zero",
+        "status": "PASS"
+      },
+      {
+        "name": "Role/ownership/content/order/unknown fields/no mutation",
+        "status": "PASS"
+      },
+      {
+        "name": "Closed error priority + same second intervals + historical replay",
+        "status": "PASS"
+      },
+      {
+        "name": "Reports period/filters/unclosed outside creation/M06",
+        "status": "PASS"
+      },
+      {
+        "name": "Storage roundtrip/error/schema/corruption + monotonic clock",
+        "status": "PASS"
+      },
+      {
+        "name": "Manager-only report controller, filters and unavailable storage",
+        "status": "PASS"
+      },
+      {
+        "name": "State/content errors and storage types rejected without mutation",
+        "status": "PASS"
+      },
+      {
+        "name": "UI-03 DEMO-01 DOM successful workflow + literal input",
+        "status": "PASS"
+      },
+      {
+        "name": "UI-03 DEMO-02 DOM Waiting no resume by Agent",
+        "status": "PASS"
+      },
+      {
+        "name": "UI-03 DEMO-03 DOM reject without reset",
+        "status": "PASS"
+      },
+      {
+        "name": "UI-03 DEMO-04 DOM review plan and permission switch",
+        "status": "PASS"
+      },
+      {
+        "name": "UI-03 DEMO-05 DOM overload/capacity",
+        "status": "PASS"
+      },
+      {
+        "name": "UI-03 DEMO-06 DOM zero and access/direct hash",
+        "status": "PASS"
+      },
+      {
+        "name": "UI-05 actual ratio/filter/capacity reports and navigation guard",
+        "status": "PASS"
+      },
+      {
+        "name": "UI-06 reload/storage/reset/schema and list seconds",
+        "status": "PASS"
+      },
+      {
+        "name": "UX-01 collapse preserves source and summary across renders",
+        "status": "PASS"
+      },
+      {
+        "name": "UX-02 all six role guides are public for Customers and inert",
+        "status": "PASS"
+      },
+      {
+        "name": "UX-03 localized sticky SLA and Manager labels/navigation preserve filters",
+        "status": "PASS"
+      },
+      {
+        "name": "UX-04 real data handoff details",
+        "status": "PASS"
+      }
+    ],
+    "passed": 110,
+    "failed": 0,
+    "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36 Edg/155.0.0.0"
+  },
+  "mobile": {
+    "width": 390,
+    "document_width": 390,
+    "internal_blocks": 0,
+    "unlabelled_fields": 0
+  },
+  "keyboard": {
+    "active_id": "scenario",
+    "focus_visible": true
+  },
+  "collapse_keyboard": {
+    "enter_collapsed": true,
+    "space_expanded": true,
+    "source_unchanged": true
+  },
+  "jump_keyboard": {
+    "heading": "manager-load",
+    "focus_visible": true
+  },
+  "manager_mobile": {
+    "width": 390,
+    "document_width": 390,
+    "table_regions": [
+      {
+        "width": 328,
+        "scroll_width": 328
+      },
+      {
+        "width": 328,
+        "scroll_width": 328
+      },
+      {
+        "width": 328,
+        "scroll_width": 328
+      },
+      {
+        "width": 328,
+        "scroll_width": 600
+      },
+      {
+        "width": 328,
+        "scroll_width": 355
+      },
+      {
+        "width": 328,
+        "scroll_width": 613
+      }
+    ],
+    "unlabelled_fields": 0
+  },
+  "ux_browser_passed": true,
+  "network_requests": [
+    "http://127.0.0.1:55024/case-study/tests/prototype/index.html",
+    "http://127.0.0.1:55024/case-study/tests/prototype/test.js",
+    "http://127.0.0.1:55024/case-study/prototype/index.html",
+    "http://127.0.0.1:55024/case-study/prototype/sla.js",
+    "http://127.0.0.1:55024/case-study/prototype/domain.js",
+    "http://127.0.0.1:55024/case-study/prototype/seeds.js",
+    "http://127.0.0.1:55024/case-study/prototype/reports.js",
+    "http://127.0.0.1:55024/case-study/prototype/storage.js",
+    "http://127.0.0.1:55024/case-study/prototype/styles.css",
+    "http://127.0.0.1:55024/case-study/prototype/app.js",
+    "http://127.0.0.1:55024/case-study/tests/sla/sla-scenarios.json",
+    "http://127.0.0.1:55024/case-study/prototype/guidance.js",
+    "http://127.0.0.1:55024/case-study/prototype/domain.js",
+    "http://127.0.0.1:55024/case-study/prototype/sla.js",
+    "http://127.0.0.1:55024/case-study/prototype/seeds.js",
+    "http://127.0.0.1:55024/case-study/prototype/reports.js",
+    "http://127.0.0.1:55024/case-study/prototype/storage.js",
+    "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTUgOWExIDEgMCAxMDAtMiAxIDEgMCAwMDAgMnpNNiAxMWExIDEgMCAxMS0yIDAgMSAxIDAgMDEyIDB6TTggOWExIDEgMCAxMDAtMiAxIDEgMCAwMDAgMnpNOSAxMWExIDEgMCAxMS0yIDAgMSAxIDAgMDEyIDB6TTExIDlhMSAxIDAgMTAwLTIgMSAxIDAgMDAwIDJ6IiBmaWxsPSJXaW5kb3dUZXh0Ii8+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xNSAzLjVBMi41IDIuNSAwIDAwMTIuNSAxaC05QTIuNSAyLjUgMCAwMDEgMy41djlBMi41IDIuNSAwIDAwMy41IDE1aDlhMi41IDIuNSAwIDAwMi41LTIuNXYtOXpNMiA1aDEydjcuNWMwIC44My0uNjcgMS41LTEuNSAxLjVoLTlBMS41IDEuNSAwIDAxMiAxMi41VjV6bTEuNS0zaDljLjgzIDAgMS41LjY3IDEuNSAxLjVWNEgydi0uNUMyIDIuNjcgMi42NyAyIDMuNSAyeiIgZmlsbD0iV2luZG93VGV4dCIvPjwvc3ZnPg==",
+    "http://127.0.0.1:55024/favicon.ico",
+    "http://127.0.0.1:55024/case-study/prototype/index.html",
+    "http://127.0.0.1:55024/case-study/prototype/styles.css",
+    "http://127.0.0.1:55024/case-study/prototype/app.js",
+    "http://127.0.0.1:55024/case-study/prototype/guidance.js",
+    "http://127.0.0.1:55024/case-study/prototype/domain.js",
+    "http://127.0.0.1:55024/case-study/prototype/sla.js",
+    "http://127.0.0.1:55024/case-study/prototype/seeds.js",
+    "http://127.0.0.1:55024/case-study/prototype/reports.js",
+    "http://127.0.0.1:55024/case-study/prototype/storage.js",
+    "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTUgOWExIDEgMCAxMDAtMiAxIDEgMCAwMDAgMnpNNiAxMWExIDEgMCAxMS0yIDAgMSAxIDAgMDEyIDB6TTggOWExIDEgMCAxMDAtMiAxIDEgMCAwMDAgMnpNOSAxMWExIDEgMCAxMS0yIDAgMSAxIDAgMDEyIDB6TTExIDlhMSAxIDAgMTAwLTIgMSAxIDAgMDAwIDJ6IiBmaWxsPSJXaW5kb3dUZXh0Ii8+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xNSAzLjVBMi41IDIuNSAwIDAwMTIuNSAxaC05QTIuNSAyLjUgMCAwMDEgMy41djlBMi41IDIuNSAwIDAwMy41IDE1aDlhMi41IDIuNSAwIDAwMi41LTIuNXYtOXpNMiA1aDEydjcuNWMwIC44My0uNjcgMS41LTEuNSAxLjVoLTlBMS41IDEuNSAwIDAxMiAxMi41VjV6bTEuNS0zaDljLjgzIDAgMS41LjY3IDEuNSAxLjVWNEgydi0uNUMyIDIuNjcgMi42NyAyIDMuNSAyeiIgZmlsbD0iV2luZG93VGV4dCIvPjwvc3ZnPg==",
+    "http://127.0.0.1:55024/case-study/prototype/index.html",
+    "http://127.0.0.1:55024/case-study/prototype/styles.css",
+    "http://127.0.0.1:55024/case-study/prototype/app.js",
+    "http://127.0.0.1:55024/case-study/prototype/guidance.js",
+    "http://127.0.0.1:55024/case-study/prototype/domain.js",
+    "http://127.0.0.1:55024/case-study/prototype/sla.js",
+    "http://127.0.0.1:55024/case-study/prototype/seeds.js",
+    "http://127.0.0.1:55024/case-study/prototype/reports.js",
+    "http://127.0.0.1:55024/case-study/prototype/storage.js",
+    "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTUgOWExIDEgMCAxMDAtMiAxIDEgMCAwMDAgMnpNNiAxMWExIDEgMCAxMS0yIDAgMSAxIDAgMDEyIDB6TTggOWExIDEgMCAxMDAtMiAxIDEgMCAwMDAgMnpNOSAxMWExIDEgMCAxMS0yIDAgMSAxIDAgMDEyIDB6TTExIDlhMSAxIDAgMTAwLTIgMSAxIDAgMDAwIDJ6IiBmaWxsPSJXaW5kb3dUZXh0Ii8+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xNSAzLjVBMi41IDIuNSAwIDAwMTIuNSAxaC05QTIuNSAyLjUgMCAwMDEgMy41djlBMi41IDIuNSAwIDAwMy41IDE1aDlhMi41IDIuNSAwIDAwMi41LTIuNXYtOXpNMiA1aDEydjcuNWMwIC44My0uNjcgMS41LTEuNSAxLjVoLTlBMS41IDEuNSAwIDAxMiAxMi41VjV6bTEuNS0zaDljLjgzIDAgMS41LjY3IDEuNSAxLjVWNEgydi0uNUMyIDIuNjcgMi42NyAyIDMuNSAyeiIgZmlsbD0iV2luZG93VGV4dCIvPjwvc3ZnPg==",
+    "http://127.0.0.1:55024/case-study/prototype/index.html",
+    "http://127.0.0.1:55024/case-study/prototype/styles.css",
+    "http://127.0.0.1:55024/case-study/prototype/app.js",
+    "http://127.0.0.1:55024/case-study/prototype/guidance.js",
+    "http://127.0.0.1:55024/case-study/prototype/domain.js",
+    "http://127.0.0.1:55024/case-study/prototype/sla.js",
+    "http://127.0.0.1:55024/case-study/prototype/seeds.js",
+    "http://127.0.0.1:55024/case-study/prototype/reports.js",
+    "http://127.0.0.1:55024/case-study/prototype/storage.js",
+    "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTUgOWExIDEgMCAxMDAtMiAxIDEgMCAwMDAgMnpNNiAxMWExIDEgMCAxMS0yIDAgMSAxIDAgMDEyIDB6TTggOWExIDEgMCAxMDAtMiAxIDEgMCAwMDAgMnpNOSAxMWExIDEgMCAxMS0yIDAgMSAxIDAgMDEyIDB6TTExIDlhMSAxIDAgMTAwLTIgMSAxIDAgMDAwIDJ6IiBmaWxsPSJXaW5kb3dUZXh0Ii8+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xNSAzLjVBMi41IDIuNSAwIDAwMTIuNSAxaC05QTIuNSAyLjUgMCAwMDEgMy41djlBMi41IDIuNSAwIDAwMy41IDE1aDlhMi41IDIuNSAwIDAwMi41LTIuNXYtOXpNMiA1aDEydjcuNWMwIC44My0uNjcgMS41LTEuNSAxLjVoLTlBMS41IDEuNSAwIDAxMiAxMi41VjV6bTEuNS0zaDljLjgzIDAgMS41LjY3IDEuNSAxLjVWNEgydi0uNUMyIDIuNjcgMi42NyAyIDMuNSAyeiIgZmlsbD0iV2luZG93VGV4dCIvPjwvc3ZnPg=="
+  ],
+  "runtime_errors": [],
+  "server_requests": [
+    "\"GET /case-study/tests/prototype/index.html HTTP/1.1\" 200 -",
+    "\"GET /case-study/tests/prototype/test.js HTTP/1.1\" 200 -",
+    "\"GET /case-study/prototype/domain.js HTTP/1.1\" 200 -",
+    "\"GET /case-study/prototype/reports.js HTTP/1.1\" 200 -",
+    "\"GET /case-study/prototype/seeds.js HTTP/1.1\" 200 -",
+    "\"GET /case-study/prototype/sla.js HTTP/1.1\" 200 -",
+    "\"GET /case-study/prototype/storage.js HTTP/1.1\" 200 -",
+    "\"GET /case-study/prototype/index.html HTTP/1.1\" 200 -",
+    "\"GET /case-study/prototype/styles.css HTTP/1.1\" 200 -",
+    "\"GET /case-study/prototype/app.js HTTP/1.1\" 200 -",
+    "\"GET /case-study/tests/sla/sla-scenarios.json HTTP/1.1\" 200 -",
+    "\"GET /case-study/prototype/guidance.js HTTP/1.1\" 200 -",
+    "code 404, message File not found",
+    "\"GET /favicon.ico HTTP/1.1\" 404 -",
+    "\"GET /case-study/prototype/index.html HTTP/1.1\" 304 -",
+    "\"GET /case-study/prototype/index.html HTTP/1.1\" 304 -",
+    "\"GET /case-study/prototype/index.html HTTP/1.1\" 200 -"
+  ],
+  "no_api_calls": true
+}

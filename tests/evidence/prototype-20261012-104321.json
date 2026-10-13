@@ -1,0 +1,521 @@
+{
+  "command": "./.venv/Scripts/python.exe tests/prototype/run_browser.py",
+  "base_commit": "eb8d483d8e3af914b487c1728b22b4108fa1397f",
+  "fixture_sha256": "6e75371714e5589eb78c45b0df3eb69595f2dfcc9362c9398b8c11989c0756ee",
+  "source_sha256": {
+    "prototype/.gitkeep": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "prototype/app.js": "91e49319939d5bdb49a3f830d217f73944123b18998d086d1b47ca6bf8549d5e",
+    "prototype/domain.js": "e26caf489085ca0480857e5b34a74b4376b16179b36ac084e343934d5666d3d7",
+    "prototype/index.html": "744dba67270332a7d56f2b601f3a315ad9dcc3e3978459a7730d920c93ebd123",
+    "prototype/reports.js": "8d8f191da93974d6c29b3c883c6819eb47180461e54a70b3a204c1e339a04eee",
+    "prototype/seeds.js": "c29b48a54cd9e582e280dc84cd56415db8decd191ac1860f3ae48d818e34d18a",
+    "prototype/sla.js": "3cd31b1e4c45def3498886c3a134792e6f34d4995d369fd22bc63a7c8f22a923",
+    "prototype/storage.js": "8784aaacafdfd9b171122bf337ff375f4262c5227e736a0d1837cf0db865f0d9",
+    "prototype/styles.css": "2d007f0bdc55c6f46527f7ac8dea9e55459303a2aad6c1b6b8575dec5c5e3b8e",
+    "tests/prototype/index.html": "430dd34c7d13dcd69b443d752badc00ef7841f8a61ce1c9d05e4a9c2ab8d7a21",
+    "tests/prototype/run_browser.py": "0421f5d231c85f13e442122d0359295bcb4ee6a93872d3e4f1ac541170dcde07",
+    "tests/prototype/test.js": "525a85e794235e6d82bc644cda862c959039ae2aef55c10831c8fb310738949f"
+  },
+  "base_url": "http://127.0.0.1:49779/case-study/",
+  "started_utc": "20261012-104321",
+  "harness": {
+    "fixture_count": 83,
+    "fixture_comparisons": 1494,
+    "results": [
+      {
+        "name": "SLA-01",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-02",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-03",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-04",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-05",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-06",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-07",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-08",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-09",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-10",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-11",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-12",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-13",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-14",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-15",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-16",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-17",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-18",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-19",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-20",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-21",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-22",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-23",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-24",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-25",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-26",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-27",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-28",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-29",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-30",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-31",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-32",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-33",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-34",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-35",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-36",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-37",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-38",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-39",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-40",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-41",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-42",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-43",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-44",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-45",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-46",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-47",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-48",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-49",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-50",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-51",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-52",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-53",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-54",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-55",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-56",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-57",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-58",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-59",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-60",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-61",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-62",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-63",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-64",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-65",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-66",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-67",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-68",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-69",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-70",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-71",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-72",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-73",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-74",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-75",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-76",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-77",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-78",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-79",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-80",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-81",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-82",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-83",
+        "status": "PASS"
+      },
+      {
+        "name": "Fixture rejected attempts through JS controller",
+        "status": "PASS"
+      },
+      {
+        "name": "SLA-83 due exact + truncation + calendar",
+        "status": "PASS"
+      },
+      {
+        "name": "Warnings 3600/3599/900/899 and sticky Waiting",
+        "status": "PASS"
+      },
+      {
+        "name": "DEMO-01 success",
+        "status": "PASS"
+      },
+      {
+        "name": "DEMO-02 waiting deadline + agent message/note",
+        "status": "PASS"
+      },
+      {
+        "name": "DEMO-03 reject exact and +1 separate datasets",
+        "status": "PASS"
+      },
+      {
+        "name": "DEMO-04 review block, plan Waiting, resume",
+        "status": "PASS"
+      },
+      {
+        "name": "DEMO-05 overload then below limit",
+        "status": "PASS"
+      },
+      {
+        "name": "DEMO-06 exact/late Friday and zero",
+        "status": "PASS"
+      },
+      {
+        "name": "Role/ownership/content/order/unknown fields/no mutation",
+        "status": "PASS"
+      },
+      {
+        "name": "Closed error priority + same second intervals + historical replay",
+        "status": "PASS"
+      },
+      {
+        "name": "Reports period/filters/unclosed outside creation/M06",
+        "status": "PASS"
+      },
+      {
+        "name": "Storage roundtrip/error/schema/corruption + monotonic clock",
+        "status": "PASS"
+      },
+      {
+        "name": "UI-03 DEMO-01 DOM successful workflow + literal input",
+        "status": "PASS"
+      },
+      {
+        "name": "UI-03 DEMO-02 DOM Waiting no resume by Agent",
+        "status": "PASS"
+      },
+      {
+        "name": "UI-03 DEMO-03 DOM reject without reset",
+        "status": "PASS"
+      },
+      {
+        "name": "UI-03 DEMO-04 DOM review plan and permission switch",
+        "status": "PASS"
+      },
+      {
+        "name": "UI-03 DEMO-05 DOM overload/capacity",
+        "status": "PASS"
+      },
+      {
+        "name": "UI-03 DEMO-06 DOM zero and access/direct hash",
+        "status": "PASS"
+      },
+      {
+        "name": "UI-06 reload/storage/reset/schema and list seconds",
+        "status": "PASS"
+      }
+    ],
+    "passed": 103,
+    "failed": 0,
+    "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36 Edg/155.0.0.0"
+  },
+  "mobile": {
+    "width": 390,
+    "document_width": 390,
+    "internal_blocks": 0,
+    "unlabelled_fields": 0
+  },
+  "keyboard": {
+    "active_id": "scenario",
+    "focus_visible": true
+  },
+  "network_requests": [
+    "http://127.0.0.1:49779/case-study/tests/prototype/index.html",
+    "http://127.0.0.1:49779/case-study/tests/prototype/test.js",
+    "http://127.0.0.1:49779/case-study/prototype/index.html",
+    "http://127.0.0.1:49779/case-study/prototype/sla.js",
+    "http://127.0.0.1:49779/case-study/prototype/domain.js",
+    "http://127.0.0.1:49779/case-study/prototype/seeds.js",
+    "http://127.0.0.1:49779/case-study/prototype/reports.js",
+    "http://127.0.0.1:49779/case-study/prototype/storage.js",
+    "http://127.0.0.1:49779/case-study/tests/sla/sla-scenarios.json",
+    "http://127.0.0.1:49779/case-study/prototype/styles.css",
+    "http://127.0.0.1:49779/case-study/prototype/app.js",
+    "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTUgOWExIDEgMCAxMDAtMiAxIDEgMCAwMDAgMnpNNiAxMWExIDEgMCAxMS0yIDAgMSAxIDAgMDEyIDB6TTggOWExIDEgMCAxMDAtMiAxIDEgMCAwMDAgMnpNOSAxMWExIDEgMCAxMS0yIDAgMSAxIDAgMDEyIDB6TTExIDlhMSAxIDAgMTAwLTIgMSAxIDAgMDAwIDJ6IiBmaWxsPSJXaW5kb3dUZXh0Ii8+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xNSAzLjVBMi41IDIuNSAwIDAwMTIuNSAxaC05QTIuNSAyLjUgMCAwMDEgMy41djlBMi41IDIuNSAwIDAwMy41IDE1aDlhMi41IDIuNSAwIDAwMi41LTIuNXYtOXpNMiA1aDEydjcuNWMwIC44My0uNjcgMS41LTEuNSAxLjVoLTlBMS41IDEuNSAwIDAxMiAxMi41VjV6bTEuNS0zaDljLjgzIDAgMS41LjY3IDEuNSAxLjVWNEgydi0uNUMyIDIuNjcgMi42NyAyIDMuNSAyeiIgZmlsbD0iV2luZG93VGV4dCIvPjwvc3ZnPg==",
+    "http://127.0.0.1:49779/case-study/prototype/domain.js",
+    "http://127.0.0.1:49779/case-study/prototype/sla.js",
+    "http://127.0.0.1:49779/case-study/prototype/seeds.js",
+    "http://127.0.0.1:49779/case-study/prototype/reports.js",
+    "http://127.0.0.1:49779/case-study/prototype/storage.js",
+    "http://127.0.0.1:49779/favicon.ico",
+    "http://127.0.0.1:49779/case-study/prototype/index.html",
+    "http://127.0.0.1:49779/case-study/prototype/styles.css",
+    "http://127.0.0.1:49779/case-study/prototype/app.js",
+    "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTUgOWExIDEgMCAxMDAtMiAxIDEgMCAwMDAgMnpNNiAxMWExIDEgMCAxMS0yIDAgMSAxIDAgMDEyIDB6TTggOWExIDEgMCAxMDAtMiAxIDEgMCAwMDAgMnpNOSAxMWExIDEgMCAxMS0yIDAgMSAxIDAgMDEyIDB6TTExIDlhMSAxIDAgMTAwLTIgMSAxIDAgMDAwIDJ6IiBmaWxsPSJXaW5kb3dUZXh0Ii8+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xNSAzLjVBMi41IDIuNSAwIDAwMTIuNSAxaC05QTIuNSAyLjUgMCAwMDEgMy41djlBMi41IDIuNSAwIDAwMy41IDE1aDlhMi41IDIuNSAwIDAwMi41LTIuNXYtOXpNMiA1aDEydjcuNWMwIC44My0uNjcgMS41LTEuNSAxLjVoLTlBMS41IDEuNSAwIDAxMiAxMi41VjV6bTEuNS0zaDljLjgzIDAgMS41LjY3IDEuNSAxLjVWNEgydi0uNUMyIDIuNjcgMi42NyAyIDMuNSAyeiIgZmlsbD0iV2luZG93VGV4dCIvPjwvc3ZnPg==",
+    "http://127.0.0.1:49779/case-study/prototype/domain.js",
+    "http://127.0.0.1:49779/case-study/prototype/sla.js",
+    "http://127.0.0.1:49779/case-study/prototype/seeds.js",
+    "http://127.0.0.1:49779/case-study/prototype/reports.js",
+    "http://127.0.0.1:49779/case-study/prototype/storage.js",
+    "http://127.0.0.1:49779/case-study/prototype/index.html",
+    "http://127.0.0.1:49779/case-study/prototype/styles.css",
+    "http://127.0.0.1:49779/case-study/prototype/app.js",
+    "http://127.0.0.1:49779/case-study/prototype/domain.js",
+    "http://127.0.0.1:49779/case-study/prototype/sla.js",
+    "http://127.0.0.1:49779/case-study/prototype/seeds.js",
+    "http://127.0.0.1:49779/case-study/prototype/reports.js",
+    "http://127.0.0.1:49779/case-study/prototype/storage.js",
+    "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTUgOWExIDEgMCAxMDAtMiAxIDEgMCAwMDAgMnpNNiAxMWExIDEgMCAxMS0yIDAgMSAxIDAgMDEyIDB6TTggOWExIDEgMCAxMDAtMiAxIDEgMCAwMDAgMnpNOSAxMWExIDEgMCAxMS0yIDAgMSAxIDAgMDEyIDB6TTExIDlhMSAxIDAgMTAwLTIgMSAxIDAgMDAwIDJ6IiBmaWxsPSJXaW5kb3dUZXh0Ii8+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xNSAzLjVBMi41IDIuNSAwIDAwMTIuNSAxaC05QTIuNSAyLjUgMCAwMDEgMy41djlBMi41IDIuNSAwIDAwMy41IDE1aDlhMi41IDIuNSAwIDAwMi41LTIuNXYtOXpNMiA1aDEydjcuNWMwIC44My0uNjcgMS41LTEuNSAxLjVoLTlBMS41IDEuNSAwIDAxMiAxMi41VjV6bTEuNS0zaDljLjgzIDAgMS41LjY3IDEuNSAxLjVWNEgydi0uNUMyIDIuNjcgMi42NyAyIDMuNSAyeiIgZmlsbD0iV2luZG93VGV4dCIvPjwvc3ZnPg==",
+    "http://127.0.0.1:49779/case-study/prototype/index.html",
+    "http://127.0.0.1:49779/case-study/prototype/styles.css",
+    "http://127.0.0.1:49779/case-study/prototype/app.js",
+    "http://127.0.0.1:49779/case-study/prototype/domain.js",
+    "http://127.0.0.1:49779/case-study/prototype/sla.js",
+    "http://127.0.0.1:49779/case-study/prototype/seeds.js",
+    "http://127.0.0.1:49779/case-study/prototype/reports.js",
+    "http://127.0.0.1:49779/case-study/prototype/storage.js",
+    "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTUgOWExIDEgMCAxMDAtMiAxIDEgMCAwMDAgMnpNNiAxMWExIDEgMCAxMS0yIDAgMSAxIDAgMDEyIDB6TTggOWExIDEgMCAxMDAtMiAxIDEgMCAwMDAgMnpNOSAxMWExIDEgMCAxMS0yIDAgMSAxIDAgMDEyIDB6TTExIDlhMSAxIDAgMTAwLTIgMSAxIDAgMDAwIDJ6IiBmaWxsPSJXaW5kb3dUZXh0Ii8+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xNSAzLjVBMi41IDIuNSAwIDAwMTIuNSAxaC05QTIuNSAyLjUgMCAwMDEgMy41djlBMi41IDIuNSAwIDAwMy41IDE1aDlhMi41IDIuNSAwIDAwMi41LTIuNXYtOXpNMiA1aDEydjcuNWMwIC44My0uNjcgMS41LTEuNSAxLjVoLTlBMS41IDEuNSAwIDAxMiAxMi41VjV6bTEuNS0zaDljLjgzIDAgMS41LjY3IDEuNSAxLjVWNEgydi0uNUMyIDIuNjcgMi42NyAyIDMuNSAyeiIgZmlsbD0iV2luZG93VGV4dCIvPjwvc3ZnPg=="
+  ],
+  "runtime_errors": [],
+  "server_requests": [
+    "\"GET /case-study/tests/prototype/index.html HTTP/1.1\" 200 -",
+    "\"GET /case-study/tests/prototype/test.js HTTP/1.1\" 200 -",
+    "\"GET /case-study/prototype/sla.js HTTP/1.1\" 200 -",
+    "\"GET /case-study/prototype/domain.js HTTP/1.1\" 200 -",
+    "\"GET /case-study/prototype/seeds.js HTTP/1.1\" 200 -",
+    "\"GET /case-study/prototype/reports.js HTTP/1.1\" 200 -",
+    "\"GET /case-study/prototype/storage.js HTTP/1.1\" 200 -",
+    "\"GET /case-study/prototype/index.html HTTP/1.1\" 200 -",
+    "\"GET /case-study/tests/sla/sla-scenarios.json HTTP/1.1\" 200 -",
+    "\"GET /case-study/prototype/styles.css HTTP/1.1\" 200 -",
+    "\"GET /case-study/prototype/app.js HTTP/1.1\" 200 -",
+    "code 404, message File not found",
+    "\"GET /favicon.ico HTTP/1.1\" 404 -",
+    "\"GET /case-study/prototype/index.html HTTP/1.1\" 304 -",
+    "\"GET /case-study/prototype/app.js HTTP/1.1\" 304 -",
+    "\"GET /case-study/prototype/storage.js HTTP/1.1\" 304 -",
+    "\"GET /case-study/prototype/index.html HTTP/1.1\" 304 -",
+    "\"GET /case-study/prototype/index.html HTTP/1.1\" 200 -"
+  ],
+  "no_api_calls": true
+}

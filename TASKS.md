@@ -22,11 +22,11 @@
 | DATA-02 | Thiết kế bảng `ticket_reviews`; lưu số giây còn lại tại mỗi lần Resolved nếu DATA-01 chưa bao phủ. | SLA-01 | Đã triển khai review theo chu kỳ, snapshot Resolved được DATA-01 phủ |
 | API-01 | Xác định hợp đồng API và kiểm tra phân quyền backend. | DOC-01, SLA-01 | Đã có contract/OpenAPI và kiểm thử HTTP; xem evidence implementation |
 | API-02 | Kiểm tra `REVIEW_REQUIRED`; Agent chuyển Waiting khi review mở; Manager ghi phương án ở Waiting; Manager/Agent/Customer ghi phương án (Customer 404, Agent 403); `INVALID_TICKET_STATE`/`TICKET_CLOSED` khi không có review mở; tính nguyên tử từ chối và tạo review. | DOC-01, SLA-01 | Đã thực thi A1/A2, REVIEW_REQUIRED, quyền/nội dung và rollback; xem evidence |
-| PROTO-01 | Xây prototype tĩnh cho luồng chính. | DOC-01 | Chưa bắt đầu |
+| PROTO-01 | Xây prototype tĩnh cho luồng chính. | DOC-01, D-44 | Đã dựng bốn view/sáu nhóm DEMO/M-01…07; JS/Edge headless 106 PASS; chờ chủ dự án xem UI, chưa deploy. [Báo cáo](tests/evidence/prototype-report-20261012.md) |
 | CON-01 | Chứng minh hai ca nhận đồng thời. | DATA-01, API-01 | Đã kiểm thử hai tình huống bằng threads/kết nối riêng, SQLite file và barrier |
 | RPT-01 | Báo cáo SQL khớp dữ liệu mẫu. | DATA-01 | Đã triển khai SQL trên snapshot as_of và kiểm thử dữ liệu xác định |
 | RPT-02 | Báo cáo M-07 về chờ Manager review. | DATA-02 | Đã triển khai và kiểm thử M-07; không phải SQL thuần cho phép giao khoảng |
-| EVD-01 | Thu thập bằng chứng kiểm thử hợp lệ và hoàn chỉnh ma trận truy vết. | Các hạng mục liên quan | Đã có bằng chứng backend; prototype/Postman/video chưa làm |
+| EVD-01 | Thu thập bằng chứng kiểm thử hợp lệ và hoàn chỉnh ma trận truy vết. | Các hạng mục liên quan | Đã có backend và JS/DOM/ảnh prototype; Postman/video chưa làm; chưa hoàn thành v1.0 |
 
 ## Bổ sung sau nhập S1–S12 — 08/10/2026 (lịch sử lúc còn draft)
 
@@ -57,3 +57,11 @@ Các mục chưa triển khai ở phần lịch sử 08/10 và 10/10 không còn
 ### Bước 1 — ổn định Python và clean-start Windows, 12/10/2026
 
 Hoàn tất phần môi trường: Python 3.12.10 chính thức cài theo người dùng ngoài Temp; giữ `.venv-backup-20261012-162259` và tạo `.venv` mới. Repo gốc và `.clean-start-20261012-162259` đều `pip check` PASS, pytest 181/181 PASS. Clean-start dùng source hiện tại gồm file chưa commit, database mới, Uvicorn riêng; HTTP docs/OpenAPI, luồng Closed và quyền riêng tư Customer đạt. SHA-256 fixture 83 ca và mọi evidence cũ giữ nguyên. [Báo cáo bước 1](tests/evidence/step1-windows-20261012-162259-report.md) ghi lệnh, kết quả, giới hạn và danh sách file riêng. Chưa làm prototype/Postman/video/deploy; chưa commit/push và chưa hoàn thành v1.0.
+
+### Prototype — D-44, 12/10/2026
+
+Đã dựng prototype độc lập theo spec: bốn view, sáu nhóm DEMO và biến thể, controller/SLA/M-01…07, clock đứng yên, schema storage/reset. Đã chạy JavaScript trong Edge headless với 83 fixture gốc và kiểm tra controller/DOM/sáu nhóm demo: 106 PASS / 0 FAIL; có ảnh trước/sau và mobile/keyboard/subpath/network. [Báo cáo thực và giới hạn](tests/evidence/prototype-report-20261012.md), [cách mở](prototype/README.md). Chờ chủ dự án xem giao diện; chưa commit/push/deploy Pages, Postman hoặc video. Không chạy lại backend 181 test vì backend/dependencies không đổi; fixture 83 giữ nguyên. Các đoạn “prototype chưa làm” phía trên là lịch sử. Chưa xác nhận v1.0 hoàn thành.
+
+### Prototype / Pages — D-46, 13/10/2026
+
+Chủ dự án đã phê duyệt yêu cầu/kịch bản, UX và chấp nhận kết quả/ảnh kiểm thử tự động; cho phép commit/push main thường và deploy Pages. Không yêu cầu thao tác lại tất cả kịch bản; không ghi chủ dự án tự chạy công cụ. UX đã đủ phạm vi D-45. Kiểm thử mới sau sửa footer nguồn: 110 PASS / 0 FAIL; 83 fixture/backend/dependencies giữ nguyên, backend không chạy lại. Workflow chỉ đóng gói runtime `prototype/` tại project subpath; trạng thái triển khai/public smoke và bằng chứng thực tại [báo cáo Pages](tests/evidence/pages-report-20261013.md). Các trạng thái chờ review/chưa deploy phía trên là lịch sử. Postman/video và README tổng thể để bước sau; toàn bộ v1.0 chưa hoàn thành.

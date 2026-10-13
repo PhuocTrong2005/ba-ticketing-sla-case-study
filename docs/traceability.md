@@ -114,3 +114,55 @@ BR-62…BR-64 được cụ thể hóa trong API/data contract; AC-01/14/27/29/3
 - FR-01…04 / NFR-01, AC-01…16 (phần luồng ngắn và riêng tư): HTTP thật Customer tạo → Agent nhận → Resolved có kết quả → Customer Closed; Customer không thấy SLA/cảnh báo/ghi chú và nội dung review/handling_plan đã tạo thực; endpoint reviews trả 404 cho Customer. Không suy luồng ngắn này phủ toàn bộ AC.
 - [Run record HTTP, môi trường, lệnh và manifest source](../tests/evidence/step1-windows-20261012-162259-run.json); [báo cáo/giới hạn và kiểm tra bảo toàn](../tests/evidence/step1-windows-20261012-162259-report.md). Fixture và bằng chứng Linux/Windows trước đó giữ nguyên byte.
 - AC-32/prototype, Postman, video, deploy chưa thực hiện trong bước này; không thay trạng thái planned của prototype hoặc kết luận hoàn thành v1.0.
+
+## Prototype — D-44, planned trước triển khai 12/10/2026
+
+| Ca UI | BR / AC | Kiểm chứng dự kiến | Trạng thái ban đầu |
+|---|---|---|---|
+| UI-01 | BR-17…26,38,39,46…48,59…61 / AC-17…22 | JS replay đối chiếu 83 fixture gốc và biên | planned |
+| UI-02 | BR-03…16,32,33,49,54,62,64 / AC-01…16,27,33,34 | Controller quyền/lỗi không mutate; DOM role/direct navigation | planned |
+| UI-03 | BR-08…24,52…58 / AC tương ứng | Sáu nhóm DEMO với thao tác thực | planned |
+| UI-04 | BR-40,41,49 / AC-32 | Browser desktop/mobile/keyboard, giây chỉ detail | planned |
+| UI-05 | BR-35,63 / AC-28…31 | M-01…M-07, kỳ/filter cùng dataset/clock | planned |
+| UI-06 | BR-02,06 / NFR-06 | Storage/reset/schema, subpath, network không API | planned |
+
+Không dùng một phiên browser để chứng minh SQLite atomicity hoặc race AC-08/09; dẫn [bằng chứng backend riêng](../tests/evidence/backend-test-report.md).
+
+## Prototype thực thi — 12/10/2026
+
+Các ca UI-01…UI-06 phía trên giữ trạng thái ban đầu planned để phân biệt kế hoạch với kết quả. Implementation: [engine](../prototype/sla.js), [controller](../prototype/domain.js), [reports](../prototype/reports.js), [seeds](../prototype/seeds.js), [storage](../prototype/storage.js), [shell/render](../prototype/app.js).
+
+- UI-01: [harness JavaScript thực](../tests/prototype/test.js) so 83 fixture verified, 1.494 trường top-level so sâu, đạt 83/83. Rejected attempts qua controller riêng. Không thay bằng checker/backend.
+- UI-02/UI-03/UI-05/UI-06: các ca controller/model và DOM sáu demo, quyền/direct navigation, report filter, storage/reload/reset đã thực thi; tổng suite 106 PASS / 0 FAIL. [Run record](../tests/evidence/prototype-20261012-105312.json), [báo cáo từng phần/giới hạn](../tests/evidence/prototype-report-20261012.md).
+- UI-04/AC-32: ảnh browser thật desktop/mobile, input labels, Tab/focus-visible, danh sách không countdown giây, không API và subpath có evidence. Đây là kiểm tra tự động/headless và rà một số ảnh, chờ chủ dự án review UX; chưa xác nhận cross-browser hoặc thiết bị vật lý.
+- Không gán demo PASS cho race/atomicity AC-08/09 hoặc database event_id; giữ liên kết backend riêng. Chưa commit/push/deploy Pages, Postman/video, chưa xác nhận v1.0 hoàn thành. Fixture và backend giữ nguyên.
+
+## UX prototype — D-45, thực thi 13/10/2026
+
+Phạm vi trình bày/hướng dẫn/điều hướng theo [spec mục 9](05-prototype/prototype-spec.md#9-ux-đã-duyệt--13102026), không thêm BR. [Hướng dẫn theo vai trò](../prototype/guidance.js) chỉ tạo text; domain/SLA/reports/seeds/storage giữ nguyên byte so baseline đầu nhiệm vụ.
+
+| Ca bổ sung | Yêu cầu / truy vết | Kiểm tra thực |
+|---|---|---|
+| UX-01 | D-45 controls; AC-32, BR-02/06 | Thu gọn/mở không mutate storage; summary danh tính/nhóm/UTC+7; render giữ trạng thái thu gọn |
+| UX-02 | D-45 sáu nhóm hướng dẫn; AC-32, BR-49/62 | Customer/Agent/Manager từng nhóm, Customer các biến thể không có hướng dẫn nội bộ; không tự event/clock hoặc gắn kết quả hoàn thành |
+| UX-03 | D-45 nhãn/navigation; AC-28…32, BR-39/40/63 | Vi phạm sticky cùng Tạm dừng, nhãn báo cáo/N/M-06/M-07; bốn liên kết focus heading giữ filter/source; tỷ lệ có mẫu số từ thao tác UI thật |
+| UX-04 | D-45 ảnh bàn giao; AC-01…16/24/32 | Agent có hai SLA/note/review chặn Resolved; Customer Resolved có hai quyết định, không block nội bộ |
+
+[Run record cuối](../tests/evidence/prototype-ux-20261012-235015.json): 110 PASS / 0 FAIL, gồm 106 ca cũ, 83 fixture/1.494 so sánh; giữ quyền/controller, storage, reports và sáu DEMO. Kiểm tra browser riêng đạt Tab/focus-visible, Enter/Space cho summary, Enter nhảy heading; Customer và Manager 390px không tràn trang, bảng Manager cuộn riêng. [Báo cáo và ảnh](../tests/evidence/prototype-ux-report-20261013.md) ghi phương pháp, audit và các lần chưa đạt; không dùng kết quả backend thay kiểm tra UI.
+
+Không chạy lại backend 181 test; backend/dependencies giữ nguyên. Chưa commit/push/deploy Pages, Postman/video; chưa xác nhận cross-browser, thiết bị vật lý hoặc chủ dự án duyệt UX cuối.
+
+[Audit bảo toàn/link/diff thực](../tests/evidence/prototype-ux-audit-20261012-235146.json): PASS; 157 evidence cũ nguyên byte, không có thay đổi protected ngoài phạm vi hoặc source hash mismatch, 88 link local hợp lệ, git diff --check exit 0.
+
+## Prototype / Pages — D-46, 13/10/2026
+
+Chủ dự án phê duyệt yêu cầu/kịch bản và UX; chấp nhận kết quả, ảnh bằng chứng từ kiểm thử tự động. Không ghi nhận chủ dự án tự thao tác mọi kịch bản hoặc chạy công cụ. Thay trạng thái chờ UX review ở các mốc lịch sử phía trên; không xác nhận toàn bộ v1.0.
+
+| Phạm vi | Thực thi / bằng chứng |
+|---|---|
+| UI-01…06, UX-01…04 / D-44…46 | Source sau sửa footer đã chạy suite 110 PASS / 0 FAIL; 83 fixture không đổi. [Run local](../tests/evidence/prototype-ux-20261013-002125.json). |
+| BR-02 / Pages runtime, độc lập API | [Workflow](../.github/workflows/pages.yml) chỉ upload 9 file runtime và `.nojekyll`; project subpath, Pages origin/localStorage/network được kiểm tra riêng. |
+| Public smoke / bốn view và quyền Customer | Kết quả URL thật/workflow/public smoke bổ sung trong [báo cáo Pages](../tests/evidence/pages-report-20261013.md). Sáu nhóm trên Pages chỉ smoke, không gán suite local thành suite Pages. |
+| Bảo toàn | Baseline giữ backend/dependencies/BR/codes/83 fixture và 228 evidence trước nhiệm vụ; audit cuối nằm trong báo cáo Pages. Không chạy lại backend do không đổi source/dependencies. |
+
+Postman/video chưa làm; không gán kiểm tra UI cho race/atomicity/database event_id hoặc bảo mật production.

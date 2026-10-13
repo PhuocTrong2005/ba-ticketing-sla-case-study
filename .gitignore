@@ -14,3 +14,8 @@ __pycache__/
 tests/evidence/step1-windows-*-python-install*.log
 tests/evidence/step1-windows-*-repo-venv.log
 tests/evidence/step1-windows-*-clean-venv.log
+
+# Browser diagnostics stay local; retain files without publishing raw logs.
+tests/evidence/prototype-*-edge.log
+tests/evidence/pages-public-smoke-*-edge.log
+_site/
