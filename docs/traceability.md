@@ -1,8 +1,14 @@
 # Traceability matrix
 
-## Hiện hành — portfolio 13/10/2026, D-48
+## Clean-start — D-49, 13/10/2026
 
-[Ma trận AC-01…34](ac-traceability.md) là điểm đọc hiện hành: mỗi AC có implementation, test/request cụ thể, evidence và giới hạn. Tách chức năng/quyền, đồng thời/dữ liệu, SLA, UI/báo cáo và tái lập; không gán toàn bộ AC PASS từ tổng suite. [Release checklist](release-checklist.md) giữ tiêu chí gốc/khoảng thiếu: video Chưa có, README chưa clean-start toàn bộ bằng checkout mới sau xuất bản.
+[Report mới](../tests/evidence/portfolio-clean-start-report-20261013.md), [commit/OS/commands/servers](../tests/evidence/portfolio-clean-start-20261013-run.json), [JUnit 181](../tests/evidence/portfolio-clean-start-20261013-junit.xml): clone trực tiếp origin/main `7c35b2c`, không copy venv/data/cache/config; install/check/pytest/backend/docs/OpenAPI đạt. Prototype static URL docs có 24 smoke check; [JS clone 110/0](../tests/evidence/prototype-ux-20261013-012403.json); [Newman clone](../tests/evidence/newman-20261013-012500-070211-run.json) 191 request/514 assertion/0 lỗi/exit 0.
+
+DOC-CS-01: [auditor lịch sử thất bại trước sửa tại `7c35b2c`](../tests/evidence/portfolio-clean-start-20261013-documentation-issue-before-fix.json), không là backend/UI bug. [Docs-only patch/recheck](../tests/evidence/portfolio-clean-start-20261013-doc-recheck.json) trên clone đạt 110/110, giữ auditor/assertion/fixture không đổi; prototype README hiện hành phân biệt runner tái lập và auditor lịch sử. [Clone lần 2](../tests/evidence/portfolio-clean-start-repeat-20261013.md) tái hiện lỗi hướng dẫn cũ và tách lỗi sandbox PyPI/%TEMP% khỏi backend. Run trỏ nhầm repo gốc được giữ và loại khỏi clean-start evidence. Không blanket PASS hướng dẫn commit cũ; chưa chạy trọn suite từ commit mới. [Checklist](release-checklist.md) ghi giới hạn và video còn thiếu.
+
+## Mốc xuất bản portfolio 13/10/2026, D-48
+
+[Ma trận AC-01…34](ac-traceability.md) có implementation, test/request/evidence/giới hạn, tách chức năng/quyền, đồng thời/dữ liệu, SLA, UI/báo cáo/tái lập; không blanket PASS. Tại mốc D-48 video và clean-start checkout mới còn thiếu; kết quả clean-start được bổ sung ở D-49 phía trên. [Release checklist](release-checklist.md) giữ video thiếu và phân biệt lỗi tài liệu commit cũ với bản sửa hiện hành.
 
 Đã đối chiếu nguồn: Windows 181 pytest/0 lỗi; JS local 110/0; Pages 74 smoke check; Newman 191 request/514 assertion/0 lỗi. [Evidence index](../tests/evidence/README.md), [audit xuất bản](../tests/evidence/portfolio-publication-report-20261013.md). Postman được chủ dự án chấp nhận; runner/Codex thực thi, không suy chủ dự án tự thao tác mọi ca. Không chạy lại suite khi source/collection/helper và hash khớp.
 

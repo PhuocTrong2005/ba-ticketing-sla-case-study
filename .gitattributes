@@ -27,3 +27,7 @@ tests/evidence/postman-* -text whitespace=blank-at-eol,blank-at-eof,space-before
 # Publication review evidence and tools retain their recorded bytes.
 tests/evidence/portfolio-* -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 tests/portfolio/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+
+# Keep failed pytest transcripts byte-for-byte, including traceback whitespace.
+tests/evidence/portfolio-clean-start-20261013b-junit.xml -text -whitespace
+tests/evidence/portfolio-clean-start-20261013b-pytest.txt -text -whitespace

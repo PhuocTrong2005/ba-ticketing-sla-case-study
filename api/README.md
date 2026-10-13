@@ -1,5 +1,7 @@
 # Postman — API mô phỏng
 
+[Clean-start clone origin/main tại `7c35b2c`](../tests/evidence/portfolio-clean-start-report-20261013.md): setup tooling và runner nguyên bản chạy bằng venv/Node/cache/database mới; **191 request/514 assertion, 0 lỗi, exit 0**. Không cần tooling/config của repo tác giả hoặc workaround ngoài hướng dẫn Postman. [Lần clone thứ hai](../tests/evidence/portfolio-clean-start-repeat-20261013.md) tái hiện kết quả; DOC-CS-01 thuộc hướng dẫn auditor prototype ở commit cũ, không thuộc collection/backend.
+
 Hiện hành D-48, 13/10/2026: chủ dự án chấp nhận kết quả Newman 191 request/514 assertion đã báo và cho phép commit/push Postman cùng tài liệu portfolio. “Chưa commit/push” trong phạm vi D-47 bên dưới là lịch sử. Source/collection/helper không đổi sau run cuối, không chạy lại để lặp kết quả; [audit xuất bản](../tests/evidence/portfolio-publication-report-20261013.md), [release checklist](../docs/release-checklist.md) ghi trạng thái/giới hạn. Không suy chủ dự án tự chạy mọi request hoặc hoàn thành v1.0.
 
 Collection v2.1 và environment trong thư mục này phục vụ kiểm tra HTTP thật theo [API contract](../docs/04-data-api/api-contract.md), [OpenAPI](openapi.json), BR/codes hiện hành. Customer 1/2, Agent 3/4/5, Manager 6 dùng `X-Demo-User-Id`; đây không phải đăng nhập production. Client chỉ gửi payload được contract cho phép. Kỳ/as_of của báo cáo là query đọc, không đặt timestamp sự kiện hay điều khiển clock backend.

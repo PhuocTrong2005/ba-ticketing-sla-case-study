@@ -1,0 +1,9 @@
+CDP connected
+CDP domains enabled
+Harness navigated
+{
+  "passed": 110,
+  "failed": 0,
+  "failures": []
+}
+Evidence: C:\Users\ASUS\ba-ticketing-sla-case-study\.clean-start-portfolio-20261013b\tests\evidence\prototype-ux-20261013-022543.json

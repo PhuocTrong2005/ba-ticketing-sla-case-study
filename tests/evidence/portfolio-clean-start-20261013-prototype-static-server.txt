@@ -1,0 +1,15 @@
+127.0.0.1 - - [13/Oct/2026 08:23:57] "GET /prototype/ HTTP/1.1" 200 -
+127.0.0.1 - - [13/Oct/2026 08:23:58] "GET /prototype/ HTTP/1.1" 200 -
+127.0.0.1 - - [13/Oct/2026 08:23:58] "GET /prototype/styles.css HTTP/1.1" 200 -
+127.0.0.1 - - [13/Oct/2026 08:23:58] "GET /prototype/app.js HTTP/1.1" 200 -
+127.0.0.1 - - [13/Oct/2026 08:23:58] "GET /prototype/guidance.js HTTP/1.1" 200 -
+127.0.0.1 - - [13/Oct/2026 08:23:58] "GET /prototype/domain.js HTTP/1.1" 200 -
+127.0.0.1 - - [13/Oct/2026 08:23:58] "GET /prototype/sla.js HTTP/1.1" 200 -
+127.0.0.1 - - [13/Oct/2026 08:23:58] "GET /prototype/seeds.js HTTP/1.1" 200 -
+127.0.0.1 - - [13/Oct/2026 08:23:58] "GET /prototype/reports.js HTTP/1.1" 200 -
+127.0.0.1 - - [13/Oct/2026 08:23:58] "GET /prototype/storage.js HTTP/1.1" 200 -
+127.0.0.1 - - [13/Oct/2026 08:23:59] code 404, message File not found
+127.0.0.1 - - [13/Oct/2026 08:23:59] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [13/Oct/2026 08:23:59] code 404, message File not found
+127.0.0.1 - - [13/Oct/2026 08:23:59] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [13/Oct/2026 08:24:00] "GET /prototype/ HTTP/1.1" 304 -

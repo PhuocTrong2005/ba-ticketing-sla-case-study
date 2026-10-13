@@ -1,0 +1,25 @@
+{
+  "checked_utc": "2026-10-13T02:31:17.682508+00:00",
+  "local_head": "7c35b2c0b5f7c3798844d024ea9bcaefb30f918f",
+  "origin_main": "7c35b2c0b5f7c3798844d024ea9bcaefb30f918f",
+  "same_commit": true,
+  "diff_check_exit": 0,
+  "staged_files": [],
+  "working_tree_modified": [
+    "README.md",
+    "TASKS.md",
+    "api/README.md",
+    "docs/ac-traceability.md",
+    "docs/backend-running.md",
+    "docs/decision-log.md",
+    "docs/release-checklist.md",
+    "docs/traceability.md",
+    "prototype/README.md"
+  ],
+  "run_project_untracked": true,
+  "new_evidence_untracked_count": 144,
+  "new_helper_untracked_count": 4,
+  "commit_created": false,
+  "push_done": false,
+  "v1_tag_created": false
+}

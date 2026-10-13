@@ -1,0 +1,21 @@
+{
+  "exact_start_time_not_captured_for_manual_retries": true,
+  "records": [
+    {
+      "command": ".venv\\Scripts\\python.exe -m pip install -r requirements.txt",
+      "cwd": ".clean-start-portfolio-20261013b",
+      "exit_code": 0,
+      "finished_utc_from_log_mtime": "2026-10-13T02:24:28.023123+00:00",
+      "stdout_stderr": "tests/evidence/portfolio-clean-start-20261013b-pip-install-network-retry.txt",
+      "invocation": "require_escalated: normal Windows network and Temp access after sandbox denial"
+    },
+    {
+      "command": ".venv\\Scripts\\python.exe -m pytest --junitxml=..\\tests\\evidence\\portfolio-clean-start-20261013b-junit-retry.xml",
+      "cwd": ".clean-start-portfolio-20261013b",
+      "exit_code": 0,
+      "finished_utc_from_log_mtime": "2026-10-13T02:25:27.501270+00:00",
+      "stdout_stderr": "tests/evidence/portfolio-clean-start-20261013b-pytest-retry.txt",
+      "invocation": "require_escalated: normal Windows network and Temp access after sandbox denial"
+    }
+  ]
+}

@@ -55,6 +55,8 @@ Python 3.12; từ root repo, sau khi tạo `.venv` mới nếu chưa có:
 
 Mở `http://127.0.0.1:8000/docs`. Danh tính demo: Customer 1/2, Agent 3/4/5, Manager 6. [Chi tiết môi trường/SQLite/clean-start](docs/backend-running.md); [Newman với DB thử riêng](api/README.md).
 
+[Clean-start từ clone origin/main tại `7c35b2c`](tests/evidence/portfolio-clean-start-report-20261013.md): backend/prototype/Newman chạy được bằng môi trường mới. [DOC-CS-01](tests/evidence/portfolio-clean-start-repeat-20261013.md) là lỗi hướng dẫn auditor UX lịch sử ở commit đó; hướng dẫn prototype hiện hành đã bỏ bước auditor cho clone sạch. Bản sửa docs được thử riêng trên clone, chưa chạy lại toàn bộ nghiệm thu từ commit xuất bản mới.
+
 ## Kết quả đã đối chiếu
 
 | Bộ kiểm tra | Kết quả nguồn | Đơn vị đếm / bằng chứng |

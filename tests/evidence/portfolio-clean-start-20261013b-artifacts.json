@@ -1,0 +1,145 @@
+{
+  "direction": "fresh checkout to original workspace for evidence only",
+  "files": [
+    {
+      "file": "tests/evidence/newman-20261013-022639-428089-run.json",
+      "sha256": "9bb885516cf8ab106fb3e4031f5f162cb83f63ccaa810a51a9cd486022a355af",
+      "bytes": 5741
+    },
+    {
+      "file": "tests/evidence/newman-20261013-022639-428089-stdout.txt",
+      "sha256": "e991671ff671e76ccd2e913ff21b8fafdc3d5114aa6755429181ce8d61372710",
+      "bytes": 45503
+    },
+    {
+      "file": "tests/evidence/newman-20261013-022639-428089.json",
+      "sha256": "4c43feb7393ab55a6df61eabb75f54b3e2fe09f2f01e3847b640cab964f9c286",
+      "bytes": 5950063
+    },
+    {
+      "file": "tests/evidence/newman-20261013-022639-428089.xml",
+      "sha256": "be889845f667e27ee671f21e346b4b269d3f8e59058a9f3956c40311e6e277d4",
+      "bytes": 129664
+    },
+    {
+      "file": "tests/evidence/postman-tools-20261013-022639.json",
+      "sha256": "df49dc57f104e2286c10eca9a9d43d014022c0b9a38e6738e41fef71a2c36e02",
+      "bytes": 476
+    },
+    {
+      "file": "tests/evidence/prototype-ux-20261013-022543-DEMO-01-after.png",
+      "sha256": "a4337930f10c08dfbbda0b867f941eab0b713439ff01a3f506241b170bfb0cce",
+      "bytes": 95821
+    },
+    {
+      "file": "tests/evidence/prototype-ux-20261013-022543-DEMO-01-before.png",
+      "sha256": "7e5db8ebc68ac834b9498905723d41c0c75181c1a65e1efdb4731c74036407f6",
+      "bytes": 95051
+    },
+    {
+      "file": "tests/evidence/prototype-ux-20261013-022543-DEMO-02-after.png",
+      "sha256": "e65ef1d02c19586c7a2601707d24a0cec98bb7f49013e420dffcd276840c6f81",
+      "bytes": 146411
+    },
+    {
+      "file": "tests/evidence/prototype-ux-20261013-022543-DEMO-02-before.png",
+      "sha256": "262612d35d2608214748e0bdea32e1daf22a88f142f586941ce036019317faa7",
+      "bytes": 103755
+    },
+    {
+      "file": "tests/evidence/prototype-ux-20261013-022543-DEMO-03-after.png",
+      "sha256": "7708ec9274bf616205a4e417ccaba6f0c272e3062ae11c71d5b03736a306d768",
+      "bytes": 142677
+    },
+    {
+      "file": "tests/evidence/prototype-ux-20261013-022543-DEMO-03-before.png",
+      "sha256": "5c75580cae7909b855362039d8447ee831cdb773e9925e27198645344d964211",
+      "bytes": 100646
+    },
+    {
+      "file": "tests/evidence/prototype-ux-20261013-022543-DEMO-04-after.png",
+      "sha256": "5cf49ba81d176f56e6cac002d898b2fdd1f6e5625dda58e782279d0a445a943b",
+      "bytes": 129025
+    },
+    {
+      "file": "tests/evidence/prototype-ux-20261013-022543-DEMO-04-before.png",
+      "sha256": "e4e7aa37fb4e4acda9295ccf003c6780e9f3fc2f550c924076d0a4642453160d",
+      "bytes": 102668
+    },
+    {
+      "file": "tests/evidence/prototype-ux-20261013-022543-DEMO-05-after.png",
+      "sha256": "fc4488f849f6bf5208a96e6fe8ae07abd5f88331d00bca3471f5cffdb225c8a1",
+      "bytes": 163177
+    },
+    {
+      "file": "tests/evidence/prototype-ux-20261013-022543-DEMO-05-before.png",
+      "sha256": "ddc5bd5d425b0d73d6a5a814ee7e7400cad1545b66535705f8f5a9550effc1a5",
+      "bytes": 156072
+    },
+    {
+      "file": "tests/evidence/prototype-ux-20261013-022543-DEMO-06-after.png",
+      "sha256": "e4bd4e175066c0caeed72ca5fb5d77923357caa797cc7a4d9da99b1f4a5daa2a",
+      "bytes": 229432
+    },
+    {
+      "file": "tests/evidence/prototype-ux-20261013-022543-DEMO-06-before.png",
+      "sha256": "97573c086c2e6f37c6a042ab8c3eba2d6248fd0fc26e0b1ce97bb21ef33d8b0c",
+      "bytes": 122868
+    },
+    {
+      "file": "tests/evidence/prototype-ux-20261013-022543-customer-mobile.png",
+      "sha256": "190a2dde152474d65a1431428a1136b5768024638e95d9bd4926ce8e595011ff",
+      "bytes": 92049
+    },
+    {
+      "file": "tests/evidence/prototype-ux-20261013-022543-manager-desktop.png",
+      "sha256": "75e342f30821d8022bd24333f2664ce51f7cfdffb893f1fa98e42272f771a69e",
+      "bytes": 232120
+    },
+    {
+      "file": "tests/evidence/prototype-ux-20261013-022543-review-detail.png",
+      "sha256": "f0a844994edebb1c2a6c716c004a6a98599fd36f22520d4fc3ca1241f7e0ae6b",
+      "bytes": 183152
+    },
+    {
+      "file": "tests/evidence/prototype-ux-20261013-022543-ux-agent-detail.png",
+      "sha256": "49f1b55e7792774fe989f7b49dbb08d88e399a6b678e6a3b19b1c6be935cd19c",
+      "bytes": 193787
+    },
+    {
+      "file": "tests/evidence/prototype-ux-20261013-022543-ux-controls-collapsed.png",
+      "sha256": "75492c4ff22f5d89ced4b3b930e9ab6af2058f6a272e5544ec70e1d7457750bf",
+      "bytes": 163268
+    },
+    {
+      "file": "tests/evidence/prototype-ux-20261013-022543-ux-customer-resolved.png",
+      "sha256": "190b1935273a5d94d780e363e22268bcf56e72f15fe811ce0262ccc5ef6fe034",
+      "bytes": 106301
+    },
+    {
+      "file": "tests/evidence/prototype-ux-20261013-022543-ux-manager-dashboard.png",
+      "sha256": "a6b25b5aabc98092fb273e0405cfff8986a51582405b15c3f213fe2004d33929",
+      "bytes": 239543
+    },
+    {
+      "file": "tests/evidence/prototype-ux-20261013-022543-ux-manager-review-detail.png",
+      "sha256": "4a3809139fbf2fe7b57a3d50763d0a5f35fcd1abb5d6d4af6bf3de0fec4a9ca2",
+      "bytes": 185058
+    },
+    {
+      "file": "tests/evidence/prototype-ux-20261013-022543.json",
+      "sha256": "d8fcd8053579c2bf58bacdc516e7cfa6eacd97481c125d7420fa8b51c1dff98a",
+      "bytes": 20087
+    },
+    {
+      "file": "tests/evidence/prototype-ux-audit-20261013-022602.json",
+      "sha256": "919f70b4152d5a713c003d45aad036d5ec43005b9dd05acb21581820f5cab587",
+      "bytes": 165166
+    },
+    {
+      "file": "tests/evidence/portfolio-clean-start-20261013b-junit.xml",
+      "sha256": "f83291c1ff9446da83de477ba97d64ffae2501e1affe39bf79ec0df1bde951a3",
+      "bytes": 590397
+    }
+  ]
+}

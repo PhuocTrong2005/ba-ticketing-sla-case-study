@@ -1,0 +1,55 @@
+{
+  "passed": true,
+  "exit_code": 0,
+  "orchestration_error": null,
+  "stats": {
+    "iterations": {
+      "total": 1,
+      "pending": 0,
+      "failed": 0
+    },
+    "items": {
+      "total": 191,
+      "pending": 0,
+      "failed": 0
+    },
+    "scripts": {
+      "total": 383,
+      "pending": 0,
+      "failed": 0
+    },
+    "prerequests": {
+      "total": 191,
+      "pending": 0,
+      "failed": 0
+    },
+    "requests": {
+      "total": 191,
+      "pending": 0,
+      "failed": 0
+    },
+    "tests": {
+      "total": 191,
+      "pending": 0,
+      "failed": 0
+    },
+    "assertions": {
+      "total": 514,
+      "pending": 0,
+      "failed": 0
+    },
+    "testScripts": {
+      "total": 191,
+      "pending": 0,
+      "failed": 0
+    },
+    "prerequestScripts": {
+      "total": 192,
+      "pending": 0,
+      "failed": 0
+    }
+  },
+  "owned_server_stopped": true,
+  "database": ".postman-runs/20261013-022639-428089/ticketing.sqlite3"
+}
+Evidence prefix: newman-20261013-022639-428089

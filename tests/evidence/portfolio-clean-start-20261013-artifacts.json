@@ -1,0 +1,142 @@
+[
+  {
+    "file": "tests/evidence/newman-20261013-012500-070211-run.json",
+    "sha256": "32e6455723c111dd88b6ca6c774f2892e77b54daad0af32ac5208fe3de54021e",
+    "copied_from": "fresh checkout generated output"
+  },
+  {
+    "file": "tests/evidence/newman-20261013-012500-070211-stdout.txt",
+    "sha256": "bed501e5a67d57a6d72feaa1ef9b0e1683653056de52ca19740d9d4fd0cef139",
+    "copied_from": "fresh checkout generated output"
+  },
+  {
+    "file": "tests/evidence/newman-20261013-012500-070211.json",
+    "sha256": "a1105c9be2389a29d79bf84d6bff276e0ba9aa15f4531e6391a2ada3c2933656",
+    "copied_from": "fresh checkout generated output"
+  },
+  {
+    "file": "tests/evidence/newman-20261013-012500-070211.xml",
+    "sha256": "19e01a876bea08d2e45af3b29a95cf97b88eb3c5c66f12c1961f6907eb151ccf",
+    "copied_from": "fresh checkout generated output"
+  },
+  {
+    "file": "tests/evidence/portfolio-clean-start-20261013-junit.xml",
+    "sha256": "545508aa1585e8a1d57e29ff400c8c09af2c073a60336723ed805c54688cd93c",
+    "copied_from": "fresh checkout generated output"
+  },
+  {
+    "file": "tests/evidence/postman-tools-20261013-012459.json",
+    "sha256": "df49dc57f104e2286c10eca9a9d43d014022c0b9a38e6738e41fef71a2c36e02",
+    "copied_from": "fresh checkout generated output"
+  },
+  {
+    "file": "tests/evidence/prototype-ux-20261013-012403-customer-mobile.png",
+    "sha256": "190a2dde152474d65a1431428a1136b5768024638e95d9bd4926ce8e595011ff",
+    "copied_from": "fresh checkout generated output"
+  },
+  {
+    "file": "tests/evidence/prototype-ux-20261013-012403-DEMO-01-after.png",
+    "sha256": "a4337930f10c08dfbbda0b867f941eab0b713439ff01a3f506241b170bfb0cce",
+    "copied_from": "fresh checkout generated output"
+  },
+  {
+    "file": "tests/evidence/prototype-ux-20261013-012403-DEMO-01-before.png",
+    "sha256": "7e5db8ebc68ac834b9498905723d41c0c75181c1a65e1efdb4731c74036407f6",
+    "copied_from": "fresh checkout generated output"
+  },
+  {
+    "file": "tests/evidence/prototype-ux-20261013-012403-DEMO-02-after.png",
+    "sha256": "05e3a0e8293d49107a7d88eb397056ead4f5b86926f2f8d749bba8750780dc61",
+    "copied_from": "fresh checkout generated output"
+  },
+  {
+    "file": "tests/evidence/prototype-ux-20261013-012403-DEMO-02-before.png",
+    "sha256": "262612d35d2608214748e0bdea32e1daf22a88f142f586941ce036019317faa7",
+    "copied_from": "fresh checkout generated output"
+  },
+  {
+    "file": "tests/evidence/prototype-ux-20261013-012403-DEMO-03-after.png",
+    "sha256": "7708ec9274bf616205a4e417ccaba6f0c272e3062ae11c71d5b03736a306d768",
+    "copied_from": "fresh checkout generated output"
+  },
+  {
+    "file": "tests/evidence/prototype-ux-20261013-012403-DEMO-03-before.png",
+    "sha256": "5c75580cae7909b855362039d8447ee831cdb773e9925e27198645344d964211",
+    "copied_from": "fresh checkout generated output"
+  },
+  {
+    "file": "tests/evidence/prototype-ux-20261013-012403-DEMO-04-after.png",
+    "sha256": "5cf49ba81d176f56e6cac002d898b2fdd1f6e5625dda58e782279d0a445a943b",
+    "copied_from": "fresh checkout generated output"
+  },
+  {
+    "file": "tests/evidence/prototype-ux-20261013-012403-DEMO-04-before.png",
+    "sha256": "e4e7aa37fb4e4acda9295ccf003c6780e9f3fc2f550c924076d0a4642453160d",
+    "copied_from": "fresh checkout generated output"
+  },
+  {
+    "file": "tests/evidence/prototype-ux-20261013-012403-DEMO-05-after.png",
+    "sha256": "fc4488f849f6bf5208a96e6fe8ae07abd5f88331d00bca3471f5cffdb225c8a1",
+    "copied_from": "fresh checkout generated output"
+  },
+  {
+    "file": "tests/evidence/prototype-ux-20261013-012403-DEMO-05-before.png",
+    "sha256": "ddc5bd5d425b0d73d6a5a814ee7e7400cad1545b66535705f8f5a9550effc1a5",
+    "copied_from": "fresh checkout generated output"
+  },
+  {
+    "file": "tests/evidence/prototype-ux-20261013-012403-DEMO-06-after.png",
+    "sha256": "e6a1e961ebbe0f6e99ad399b2434f7f1fa5ca4cc21d615680a731cb8a9551f38",
+    "copied_from": "fresh checkout generated output"
+  },
+  {
+    "file": "tests/evidence/prototype-ux-20261013-012403-DEMO-06-before.png",
+    "sha256": "97573c086c2e6f37c6a042ab8c3eba2d6248fd0fc26e0b1ce97bb21ef33d8b0c",
+    "copied_from": "fresh checkout generated output"
+  },
+  {
+    "file": "tests/evidence/prototype-ux-20261013-012403-manager-desktop.png",
+    "sha256": "75e342f30821d8022bd24333f2664ce51f7cfdffb893f1fa98e42272f771a69e",
+    "copied_from": "fresh checkout generated output"
+  },
+  {
+    "file": "tests/evidence/prototype-ux-20261013-012403-review-detail.png",
+    "sha256": "f0a844994edebb1c2a6c716c004a6a98599fd36f22520d4fc3ca1241f7e0ae6b",
+    "copied_from": "fresh checkout generated output"
+  },
+  {
+    "file": "tests/evidence/prototype-ux-20261013-012403-ux-agent-detail.png",
+    "sha256": "49f1b55e7792774fe989f7b49dbb08d88e399a6b678e6a3b19b1c6be935cd19c",
+    "copied_from": "fresh checkout generated output"
+  },
+  {
+    "file": "tests/evidence/prototype-ux-20261013-012403-ux-controls-collapsed.png",
+    "sha256": "75492c4ff22f5d89ced4b3b930e9ab6af2058f6a272e5544ec70e1d7457750bf",
+    "copied_from": "fresh checkout generated output"
+  },
+  {
+    "file": "tests/evidence/prototype-ux-20261013-012403-ux-customer-resolved.png",
+    "sha256": "190b1935273a5d94d780e363e22268bcf56e72f15fe811ce0262ccc5ef6fe034",
+    "copied_from": "fresh checkout generated output"
+  },
+  {
+    "file": "tests/evidence/prototype-ux-20261013-012403-ux-manager-dashboard.png",
+    "sha256": "a6b25b5aabc98092fb273e0405cfff8986a51582405b15c3f213fe2004d33929",
+    "copied_from": "fresh checkout generated output"
+  },
+  {
+    "file": "tests/evidence/prototype-ux-20261013-012403-ux-manager-review-detail.png",
+    "sha256": "4a3809139fbf2fe7b57a3d50763d0a5f35fcd1abb5d6d4af6bf3de0fec4a9ca2",
+    "copied_from": "fresh checkout generated output"
+  },
+  {
+    "file": "tests/evidence/prototype-ux-20261013-012403.json",
+    "sha256": "6f6edd26394847bb6390df457d5b8926702a6d2b4822d23cacd685e90d9125ca",
+    "copied_from": "fresh checkout generated output"
+  },
+  {
+    "file": "tests/evidence/prototype-ux-audit-20261013-012422.json",
+    "sha256": "938c4db5d4fdf645e76746e5c3887db139a576a47a5b0d5ef428018b7089747e",
+    "copied_from": "fresh checkout generated output"
+  }
+]

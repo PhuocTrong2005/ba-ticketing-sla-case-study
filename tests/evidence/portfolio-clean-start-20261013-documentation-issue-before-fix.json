@@ -1,0 +1,17 @@
+{
+  "id": "DOC-CS-01",
+  "category": "documentation / historical auditor usage",
+  "checked_commit": "7c35b2c0b5f7c3798844d024ea9bcaefb30f918f",
+  "published_instruction": "prototype/README.md instructs audit_ux.py after runner",
+  "command_exit_code": 1,
+  "runtime_suite_passed": true,
+  "runtime_source_hash_mismatches": [],
+  "historical_missing_or_changed_paths": 1843,
+  "actual_audit": "tests/evidence/prototype-ux-audit-20261013-012422.json",
+  "failed_stdout": "tests/evidence/portfolio-clean-start-20261013-prototype-audit-as-published.txt",
+  "fresh_tracked_source_changed_before_fix": [],
+  "classification_reason": "Historical baseline requires ignored backups/old clean copy/local Run Project.txt and old documentation; these cannot be present in fresh clone without violating isolation. Runtime suite passed; no implementation defect observed.",
+  "status": "captured before correction",
+  "published_workflow_all_steps_passed": false,
+  "required_fix": "Explain historical audit scope and use fresh source/run/link preservation review; retain historical auditor/assertions/output unchanged."
+}

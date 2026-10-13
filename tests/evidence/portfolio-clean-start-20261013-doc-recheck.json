@@ -1,0 +1,96 @@
+{
+  "commit": "7c35b2c0b5f7c3798844d024ea9bcaefb30f918f",
+  "cwd": ".clean-start-portfolio-20261013",
+  "command": ".\\.venv\\Scripts\\python.exe tests/prototype/run_browser.py",
+  "run_record": "tests/evidence/prototype-ux-20261013-012913.json",
+  "phase": "documentation-only correction applied to clone then documented runner rerun",
+  "passed": true,
+  "artifacts": [
+    {
+      "file": "tests/evidence/prototype-ux-20261013-012913-customer-mobile.png",
+      "sha256": "f99978cc030f3deaddbc638d95ef2840342fb9d53828b1191b25d15267e9eb67"
+    },
+    {
+      "file": "tests/evidence/prototype-ux-20261013-012913-DEMO-01-after.png",
+      "sha256": "3355718e165a7147931a1e0eeaf8cb39e24a72a7abb8b9d86a17b21a06c94c7b"
+    },
+    {
+      "file": "tests/evidence/prototype-ux-20261013-012913-DEMO-01-before.png",
+      "sha256": "9e1c0380c9f1d63b574610475bcdb3e1bc078c99b1f7d523c4942863b720b180"
+    },
+    {
+      "file": "tests/evidence/prototype-ux-20261013-012913-DEMO-02-after.png",
+      "sha256": "46802827a7b69dade047b26a86d0df58273c1bbb1cd4c2738fa1e53675a24b6c"
+    },
+    {
+      "file": "tests/evidence/prototype-ux-20261013-012913-DEMO-02-before.png",
+      "sha256": "fc2eefd9723576e2801ee1a1447122337d54b2def21637f792ede82cbcd39277"
+    },
+    {
+      "file": "tests/evidence/prototype-ux-20261013-012913-DEMO-03-after.png",
+      "sha256": "5069a9f80f06322ddff5187106039ed7833055906c315abbe537c190ccb8472a"
+    },
+    {
+      "file": "tests/evidence/prototype-ux-20261013-012913-DEMO-03-before.png",
+      "sha256": "e84a3eb226ed20461326f299b07ec6c76b7540482d7e967179837de77fd729d8"
+    },
+    {
+      "file": "tests/evidence/prototype-ux-20261013-012913-DEMO-04-after.png",
+      "sha256": "d5d41d6a07a5c532653ae969a5d1021320fcd751f35216c5fba6e82cd1356421"
+    },
+    {
+      "file": "tests/evidence/prototype-ux-20261013-012913-DEMO-04-before.png",
+      "sha256": "6f6ec419d34462174140154445858fdceb5a04539f61d3f447a5d8635c6d1a3e"
+    },
+    {
+      "file": "tests/evidence/prototype-ux-20261013-012913-DEMO-05-after.png",
+      "sha256": "6fb8a4c9fda4af2bdeeec10e214a2757769fc2157fe4bacf8ef2dffc00b75bf6"
+    },
+    {
+      "file": "tests/evidence/prototype-ux-20261013-012913-DEMO-05-before.png",
+      "sha256": "2631139b2ffc53de7972a6604ea6ead59fdca45247effdebc4f8c8db0efdcee3"
+    },
+    {
+      "file": "tests/evidence/prototype-ux-20261013-012913-DEMO-06-after.png",
+      "sha256": "cd04ef81a7cfcf6263e1d143aebe38ef090ba39335ffa63a4f4eaae41f2c7cb7"
+    },
+    {
+      "file": "tests/evidence/prototype-ux-20261013-012913-DEMO-06-before.png",
+      "sha256": "bbf20aa48ba3b066bf408d83bd8d53324bd8e12a5915be061135b650bba69934"
+    },
+    {
+      "file": "tests/evidence/prototype-ux-20261013-012913-manager-desktop.png",
+      "sha256": "f44596970dd17af0646024c6d2c7cff15fd330db4b27371dbd67208bf85082dd"
+    },
+    {
+      "file": "tests/evidence/prototype-ux-20261013-012913-review-detail.png",
+      "sha256": "fefd88da25d8f2b852d7af988e9c6b3bc72ec35174d23020dd866f48c9063b12"
+    },
+    {
+      "file": "tests/evidence/prototype-ux-20261013-012913-ux-agent-detail.png",
+      "sha256": "8a2c11708c19870e7bf6f99d09f9c7f32112efd7888d037d06308b21156dfb2c"
+    },
+    {
+      "file": "tests/evidence/prototype-ux-20261013-012913-ux-controls-collapsed.png",
+      "sha256": "bd6889b4db008b45c5da62785ffd3fb6f47e3e340244b2958538b99b81d435b1"
+    },
+    {
+      "file": "tests/evidence/prototype-ux-20261013-012913-ux-customer-resolved.png",
+      "sha256": "148ce6c987156b331f5fd8d53969e46a20116855a24542170c7cbf7e1c49efa0"
+    },
+    {
+      "file": "tests/evidence/prototype-ux-20261013-012913-ux-manager-dashboard.png",
+      "sha256": "61d3fcb5b079a000591f2dfe4d24d3adda1c3cacf20c867afdc6a9b1f0123a3b"
+    },
+    {
+      "file": "tests/evidence/prototype-ux-20261013-012913-ux-manager-review-detail.png",
+      "sha256": "a8b95b746d1bb737b0b5aadc2418fbb46b5e35db88db6e261f3befb25dab8ed3"
+    },
+    {
+      "file": "tests/evidence/prototype-ux-20261013-012913.json",
+      "sha256": "f4f4ee702629e6803e4da3fbe632b87de379a1222c52ef2a63c8e399ec6ce5b4"
+    }
+  ],
+  "excluded_original_repo_run": "tests/evidence/prototype-ux-20261013-012827.json",
+  "exclusion_reason": "Orchestration used fresh Python with relative script in original cwd; preserved but not counted as clean-checkout acceptance."
+}

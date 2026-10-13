@@ -1,0 +1,81 @@
+{
+  "checked_commit": "7c35b2c0b5f7c3798844d024ea9bcaefb30f918f",
+  "clone": ".clean-start-portfolio-20261013",
+  "tool_versions": {
+    "python": "Python 3.12.10",
+    "pip": "pip 25.0.1 from <fresh-checkout>\\.venv\\Lib\\site-packages\\pip (python 3.12)",
+    "node": "v22.23.3",
+    "newman": "6.2.1",
+    "os": "Windows-11-10.0.26300-SP0"
+  },
+  "original_protected_files": 395,
+  "original_changes_allowed": [
+    "README.md",
+    "TASKS.md",
+    "api/README.md",
+    "docs/ac-traceability.md",
+    "docs/backend-running.md",
+    "docs/decision-log.md",
+    "docs/release-checklist.md",
+    "docs/traceability.md",
+    "prototype/README.md"
+  ],
+  "original_unexpected_changes": [],
+  "original_database_changes": [],
+  "run_project_preserved": true,
+  "old_evidence_preserved": 287,
+  "clone_tracked_changes_after_docs_patch": [
+    "prototype/README.md"
+  ],
+  "fresh_ignored_inventory_before_setup": {
+    ".venv": false,
+    ".postman-tools": false,
+    ".postman-runs": false,
+    "data/ticketing.sqlite3": false,
+    "Run Project.txt": false,
+    ".pytest_cache": false
+  },
+  "pytest": {
+    "cases": 181,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "prototype_before_and_after": {
+    "cases_each": 110,
+    "local_static_smoke_checks": 24,
+    "accepted_recheck": "tests/evidence/prototype-ux-20261013-012913.json",
+    "excluded_original_repo_run": "tests/evidence/prototype-ux-20261013-012827.json"
+  },
+  "newman": {
+    "requests": 191,
+    "assertions": 514,
+    "exit_code": 0,
+    "fresh_database_retained": true,
+    "owned_server_stopped": true
+  },
+  "fresh_newman_source_mismatches": [],
+  "fresh_prototype_source_mismatches": [],
+  "copied_artifact_byte_mismatches": [],
+  "links_images_checked": 372,
+  "broken_links_images": [],
+  "owned_ports_closed": {
+    "8000": true,
+    "8765": true,
+    "59753": true,
+    "54382": true,
+    "62405": true
+  },
+  "owned_recorded_servers_stopped": true,
+  "git_diff_check_exit_code": 0,
+  "staged_files": [],
+  "head_unchanged": true,
+  "runtime_acceptance_passed": true,
+  "as_published_all_documented_steps_passed": false,
+  "documentation_defect": "DOC-CS-01",
+  "doc_correction_verified_on_clone": true,
+  "correction_published": false,
+  "video_available": false,
+  "limitations": "Windows/Edge headless local only; no Pages redeploy, Postman UI or production acceptance. False as-published flag remains because historical auditor failed; evidence not rewritten.",
+  "audit_passed": true
+}

@@ -1,0 +1,13 @@
+{
+  "base_commit": "7c35b2c0b5f7c3798844d024ea9bcaefb30f918f",
+  "patch_scope": [
+    "prototype/README.md"
+  ],
+  "patch_sha256": "b7dc0cc8daac6c1b6967464e442288381ebc833df74db9c36511215583aa69ba",
+  "before_sha256": "ae0580498caf032a09ce6ca8150915a00373f0949330b0f879970a1f565a7be4",
+  "after_sha256": "1f228b67bcea98f78d5a76c17c1f62b410a39b92aa0d4373ef3a77ecd1166352",
+  "changed_tracked_source": [
+    "prototype/README.md"
+  ],
+  "method": "Explicit documentation-only Git patch applied to clone after preserving as-published failure; no runtime/tool/dependency/assertion change."
+}

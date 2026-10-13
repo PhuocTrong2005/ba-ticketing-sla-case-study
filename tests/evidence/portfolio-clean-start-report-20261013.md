@@ -1,0 +1,51 @@
+# Clean-start portfolio từ origin/main — 13/10/2026 (UTC+7)
+
+**Người khác có thể chạy backend, prototype và Newman theo các hướng dẫn chính từ clone mới**, khi đã có Python 3.12 ổn định/Edge Windows và mạng để cài packages/tooling. Không cần môi trường/database/cache/config của tác giả. Tuy nhiên **hướng dẫn đã xuất bản tại commit kiểm tra không đạt hoàn toàn**: bước auditor UX lịch sử trong prototype README bị sai phạm vi (DOC-CS-01). Đã giữ evidence trước sửa, đề xuất sửa tài liệu và kiểm tra lại trên clone; bản sửa chưa commit/push. Không gán lỗi auditor thành bug backend hoặc sửa assertion để đạt.
+
+## Checkout và môi trường
+
+Clone độc lập `.clean-start-portfolio-20261013/` từ remote bằng `git clone --branch main --single-branch https://github.com/PhuocTrong2005/ba-ticketing-sla-case-study.git .clean-start-portfolio-20261013`. Commit thực: **`7c35b2c0b5f7c3798844d024ea9bcaefb30f918f`**. [Run record](portfolio-clean-start-20261013-run.json), [snapshot as-published trước sửa](portfolio-clean-start-20261013-as-published-run.json) lưu OS, source manifest, lệnh, thời điểm/exit, process và kết quả.
+
+Inventory trước chuẩn bị: `.venv`, `.postman-tools`, `.postman-runs`, database demo, cache và Run Project.txt đều không có trong clone; git status sạch. Không copy môi trường/config/data/cache từ repo gốc. Python nền **3.12.10**, virtualenv mới `include-system-site-packages=false`; host không có `py`, dùng executable Python 3.12 trực tiếp theo fallback đã ghi trong docs/backend-running.md. Đây là nhánh được hướng dẫn, không là workaround ngoài tài liệu. OS đầy đủ và versions trong record/freeze; không suy kiểm tra Windows thành cross-platform.
+
+Pip cache được đặt riêng trong clone để bảo đảm không tái sử dụng cache repo cũ; đây là cô lập của harness nghiệm thu, không là bước bắt buộc để người đọc chạy ứng dụng. Node archive/Newman/npm cache tải/cài mới bằng helper của clone; không reuse `.postman-tools` gốc. Profile Edge tạm mới, không profile người dùng. Các file environment/collection dùng nguyên bản remote.
+
+## Thực thi và đơn vị đếm
+
+| Phần | Lệnh từ clone / evidence | Kết quả thực |
+|---|---|---|
+| Venv/requirements | Stable Python `-m venv .venv`, `& .\.venv\Scripts\python.exe -m pip install -r requirements.txt`; [install](portfolio-clean-start-20261013-pip-install.txt), [venv](portfolio-clean-start-20261013-create-venv.txt) | Exit 0; Python 3.12.10 mới; không sao chép venv cũ. |
+| Dependency check | `& .\.venv\Scripts\python.exe -m pip check`; [output](portfolio-clean-start-20261013-pip-check.txt), [freeze](portfolio-clean-start-20261013-pip-freeze.txt) | Exit 0, No broken requirements found. Transitive packages cài mới từ requirements, không sửa requirements. |
+| Pytest | `& .\.venv\Scripts\python.exe -m pytest --junitxml=tests/evidence/portfolio-clean-start-20261013-junit.xml`; [JUnit](portfolio-clean-start-20261013-junit.xml), [stdout](portfolio-clean-start-20261013-pytest.txt) | **181/181**, 0 failure/error/skipped, exit 0. `--junitxml` chỉ instrumentation lưu report, không đổi test/expected. |
+| Backend | `& .\.venv\Scripts\python.exe -m uvicorn backend.app:app --host 127.0.0.1 --port 8000`; [server log](portfolio-clean-start-20261013-backend-server.txt), [HTTP record](portfolio-clean-start-20261013-run.json) | `/docs` 200, Swagger HTML có markup; `/openapi.json` 200 và khớp tracked. Đã dừng đúng PID; không khẳng định thử mọi tương tác Swagger/CDN assets. |
+| Static prototype theo URL docs | `& .\.venv\Scripts\python.exe -m http.server 8765 --bind 127.0.0.1`; mở `/prototype/`; [record](portfolio-clean-start-20261013-run.json), [log](portfolio-clean-start-20261013-prototype-static-server.txt) | **24 check smoke đạt**: tạo→nhận→reply→Resolved→Closed, đổi vai trò/scenario/reset/clock/reload, Customer private, Manager review khi Waiting, resume và controls. Không lỗi JS/API call. |
+| Prototype suite nguyên bản | `& .\.venv\Scripts\python.exe tests/prototype/run_browser.py`; [run](prototype-ux-20261013-012403.json), [stdout](portfolio-clean-start-20261013-prototype-suite.txt) | **110/110 case JS**, 0 fail/exit 0; 83 fixture và controller/DOM/UX; browser checks/mobile/keyboard đạt. Đây là local, không Pages rerun. |
+| Auditor như tài liệu đã xuất bản | `& .\.venv\Scripts\python.exe tests/prototype/audit_ux.py`; [stdout lỗi](portfolio-clean-start-20261013-prototype-audit-as-published.txt), [JSON lỗi](prototype-ux-audit-20261013-012422.json) | **Exit 1 / passed=false**; 1.843 path từ baseline lịch sử thiếu/khác. `browser_suite_passed=true`, source mismatch sau run = []; lỗi hướng dẫn/scope auditor, không UI/SLA failure. |
+| Node/Newman setup | `& .\.venv\Scripts\python.exe tests/postman/setup_tools.py`; [tool versions](postman-tools-20261013-012459.json), [stdout](portfolio-clean-start-20261013-newman-tools-setup.txt) | Exit 0; Node v22.23.3, npm 10.9.9, Newman 6.2.1; SHA archive chính thức khớp, tooling/cache mới trong clone. |
+| Newman helper nguyên bản | `& .\.venv\Scripts\python.exe tests/postman/run_newman.py`; [run](newman-20261013-012500-070211-run.json), [JSON](newman-20261013-012500-070211.json), [JUnit](newman-20261013-012500-070211.xml), [stdout](portfolio-clean-start-20261013-newman-run.txt) | **191 request, 514 assertion, 0 lỗi, exit 0**, một iteration. Fresh `.postman-runs/20261013-012500-070211/ticketing.sqlite3` chưa tồn tại trước import, giữ riêng; server đã dừng. Không fake Python thành Newman. |
+
+Không cộng pytest/JS/smoke/assertion, hoặc hai lần prototype, thành tình huống độc lập. 83 fixture được tái sử dụng. Root data cũ không bị sửa/xóa; database mặc định trong clone có thể được tạo khi pytest import backend.app, vẫn độc lập với DB mới của Newman.
+
+## Thiếu sót trước sửa và kiểm tra lại
+
+[DOC-CS-01 trước sửa](portfolio-clean-start-20261013-documentation-issue-before-fix.json) được lưu trước khi sửa bất cứ tài liệu nào: auditor UX lấy baseline của nhiệm vụ trước gồm `.venv-backup-*`, `.clean-start-*`, database/file local và Run Project.txt. Clone mới đúng quy tắc phải không có các file đó; không copy chúng để làm audit đạt. Baseline không phải input portable. Không phát hiện lỗi implementation hoặc dependency incompatibility trong các kiểm tra đã chạy.
+
+Sửa đề xuất: prototype README phân biệt runtime runner với auditor task-specific lịch sử; không yêu cầu auditor lịch sử cho clone mới, vẫn giữ code/assertion/record của nó. Bảo toàn clean-start dùng manifest source chính clone, hashes runtime/test/output và baseline repo gốc. Đồng thời làm rõ những câu “chưa Pages/Postman” trong report cũ là lịch sử. Không sửa SLA/role/fixture/expected hoặc bỏ assertion runtime.
+
+[Patch provenance](portfolio-clean-start-20261013-doc-patch.json): patch chỉ `prototype/README.md` áp dụng vào clone sau lưu failure; code/runtime/helper/dependencies vẫn nguyên remote. [Recheck record](portfolio-clean-start-20261013-doc-recheck.json), [run clone sau sửa docs](prototype-ux-20261013-012913.json): chạy lại đúng cwd clone, **110/110 đạt**, exit 0/browser checks đạt. Lệnh này là lệnh runtime còn lại trong hướng dẫn đã sửa. Chưa chạy lại Newman/backend sau sửa docs vì collection/implementation/helper không đổi.
+
+Một lỗi orchestration được giữ riêng: [run trỏ script repo gốc](prototype-ux-20261013-012827.json) dùng Python mới nhưng cwd sai. Không tính run đó là clean-checkout acceptance; không xóa artifact để che lịch sử. Sau đó đã chạy lại đúng clone như record recheck ở trên. Connection-reset ở static server khi Edge hủy kết nối xuất hiện trong vài stdout runner; các suite/JS/browser checks vẫn đạt, không là assertion/implementation failure.
+
+Ảnh thật thao tác trên URL docs: [Customer Closed](portfolio-clean-start-20261013-customer-closed.png), [Manager plan giữ Waiting](portfolio-clean-start-20261013-manager-plan.png). [Manifest artifact](portfolio-clean-start-20261013-artifacts.json) chứng minh các JSON/JUnit/PNG từ clone được copy nguyên byte **ra** repo gốc để bàn giao; không copy dữ liệu/môi trường cũ **vào** clone. Các server/Edge được dừng bằng Popen PID mà nhiệm vụ tạo; log/database/tooling/checkout mới được giữ, không xóa repo gốc.
+
+## Nghiệm thu và giới hạn
+
+Đã có evidence thực cho tiêu chí chạy README/portfolio từ checkout mới ở phạm vi backend/prototype/Newman chính. **Không đánh dấu toàn bộ hướng dẫn origin/main chưa sửa PASS**: DOC-CS-01 ở bản published đã thất bại, bản sửa tài liệu được thử nhưng chưa commit/push. Checklist/TASKS phải giữ ghi chú này đến khi chủ dự án chốt xuất bản sửa.
+
+Không có bước cài/đổi backend dependencies ngoài requirements hoặc sửa source để ứng dụng chạy; Python fallback/Edge/mạng là prereq đã ghi. Cài tooling Newman là helper được hướng dẫn. Không kiểm tra Postman UI Runner, cross-browser, thiết bị vật lý, performance/uptime hoặc triển khai Pages mới. Race/fixture toán học dùng pytest thật, Newman tuần tự không chứng minh race/SLA biên. Video **Chưa có**, không tag v1.0, chưa công bố hoàn thành portfolio.
+
+[Audit nghiệm thu](portfolio-clean-start-audit-20261013-013508.json) PASS ở phạm vi audit: 395 file gốc protected (9 tài liệu được sửa đúng scope), 287 evidence tracked cũ nguyên byte; database demo gốc/Run Project.txt nguyên byte. Source runtime/Newman/prototype từ clone và artifact copy ra ngoài khớp hash. 372 link/ảnh hợp lệ, diff-check exit 0, HEAD không đổi và không staged file; port/server/browsers đã dừng. `runtime_acceptance_passed=true` nhưng **`as_published_all_documented_steps_passed=false`** giữ đúng lỗi đã phát hiện. Không dùng audit PASS để che bước auditor published exit 1.
+
+OS thực: **Windows 11, build 10.0.26300 SP0**; Python **3.12.10**, pip **25.0.1**, Node **v22.23.3**, Newman **6.2.1**. Các bản Python package cụ thể lưu trong freeze. Checkout/venv/tooling/database/profile riêng được giữ; thư mục clone bị ignore trong repo gốc. Không commit/push, không tag/video.
+
+[Audit cuối mở rộng](portfolio-clean-start-audit-20261013-013902.json) PASS: thêm đối chiếu **35 raw evidence log cũ** với baseline xuất bản trước, không file nào đổi; gồm port của run orchestration trỏ repo gốc cũng đã đóng. 373 links/images hợp lệ; các cờ runtime đạt/remote nguyên bản chưa đạt/docs chưa publish giữ nguyên. Link tới audit bổ sung sau lần này được kiểm tra tồn tại riêng; không đổi source đã chạy.

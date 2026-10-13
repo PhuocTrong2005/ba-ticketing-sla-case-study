@@ -1,5 +1,9 @@
 # Backlog v1.0
 
+Nghiệm thu clean-start lần 2 trên [checkout độc lập cùng origin/main tại `7c35b2c`](tests/evidence/portfolio-clean-start-repeat-20261013.md): 181 pytest, 110 prototype, 24 static smoke, Newman 191/514 đạt sau khi xử lý hai giới hạn sandbox. DOC-CS-01 tại commit cũ tái hiện; hướng dẫn prototype hiện hành sửa bước auditor và có [recheck docs](tests/evidence/portfolio-clean-start-20261013-doc-recheck.json). Chưa chạy lại trọn suite từ commit mới. Video Chưa có; chưa tag v1.0.
+
+D-49, nghiệm thu clean-start 13/10/2026: [clone origin/main `7c35b2c`](tests/evidence/portfolio-clean-start-report-20261013.md), venv/tooling/cache/database mới; requirements/pip check/181 pytest/HTTP backend/static smoke 24 check/110 JS/Newman 191 request–514 assertion đạt. DOC-CS-01 auditor UX lịch sử không portable: giữ evidence thất bại, sửa docs, recheck đúng clone 110/110. Trạng thái chưa commit/push trong report là mốc trước D-50. Video Chưa có, không tag v1.0. Không gán run trỏ repo gốc hoặc auditor lịch sử thành PASS clean-start.
+
 Hiện hành D-48, 13/10/2026: Postman được chủ dự án chấp nhận và cho phép commit/push cùng tài liệu portfolio. [README](README.md), [AC-01…34](docs/ac-traceability.md), [release checklist](docs/release-checklist.md), [audit xuất bản](tests/evidence/portfolio-publication-report-20261013.md). Video Chưa có; portfolio v1.0 chưa hoàn tất/chưa tag. Các ghi chú chưa commit/Postman/README trong mốc trước giữ như lịch sử.
 
 ## Tiêu chí hoàn thành v1.0

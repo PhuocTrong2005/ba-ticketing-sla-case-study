@@ -1,5 +1,7 @@
 # Nghiệm thu portfolio v1.0
 
+[Lần clean-start độc lập thứ hai](../tests/evidence/portfolio-clean-start-repeat-20261013.md) trên commit `7c35b2c` tái hiện 181 pytest, 110 prototype, 24 static smoke và Newman 191/514. Hai lỗi sandbox khi cài pip/tạo `%TEMP%` có log trước khi chạy lại thành công. DOC-CS-01 trong hướng dẫn commit cũ tái hiện; prototype README hiện hành đã bỏ auditor lịch sử khỏi bước clone sạch và bản sửa docs được kiểm tra riêng. Chưa chạy toàn bộ suite từ commit mới.
+
 Hiện hành 13/10/2026. Giữ tiêu chí [TASKS](../TASKS.md)/[project brief](01-context/project-brief.md), không thêm feature/thay gate/bỏ tiêu chí để gán hoàn thành. [D-48](decision-log.md): chủ dự án chấp nhận Postman và cho phép xuất bản tài liệu. **Video Chưa có; portfolio v1.0 chưa hoàn tất; chưa tạo tag.**
 
 “Có bằng chứng” áp dụng phạm vi mô tả. [Ma trận từng AC](ac-traceability.md) không tự gán tất cả AC PASS từ tổng suite.
@@ -12,7 +14,7 @@ Hiện hành 13/10/2026. Giữ tiêu chí [TASKS](../TASKS.md)/[project brief](0
 | Hai ca nhận đồng thời | `test_concurrent_two_agents_same_ticket`, `test_concurrent_one_agent_two_tickets_at_capacity_two`: [JUnit](../tests/evidence/step1-windows-20261012-162259-repo-junit.xml), [source](../tests/backend/test_integrity.py) | Có evidence threads/barrier/connection riêng/SQLite file, response và DB cuối; không Newman tuần tự. |
 | Projection dựng lại từ events | `test_append_only_and_rebuild_all_projections`, raw/zero/event IDs/fault rollback: [integrity](../tests/backend/test_integrity.py), [JUnit](../tests/evidence/step1-windows-20261012-162259-repo-junit.xml) | Có evidence rebuild và lỗi được thử; AC-34 chưa dump mọi bảng cho mọi error branch; không production backup/recovery. |
 | SQL khớp dữ liệu mẫu | Bốn ca [report tests](../tests/backend/test_reports.py), [JUnit](../tests/evidence/step1-windows-20261012-162259-repo-junit.xml), [SQL](../sql/README.md), PM-161…210 | Có evidence cohort/filter/as_of/zero/load/M07 theo dataset; M07 dùng engine giao khoảng, không SQL thuần. N chỉ bổ sung HTTP contract/counts. |
-| README thử từ thư mục mới | [Windows clean-start](../tests/evidence/step1-windows-20261012-162259-report.md), [181 clean JUnit](../tests/evidence/step1-windows-20261012-162259-clean-junit.xml), [hướng dẫn hiện hành](backend-running.md) | **Một phần**: backend source/dependencies khớp manifest đã thử; README mới rà link/lệnh, chưa clean-start toàn bộ bằng checkout mới sau xuất bản. Giữ khoảng thiếu khi xét release cuối. |
+| README thử từ thư mục mới | [Clean-start clone `7c35b2c`](../tests/evidence/portfolio-clean-start-report-20261013.md), [run commit/commands](../tests/evidence/portfolio-clean-start-20261013-run.json), [181 JUnit](../tests/evidence/portfolio-clean-start-20261013-junit.xml), [doc recheck](../tests/evidence/portfolio-clean-start-20261013-doc-recheck.json), [clone lần 2](../tests/evidence/portfolio-clean-start-repeat-20261013.md) | **Có bằng chứng thực thi chính từ hai clone mới**: requirements/pip check/181 pytest/HTTP backend/static smoke/110 JS/Newman 191–514. DOC-CS-01: auditor lịch sử lỗi trong hướng dẫn `7c35b2c`; docs sửa đã tái kiểm tra riêng. Không gán hướng dẫn commit cũ PASS hoặc suy ra đã chạy trọn suite từ commit mới. |
 | Giới hạn/mô phỏng trung thực | [README](../README.md), [API README](../api/README.md), [evidence index](../tests/evidence/README.md), [AC matrix](ac-traceability.md) | Đã ghi giả định/demo identity/UI không API/đơn vị đếm/local vs public smoke/race-fixture riêng và phần thiếu. |
 
 ## Hiện vật portfolio
@@ -26,6 +28,6 @@ Hiện hành 13/10/2026. Giữ tiêu chí [TASKS](../TASKS.md)/[project brief](0
 | Postman | [Collection/environment](../api/README.md), Newman 191 request/514 assertion/0 lỗi/exit 0; chủ dự án chấp nhận D-48. Chưa Postman UI Runner, không khẳng định tự chạy mọi request. |
 | Traceability/nghiệm thu | Đủ hàng AC-01…34, implementation/test/evidence/giới hạn rõ; không blanket PASS. |
 | Video | **Chưa có — còn thiếu.** Không link/thumbnail giả, không làm trong nhiệm vụ. |
-| Tag/release v1.0 | **Chưa tạo**, không công bố hoàn thành; xét lại sau video và bằng chứng tái lập còn thiếu. |
+| Tag/release v1.0 | **Chưa tạo**, không công bố hoàn thành. Video còn thiếu; clean-start runtime từ clone mới đã có evidence, sửa DOC-CS-01 chỉ kiểm tra trong phạm vi docs. |
 
 Cross-browser/thiết bị vật lý/performance/uptime chưa evidence; không tự thêm thành gate v1.0 hoặc đặt ngưỡng mới. Roadmap giữ ngoài v1.0. [Audit xuất bản](../tests/evidence/portfolio-publication-report-20261013.md) ghi bảo toàn/diff/hash/Git; trigger/deploy không là lần test mới.

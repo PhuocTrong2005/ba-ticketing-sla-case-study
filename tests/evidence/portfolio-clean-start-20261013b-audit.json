@@ -1,0 +1,89 @@
+{
+  "checked_commit": "7c35b2c0b5f7c3798844d024ea9bcaefb30f918f",
+  "os": "Windows-11-10.0.26300-SP0",
+  "stable_python": "Python 3.12.10",
+  "fresh_python": "Python 3.12.10",
+  "node": "v22.23.3",
+  "newman": "6.2.1",
+  "initial_ignored_state": {
+    ".venv": false,
+    ".postman-tools": false,
+    ".postman-runs": false,
+    "data/ticketing.sqlite3": false,
+    "Run Project.txt": false,
+    ".pytest_cache": false
+  },
+  "clone_changed_tracked_source": [],
+  "artifact_mismatches": [],
+  "original_protected_changes": [],
+  "original_database_changes": [],
+  "run_project_preserved": true,
+  "published_links_checked": 95,
+  "missing_published_links": [],
+  "pytest_first": {
+    "tests": 181,
+    "failures": 0,
+    "errors": 96,
+    "skipped": 0
+  },
+  "pytest_retry": {
+    "tests": 181,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "prototype_cases_passed": 110,
+  "prototype_cases_total": 110,
+  "local_static_smoke_checks": 24,
+  "prototype_historical_auditor_passed": false,
+  "newman_requests": {
+    "total": 191,
+    "pending": 0,
+    "failed": 0
+  },
+  "newman_assertions": {
+    "total": 514,
+    "pending": 0,
+    "failed": 0
+  },
+  "newman_junit_assertions": 514,
+  "newman_failure_count": 0,
+  "newman_fresh_database": true,
+  "newman_owned_server_stopped": true,
+  "owned_ports_closed": {
+    "8000": true,
+    "8765": true,
+    "59023": true,
+    "62992": true
+  },
+  "backend_http": {
+    "docs_http": 200,
+    "docs_has_swagger_ui": true,
+    "openapi_http": 200,
+    "openapi_matches_tracked": true,
+    "routes": [
+      "/tickets",
+      "/tickets/queue",
+      "/tickets/{ticket_id}",
+      "/tickets/{ticket_id}/claim",
+      "/tickets/{ticket_id}/messages",
+      "/tickets/{ticket_id}/notes",
+      "/tickets/{ticket_id}/waiting",
+      "/tickets/{ticket_id}/resolve",
+      "/tickets/{ticket_id}/confirm",
+      "/tickets/{ticket_id}/reject",
+      "/tickets/{ticket_id}/reviews",
+      "/tickets/{ticket_id}/reviews/complete",
+      "/reports/{metric_code}"
+    ]
+  },
+  "owned_browser_stopped": true,
+  "published_instructions_fully_passed": false,
+  "issues": {
+    "pip_first": "environment: sandbox blocks PyPI network",
+    "pytest_first": "environment: sandbox denies pytest Temp directory",
+    "prototype_auditor": "documentation DOC-CS-01: historical task baseline expects files absent from fresh clone",
+    "implementation": "none observed"
+  },
+  "audit_passed": true
+}
