@@ -1,0 +1,630 @@
+{
+  "url": "https://phuoctrong2005.github.io/ba-ticketing-sla-case-study/",
+  "started_utc": "20261013-002741",
+  "commit": "4bf35993228ab47359737342db7c0fdf0a9cb906",
+  "scope": "Six groups: initial-state smoke only. DEMO-01: complete ticket workflow. Not the local 110-case suite.",
+  "checks": [
+    {
+      "name": "public asset matches source: index.html",
+      "passed": true
+    },
+    {
+      "name": "public asset matches source: styles.css",
+      "passed": true
+    },
+    {
+      "name": "public asset matches source: app.js",
+      "passed": true
+    },
+    {
+      "name": "public asset matches source: domain.js",
+      "passed": true
+    },
+    {
+      "name": "public asset matches source: guidance.js",
+      "passed": true
+    },
+    {
+      "name": "public asset matches source: reports.js",
+      "passed": true
+    },
+    {
+      "name": "public asset matches source: seeds.js",
+      "passed": true
+    },
+    {
+      "name": "public asset matches source: sla.js",
+      "passed": true
+    },
+    {
+      "name": "public asset matches source: storage.js",
+      "passed": true
+    },
+    {
+      "name": "actual Pages origin",
+      "passed": true
+    },
+    {
+      "name": "simulation banner",
+      "passed": true
+    },
+    {
+      "name": "DEMO-01 selected",
+      "passed": true
+    },
+    {
+      "name": "DEMO-01 Agent view",
+      "passed": true
+    },
+    {
+      "name": "DEMO-01 Manager view",
+      "passed": true
+    },
+    {
+      "name": "DEMO-01 Customer privacy",
+      "passed": true
+    },
+    {
+      "name": "DEMO-02 selected",
+      "passed": true
+    },
+    {
+      "name": "DEMO-02 Agent view",
+      "passed": true
+    },
+    {
+      "name": "DEMO-02 Manager view",
+      "passed": true
+    },
+    {
+      "name": "DEMO-02 Customer privacy",
+      "passed": true
+    },
+    {
+      "name": "DEMO-03 selected",
+      "passed": true
+    },
+    {
+      "name": "DEMO-03 Agent view",
+      "passed": true
+    },
+    {
+      "name": "DEMO-03 Manager view",
+      "passed": true
+    },
+    {
+      "name": "DEMO-03 Customer privacy",
+      "passed": true
+    },
+    {
+      "name": "DEMO-04 selected",
+      "passed": true
+    },
+    {
+      "name": "DEMO-04 Agent view",
+      "passed": true
+    },
+    {
+      "name": "DEMO-04 Manager view",
+      "passed": true
+    },
+    {
+      "name": "DEMO-04 Customer privacy",
+      "passed": true
+    },
+    {
+      "name": "DEMO-05 selected",
+      "passed": true
+    },
+    {
+      "name": "DEMO-05 Agent view",
+      "passed": true
+    },
+    {
+      "name": "DEMO-05 Manager view",
+      "passed": true
+    },
+    {
+      "name": "DEMO-05 Customer privacy",
+      "passed": true
+    },
+    {
+      "name": "DEMO-06 selected",
+      "passed": true
+    },
+    {
+      "name": "DEMO-06 Agent view",
+      "passed": true
+    },
+    {
+      "name": "DEMO-06 Manager view",
+      "passed": true
+    },
+    {
+      "name": "DEMO-06 Customer privacy",
+      "passed": true
+    },
+    {
+      "name": "variant selected: monday",
+      "passed": true
+    },
+    {
+      "name": "variant selected: friday",
+      "passed": true
+    },
+    {
+      "name": "variant selected: zero",
+      "passed": true
+    },
+    {
+      "name": "variant selected: warnings",
+      "passed": true
+    },
+    {
+      "name": "variant selected: sticky",
+      "passed": true
+    },
+    {
+      "name": "control available: [data-advance=\"1\"]",
+      "passed": true
+    },
+    {
+      "name": "clock advances",
+      "passed": true
+    },
+    {
+      "name": "control available: #reset",
+      "passed": true
+    },
+    {
+      "name": "reset restores clock",
+      "passed": true
+    },
+    {
+      "name": "form accepted: [data-action=create]",
+      "passed": true
+    },
+    {
+      "name": "form accepted: #clock-form",
+      "passed": true
+    },
+    {
+      "name": "control available: [data-claim=\"1\"]",
+      "passed": true
+    },
+    {
+      "name": "form accepted: #clock-form",
+      "passed": true
+    },
+    {
+      "name": "form accepted: [data-action=message]",
+      "passed": true
+    },
+    {
+      "name": "form accepted: #clock-form",
+      "passed": true
+    },
+    {
+      "name": "form accepted: [data-action=resolve]",
+      "passed": true
+    },
+    {
+      "name": "form accepted: #clock-form",
+      "passed": true
+    },
+    {
+      "name": "control available: [data-confirm=\"1\"]",
+      "passed": true
+    },
+    {
+      "name": "DEMO-01 Closed visible",
+      "passed": true
+    },
+    {
+      "name": "Customer detail privacy",
+      "passed": true
+    },
+    {
+      "name": "Pages localStorage persists across reload",
+      "passed": true
+    },
+    {
+      "name": "reload renders Closed",
+      "passed": true
+    },
+    {
+      "name": "other Customer cannot view ticket",
+      "passed": true
+    },
+    {
+      "name": "control available: [data-jump=\"manager-reviews\"]",
+      "passed": true
+    },
+    {
+      "name": "Manager navigation manager-reviews",
+      "passed": true
+    },
+    {
+      "name": "control available: [data-jump=\"manager-reports\"]",
+      "passed": true
+    },
+    {
+      "name": "Manager navigation manager-reports",
+      "passed": true
+    },
+    {
+      "name": "control available: [data-jump=\"manager-load\"]",
+      "passed": true
+    },
+    {
+      "name": "Manager navigation manager-load",
+      "passed": true
+    },
+    {
+      "name": "control available: [data-jump=\"manager-tickets\"]",
+      "passed": true
+    },
+    {
+      "name": "Manager navigation manager-tickets",
+      "passed": true
+    },
+    {
+      "name": "Manager review form present",
+      "passed": true
+    },
+    {
+      "name": "Manager restricted actions absent",
+      "passed": true
+    },
+    {
+      "name": "Agent review blocks Resolved",
+      "passed": true
+    },
+    {
+      "name": "control available: .controls summary",
+      "passed": true
+    },
+    {
+      "name": "collapsed controls",
+      "passed": true
+    },
+    {
+      "name": "no blocking JavaScript errors",
+      "passed": true
+    },
+    {
+      "name": "no Fetch/XHR/API requests",
+      "passed": true
+    },
+    {
+      "name": "browser runtime assets loaded",
+      "passed": true
+    }
+  ],
+  "assets": [
+    {
+      "file": "index.html",
+      "status": 200,
+      "sha256": "1bc0c731bd844086c4489cdbde96854680d1746f92c82e7c5c0ba5fb204d72cb"
+    },
+    {
+      "file": "styles.css",
+      "status": 200,
+      "sha256": "602d46449d211ebacb738497aea118ebca09cca41799aed2de507773c360e8c7"
+    },
+    {
+      "file": "app.js",
+      "status": 200,
+      "sha256": "e5f1d4a23cca439bf957f3d39e02c61ef5e7dd989db3b3a0c73274318f3b9984"
+    },
+    {
+      "file": "domain.js",
+      "status": 200,
+      "sha256": "e26caf489085ca0480857e5b34a74b4376b16179b36ac084e343934d5666d3d7"
+    },
+    {
+      "file": "guidance.js",
+      "status": 200,
+      "sha256": "52ae145a51cef236ee7613959b9435865060451e37449a23d7a737d1c76f8790"
+    },
+    {
+      "file": "reports.js",
+      "status": 200,
+      "sha256": "b3be3c0bcd8052c87292b51e9868fac0f5899b3e39aa2b4b7a82828c07611fc1"
+    },
+    {
+      "file": "seeds.js",
+      "status": 200,
+      "sha256": "090fa451e3c0bb22f0324406efb0c68aa8cd5d8ff03c609bb84611e265f5f08d"
+    },
+    {
+      "file": "sla.js",
+      "status": 200,
+      "sha256": "3cd31b1e4c45def3498886c3a134792e6f34d4995d369fd22bc63a7c8f22a923"
+    },
+    {
+      "file": "storage.js",
+      "status": 200,
+      "sha256": "634d9258fb125905ca6988c1f2f9ce7ef9232c823b28913d2c2a1b49dc495a3b"
+    }
+  ],
+  "screenshots": [
+    "tests/evidence/pages-public-smoke-20261013-002741-DEMO-01-initial.png",
+    "tests/evidence/pages-public-smoke-20261013-002741-DEMO-02-initial.png",
+    "tests/evidence/pages-public-smoke-20261013-002741-DEMO-03-initial.png",
+    "tests/evidence/pages-public-smoke-20261013-002741-DEMO-04-initial.png",
+    "tests/evidence/pages-public-smoke-20261013-002741-DEMO-05-initial.png",
+    "tests/evidence/pages-public-smoke-20261013-002741-DEMO-06-initial.png",
+    "tests/evidence/pages-public-smoke-20261013-002741-customer-closed.png",
+    "tests/evidence/pages-public-smoke-20261013-002741-manager-dashboard.png",
+    "tests/evidence/pages-public-smoke-20261013-002741-manager-review-detail.png",
+    "tests/evidence/pages-public-smoke-20261013-002741-agent-controls-collapsed.png"
+  ],
+  "runtime_errors": [],
+  "requests": [
+    {
+      "url": "https://phuoctrong2005.github.io/ba-ticketing-sla-case-study/",
+      "type": "Document",
+      "method": "GET"
+    },
+    {
+      "url": "https://phuoctrong2005.github.io/ba-ticketing-sla-case-study/styles.css",
+      "type": "Stylesheet",
+      "method": "GET"
+    },
+    {
+      "url": "https://phuoctrong2005.github.io/ba-ticketing-sla-case-study/app.js",
+      "type": "Script",
+      "method": "GET"
+    },
+    {
+      "url": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTUgOWExIDEgMCAxMDAtMiAxIDEgMCAwMDAgMnpNNiAxMWExIDEgMCAxMS0yIDAgMSAxIDAgMDEyIDB6TTggOWExIDEgMCAxMDAtMiAxIDEgMCAwMDAgMnpNOSAxMWExIDEgMCAxMS0yIDAgMSAxIDAgMDEyIDB6TTExIDlhMSAxIDAgMTAwLTIgMSAxIDAgMDAwIDJ6IiBmaWxsPSJXaW5kb3dUZXh0Ii8+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xNSAzLjVBMi41IDIuNSAwIDAwMTIuNSAxaC05QTIuNSAyLjUgMCAwMDEgMy41djlBMi41IDIuNSAwIDAwMy41IDE1aDlhMi41IDIuNSAwIDAwMi41LTIuNXYtOXpNMiA1aDEydjcuNWMwIC44My0uNjcgMS41LTEuNSAxLjVoLTlBMS41IDEuNSAwIDAxMiAxMi41VjV6bTEuNS0zaDljLjgzIDAgMS41LjY3IDEuNSAxLjVWNEgydi0uNUMyIDIuNjcgMi42NyAyIDMuNSAyeiIgZmlsbD0iV2luZG93VGV4dCIvPjwvc3ZnPg==",
+      "type": "Image",
+      "method": "GET"
+    },
+    {
+      "url": "https://phuoctrong2005.github.io/ba-ticketing-sla-case-study/guidance.js",
+      "type": "Script",
+      "method": "GET"
+    },
+    {
+      "url": "https://phuoctrong2005.github.io/ba-ticketing-sla-case-study/domain.js",
+      "type": "Script",
+      "method": "GET"
+    },
+    {
+      "url": "https://phuoctrong2005.github.io/ba-ticketing-sla-case-study/sla.js",
+      "type": "Script",
+      "method": "GET"
+    },
+    {
+      "url": "https://phuoctrong2005.github.io/ba-ticketing-sla-case-study/seeds.js",
+      "type": "Script",
+      "method": "GET"
+    },
+    {
+      "url": "https://phuoctrong2005.github.io/ba-ticketing-sla-case-study/reports.js",
+      "type": "Script",
+      "method": "GET"
+    },
+    {
+      "url": "https://phuoctrong2005.github.io/ba-ticketing-sla-case-study/storage.js",
+      "type": "Script",
+      "method": "GET"
+    },
+    {
+      "url": "https://phuoctrong2005.github.io/favicon.ico",
+      "type": "Other",
+      "method": "GET"
+    },
+    {
+      "url": "https://phuoctrong2005.github.io/favicon.ico",
+      "type": "Other",
+      "method": "GET"
+    },
+    {
+      "url": "https://phuoctrong2005.github.io/favicon.ico",
+      "type": "Other",
+      "method": "GET"
+    },
+    {
+      "url": "https://phuoctrong2005.github.io/favicon.ico",
+      "type": "Other",
+      "method": "GET"
+    },
+    {
+      "url": "https://phuoctrong2005.github.io/favicon.ico",
+      "type": "Other",
+      "method": "GET"
+    },
+    {
+      "url": "https://phuoctrong2005.github.io/ba-ticketing-sla-case-study/",
+      "type": "Document",
+      "method": "GET"
+    },
+    {
+      "url": "https://phuoctrong2005.github.io/ba-ticketing-sla-case-study/styles.css",
+      "type": "Stylesheet",
+      "method": "GET"
+    },
+    {
+      "url": "https://phuoctrong2005.github.io/ba-ticketing-sla-case-study/app.js",
+      "type": "Script",
+      "method": "GET"
+    },
+    {
+      "url": "https://phuoctrong2005.github.io/ba-ticketing-sla-case-study/guidance.js",
+      "type": "Script",
+      "method": "GET"
+    },
+    {
+      "url": "https://phuoctrong2005.github.io/ba-ticketing-sla-case-study/domain.js",
+      "type": "Script",
+      "method": "GET"
+    },
+    {
+      "url": "https://phuoctrong2005.github.io/ba-ticketing-sla-case-study/sla.js",
+      "type": "Script",
+      "method": "GET"
+    },
+    {
+      "url": "https://phuoctrong2005.github.io/ba-ticketing-sla-case-study/seeds.js",
+      "type": "Script",
+      "method": "GET"
+    },
+    {
+      "url": "https://phuoctrong2005.github.io/ba-ticketing-sla-case-study/reports.js",
+      "type": "Script",
+      "method": "GET"
+    },
+    {
+      "url": "https://phuoctrong2005.github.io/ba-ticketing-sla-case-study/storage.js",
+      "type": "Script",
+      "method": "GET"
+    },
+    {
+      "url": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTUgOWExIDEgMCAxMDAtMiAxIDEgMCAwMDAgMnpNNiAxMWExIDEgMCAxMS0yIDAgMSAxIDAgMDEyIDB6TTggOWExIDEgMCAxMDAtMiAxIDEgMCAwMDAgMnpNOSAxMWExIDEgMCAxMS0yIDAgMSAxIDAgMDEyIDB6TTExIDlhMSAxIDAgMTAwLTIgMSAxIDAgMDAwIDJ6IiBmaWxsPSJXaW5kb3dUZXh0Ii8+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xNSAzLjVBMi41IDIuNSAwIDAwMTIuNSAxaC05QTIuNSAyLjUgMCAwMDEgMy41djlBMi41IDIuNSAwIDAwMy41IDE1aDlhMi41IDIuNSAwIDAwMi41LTIuNXYtOXpNMiA1aDEydjcuNWMwIC44My0uNjcgMS41LTEuNSAxLjVoLTlBMS41IDEuNSAwIDAxMiAxMi41VjV6bTEuNS0zaDljLjgzIDAgMS41LjY3IDEuNSAxLjVWNEgydi0uNUMyIDIuNjcgMi42NyAyIDMuNSAyeiIgZmlsbD0iV2luZG93VGV4dCIvPjwvc3ZnPg==",
+      "type": "Image",
+      "method": "GET"
+    },
+    {
+      "url": "https://phuoctrong2005.github.io/favicon.ico",
+      "type": "Other",
+      "method": "GET"
+    }
+  ],
+  "responses": [
+    {
+      "url": "https://phuoctrong2005.github.io/ba-ticketing-sla-case-study/",
+      "status": 200,
+      "type": "Document"
+    },
+    {
+      "url": "https://phuoctrong2005.github.io/ba-ticketing-sla-case-study/styles.css",
+      "status": 200,
+      "type": "Stylesheet"
+    },
+    {
+      "url": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTUgOWExIDEgMCAxMDAtMiAxIDEgMCAwMDAgMnpNNiAxMWExIDEgMCAxMS0yIDAgMSAxIDAgMDEyIDB6TTggOWExIDEgMCAxMDAtMiAxIDEgMCAwMDAgMnpNOSAxMWExIDEgMCAxMS0yIDAgMSAxIDAgMDEyIDB6TTExIDlhMSAxIDAgMTAwLTIgMSAxIDAgMDAwIDJ6IiBmaWxsPSJXaW5kb3dUZXh0Ii8+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xNSAzLjVBMi41IDIuNSAwIDAwMTIuNSAxaC05QTIuNSAyLjUgMCAwMDEgMy41djlBMi41IDIuNSAwIDAwMy41IDE1aDlhMi41IDIuNSAwIDAwMi41LTIuNXYtOXpNMiA1aDEydjcuNWMwIC44My0uNjcgMS41LTEuNSAxLjVoLTlBMS41IDEuNSAwIDAxMiAxMi41VjV6bTEuNS0zaDljLjgzIDAgMS41LjY3IDEuNSAxLjVWNEgydi0uNUMyIDIuNjcgMi42NyAyIDMuNSAyeiIgZmlsbD0iV2luZG93VGV4dCIvPjwvc3ZnPg==",
+      "status": 200,
+      "type": "Image"
+    },
+    {
+      "url": "https://phuoctrong2005.github.io/ba-ticketing-sla-case-study/app.js",
+      "status": 200,
+      "type": "Script"
+    },
+    {
+      "url": "https://phuoctrong2005.github.io/ba-ticketing-sla-case-study/guidance.js",
+      "status": 200,
+      "type": "Script"
+    },
+    {
+      "url": "https://phuoctrong2005.github.io/ba-ticketing-sla-case-study/domain.js",
+      "status": 200,
+      "type": "Script"
+    },
+    {
+      "url": "https://phuoctrong2005.github.io/ba-ticketing-sla-case-study/reports.js",
+      "status": 200,
+      "type": "Script"
+    },
+    {
+      "url": "https://phuoctrong2005.github.io/ba-ticketing-sla-case-study/seeds.js",
+      "status": 200,
+      "type": "Script"
+    },
+    {
+      "url": "https://phuoctrong2005.github.io/ba-ticketing-sla-case-study/storage.js",
+      "status": 200,
+      "type": "Script"
+    },
+    {
+      "url": "https://phuoctrong2005.github.io/ba-ticketing-sla-case-study/sla.js",
+      "status": 200,
+      "type": "Script"
+    },
+    {
+      "url": "https://phuoctrong2005.github.io/favicon.ico",
+      "status": 404,
+      "type": "Other"
+    },
+    {
+      "url": "https://phuoctrong2005.github.io/favicon.ico",
+      "status": 404,
+      "type": "Other"
+    },
+    {
+      "url": "https://phuoctrong2005.github.io/favicon.ico",
+      "status": 404,
+      "type": "Other"
+    },
+    {
+      "url": "https://phuoctrong2005.github.io/favicon.ico",
+      "status": 404,
+      "type": "Other"
+    },
+    {
+      "url": "https://phuoctrong2005.github.io/favicon.ico",
+      "status": 404,
+      "type": "Other"
+    },
+    {
+      "url": "https://phuoctrong2005.github.io/ba-ticketing-sla-case-study/",
+      "status": 200,
+      "type": "Document"
+    },
+    {
+      "url": "https://phuoctrong2005.github.io/ba-ticketing-sla-case-study/styles.css",
+      "status": 200,
+      "type": "Stylesheet"
+    },
+    {
+      "url": "https://phuoctrong2005.github.io/ba-ticketing-sla-case-study/app.js",
+      "status": 200,
+      "type": "Script"
+    },
+    {
+      "url": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTUgOWExIDEgMCAxMDAtMiAxIDEgMCAwMDAgMnpNNiAxMWExIDEgMCAxMS0yIDAgMSAxIDAgMDEyIDB6TTggOWExIDEgMCAxMDAtMiAxIDEgMCAwMDAgMnpNOSAxMWExIDEgMCAxMS0yIDAgMSAxIDAgMDEyIDB6TTExIDlhMSAxIDAgMTAwLTIgMSAxIDAgMDAwIDJ6IiBmaWxsPSJXaW5kb3dUZXh0Ii8+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xNSAzLjVBMi41IDIuNSAwIDAwMTIuNSAxaC05QTIuNSAyLjUgMCAwMDEgMy41djlBMi41IDIuNSAwIDAwMy41IDE1aDlhMi41IDIuNSAwIDAwMi41LTIuNXYtOXpNMiA1aDEydjcuNWMwIC44My0uNjcgMS41LTEuNSAxLjVoLTlBMS41IDEuNSAwIDAxMiAxMi41VjV6bTEuNS0zaDljLjgzIDAgMS41LjY3IDEuNSAxLjVWNEgydi0uNUMyIDIuNjcgMi42NyAyIDMuNSAyeiIgZmlsbD0iV2luZG93VGV4dCIvPjwvc3ZnPg==",
+      "status": 200,
+      "type": "Image"
+    },
+    {
+      "url": "https://phuoctrong2005.github.io/ba-ticketing-sla-case-study/domain.js",
+      "status": 200,
+      "type": "Script"
+    },
+    {
+      "url": "https://phuoctrong2005.github.io/ba-ticketing-sla-case-study/sla.js",
+      "status": 200,
+      "type": "Script"
+    },
+    {
+      "url": "https://phuoctrong2005.github.io/ba-ticketing-sla-case-study/seeds.js",
+      "status": 200,
+      "type": "Script"
+    },
+    {
+      "url": "https://phuoctrong2005.github.io/ba-ticketing-sla-case-study/storage.js",
+      "status": 200,
+      "type": "Script"
+    },
+    {
+      "url": "https://phuoctrong2005.github.io/ba-ticketing-sla-case-study/reports.js",
+      "status": 200,
+      "type": "Script"
+    },
+    {
+      "url": "https://phuoctrong2005.github.io/ba-ticketing-sla-case-study/guidance.js",
+      "status": 200,
+      "type": "Script"
+    },
+    {
+      "url": "https://phuoctrong2005.github.io/favicon.ico",
+      "status": 404,
+      "type": "Other"
+    }
+  ],
+  "network_failures": [],
+  "passed": true
+}

@@ -44,6 +44,9 @@ def main():
         p = ROOT / n
         if p.is_file() and p.suffix not in ['.png', '.jpg'] and pattern.search(p.read_bytes()):
             secret_hits.append(n)
+    tracked = subprocess.check_output(['git', 'ls-files'], text=True).splitlines()
+    byte_scope = [n for n in tracked if n.startswith(('prototype/', 'tests/prototype/', 'tests/evidence/prototype-', 'tests/evidence/pages-', 'tests/evidence/ux-baseline-'))]
+    index_mismatch = [n for n in byte_scope if (ROOT / n).is_file() and subprocess.check_output(['git', 'show', ':' + n]) != (ROOT / n).read_bytes()]
     result = {'local_run': str(latest.relative_to(ROOT)).replace('\\', '/'),
               'protected_files': len(baseline), 'old_evidence_preserved': sum(n.startswith('tests/evidence/') for n in baseline) if not changed else None,
               'changed_or_deleted': changed, 'runtime_and_harness_source_mismatches': mismatch,
@@ -51,9 +54,10 @@ def main():
               'links_checked': count, 'broken_links': broken,
               'git_diff_check': diff.returncode, 'git_staged_diff_check': staged_diff.returncode,
               'staged_files': staged, 'forbidden_staged': forbidden, 'secret_pattern_hits': secret_hits,
+              'index_bytes_checked': len(byte_scope), 'index_byte_mismatches': index_mismatch,
               'local_suite': {'passed': run['harness']['passed'], 'failed': run['harness']['failed'], 'ux_browser_passed': run['ux_browser_passed'], 'runtime_errors': run['runtime_errors'], 'no_api_calls': run['no_api_calls']},
               'backend_tests_rerun': False}
-    result['passed'] = not any([changed, mismatch, broken, diff.returncode, staged_diff.returncode, forbidden, secret_hits, run['harness']['failed'], run['runtime_errors']]) and run['harness']['passed'] == 110 and run['ux_browser_passed'] and run['no_api_calls']
+    result['passed'] = not any([changed, mismatch, index_mismatch, broken, diff.returncode, staged_diff.returncode, forbidden, secret_hits, run['harness']['failed'], run['runtime_errors']]) and run['harness']['passed'] == 110 and run['ux_browser_passed'] and run['no_api_calls']
     dest = ROOT / ('tests/evidence/pages-audit-' + time.strftime('%Y%m%d-%H%M%S', time.gmtime()) + '.json')
     dest.write_text(json.dumps(result, indent=2, ensure_ascii=False), encoding='utf8')
     print(json.dumps({k: v for k, v in result.items() if k != 'staged_files'}, ensure_ascii=False, indent=2))

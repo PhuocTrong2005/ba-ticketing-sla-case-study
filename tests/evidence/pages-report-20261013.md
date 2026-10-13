@@ -16,6 +16,29 @@ Credential GitHub sẵn có chỉ dùng trong bộ nhớ qua Git Credential Mana
 
 ## Kiểm tra công khai
 
-Đang chờ commit/push và workflow triển khai đầu tiên. Kết quả cuối, URL thực, workflow, public smoke và bảo toàn được bổ sung sau thực thi. Sáu nhóm chạy đầy đủ ở local; trên Pages chỉ định thực hiện smoke ban đầu sáu nhóm, một luồng DEMO-01 đầy đủ, bốn view, danh tính/quyền, kịch bản/khôi phục/clock, localStorage và network. Không gán 110 PASS local thành 110 ca trên Pages.
+[Demo thực](https://phuoctrong2005.github.io/ba-ticketing-sla-case-study/) đã mở trực tiếp trong Edge headless trên origin Pages. [Workflow cuối](https://github.com/PhuocTrong2005/ba-ticketing-sla-case-study/actions/runs/38327310064) của runtime commit [`4bf3599`](https://github.com/PhuocTrong2005/ba-ticketing-sla-case-study/commit/4bf35993228ab47359737342db7c0fdf0a9cb906) kết thúc `success`; [metadata triển khai, jobs/steps và probes](pages-deployment-20261013-002812.json) ghi GitHub trả URL thật, HTTPS, build_type workflow. Commit đầu [`7c2edb3`](https://github.com/PhuocTrong2005/ba-ticketing-sla-case-study/commit/7c2edb3ff86d361623dbe381bfc8753be6b3625e) cũng deploy thành công nhưng chỉ bản sau sửa giữ byte được dùng cho public smoke.
+
+Lệnh thực: `& .\.venv\Scripts\python.exe tests/prototype/public_smoke.py https://phuoctrong2005.github.io/ba-ticketing-sla-case-study/`. [Record public mới](pages-public-smoke-20261013-002741.json) exit 0, **74/74 kiểm tra PASS**, 10 ảnh browser thật tên mới. HTTP tải 9 assets đều 200 và SHA-256 khớp byte source. Browser tải CSS và 7 modules thành công, `runtime_errors=[]`, `network_failures=[]`, không Fetch/XHR/API. Favicon mặc định ở gốc origin trả 404, không ảnh hưởng UI/assets runtime hoặc luồng demo; không gọi FastAPI.
+
+| Nhóm / hành vi | Local | Pages công khai |
+|---|---|---|
+| DEMO-01 thành công | Luồng đầy đủ trong suite | Tạo High → nhận → nhắn → Resolved → Customer xác nhận Closed; tiến clock 09:05/09:10/09:30/09:35 bằng form UI |
+| DEMO-02 Waiting, DEMO-03 từ chối, DEMO-04 review, DEMO-05 tải, DEMO-06 SLA biên | Luồng/assertion đầy đủ sáu nhóm cùng 83 fixture trong 110 ca | Chỉ smoke trạng thái mẫu và đổi Customer/Agent/Manager; DEMO-06 đổi 5 biến thể, +1 giây/reset. Không chạy lại toàn bộ nhánh/expected các nhóm này trên Pages |
+| Bốn view | Suite DOM/UX | Customer, Agent, Manager và chi tiết ticket đã render từ site thật |
+| Quyền hiển thị | Controller + DOM | Customer không có SLA/note/review/form nội bộ; Customer 2 vào ticket Customer 1 nhận 404; Manager không có claim/message/Resolved/confirm; Agent thấy review chặn Resolved |
+| Điều khiển / navigation | UX/click/keyboard/mobile | Chọn 6 nhóm, danh tính, biến thể, clock, khôi phục; 4 liên kết Manager đưa focus heading; controls thu gọn vẫn có hướng dẫn. Chưa chạy keyboard/mobile riêng trên origin Pages |
+| localStorage / network | Storage/schema/quota/reload và static subpath | Namespace trên origin Pages tồn tại, giữ nguồn sau reload và vẫn render Closed; nguồn được sinh bởi thao tác UI, không sửa storage để dựng đáp án. Không Fetch/XHR/API/lỗi JavaScript chặn |
+
+Ảnh công khai tiêu biểu: [Customer Closed](pages-public-smoke-20261013-002741-customer-closed.png), [Manager dashboard](pages-public-smoke-20261013-002741-manager-dashboard.png), [Manager review detail](pages-public-smoke-20261013-002741-manager-review-detail.png), [Agent controls thu gọn](pages-public-smoke-20261013-002741-agent-controls-collapsed.png). Còn sáu ảnh DEMO-01…06 initial trong record. Đã rà trực quan Customer Closed và Manager dashboard. Probes backend/app.py, SQLite, fixture, evidence và README local trên site đều 404, đúng artifact runtime; footer README trỏ về repo GitHub.
+
+## Rà soát, bảo toàn và bàn giao
+
+[Audit bảo toàn trước commit](pages-audit-20261013-002616.json) và [sau commit runtime](pages-audit-20261013-002729.json) PASS: 261 file protected, 228 evidence trước nhiệm vụ nguyên byte, không đổi backend/dependencies/BR/codes/fixture. Runtime/harness khớp hash lần local cuối. Link local hợp lệ, staged diff sạch, không virtualenv/database/profile/cache/log/secrets trong commit. Scan token/private-key là kiểm tra theo mẫu, không tuyên bố kiểm toán bảo mật toàn diện.
+
+[Audit bàn giao](pages-audit-20261013-003014.json) PASS: 131 link local hợp lệ, 218 file index đúng byte disk, không source mismatch, diff/staged diff exit 0. Các link tới audit bổ sung sau lần này được kiểm tra tồn tại riêng. Đối chiếu Git blob của tất cả backend/tests-backend/tests-SLA/evidence/dependencies/BR/codes đã tracked tại `eb8d483` với runtime HEAD không có thay đổi. File bằng chứng có sẵn trên disk vẫn đúng hash baseline; bằng chứng prototype mới được commit đúng byte, còn log giữ local. Không coi khác biệt xuống dòng có sẵn giữa disk Windows và Git blob lịch sử là thay đổi trong nhiệm vụ.
+
+Giữ nguyên [audit chưa đạt đầu tiên](pages-audit-20261013-002555.json): thuộc tính CRLF chưa được hoàn thiện làm staged diff check trả 2. Đã sửa rồi chạy audit mới, không đổi record cũ. Rà byte index sau commit đầu phát hiện 24 file còn bị chuẩn hóa xuống dòng vì đã stage trước attributes; commit đầu đã được tạo do chuỗi PowerShell không dừng ở lỗi assertion. Đã tạo commit thường `4bf3599` bằng Python `check=True`/assert để dừng khi lỗi, `git add --renormalize` chỉ trên 24 file liên quan, không reset/force/amend, không sửa file nguồn trên disk. Kiểm tra lại index không còn byte mismatch; asset công khai sau đó khớp byte đã kiểm thử. Audit cuối bổ sung kiểm tra byte index để phát hiện lỗi tương tự.
+
+Commit bàn giao tiếp theo chỉ cập nhật docs/công cụ audit/evidence public; runtime không đổi nên không chạy lại suite/backend hoặc deploy lặp. README chỉ thêm link/cách dùng/kết quả/nguồn chấp nhận; TASKS/traceability cập nhật phạm vi prototype/Pages. `Run Project.txt` vẫn giữ nguyên untracked, log Edge giữ local ignored. Git status sau bàn giao phải ghi đúng phần còn lại, không gọi working tree clean.
 
 Postman và video ngoài nhiệm vụ. Không xác nhận cross-browser hoặc thiết bị vật lý; dữ liệu trình duyệt đọc được qua DevTools, danh tính mô phỏng không phải đăng nhập production.

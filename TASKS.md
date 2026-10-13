@@ -22,7 +22,7 @@
 | DATA-02 | Thiết kế bảng `ticket_reviews`; lưu số giây còn lại tại mỗi lần Resolved nếu DATA-01 chưa bao phủ. | SLA-01 | Đã triển khai review theo chu kỳ, snapshot Resolved được DATA-01 phủ |
 | API-01 | Xác định hợp đồng API và kiểm tra phân quyền backend. | DOC-01, SLA-01 | Đã có contract/OpenAPI và kiểm thử HTTP; xem evidence implementation |
 | API-02 | Kiểm tra `REVIEW_REQUIRED`; Agent chuyển Waiting khi review mở; Manager ghi phương án ở Waiting; Manager/Agent/Customer ghi phương án (Customer 404, Agent 403); `INVALID_TICKET_STATE`/`TICKET_CLOSED` khi không có review mở; tính nguyên tử từ chối và tạo review. | DOC-01, SLA-01 | Đã thực thi A1/A2, REVIEW_REQUIRED, quyền/nội dung và rollback; xem evidence |
-| PROTO-01 | Xây prototype tĩnh cho luồng chính. | DOC-01, D-44 | Đã dựng bốn view/sáu nhóm DEMO/M-01…07; JS/Edge headless 106 PASS; chờ chủ dự án xem UI, chưa deploy. [Báo cáo](tests/evidence/prototype-report-20261012.md) |
+| PROTO-01 | Xây prototype tĩnh cho luồng chính. | DOC-01, D-44…46 | UX đã được chấp nhận; local 110 PASS / 0 FAIL, Pages đã deploy, public smoke 74 kiểm tra PASS. Sáu nhóm trên Pages chỉ smoke; [báo cáo](tests/evidence/pages-report-20261013.md). |
 | CON-01 | Chứng minh hai ca nhận đồng thời. | DATA-01, API-01 | Đã kiểm thử hai tình huống bằng threads/kết nối riêng, SQLite file và barrier |
 | RPT-01 | Báo cáo SQL khớp dữ liệu mẫu. | DATA-01 | Đã triển khai SQL trên snapshot as_of và kiểm thử dữ liệu xác định |
 | RPT-02 | Báo cáo M-07 về chờ Manager review. | DATA-02 | Đã triển khai và kiểm thử M-07; không phải SQL thuần cho phép giao khoảng |
@@ -65,3 +65,5 @@ Hoàn tất phần môi trường: Python 3.12.10 chính thức cài theo ngư�
 ### Prototype / Pages — D-46, 13/10/2026
 
 Chủ dự án đã phê duyệt yêu cầu/kịch bản, UX và chấp nhận kết quả/ảnh kiểm thử tự động; cho phép commit/push main thường và deploy Pages. Không yêu cầu thao tác lại tất cả kịch bản; không ghi chủ dự án tự chạy công cụ. UX đã đủ phạm vi D-45. Kiểm thử mới sau sửa footer nguồn: 110 PASS / 0 FAIL; 83 fixture/backend/dependencies giữ nguyên, backend không chạy lại. Workflow chỉ đóng gói runtime `prototype/` tại project subpath; trạng thái triển khai/public smoke và bằng chứng thực tại [báo cáo Pages](tests/evidence/pages-report-20261013.md). Các trạng thái chờ review/chưa deploy phía trên là lịch sử. Postman/video và README tổng thể để bước sau; toàn bộ v1.0 chưa hoàn thành.
+
+Pages thực đã kiểm tra: [demo](https://phuoctrong2005.github.io/ba-ticketing-sla-case-study/), [workflow thành công](https://github.com/PhuocTrong2005/ba-ticketing-sla-case-study/actions/runs/38327310064), commit runtime `4bf3599`. Public smoke 74/74 PASS, 10 ảnh mới; đủ bốn view/đổi danh tính/kịch bản/reset/clock/luồng DEMO-01/quyền Customer/localStorage/network. Sáu nhóm trên Pages chỉ smoke ban đầu, sáu nhóm local chạy đầy đủ. Không có lỗi JavaScript chặn, không Fetch/XHR/API; asset runtime khớp hash source. Chỉ cập nhật README tối thiểu.

@@ -160,9 +160,10 @@ Chủ dự án phê duyệt yêu cầu/kịch bản và UX; chấp nhận kết 
 
 | Phạm vi | Thực thi / bằng chứng |
 |---|---|
-| UI-01…06, UX-01…04 / D-44…46 | Source sau sửa footer đã chạy suite 110 PASS / 0 FAIL; 83 fixture không đổi. [Run local](../tests/evidence/prototype-ux-20261013-002125.json). |
+| UI-01…06, UX-01…04 / D-44…46 | Source sau sửa footer đã chạy suite 110 PASS / 0 FAIL; 83 fixture không đổi. [Run local cuối](../tests/evidence/prototype-ux-20261013-002503.json). |
 | BR-02 / Pages runtime, độc lập API | [Workflow](../.github/workflows/pages.yml) chỉ upload 9 file runtime và `.nojekyll`; project subpath, Pages origin/localStorage/network được kiểm tra riêng. |
-| Public smoke / bốn view và quyền Customer | Kết quả URL thật/workflow/public smoke bổ sung trong [báo cáo Pages](../tests/evidence/pages-report-20261013.md). Sáu nhóm trên Pages chỉ smoke, không gán suite local thành suite Pages. |
-| Bảo toàn | Baseline giữ backend/dependencies/BR/codes/83 fixture và 228 evidence trước nhiệm vụ; audit cuối nằm trong báo cáo Pages. Không chạy lại backend do không đổi source/dependencies. |
+| Public smoke / bốn view và quyền Customer | [Public run](../tests/evidence/pages-public-smoke-20261013-002741.json): 74/74 kiểm tra PASS, 10 ảnh thật; bốn view, danh tính/kịch bản/reset/clock, DEMO-01 đến Closed, quyền Customer/Manager/Agent, localStorage reload, không API/lỗi JavaScript. Sáu nhóm trên Pages chỉ smoke ban đầu; không gán suite local thành suite Pages. |
+| Triển khai thật | Runtime commit `4bf3599`, [workflow thành công](https://github.com/PhuocTrong2005/ba-ticketing-sla-case-study/actions/runs/38327310064), [URL Pages](https://phuoctrong2005.github.io/ba-ticketing-sla-case-study/), [metadata/exclusion probes](../tests/evidence/pages-deployment-20261013-002812.json). 9 assets khớp byte source, không upload backend/SQLite/tests/fixture/log. |
+| Bảo toàn | [Audit bàn giao](../tests/evidence/pages-audit-20261013-003014.json) PASS: 261 protected, 228 evidence cũ nguyên byte, 218 file index đúng byte disk; không thay đổi fixture/backend/dependencies, không chạy lại backend. |
 
 Postman/video chưa làm; không gán kiểm tra UI cho race/atomicity/database event_id hoặc bảo mật production.
